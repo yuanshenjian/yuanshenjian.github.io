@@ -51,6 +51,6 @@ type: "book"
 
 ## 封面截图
 
-![]({{ site.url }}{{ site.images }}{{ '/book/professional-quality-of-programmer-1.png'  }})
+![]({{ site.url }}{{ site.img_path }}{{ '/book/professional-quality-of-programmer-1.png'  }})
 
 

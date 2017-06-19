@@ -4,7 +4,7 @@ keywords: sjyuan,blog,Jekyll,github
 baseurl: ""
 permalink: /:title/
 url: http://sjyuan.cc
-img_path: /static/assets/img
+img_path: /assets/images
 
 author:
   name: Yuan Shenjian
@@ -54,5 +54,3 @@ compress_html:
   comments: ["<!-- ", " -->"]
   clippings: all
   endings: all
-
-images: '/assets/images'

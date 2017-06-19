@@ -42,7 +42,7 @@ published: true
 
 优秀的实践（CDCD）总是离不开优秀工具来做支撑，[Raml](http://raml.org) 以及其生态群恰到好处地提供了我们想要的合同功能。[Raml](http://raml.org) 是什么，先看一张官网：
 
-![]({{ site.url }}{{ site.images }}{{ '/restful/raml.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/restful/raml.png' }})
 
 `Design`、`Build`、`Test`、`Document`、`Share`，我们选择 [Raml](http://raml.org) ，究根结底也是因为它这几大优秀的特性：
 

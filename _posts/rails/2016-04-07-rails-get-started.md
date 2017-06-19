@@ -102,7 +102,7 @@ $ rails server
 ### 访问Rails服务
 >打开你的浏览器，输入[http://localhost:3000](http://localhost:3000)，会看到下面页面
 
-![Alt text]({{ site.url }}{{ site.images }}{{ '/rails/rails-get-started-1.png' }})
+![Alt text]({{ site.url }}{{ site.img_path }}{{ '/rails/rails-get-started-1.png' }})
 
 ---
 
@@ -252,7 +252,7 @@ end
 ```
 访问链接[http://127.0.0.1:3000/articles/new](http://127.0.0.1:3000/articles/new)
 
-![Alt text]({{ site.url }}{{ site.images }}{{ '/rails/rails-get-started-2.png' }})
+![Alt text]({{ site.url }}{{ site.img_path }}{{ '/rails/rails-get-started-2.png' }})
 
 ---
 
@@ -338,7 +338,7 @@ $ rake db:migrate
 
 此时提交之后会发生异常
 
-![Alt text]({{ site.url }}{{ site.images }}{{ '/rails/rails-get-started-3.png' }})
+![Alt text]({{ site.url }}{{ site.img_path }}{{ '/rails/rails-get-started-3.png' }})
 
 添加一个提取request form data参数的方法来解决这个问题
 
@@ -381,7 +381,7 @@ end
 ```
 提交表单后，会将刚才添加的内容展示出来
 
-![Alt text]({{ site.url }}{{ site.images }}{{ '/rails/rails-get-started-4.png' }})
+![Alt text]({{ site.url }}{{ site.img_path }}{{ '/rails/rails-get-started-4.png' }})
 
 ---
 
@@ -416,7 +416,7 @@ end
 
 访问[http://localhost:3000/articles ](http://localhost:3000/articles)，可以看到文章列表
 
-![Alt text]({{ site.url }}{{ site.images }}{{ '/rails/rails-get-started-5.png' }})
+![Alt text]({{ site.url }}{{ site.img_path }}{{ '/rails/rails-get-started-5.png' }})
 
 ---
 
@@ -508,7 +508,7 @@ end
 ```
 故意不填title提交表单，可以看到如下提示
 
-![Alt text]({{ site.url }}{{ site.images }}{{ '/rails/rails-get-started-6.png' }})
+![Alt text]({{ site.url }}{{ site.img_path }}{{ '/rails/rails-get-started-6.png' }})
 
 ---
 
@@ -622,7 +622,7 @@ end
 ```
 访问[http://127.0.0.1:3000/articles/](http://127.0.0.1:3000/articles/)
 
-![Alt text]({{ site.url }}{{ site.images }}{{ '/rails/rails-get-started-7.png' }})
+![Alt text]({{ site.url }}{{ site.img_path }}{{ '/rails/rails-get-started-7.png' }})
 
 ---
 
@@ -862,7 +862,7 @@ end
 ```
 访问[http://127.0.0.1:3000/articles/1](http://127.0.0.1:3000/articles/1)，当然你要先确保有id=1的数据
 
-![Alt text]({{ site.url }}{{ site.images }}{{ '/rails/rails-get-started-8.png' }})
+![Alt text]({{ site.url }}{{ site.img_path }}{{ '/rails/rails-get-started-8.png' }})
 
 ---
 
@@ -947,7 +947,7 @@ end
 ```
 浏览器地址栏输入[http://127.0.0.1:3000/articles/](http://127.0.0.1:3000/articles/)，敲下最后一个`enter`键，点击添加`Article`链接，会弹出登录框
 
-![Alt text]({{ site.url }}{{ site.images }}{{ '/rails/rails-get-started-9.png' }})
+![Alt text]({{ site.url }}{{ site.img_path }}{{ '/rails/rails-get-started-9.png' }})
 
 更多Rails安全主题，请访问[Rails Security](http://guides.rubyonrails.org/security.html)
 

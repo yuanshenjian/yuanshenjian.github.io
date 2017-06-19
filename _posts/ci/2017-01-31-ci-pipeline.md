@@ -20,7 +20,7 @@ tags: [continuous-integration]
 
 以一个Java Web工程为例，一次集成通常含有以下步骤：
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/ci-steps.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/ci-steps.png' }})
 
 这里面的每一个步骤循序渐进，必须都是通过后才能持续往后走，而通过也必须是有意义的通过，而不只是亮了一个空壳绿灯。
 
@@ -98,7 +98,7 @@ CI通常开始源代码的获取，获取了所有完整的代码库后，首先
 ### 测试
 运行测试的策略通常借鉴于[测试金字塔](https://martinfowler.com/bliki/TestPyramid.html)，单元测试、集成测试、E2E测试。关于测试的最佳实践则是将这三部分测试都涵盖进去。首先CI会每次自动运行单元测试，然后自动运行集成测试，最后是E2E测试。完美的情况下，每一次提交三部分测试都会运行，只有所有测试通过后才进入下一个环节。而在实际中，有些项目E2E测试运行的时间较长，以至于对集成和部署造成了一定的影响，此时我们需要做一些优化措施，可以并发运行E2E测试(Jenkins中join pulgin)：
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/e2e-test-slaves.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/e2e-test-slaves.png' }})
 
 
 >实践指导：
@@ -143,7 +143,7 @@ CI通常开始源代码的获取，获取了所有完整的代码库后，首先
 
 以上几个问题引出了经典的`Test`、`Staging`、`UAT`、`Production`四个环境。分别用于测试、演示、用户验收、生产运营。另外，开发人员通常在本地机器会运行一个`Dev`环境。下图总结了以上四个环境的部署方式：
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/deployment-envs.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/deployment-envs.png' }})
 
 `UAT` 和 `Production` 环境被虚线框起来，因为这两个环境在某些情况下是交付团队是没有权限去控制的，此时是由客户的专门人员负责一键部署。
 

@@ -43,5 +43,5 @@ type: "book"
 
 
 ## 封面截图
-![]({{ site.url }}{{ site.images }}{{ '/book/effective-java-1.png'}})
+![]({{ site.url }}{{ site.img_path }}{{ '/book/effective-java-1.png'}})
 

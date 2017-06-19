@@ -153,4 +153,4 @@ public class PessimisticMan implements Life {
 学会感恩，行动助人~
 
 下面是我微信朋友圈的一张图
-![Alt text]({{ site.url }}{{ site.images }}{{ '/life/perceptioin-of-an-email-1.png' }})
+![Alt text]({{ site.url }}{{ site.img_path }}{{ '/life/perceptioin-of-an-email-1.png' }})

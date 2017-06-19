@@ -25,7 +25,7 @@ source: "https://www.thoughtworks.com/insights/blog/three-common-mistakes-first-
 开发人员初次走进技术领导（后文简称TL）这个角色的时候都是很困难的。即便经验再丰富的开发人员，他的技能和经验也是不能自动转换成一个TL必备的技能的。事实上，如果开发人员不能很好地运用已有的技能和经验，或者不能在这个新角色中树立更多权威，一些旧有的习惯不但没有帮助，反而会带来阻碍。
 
 
-![Alt text]({{ site.url }}{{ site.images }}{{ '/career/3-common-mistakes-of-first-time-tech-lead-1.png' | prepend: site.baseurl }})
+![Alt text]({{ site.url }}{{ site.img_path }}{{ '/career/3-common-mistakes-of-first-time-tech-lead-1.png' | prepend: site.baseurl }})
 
 这篇文章，我们一起来探索一下初次做TL时容易踏入的三个陷阱，以及他们可以做些什么来避免绕过这些陷阱。
 

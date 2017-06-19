@@ -39,7 +39,7 @@ E项目是一个在线的物资跟踪监控系统。由[ThoughtWorks](https://th
 
 我们团队还有一个`workout`的文化特色，向⬇️看：
 
-![]({{ site.url }}{{ site.images }}{{ '/agile/agile-development-summary-of-project-e-workout.jpg'  }})
+![]({{ site.url }}{{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-workout.jpg'  }})
 
 >PS：我们的`workout`自开始之日到项目交付之期，不曾落下过一天，且收到良好的反馈。即便团队成员分开了，每个人都能将`运动精神`传播下去，乃至源远流长......
 

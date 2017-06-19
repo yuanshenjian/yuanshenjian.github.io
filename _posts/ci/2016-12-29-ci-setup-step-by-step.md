@@ -56,14 +56,14 @@ Step by step Build如下：
 #### Shell Shell executable
 将此项设置为`bash`，更加符合平时在Terminal上的操作习惯，个人习惯，属于建议项，配置如图：
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/shell-executable.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/shell-executable.png' }})
 
 ---
 
 #### E-mail notification
 E-mail是一个很好的反馈通知机制，为build配置了Email通知，将会在build失败后第一时间通知相关人员，这也是CI反馈机制中的关键步骤，那么要启用邮件通知，需要我们配置全局的E-mail notification：
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/email-notification.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/email-notification.png' }})
 
 >这里使用 [网易126邮箱](http://www.126.com/) 的免费 [SMTP](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) 服务器，需要提供有效的邮箱账户，并且需要开启`IMAP/SMTP服务`，具体怎么开启，[Google](http://www.google.com/) 或者 [百度](https://www.baidu.com/) 中可以找到答案。
 
@@ -74,7 +74,7 @@ E-mail是一个很好的反馈通知机制，为build配置了Email通知，将�
 #### System Admin e-mail address
 此项配置是为了保证E-mail通知的正常运行，因为Jenkins只允许系统管理员执行Email通知，所以只有系统管理员邮箱地址和发邮件的账户是一个账户是才可以成功发送邮件通知：
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/system-admin-email-address.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/system-admin-email-address.png' }})
 
 ---
 
@@ -82,7 +82,7 @@ E-mail是一个很好的反馈通知机制，为build配置了Email通知，将�
 ### 系统工具
 全局的系统工具用来执行相关任务，比如Gradle执行编译、测试、打包等任务，Git去pull代码，JDK提供Java执行环境。在Jenkins中，我们可以通过GUI来配置一些基本的工具：`Manage Jenkins->Global Tool Configuration`
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/global-tool-configuration.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/global-tool-configuration.png' }})
 
 > 实践指导：
 > 通常，我们不会在Jenkins Web GUI上配置安装这些工具，需要的工具我们会在Server机器上通过其他方式，比如：我们可以将安装命令放在provision的shell脚本中(可以使用[Ansilbe](https://www.ansible.com/)脚本)，在`Vagrant up`的时候进行自动化安装，此次Dojo我已经在 [Dojo-ci](https://github.com/sjyuan-cc/dojo-ci) 中提供了这个Shell脚本。
@@ -126,15 +126,15 @@ Jenkins提供了用户权限控制，这其实是一个基础的配置。通常J
 
 比较常用的认证方式是`Matrix-based security` 和 `Project-based Matrix Authorization Strategy`，前者配置的权限针对所有Project是一致的，而后者可以将用户权限绑定到某些具体的Project中。相对来说后者更加常用一些，这里以后者为例，`sjyuan`是管理员，在Global配置中分配了所有权限，而`user1`只拥有全局的Read Overall权限（这是前提条件，不然`user1`登陆后什么也看不到）：
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/project-based-matrix-authorization.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/project-based-matrix-authorization.png' }})
 
 此时我们以`sjyuan`登录进去之后在`dojo-ci-web` project中给`user1`授予部分权限：
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/enable-project-based-security.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/enable-project-based-security.png' }})
 
 不管配置哪一种用户权限，我们使用的`Security Realm`都是`Jenkins’ own user database`:
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/access-controll.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/access-controll.png' }})
 
 >实践指导：
 >第一次配置用户权限时，将当前用户设置为管理员权限，记得赋予admin权限，建议取消`Allow users to sign up`选项，统一由管理员给指定成员分配用户并授权。
@@ -146,7 +146,7 @@ Jenkins提供了用户权限控制，这其实是一个基础的配置。通常J
 
 创建一个自由风格的工程，点击Home页面上`New Item`link进入创建页面：
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/free-style-project.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/free-style-project.png' }})
 
 ---
 
@@ -154,7 +154,7 @@ Jenkins提供了用户权限控制，这其实是一个基础的配置。通常J
 
 我们创建了一个名为 [dojo-ci-web](https://github.com/sjyuan-cc/dojo-ci-web/) 的project，进入配置界面，来做一些基础的配置：
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/basic-config.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/basic-config.png' }})
 
 > 1. 上述给user1赋予了该项目上的部分权限。
 > 2. 配置历史build的弃留策略。
@@ -166,14 +166,14 @@ Jenkins提供了用户权限控制，这其实是一个基础的配置。通常J
 ### 配置Git Repository
 在`Source code management`栏配置Git Repository，需要提供一个[Github](https://github.com/)账号，作为IT从业者，该账号应该不是问题，还没有的话可以到[Github](https://github.com/)上注册一个
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/source-code-management.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/source-code-management.png' }})
 
 ---
 
 ### 配置触发构建策略
 在`Build Triggers`栏配置触发构建策略：
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/build-trigger.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/build-trigger.png' }})
 
 >Poll SCM，轮询Source Code Management，每个2分钟去检查Repository有没有新的提交，如果有，触发build，否则不做处理。轮询规则设置就是标准的Cron的规则，推荐一个[在线调式的工具](https://crontab.guru/)。
 
@@ -182,7 +182,7 @@ Jenkins提供了用户权限控制，这其实是一个基础的配置。通常J
 ### 运行测试
 在 `Build` 栏添加build step，`Add build step -> Execute shell`
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/build-step-run-test.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/build-step-run-test.png' }})
 
 > `./gradlew clean test` 命令是CI所配置的代码库中运行测试的gradle task，[Gradle](https://gradle.org/)是一个用于Java工程的构建工具，做的事情跟[Maven](https://maven.apache.org/)类似，只是目前更加受到Java Developer的青睐。
 
@@ -193,7 +193,7 @@ Jenkins提供了用户权限控制，这其实是一个基础的配置。通常J
 ### 发布测试报告
 运行测试完毕后，可以直观地看到测试状态 (绿色：成功，红色：失败)，我们还可以在测试报告后发布测试报告，它的配置也很简单，只需要在 `Post-build Actions`栏中添加post-build操作，`Add post-build action->Publish JUnit test result report`：
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/publish-test-report.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/publish-test-report.png' }})
 
 ---
 
@@ -202,7 +202,7 @@ Jenkins提供了用户权限控制，这其实是一个基础的配置。通常J
 
 通常，测试挂了，我们会希望第一时间通知相关人员去修复CI，不要让CI挂了还心安理得地过夜，这就需要一些有效的反馈机制了，此时我们会考虑引入邮件通知，前面我们已经配置好邮件服务器并测试通过了，此时需要添加一个`Post-build Actions`，`Add post-build action->E-mail Notification`:
 
-![]({{ site.url }}{{ site.images }}{{ '/dojo/ci/post-action-email-notification.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/dojo/ci/post-action-email-notification.png' }})
 
 
 到此，一个可以报告测试状态的CI Build搭建起来，过程并不复杂，我们已经能够直观的看到CI的效果了。下一节课我们来讨论构建构建可持续部署Pipeline的策略并加以实践。
