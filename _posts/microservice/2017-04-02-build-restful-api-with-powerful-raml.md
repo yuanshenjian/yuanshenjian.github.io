@@ -266,7 +266,7 @@ $ npm run docs-server
 
 访问`http://127.0.0.1:8081`之后，可以看到：
 
-![]({{'/static/assets/img/restful/raml-api-page.png'}})
+![]({{ site.url }}{{ site.img_path }}{{ '/restful/raml-api-page.png' }})
 
 
 ---
