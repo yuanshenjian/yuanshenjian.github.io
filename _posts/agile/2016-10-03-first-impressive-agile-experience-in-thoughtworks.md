@@ -72,7 +72,7 @@ E项目是一个在线的物资跟踪监控系统。由[ThoughtWorks](https://th
 
 项目中实践主要围绕迭代进行，用一张图概括：
 
-![]({{ "/static/assets/img/agile/main-events-in-one-iteration.png" }})
+![]({{ site.url }}{{ site.img_path }}{{ '/agile/main-events-in-one-iteration.png' }})
 
 >从图中可以看出，一个Iteration通常始于[IPM](#ipm)，止于[Showcase](#showcase)，其中每天都会发生的有[Standup](#standup)。[Pair](#pair)、[TDD](#tdd)、[Code Review](#code-review)则发生在每天的Coding中，通常情况下，[Story kick-off](#story-kick-off)之后，就进入了开发环节，Coding便开始了。[CI](#ci)属于基础设施，通常在一个名为Iteration0的迭代完成，也就是正是开发开始之前就应该完成[CI](#ci)的搭建。[Retro](#retro)则较长一段时间才进行的活动，根据实际情况，有1个月一次，也有2个月一次的。另外[Regular catch up with client](#regular-catch-up-with-client)也是因项目而异，E是Daily，也有Weekly的，有些项目甚至没有这项活动。
 
@@ -98,7 +98,7 @@ E项目是一个在线的物资跟踪监控系统。由[ThoughtWorks](https://th
 
 IPM的主要产出是下一个迭代中完成的Story，这些Story即为下一个Story要完成的目标，我们通过敏捷看板工具来管理它们，例如下图[mingle](https://www.thoughtworks.com/mingle/)上位于`Backlog`栏中的Story:
 
-![]({{ "/static/assets/img/agile/agile-development-summary-of-project-e-stories-list.png" }})
+![]({{ site.url }}{{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-stories-list.png' }})
 
 ---
 
@@ -166,7 +166,7 @@ Standup，就是每日站会。我听过一个有趣的事情：在敏捷开发�
 
 下面是我们团队的Standup:
 
-![Alt text]({{ "/static/assets/img/agile/agile-development-summary-of-project-e-standup.jpg" }})
+![Alt text]({{ site.url }}{{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-standup.jpg' }})
 
 >PS: Standup的时候，选一实物作为Token，发言时拿着Token。上图中我们选择了`瑜伽球`作为Token，逗比们说：健身无处不在~
 
@@ -194,7 +194,7 @@ Story kick off的核心目的是确保DEV开发出的功能都是符合客户期
 
 下面是一对Pair做Story kick off：
 
-![]({{ "/static/assets/img/agile/agile-development-summary-of-project-e-kick-off.jpg" }})
+![]({{ site.url }}{{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-kick-off.jpg' }})
 
 ---
 
@@ -207,7 +207,7 @@ Story kick off的核心目的是确保DEV开发出的功能都是符合客户期
 
 下图是我跟TL Pair的剪影：
 
-![Alt text]({{ "/static/assets/img/agile/agile-development-summary-of-project-e-pair.jpg" }})
+![]({{ site.url }}{{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-pair.jpg' }})
 
 Pair将本来可以并行工作的两个人聚焦在一件事情上，表面上是在降低生产力，实际上它确实是有一定的成本的。而这种付出并不会打水漂，最明显的好处是能够最大化知识的共享（尤其是更换pair的场景下）,包括业务知识的共享、技术方案共享、解决问题思路的共享，这一点尤其体现在团队有新人融入的时候，通过Pair能够快速带领新人成长起来，提高整个团队的战斗力。
 另一方面就是提高代码质量，Pair实际上是两个人一直在不停的做[Code Review](#code-review)，两个人的思维碰撞能够避免很多代码小聪明和不好的编码习惯。同时两人还可以互相监督，比如谁犯懒不想写测试了，就进行举报，举报有奖😄。
@@ -279,7 +279,7 @@ Code Review也是需要时间成本的，根据团队的规模1~2小时（5~10�
 
 下面是某个时刻，我们Team四个人正在专注地讨论为一个函数取个更好的名字（猜猜谁是表情帝？？）：
 
-![Alt text]({{ "/static/assets/img/agile/agile-development-summary-of-project-e-code-review.jpg" }})
+![]({{ site.url }}{{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-code-review.jpg' }})
 
 ---
 
@@ -330,7 +330,7 @@ CI，持续集成。在我的印象中，它是一个项目开始前`必须`搭�
 
 下面是我们CI的Dashboard，使用了一个Chrome插件[BuildReactor](https://chrome.google.com/webstore/category/apps?hl=en)（如果加载不了就说明需要翻墙）将[Go](https://go.cd/)的多个Pipeline集中展示出来。
 
-![Alt text]({{ "/static/assets/img/agile/agile-development-summary-of-project-e-ci.jpg" }})
+![]({{ site.url }}{{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-ci.jpg' }})
 
 
 ---
@@ -356,7 +356,7 @@ Retro是Retrospective的简写，即回顾。团队通常以回顾会议的形�
 
 我们Team的一次Retro
 
-![Alt text]({{ "/static/assets/img/agile/agile-development-summary-of-project-e-retro.jpg" }})
+![]({{ site.url }}{{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-retro.jpg' }})
 
 
 ---
