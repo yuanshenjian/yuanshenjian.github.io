@@ -1,7 +1,10 @@
 ---
+bg: "rails.jpg"
 layout: page
 title: Troubleshoots
 permalink: /troubleshoots/
+summary: "疑难杂症"
+
 active: troubleshoots
 ---
 
