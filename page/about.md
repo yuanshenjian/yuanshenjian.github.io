@@ -4,7 +4,7 @@ layout: page
 title: "About"
 crawlertitle: "Why and how this blog was created"
 permalink: /about/
-summary: "崇尚简约，热爱编程"
+summary: "简约，简爱"
 active: about
 ---
 
