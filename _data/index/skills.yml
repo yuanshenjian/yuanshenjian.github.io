@@ -1,0 +1,6 @@
+# skills section data
+
+label: Ability
+id : cs
+aspects: Agile, CI, TDD, DDD, MicroService, Git, Java, Gradle, Python, JavaScript, MongoDB
+percentage: 99, 99, 99, 79, 92, 99, 92, 92, 90, 82, 80

@@ -1,0 +1,16 @@
+# blog page sections
+- name: Blog
+  href: /blog/
+
+# edit following lines to custom your blog page, make sure name is the same as href but capitalized first letter(except HTML)
+- name: InfoQ
+  href: /infoq/
+
+- name: TroubleShoot
+  href: /troubleshoots/
+
+- name: Code
+  href: /code/
+
+- name: Insight
+  href: /insight/

@@ -1,0 +1,58 @@
+title: CLEAN CODER
+description: 程序袁的博客
+keywords: sjyuan,blog,Jekyll,github
+baseurl: ""
+permalink: /:title/
+url: http://sjyuan.cc
+img_path: /static/assets/img
+
+author:
+  name: Yuan Shenjian
+  first_name: Shenjian
+  last_name: Yuan
+  avatar: /static/assets/img/landing/avatar.jpg
+  github_username: sjyuan-cc
+  linkedin_id:
+  facebook_username:
+  twitter_username:
+  email: sjyuan@thoughtworks.com
+  cv:   # A online CV can be printed as PDF, leave blank if you don't have now
+
+# comment
+changyan:
+  app_id: cysVa2ysp
+  conf: prod_eebaa51d28501502f4511eae210ddd5a
+
+encoding: utf-8
+
+# other settings
+#highlighter: rouge
+markdown: kramdown
+kramdown:
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..3
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  input: GFM
+  syntax_highlighter: rouge
+
+sass:
+  sass_dir: assets/_sass
+  style: compressed
+
+# Posts settings
+future: true
+safe: false
+lsi: false
+excerpt_separator: "\n\n"
+
+# Theme settings
+compress_html:
+  comments: ["<!-- ", " -->"]
+  clippings: all
+  endings: all
+
+images: '/assets/images'

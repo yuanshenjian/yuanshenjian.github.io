@@ -1,0 +1,30 @@
+
+- letter: G
+  collection:
+  - title: Git
+    permalink: /troubleshoots/git
+
+- letter: I
+  collection:
+    - title: Intellij IDEA
+      permalink: /troubleshoots/intellij
+
+- letter: J
+  collection:
+    - title: Jenkins
+      permalink: /troubleshoots/jenkins
+    - title: JSON
+      permalink: /troubleshoots/json
+
+
+- letter: N
+  collection:
+    - title: Node
+      permalink: /troubleshoots/node
+
+- letter: P
+  collection:
+    - title: Postgres
+      permalink: /troubleshoots/postgresql
+
+

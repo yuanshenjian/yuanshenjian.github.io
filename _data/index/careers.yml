@@ -1,0 +1,44 @@
+# careers section data
+# if you don't have language feature(language.yml is empty), ignore "i18n" items
+- name:
+    detail: ThoughtWorks
+    i18n: company_tw
+  desc:
+    detail: I worked at Company A ...
+    i18n: company_tw_desc
+  date:
+    detail: March 26th, 2015
+    i18n: company_tw_date
+  job:
+    detail: Consultant
+    i18n: company_tw_job
+  icon: fa-plus-square
+
+- name:
+    detail: Merit
+    i18n: company_merit
+  desc:
+    detail: I worked at Merit ...
+    i18n: company_merit_desc
+  date:
+    detail: July 2nd, 2013
+    i18n: company_merit_date
+  job:
+    detail: Java Developer
+    i18n: company_merit_job
+  icon: fa-plus-square
+
+
+- name:
+    detail: Chang'an University
+    i18n: college
+  desc:
+    detail: I worked at Merit ...
+    i18n: college_des
+  date:
+    detail: April 20th, 2013
+    i18n: college_date
+  job:
+    detail: Graduate
+    i18n: college_job
+  icon: fa-plus-square

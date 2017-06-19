@@ -1,0 +1,9 @@
+- letter: S
+  collection:
+    - title: Spring
+      permalink: /code/spring
+
+- letter: Y
+  collection:
+    - title: YAML
+      permalink: /code/yaml

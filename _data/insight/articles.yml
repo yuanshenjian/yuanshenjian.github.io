@@ -1,0 +1,62 @@
+# links section data
+
+- category: Clean code
+  entries:
+    - title: 重构-靠谱程序员的必备技能
+      url: https://mp.weixin.qq.com/s?__biz=MzIyOTc4MDQ3Nw==&mid=2247483826&idx=1&sn=affef18adfa24e06c759da1ba180472d&key=edbc4bce6a6454e80d321158341e5e66a3bca24cbea72f160a435e96c90a6e06ebc292239a30ab80655bb2f7ddabd6b9e401af84fbeb36476515202d529d6c72e4bdca00ec9079bc2f2ac4696aaa57d2&ascene=0&uin=MjQzOTk2NDUyMg%3D%3D&devicetype=iMac+MacBookPro11%2C2+OSX+OSX+10.12.1+build(16B2555)&version=12010310&nettype=WIFI&fontScale=100&pass_ticket=ymJkTmLQyCz45A7WxtxCxSnq7jrKhlp6cdlpJmWUrb%2FrruU1zbJKHtYmvFUvYLoM
+
+
+- category: 持续集成
+  entries:
+    - title: 遗留系统流水线的改进
+      url: http://insights.thoughtworkers.org/improvement-of-legacy-system-pipeline/
+
+
+- category: 高效学习
+  entries:
+    - title: 别学东学西了，先建立自己的知识体系吧!
+      url: https://mp.weixin.qq.com/s?__biz=MjM5MjE5ODA4MA==&mid=2651618017&idx=1&sn=6d44b61a531f1773433f1b7a2ae97015&scene=2&srcid=0626vnAL4FLJp2dXmH4TyChx&from=timeline&isappinstalled=0#wechat_redirect
+    - title: 个人知识管理的方法
+      url: http://www.jianshu.com/p/dbdac17eb9ff
+
+
+- category: 领域驱动设计
+  entries:
+    - title: 实施领域驱动设计的正确姿势
+      url: http://icodeit.org/2017/01/why-ddd-is-so-hard/
+    - title: 领域驱动设计实现之路【精】
+      url: http://www.infoq.com/cn/articles/implementation-road-of-domain-driven-design
+
+
+- category: TDD
+  entries:
+    - title: 让我们再聊聊TDD 续 – 人人都在做TDD
+      url: http://insights.thoughtworkers.org/talk-about-tdd-again-2/
+    - title: 让我们再聊聊TDD
+      url: http://insights.thoughtworkers.org/talk-about-tdd-again/
+
+
+- category: 微服务
+  entries:
+    - title: 关于微服务的发展方向，我们和5位专家聊了聊
+      url: https://mp.weixin.qq.com/s?__biz=MzA5Nzc4OTA1Mw==&mid=2659599120&idx=1&sn=dd213cf2328c7afce85bd3642409545e&chksm=8be99602bc9e1f146802b65184f18d06efece0fe06a72a7818fdca852e35ecce2041fb8bab78&mpshare=1&scene=1&srcid=0405WMDGgxMSlzdFB6EaPCwq&key=24fe34f0ac7da0981d1b567eade5186a7c9800240f7a10fcdf4611123798f7c01d99d6960323bf40451cc92188a859d26e30532a1394ab2b1159111ebe4ce9b71c903ae9252c14ecba7fc98d90d93f9f&ascene=0&uin=MjQzOTk2NDUyMg%3D%3D&devicetype=iMac+MacBookPro11%2C2+OSX+OSX+10.12.1+build(16B2555)&version=12010310&nettype=WIFI&fontScale=100&pass_ticket=kqu9ER7u%2F9rJdApBvXhPcT4vcHTxc6cJUyTx3lG%2FtDe0SIo0GbLdTP3IXlLYus%2FE
+    - title: 一个完整的微服务系统，应该包含哪些功能？
+      url: http://www.infoq.com/cn/articles/what-complete-micro-service-system-should-include
+    - title: 微服务的团队应对之道
+      url: http://www.infoq.com/cn/articles/micro-service-team-deal-with-problems
+    - title: 谈谈后端业务系统的微服务化改造
+      url: http://www.infoq.com/cn/articles/the-back-end-business-systems-service-transformation
+    - title: 微服务架构的理论基础 - 康威定律
+      url: https://yq.aliyun.com/articles/8611
+    - title: 微服务（Microservice）那点事
+      url: https://yq.aliyun.com/articles/2764?spm=5176.100239.blogcont8611.6.Wu9qbq
+
+
+- category: 职业成长
+  entries:
+    - title: 写给新人的一封信
+      url: http://insights.thoughtworkers.org/a-letter-to-newcomers/
+    - title: 我选择，我喜欢
+      url: http://insights.thoughtworkers.org/choose-what-i-like/
+    - title: 走进神秘的ThoughtWorks咨询团队
+      url: http://insights.thoughtworkers.org/mysterious-consultant-team/
