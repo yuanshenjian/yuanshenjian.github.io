@@ -4,7 +4,6 @@ title: JSON 锦囊
 permalink: /troubleshoots/json
 
 date: 2017-06-15
-tags: [Java, JSON]
 
 ---
 
@@ -22,6 +21,6 @@ JSON相关类库读取json文件进行反序列化字符串的时候，如果因
 
 ---
 
-#### 解决方案  
+#### 解决方案
 1. 在代码中将bom字符替换掉，使用String.replace("\uFEFF","")。
 2. 将文件格式转换成UTF-8无BOM格式。很多编辑器都支持，而IDEA中，可以重新创建文件，将内容置于新创建的文件中。

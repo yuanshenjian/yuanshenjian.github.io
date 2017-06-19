@@ -4,8 +4,6 @@ title: Intellij 锦囊
 permalink: /troubleshoots/intellij
 
 date: 2017-01-26
-tags: [Intellij]
-
 ---
 
 * content
