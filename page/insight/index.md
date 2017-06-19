@@ -3,7 +3,7 @@ bg: "rails.jpg"
 layout: page
 title: Insight
 permalink: /insight/
-summary: "IT人生"
+summary: "IT视野"
 
 active: insight
 
