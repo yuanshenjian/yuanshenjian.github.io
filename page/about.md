@@ -1,5 +1,5 @@
 ---
-bg: "rails.jpg"
+bg: "side-sport.jpg"
 layout: page
 title: "About"
 crawlertitle: "Why and how this blog was created"

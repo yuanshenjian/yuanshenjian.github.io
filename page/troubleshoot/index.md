@@ -1,5 +1,5 @@
 ---
-bg: "rails.jpg"
+bg: "tools.jpg"
 layout: page
 title: Troubleshoots
 permalink: /troubleshoots/
