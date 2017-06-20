@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "提升程序员生活质量的10个小习惯"
+title: "改善程序员生活质量的 3+10 习惯"
 date: 2017-05-12
 time: "15:46"
 categories: [LIFE]
