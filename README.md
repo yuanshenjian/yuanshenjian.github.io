@@ -7,7 +7,7 @@
 
 这是一个GitHub Page的主题模板，完全开源免费，欢迎下载使用！
 
-![Blog](https://github.com/sjyuan-cc/sjyuan-cc.github.io/raw/master/static/assets/img/readme/home.jpg)
+![Blog](https://github.com/sjyuan-cc/sjyuan-cc.github.io/raw/master/assets/images/readme/home.jpg)
 
 
 ## 主要特性
@@ -76,7 +76,7 @@ $ jekyll server -P 3000
 ```
 
 ### 分享
-![Share](https://github.com/sjyuan-cc/sjyuan-cc.github.io/raw/master/static/assets/img/readme/share.jpg)
+![Share](https://github.com/sjyuan-cc/sjyuan-cc.github.io/raw/master/assets/images/readme/share.jpg)
 
 文件`github-blog/_includes/sections/share.html`:
 
@@ -104,7 +104,7 @@ $ jekyll server -P 3000
 ### 评论
 博客在 [disqus]() 和 [畅言]() 社会化系统做了选择，鉴于 [disqus]() 只能在翻墙的网络访问，所以采用了后者。
 
-![Comment](https://github.com/sjyuan-cc/sjyuan-cc.github.io/raw/master/static/assets/img/readme/comment.jpg)
+![Comment](https://github.com/sjyuan-cc/sjyuan-cc.github.io/raw/master/assets/images/readme/comment.jpg)
 
 文件`github-blog/_includes/sections/comments.html`:
 
@@ -149,7 +149,7 @@ $ jekyll server -P 3000
 ### 搜索
 进入[博客主页](http://sjyuan.cc)后，右下方会浮现出一个搜索Icon，可以点击该Icon或者双击`Ctrl`键进行搜索:
 
-![Search](https://github.com/sjyuan-cc/sjyuan-cc.github.io/raw/master/static/assets/img/readme/search.jpg)
+![Search](https://github.com/sjyuan-cc/sjyuan-cc.github.io/raw/master/assets/images/readme/search.jpg)
 
 文件`github-blog/static/js/search.js`:
 
