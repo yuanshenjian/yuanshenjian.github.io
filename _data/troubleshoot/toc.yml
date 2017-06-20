@@ -16,6 +16,11 @@
     - title: JSON
       permalink: /troubleshoots/json
 
+- letter: M
+  collection:
+    - title: MySQL
+      permalink: /troubleshoots/mysql
+
 
 - letter: N
   collection:
