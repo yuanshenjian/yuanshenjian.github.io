@@ -33,3 +33,25 @@
 
   <div id="switcher"></div>
 </aside>
+
+<div class="search-tool"
+     style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px; opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+    <input type="text" class="form-control search-content" id="search-content" style="position: fixed; top: 60px"
+           placeholder="Search Blog">
+
+    <div class="close-search">
+        <img src="{{ site.url }}{{ site.img_path }}/search/close.jpg" id="close-btn"/>
+    </div>
+</div>
+
+<div class="search" id="search">
+    <img src="{{ site.url }}{{ site.img_path }}/search/search.png" id="search-btn"
+         title="Double click Ctrl"/>
+</div>
+
+<div id="back-to-top" data-toggle="tooltip" class="back-to-top" data-placement="left" title="回到顶部">
+    <a href="javascript:void(0);">
+        <div class="arrow"></div>
+        <div class="stick"></div>
+    </a>
+</div>

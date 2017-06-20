@@ -41,7 +41,7 @@
     toggleSearch(true);
   });
 
-  $.getJSON("/static/search.json")
+  $.getJSON("/assets/search.json")
     .done(function (data) {
       if (data.code == 0) {
         $("#search-content").typeahead({
