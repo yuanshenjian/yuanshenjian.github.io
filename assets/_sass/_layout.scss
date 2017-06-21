@@ -163,9 +163,11 @@ a {
 .cover-text {
   color: #fff;
   text-shadow: 2px 0 5px #333;
+  line-height: 50px;
   position: absolute;
   bottom: 20%;
   width: 80%;
+
   left: 10%;
   .heading a {
     position: relative;
