@@ -21,6 +21,7 @@
     var now = new Date().getTime();
     if (e.keyCode == 17 && shouldToggle(now)) {
       toggleSearch(show);
+      $("#search-content").focus();
     } else if (e.keyCode == 27) {
       toggleSearch(false);
     }
@@ -30,6 +31,7 @@
     var now = new Date().getTime();
     if (e.keyCode == 17 && shouldToggle(now)) {
       toggleSearch(show);
+      $("#search-content").focus();
     }
   });
 
@@ -39,6 +41,7 @@
 
   $("#search-btn").click(function() {
     toggleSearch(true);
+    $("#search-content").focus();
   });
 
   $.getJSON("/assets/search.json")
