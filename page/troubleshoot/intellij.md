@@ -10,6 +10,28 @@ date: 2017-01-26
 {:toc}
 
 ---
+## 如何显示编辑器行号
+
+##### 更新时间：2017-01-26
+
+#### 问题描述
+在Intellij中创建一个Java源文件的时候会默认加上一些无用的类注释，每一次手动删除很麻烦。
+
+---
+
+#### 解决方案
+配置`Preferences`，导航：`Preferences...` --> `File and Code Templates` -->`Includes`-->`File Header`
+
+删除：
+
+```java
+/**
+ * Created by ${USER} on ${DATE}
+ */
+```
+
+![]({{ site.url }}{{ site.img_path }}{{ '/troubleshoot/intellij-remove-header-comment.png' }})
+
 
 ## 如何显示编辑器行号
 
