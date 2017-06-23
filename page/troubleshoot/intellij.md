@@ -25,7 +25,7 @@ date: 2017-01-26
 
 将 `Show line numbers` 选项勾上：
 
-![]({{ site.url }}{{ site.images }}{{ '/troubleshoot/intellij-show-line-number.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/troubleshoot/intellij-show-line-number.png' }})
 
 
 ---
@@ -46,12 +46,12 @@ date: 2017-01-26
 
 `Preferences...` --> `Plugins` -->`Broswe repositories`--> 搜索lombok
 
-![]({{ site.url }}{{ site.images }}{{ '/troubleshoot/install-lombok.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/troubleshoot/install-lombok.png' }})
 
 2.启动Annotation processors
 `Preferences...` --> `Compiler` -->`Annotation Processors`--> 勾上`Enable annotation processing`
 
-![]({{ site.url }}{{ site.images }}{{ '/troubleshoot/enable-annotation-processing.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/troubleshoot/enable-annotation-processing.png' }})
 
 
 
