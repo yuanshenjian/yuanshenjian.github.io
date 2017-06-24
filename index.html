@@ -15,7 +15,13 @@ summary: "程序袁"
     <span>{{ page.author }}</span>
     {% endif %}
   </div>
-  <div>{{ post.content | strip_html | strip_newlines | truncate: 550 }}</div>
+  {% if post.brief %}
+  <div>{{ post.brief }}</div>
+  {% else %}
+  <div>{{ post.content | strip_html | strip_newlines | truncate: 220 }}</div>
+  {% endif %}
+
+  <div class="read-more"><a class="read-more" href="{{ site.url }}{{ post.url }}"> 继续阅读 →</a></div>
   <hr>
 </article>
 {% endfor %}

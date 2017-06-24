@@ -28,7 +28,7 @@ p {
 }
 
 code {
-  background-color: rgba(0,0,0,.04);
+  background-color: rgba(0, 0, 0, .04);
   border-radius: 4px;
   color: #676a6c;
   font-size: 90%;
@@ -128,6 +128,18 @@ td {
     border-right: 15px solid transparent;
     border-left: 15px solid transparent;
     border-bottom: 15px solid #7f7f7f;
+  }
+}
+
+.read-more {
+  margin-top: 20px;
+  margin-bottom: 1em;
+  text-align: right;
+  a {
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: underline;
   }
 }
 
