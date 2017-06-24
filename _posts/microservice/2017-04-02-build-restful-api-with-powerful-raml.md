@@ -7,7 +7,8 @@ time: "12:22"
 categories: [RESTFUL API]
 tag: [API Design, RAML, Test, Desing]
 
-published: true
+brief: "当下微服务架构的流行趋势下，一个项目或多或少被拆成多个小的服务，服务于服务之间主要采取RESTFul API进行通信。而新衍生的问题是：一个开发团队按照服务被分成多个小的Team，如何有效管理服务之间的API契约？</br></br>
+Raml为我们提供了解决方案。本文以一个共享图书馆的例子，针对Raml的几大特性，从API的设计、API的构建、API的测试、API的文档化到API的分享来讲解API的使用，并结合容器技术来构建一个API的基础镜像。"
 
 ---
 
