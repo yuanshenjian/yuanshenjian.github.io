@@ -1,56 +1,56 @@
 {% if page.bg %}
-  <aside class="sidebar" role="note" style="background-image: url({{ site.url }}{{ site.img_path }}/{{ page.bg }})">
-{% else %}
+<aside class="sidebar" role="note" style="background-image: url({{ site.url }}{{ site.img_path }}/{{ page.bg }})">
+  {% else %}
   <aside class="sidebar" role="note" style="background-image: url({{ site.url }}{{ site.img_path }}/rails.jpg)">
-{% endif %}
+    {% endif %}
 
-  <div class="cover">
+    <div class="cover">
 
-    <div class="cover-text">
-      <div class="heading">
+      <div class="cover-text">
+        <div class="heading">
 
-        {% if page.tags %}
+          {% if page.tags %}
           {{ page.title }}
           <hr>
           {% for tag in page.tags %}
-            <a href="/posts/#{{ tag | downcase }}">{{ tag | downcase }}</a>
+          <a href="/posts/#{{ tag | downcase }}">{{ tag | downcase }}</a>
           {% endfor %}
-        {% else %}
-          {{ page.title }}
-        {% endif %}
+          {% else %}
+          <a href="{{ site.url }}">{{ page.title }}</a>
+          {% endif %}
+
+        </div>
+
+        <p>
+          {% if page.summary %}
+          {{ page.summary }}
+          {% endif %}
+        </p>
 
       </div>
 
-      <p>
-        {% if page.summary %}
-          {{ page.summary }}
-        {% endif %}
-      </p>
-
     </div>
 
-  </div>
+    <div id="switcher"></div>
+  </aside>
 
-  <div id="switcher"></div>
-</aside>
-
-<div class="search-tool">
+  <div class="search-tool">
     <input type="text" class="form-control search-content" id="search-content"
            placeholder="搜索文章...">
 
     <div class="close-search">
-        <img src="{{ site.url }}{{ site.img_path }}/search/close.png" id="close-btn"/>
+      <img src="{{ site.url }}{{ site.img_path }}/search/close.png" id="close-btn"/>
     </div>
-</div>
+  </div>
 
-<div class="search" id="search">
+  <div class="search" id="search">
     <img src="{{ site.url }}{{ site.img_path }}/search/search.png" id="search-btn"
          title="Double click Ctrl"/>
-</div>
+  </div>
 
-<div id="back-to-top" data-toggle="tooltip" class="back-to-top" data-placement="left" title="回到顶部">
+  <div id="back-to-top" data-toggle="tooltip" class="back-to-top" data-placement="left" title="回到顶部">
     <a href="javascript:void(0);">
-        <div class="arrow"></div>
-        <div class="stick"></div>
+      <div class="arrow"></div>
+      <div class="stick"></div>
     </a>
-</div>
+  </div>

@@ -1,14 +1,13 @@
 ---
-layout: post
+layout: page
+permalink: /infoq/agile-practice-in-thoughtworks
 
 title: "我在ThoughtWorks中的敏捷实践"
-date: 2016-10-02
-desc: "我在ThoughtWorks中的敏捷实践"
-keywords: "ThoughtWorks,Agile,Practice"
-
+date: 2017-02-19
 categories: [AGILE]
-tags: [Agile,ThoughtWorks]
-icon: icon-thoughtworks
+tags: [Agile, ThoughtWorks]
+
+
 ---
 
 
@@ -17,38 +16,24 @@ icon: icon-thoughtworks
 
 ---
 
+
+
 >本文以我在[ThoughtWorks](https://thoughtworks.com/)中的E项目经历为依据，覆盖了[ThoughtWorks](https://thoughtworks.com/)日常独立交付项目中主要的敏捷实践。
 
 ## 项目回顾
 
 ### 项目背景
-E项目是一个在线的物资跟踪监控系统。由[ThoughtWorks](https://thoughtworks.com/)团队为客户提供的一套完善的软件交付服务。
-
-该系统为资助物资的跟踪与监控提供了完整的网络解决方案。整个流程涵盖了客户对物资来源的管控、库存管理、物资下发与跟踪、客户与IP(Implementing Partner，合作伙伴)的协作沟通、IP对运输结果的反馈(生成报告，警告通知，短信互动，邮件通知)，以及IP对物资的二次分发后的记录跟踪与监控。
-
-该项目属于海外独立交付项目，整个开发过程由[ThoughtWorks](https://thoughtworks.com/)团队负责管理。好了，项目信息只能透漏这么多了，不然客户要找我打官司了。
+E项目是一个在线的物资跟踪监控系统。由[ThoughtWorks](https://thoughtworks.com/)团队提供的一套完善的软件交付服务，整个开发过程由[ThoughtWorks](https://thoughtworks.com/)团队负责管理。  
 
 ---
 
 ### 成员背景
-[ThoughtWorks](https://thoughtworks.com/)提供完整的交付团队(`PM`, `BA`, `TL`, `QA`, `DEV`, `UX`)，团队为颇具代表性的敏捷团队，规模10人左右。客户团队主要接口人3位。
-
-[ThoughtWorks](https://thoughtworks.com/)团队成员，犹如一架生猛的战斗机：PM英文一流，敏捷开发管理相当到位，因为看了上万本`脑残`小说，时不时就用到了生活中来。TL拥有7年以上的开发经验，7年之痒，什么，不用说都懂的。TL还富有学习激情和被黑精神，黑历史墙列满了他的关辉`血泪史`。QA被誉为IT界的福尔摩斯，DEV都休想逃过她敏锐的鼻子（怎么是鼻子呢？太陶醉了吧，这是境界！），最后，就是`'苦逼'`的DEV，也就是以`程序员`自居的我们。
-
-我们每个人特点各不相同，但有一点神似：`专业，责任心，追求卓越`
-
-我们团队还有一个`workout`的文化特色，向⬇️看：
-
-![]({{ site.url }}{{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-workout.jpg'  }})
-
->PS：我们的`workout`自开始之日到项目交付之期，不曾落下过一天，且收到良好的反馈。即便团队成员分开了，每个人都能将`运动精神`传播下去，乃至源远流长......
+[ThoughtWorks](https://thoughtworks.com/)提供完整的交付团队(`PM`* 1, `BA` *1 , `TL` * 1, `QA` * 1, `DEV` * 4, `UX` * 1)，团队为颇具代表性的敏捷团队，规模10人左右。客户团队主要接口人3位。
 
 ---
 
 ### 技术背景
-我们是一个全功能团队，人人身怀敏捷开发领域的知识和技能，且有一定的经验积累，所以可以说我们天生敏捷，在开发过程中大家都能高效地分工合作。
-
-再说技术栈，项目使用的主要技术栈是`Python`, `Django`, `AngularJs`, `PostgresSQL`, `Docker`。而我们DEV在进入这个项目之前，擅长的技术栈是`Java`, `Springboot`, `C#`, `Android`, `jQuery`。
+项目上的主要技术栈是`Python`, `Django`, `AngularJs`, `PostgresSQL`, `Docker`。DEV在进入这个项目之前，擅长的技术栈是`Java`, `Springboot`, `C#`, `Android`, `jQuery`。
 
 ---
 
@@ -70,7 +55,7 @@ E项目是一个在线的物资跟踪监控系统。由[ThoughtWorks](https://th
 
 项目中所涉及的敏捷实践主要围绕迭代进行，用一张图概括：
 
-![]({{ site.url }}{{ site.img_path }}{{ '/agile/main-events-in-one-iteration.png' }})
+![]({{ site.img_path }}{{ '/agile/main-events-in-one-iteration.png' }})
 
 可以总结出以下几点：
 
@@ -106,7 +91,7 @@ E项目是一个在线的物资跟踪监控系统。由[ThoughtWorks](https://th
 
 IPM的主要产出是下一个迭代中完成的Story，这些Story即为下一个Story要完成的目标，我们通过敏捷看板工具来管理它们，例如下图[mingle](https://www.thoughtworks.com/mingle/)上位于`Backlog`栏中的Story:
 
-![]({{ site.url }}{{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-stories-list.png' }})
+![]({{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-stories-list.png' }})
 
 ---
 
@@ -178,15 +163,10 @@ Standup，就是每日站会。我听过一个有趣的事情：在敏捷开发�
 6. 帮助Team Leader了解哪些领域需要更多的帮助，从而更好地分配资源。
 ```
 
-下面是我们团队的Standup:
-
-![Alt text]({{ site.url }}{{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-standup.jpg' }})
-
->PS: Standup的时候，选一实物作为Token，发言时拿着Token。上图中我们选择了`瑜伽球`作为Token，逗比们说：健身无处不在~
 
 ---
 
-### Story kick-off
+### Story kick-off 
 >在一个Story开始前，确保`BA`, `QA`, `DEV`对Story的理解达成一致，并严格按照`AC`来验收。当然，前提是Story本身是不容置疑的。
 
 Story kick off，指的是对某一个Story进行开卡，也就是启动该Stroy，从而使其进入开发阶段。Story kick off的时候，通常需要三个角色一起参与：BA、QA以及要开发该Story的DEV。
@@ -211,10 +191,6 @@ Story kick off也是一项短时间高收益的活动，因为在我们DEV界中
 所以kick off能够`有效的避免Dev自行臆测业务需求而产生的浪费`。除此之外，`能够弥补BA在编写Story的时候技术视角的一些遗漏`。
 
 >一些项目会引入好的开发实践，比如说`BDD`。它能按照人类自然语言去描述一个功能的实现。我们的Story描述通常会参照这种方式: `as...when...then...when...then`。这个时候，DEV、QA、BA可以在Story kick off的时候利用一些测试工具（[Cucumber](https://cucumber.io/)）一起来编写Story验收测试用例（主要由QA来编写），DEV负责编写代码来通过这些测试。理想情况下，验收测试用例如果正确完整，当所有测试都通过后，意味着Story功能已经完成。而且这种`TDD`的方式，代码出现bug的几率也会大幅度降低。
-
-下面是一对Pair做Story kick off：
-
-![]({{ site.url }}{{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-kick-off.jpg' }})
 
 ---
 
@@ -241,9 +217,6 @@ Pair将本来可以并行工作的两个人聚焦在一件事情上，表面上�
 
 有些时候，因为项目进度的紧张，Pair并不会这么理想的被落实，团队可以进行灵活的调整。如果Pair的时间减少了，可以通过加长[Code Review](#code-review)的时间来做一些弥补。
 
-下图是我跟TL Pair的剪影：
-
-![]({{ site.url }}{{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-pair.jpg' }})
 
 ---
 
@@ -295,9 +268,6 @@ Code review，检查代码，也叫代码审查，就是开发人员凑在一起
 3. 让团队成员知道他人在做什么以及怎么做，分享好的编码习惯和技术实现，有助于团队整体进步。
 ```
 
-下面是某个时刻，我们Team四个人正在专注地讨论为一个函数取个更好的名字（猜猜谁是表情帝？？）：
-
-![]({{ site.url }}{{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-code-review.jpg' }})
 
 ---
 
@@ -360,11 +330,6 @@ CI，持续集成。在敏捷开发中，它是一个项目开始前`必须`搭�
 >可以借助一些工具，比如Chrome插件[BuildReactor](https://chrome.google.com/webstore/category/apps?hl=en)可以将CI的多个Pipeline集中展示出来。
 
 
-下面是我们CI的Dashboard，使用了一个Chrome插件[BuildReactor](https://chrome.google.com/webstore/category/apps?hl=en)（如果加载不了就说明需要翻墙）将[Go](https://go.cd/)的多个Pipeline集中展示出来。
-
-![]({{ site.url }}{{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-ci.jpg' }})
-
-
 ---
 
 ### Retro
@@ -386,18 +351,12 @@ Retro是Retrospective的简写，即回顾。团队通常以回顾会议的形�
 >Retro的细节因团队而有些差异，而它的理念是一致的：`总结过去，做的好的方面继续保持及加强，做的欠佳的方面一起讨论改进措施，并尽全力落实`。Retro让团队在实践中摸索出适合团队的最佳实践，引导团队和个人不断自我完善，追求卓越。
 
 
-我们Team的一次Retro
-
-![]({{ site.url }}{{ site.img_path }}{{ '/agile/agile-development-summary-of-project-e-retro.jpg' }})
-
 
 ---
 
 ## 总结
-这是我参加的一个关于敏捷实践很完善的项目，个人亲身经历了这些，深深体会到这些敏捷实践带来的益处以及个人的成长是非常大的。敏捷很好，但不只在于这些流程形式，在形式背后，我们应该深入思考这些实践是否真的让团队变得高效？让交付变得更加顺利？每个团队都是不同的，不必拘泥于这些流程形式，而是要追求这些流程产生的真正价值与意义。
+敏捷开发实践不只是拘泥于这些流程形式，在形式背后，我们应该深入思考这些实践是否减少了浪费？是否促进了高质量的交付？每个团队都是不同的，不必拘泥于这些流程形式，而是要追求这些流程产生的真正价值与意义。
 
-
->PS：文章中提供的链接在有网络的情况下如果不能访问，确认自己是否可以翻墙，如不可以，切勿较真。
 
 ---
 
@@ -410,11 +369,11 @@ Retro是Retrospective的简写，即回顾。团队通常以回顾会议的形�
 * UX：User Experience，用户体检设计师
 * AC：Acceptance Criteria，验收条件
 * UAT：User Acceptance Test，用户验收测试
-* Retro：Retrospective，回顾会议
+* Retro：Retrospective，回顾会议 
 * TB: Team building，团队建设
 
 ---
 
+文章已经发表于InfoQ，[阅读InfoQ文章](http://www.infoq.com/cn/articles/my-agile-practice-in-thoughtworks)
 
-此文章已经过优化发布于InfoQ，[阅读InfoQ文章](http://www.infoq.com/cn/articles/my-agile-practice-in-thoughtworks)
 
