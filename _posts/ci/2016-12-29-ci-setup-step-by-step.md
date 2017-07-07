@@ -5,6 +5,8 @@ date: 2016-12-29
 categories: [CI]
 tags: [continuous-integration]
 
+brief: "CI Dojo的第二次课程，本文将基于上次课程 'CI基础 & Setup环境' 搭建好的环境，通过Step by step的方式来介绍如何快速搭建一个 Jenkins CI pipeline。"
+
 ---
 
 * content
