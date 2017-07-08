@@ -5,6 +5,9 @@ title: "Django REST 异常处理"
 date: 2016-02-03
 categories: [DJANGO]
 tag: [Python,Django,Django-rest,Exception]
+author: "袁慎建"
+
+brief: "本文是对Django REST框架中的异常框架中的异常处理部分的翻译。"
 
 ---
 

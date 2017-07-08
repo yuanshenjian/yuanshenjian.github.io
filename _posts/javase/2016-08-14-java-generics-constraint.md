@@ -1,10 +1,17 @@
 ---
 layout: post
 
-title: "JAVA泛型•约束和局限性"
+title: "Java泛型•约束和局限性"
 date: 2016-08-14
 category: [JAVASE]
 tag: [Java,Generic]
+
+author: "袁慎建"
+brief: "
+在Java中，实例化泛型类时泛型参数不能使用基本类型，如 <i>List&ltint&gt</i> 这是不合法的，要存储基本类型则可以利用基本类型的包装类如 <i>List&ltInteger&gt</i> 、<i>List&ltDouble&gt</i> 。</br></br>
+
+本文全面介绍了Java泛型的约束和限制，对你正确使用泛型提供了良好的参考。
+"
 
 ---
 

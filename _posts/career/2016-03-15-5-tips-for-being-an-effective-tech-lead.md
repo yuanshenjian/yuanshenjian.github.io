@@ -7,9 +7,14 @@ categories: [CAREER]
 tags: [TechLeader]
 
 author: "袁慎建"
-published: true
-type: "translation"
+
 source: "https://www.thoughtworks.com/insights/blog/5-tips-being-effective-tech-lead"
+
+brief: "
+成为一个技术领导者(后文简称TL)对任何开发人员来讲都是一个艰难的转型，因为开发人员的经验和技能仅仅只有部分有助于他们达到对这个新角色的期望。除了简单的设计和编码，TL最重要的职责在于管理整个开发团队，这意味着TL要经常与技术人员以及非技术人员进行沟通协作。</br></br>
+
+一个开发人员花在编写良好结构的代码的时间并不能等效地转化成一些必要的技能，比如了解他人，解决冲突，以及突然需要同时处理多个他们自己并不太可能独立搞定的任务。本文分享一些初次做TL的人Tips，以帮助一个新人更好地胜任TL。
+"
 
 ---
 

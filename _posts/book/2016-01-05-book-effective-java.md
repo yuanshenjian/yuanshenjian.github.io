@@ -7,8 +7,13 @@ categories: [BOOK]
 tags: [book,Java]
 
 author: "袁慎建"
-published: true
-type: "book"
+
+brief: "Java之父的话值得我们每一个Java学习者去体会。
+</br>如果你是一个Java爱好者，并积极主动地去探索Java。
+</br>如果你想编写出优化的代码，，希望你的编码习惯被业界人士称赞。
+</br>如果你想在Java领域有所造化，如果你想为Java社区做出一点点贡献。
+</br></br>
+如果你正在寻找一本能够更加深入地了解Java编程语言的书，以便编写出更清晰、更正确、更健壮且更易于重用的代码。我推荐你拿起《Effective Java中文版（第2版）》，仔细品读，反复回味。"
 
 ---
 

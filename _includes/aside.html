@@ -16,7 +16,7 @@
           <a href="/posts/#{{ tag | downcase }}">{{ tag | downcase }}</a>
           {% endfor %}
           {% else %}
-          <a href="{{ site.url }}">{{ page.title }}</a>
+          <a href="{{ site.url }}{{ page.permalink }}">{{ page.title }}</a>
           {% endif %}
 
         </div>

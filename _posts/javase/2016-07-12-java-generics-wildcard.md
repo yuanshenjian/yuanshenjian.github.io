@@ -1,10 +1,15 @@
 ---
 layout: post
 
-title: "JAVA泛型•通配符限定"
+title: "Java泛型•通配符限定"
 date: 2016-07-12
 category: [JAVASE]
 tag: [Java,Generic]
+
+author: "袁慎建"
+brief: "
+本文介绍了泛型的通配符限定，对于类库设计者理解泛型背后的原理会大有帮助。
+"
 
 ---
 

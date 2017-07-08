@@ -205,6 +205,16 @@ hr {
   }
 }
 
+.header-sjyuan{
+  width: 200px;
+  height: 200px;
+  margin: 10px auto;
+  img{
+    border-radius: 50%
+  }
+}
+
+
 @media only screen and (min-width: 420px) {
   .personal-receipt-qr-code {
     background-image: url('/assets/images/qr-code-receipt-horizontal.jpg');

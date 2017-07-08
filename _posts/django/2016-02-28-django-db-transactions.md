@@ -5,6 +5,9 @@ title: "Django 数据库事务"
 date: 2016-02-28
 categories: [DJANGO]
 tag: [Python,Django,Transaction]
+author: "袁慎建"
+
+brief: "本文是对Django 数据库事务部分的翻译。"
 
 ---
 

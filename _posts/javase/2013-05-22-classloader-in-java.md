@@ -1,12 +1,15 @@
 ---
 layout: post
 
-title: "JAVA类加载器"
+title: "Java加载器"
 date: 2013-05-25
 category: [JAVASE]
 tag: [Java,ClassLoader]
 
-icon: icon-thoughtworks
+author: "袁慎建"
+brief: "
+简单写写Java反射和ClassLoader，之前玩过反射，觉得有点意思。
+"
 
 ---
 
@@ -18,7 +21,7 @@ icon: icon-thoughtworks
 
 ## JAVA中的反射
 
-简单写写Java反射和ClassLoader，之前玩过反射，觉得很有趣。
+简单写写Java反射和ClassLoader，之前玩过反射，觉得有点意思。
 
 比如在Jdbc中我们通常首先会根据一个字符串加载特定数据库驱动类的字节码，如下:
 

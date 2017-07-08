@@ -7,8 +7,13 @@ categories: [AGILE]
 tags: [Agile,ThoughtWorks]
 
 author: "袁慎建"
-published: true
-type: "original"
+
+brief: "我们是一个全功能团队，人人身怀敏捷开发领域的知识和技能，且有一定的经验积累，所以可以说我们天生敏捷，在开发过程中大家都能高效地分工合作。</br></br>
+
+技术栈方面，项目使用的主要技术栈是Python, Django, AngularJs, PostgresSQL, Docker。而我们DEV在进入这个项目之前，擅长的技术栈是Java, Springboot, C#, Android, jQuery。</br></br>
+
+在E项目上，我们把敏捷开发实践落实的非常到位，而本文是E项目使用的技术栈，单独抽取出来做一个简单的总结分享。
+"
 
 
 ---
@@ -41,7 +46,7 @@ E是一个在线的物资跟踪监控系统。由[ThoughtWorks](https://thoughtw
 ### 技术背景
 我们是一个全功能团队，人人身怀敏捷开发领域的知识和技能，且有一定的经验积累，所以可以说我们天生敏捷，在开发过程中大家都能高效地分工合作。
 
-再说技术栈，项目使用的主要技术栈是`Python`, `Django`, `AngularJs`, `PostgresSQL`, `Docker`。而我们DEV在进入这个项目之前，擅长的技术栈是`Java`, `Springboot`, `C#`, `Android`, `jQuery`。每个人在上这个项目之前都是`Python`盲。所以我们是在没有任何`Python`编程语言背景下介入，另外因为从其他团队接手过来要立即继续开发（实际上是为前一个团队填坑，或者是救火）。我们的`技术`和`业务`扫盲期很短，这极大地体现了团队成员的学习能力，而我的周末和晚上几乎用来啃书和Coding了。
+再说技术栈，项目使用的主要技术栈是`Python`, `Django`, `AngularJs`, `PostgresSQL`, `Docker`。而我们DEV在进入这个项目之前，擅长的技术栈是`Java`, `Springboot`, `C#`, `Android`, `jQuery`。
 
 ---
 
