@@ -1,3 +1,8 @@
+- letter: J
+  collection:
+    - title: Java
+      permalink: /code/java
+
 - letter: S
   collection:
     - title: Spring
