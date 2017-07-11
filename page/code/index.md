@@ -1,4 +1,5 @@
 ---
+bg: "tools.jpg"
 layout: page
 title: Codes
 permalink: /code/
