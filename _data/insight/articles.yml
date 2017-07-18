@@ -1,5 +1,11 @@
 # links section data
 
+- category: Agile
+  entries:
+    - title: 敏捷教练的六顶帽子
+      url: http://insights.thoughtworkers.org/six-goals-of-agile-coach/
+
+
 - category: Clean code
   entries:
     - title: 拯救Java Code Style强迫症
@@ -12,6 +18,8 @@
   entries:
     - title: 遗留系统流水线的改进
       url: http://insights.thoughtworkers.org/improvement-of-legacy-system-pipeline/
+    - title: 大型分布式团队的代码版本管理
+      url: http://insights.thoughtworkers.org/code-management-of-large-distributed-team/
 
 
 - category: 高效学习
@@ -32,6 +40,10 @@
 
 - category: TDD
   entries:
+    - title: JUnit 5 – 早期试用体验 – 第1篇
+      url: http://www.infoq.com/cn/articles/JUnit-5-Early-Test-Drive
+    - title: JUnit 5 – 早期试用体验 – 第2篇
+      url: http://www.infoq.com/cn/articles/JUnit-5-Early-Test-Drive-Part-2
     - title: 让我们再聊聊TDD 续 – 人人都在做TDD
       url: http://insights.thoughtworkers.org/talk-about-tdd-again-2/
     - title: 让我们再聊聊TDD

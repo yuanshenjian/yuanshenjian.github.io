@@ -13,6 +13,24 @@ tags: [Code, Spring data, Mongo]
 
 ---
 
+## Java8 LocalDateTime to Date
+
+```java
+@Test
+@DisplayName("Format date to sting with style 2017-08-08 08:08:08")
+void formatDate() {
+        LocalDateTime localDate = LocalDateTime.parse("2017-08-08 08:08:08",
+                DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        Date date = Date.from(localDate.atZone(ZoneId.systemDefault()).toInstant());
+
+        assertThat(DateUtils.formatDateToString(date), is("2017-08-08 08:08:08"));
+}
+
+public static String formatDateToString(Date date) {
+        return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
+}
+```
+
 ## Java MD5 加密
 
 ##### 更新时间：2017-07-09   
@@ -22,7 +40,7 @@ import java.security.MessageDigest;
 
 public final class MD5Utils {
 
-    private static final String METHOD_MD5 = "MD5Utils";
+    private static final String METHOD_MD5 = "MD5";
 
     private MD5Utils() {
         throw new IllegalStateException();
