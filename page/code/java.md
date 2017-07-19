@@ -4,7 +4,7 @@ title: Java Code Snippet
 permalink: /code/java
 
 date: 2017-07-09
-tags: [Code, Spring data, Mongo]
+tags: [Code, Java]
 
 ---
 

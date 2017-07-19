@@ -3,6 +3,11 @@
     - title: Java
       permalink: /code/java
 
+- letter: J
+  collection:
+    - title: MySQL
+      permalink: /code/mysql
+
 - letter: S
   collection:
     - title: Spring
