@@ -3,8 +3,10 @@
     - title: Java
       permalink: /code/java
 
-- letter: J
+- letter: M
   collection:
+    - title: MongoDB
+      permalink: /code/mongo
     - title: MySQL
       permalink: /code/mysql
 

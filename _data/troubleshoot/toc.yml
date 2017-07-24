@@ -18,8 +18,11 @@
 
 - letter: M
   collection:
+    - title: Mongo
+      permalink: /troubleshoots/mongo
     - title: MySQL
       permalink: /troubleshoots/mysql
+
 
 
 - letter: N

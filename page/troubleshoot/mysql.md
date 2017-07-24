@@ -21,15 +21,15 @@ date: 2016-06-20
 
 |customer_id | ucid |
 |:---|:---|
-|90fijd0af9d | 194370128943
-|90fijd0a90k | 194370128942
+|90fijd0af9d | 194370128943|
+|90fijd0a90k | 194370128942|
 
 MySQL数据库中有一个`customer`表，
 
 |customer_id | ucid | ... |
 |:---|:---|:---|
-|90fijd0af9d | |...
-|90fijd0a90k | |...
+|90fijd0af9d | |...|
+|90fijd0a90k | |...|
 
 我需要将csv文件中的ucid更新到`customer`表中的`ucid`
 
