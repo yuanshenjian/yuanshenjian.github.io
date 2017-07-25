@@ -188,15 +188,6 @@ brief: "程序员的工作性质决定了这个群体面临着一些问题，比
 
 >祝小伙伴早日康复，祝身边的人健康快乐！
 
-**推荐阅读：**
-
-[真正成熟的人就看这三点](https://mp.weixin.qq.com/s?__biz=MjM5MDMyMzg2MA==&mid=2655489425&idx=5&sn=e1a6bf140fcd8b56e681f9b2e2362aa6&chksm=bdf5a86a8a82217ca637567a0a9971beaca2ddfb4a6f63516678f348dafd3348b33fc0a5f574&mpshare=1&scene=1&srcid=0614SnwebI3DcvkuQpmjg5Mu&key=7dad7409be596df62837539813bce37ffd9562cfc418ddd8bdd41b6d52d089c6902ebf39cc3df228528de34a6ba48520d27efc9fbda26a5e70a134549c88717acb919332aeede6eb979d6f66a7d561e3&ascene=0&uin=MjQzOTk2NDUyMg%3D%3D&devicetype=iMac+MacBookPro11%2C2+OSX+OSX+10.12.1+build(16B2555)&version=12010310&nettype=WIFI&fontScale=100&pass_ticket=47NXNh0afMTIRSQcM3VJKkdZPBYRL2Hb9vSG%2F3JVKQFUVlekg9kEfP47xNbaLcBf)
-
-[世界正在惩罚不吃早餐的人](https://mp.weixin.qq.com/s?__biz=MzA4NjAwOTQzNg==&mid=2653453407&idx=2&sn=0af5d0cd771952cb9b94dc5709e02bba&chksm=8413ef6cb364667a399b921679f02b0e41d1ad5abf020a8cca955de35a158ebaafdc57a00c25&mpshare=1&scene=1&srcid=0613uX3k5LxD8Jsw53kGJPaz&key=edbc4bce6a6454e812ed18db059f5eab25e397059bdf1336668f7295106c547e10a78cc653829fbce4f448c30dfcab385d0b27922fd8c650afcaa12ebee6ff833c5794c3ca6d554275af71dc018f7074&ascene=0&uin=MjQzOTk2NDUyMg%3D%3D&devicetype=iMac+MacBookPro11%2C2+OSX+OSX+10.12.1+build(16B2555)&version=12010310&nettype=WIFI&fontScale=100&pass_ticket=47NXNh0afMTIRSQcM3VJKkdZPBYRL2Hb9vSG%2F3JVKQFUVlekg9kEfP47xNbaLcBf)
-
-[那些自律到极致的人，后来都怎么样了？](https://mp.weixin.qq.com/s?__biz=MjM5MzM4NTUyOA==&mid=2686889776&idx=2&sn=dce326376294c0b4057d1b473e41f564&chksm=8345d267b4325b71d48b461205f88c3b9151f4aa554bd8a366a1888484b0dac4757b85ac7830&mpshare=1&scene=1&srcid=0614Yaog0Xa8hfOdSFqOFDuF&key=edbc4bce6a6454e8077495ee78aaa26fbadb0de370130031c3b2b695e5f50d0f7c96df153c0c7a6336433396a4f668ebf473119d62b0ab212d647058d6bc6e92cd884d6466f76868af6b7f2ad0702359&ascene=0&uin=MjQzOTk2NDUyMg%3D%3D&devicetype=iMac+MacBookPro11%2C2+OSX+OSX+10.12.1+build(16B2555)&version=12010310&nettype=WIFI&fontScale=100&pass_ticket=qFC06toO%2B2vC7721Db1YNVnM1d8%2Bt%2FWGhJf5iD61B0ZrQbd%2FYJ%2FGymFRPqDKfgjc)
-
-
 
 
 
