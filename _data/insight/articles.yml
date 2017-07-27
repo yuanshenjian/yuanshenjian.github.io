@@ -32,6 +32,8 @@
 
 - category: 领域驱动设计
   entries:
+    - title: DDD & Microservices【精】
+      url: http://insights.thoughtworkers.org/ddd-and-microservices/
     - title: 实施领域驱动设计的正确姿势
       url: http://icodeit.org/2017/01/why-ddd-is-so-hard/
     - title: 领域驱动设计实现之路【精】
