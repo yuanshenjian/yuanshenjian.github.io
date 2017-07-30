@@ -36,7 +36,6 @@ code {
   border-radius: 4px;
   color: #676a6c;
   font-size: 90%;
-  padding: 2px 4px;
 }
 
 pre {
@@ -58,6 +57,14 @@ blockquote {
   border-left: 5px solid #D6DBDF;
   background-color: whitesmoke;
   padding: 0 0 0 15px;
+}
+
+.image-source-comment{
+  min-height: 22px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #969696;
 }
 
 .highlighter-rouge {
