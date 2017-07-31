@@ -1,3 +1,8 @@
+- letter: G
+  collection:
+    - title: Gradle
+      permalink: /code/gradle
+
 - letter: J
   collection:
     - title: Java
