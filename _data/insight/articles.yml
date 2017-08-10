@@ -49,14 +49,19 @@
 
 - category: TDD
   entries:
-    - title: JUnit 5 – 早期试用体验 – 第1篇
-      url: http://www.infoq.com/cn/articles/JUnit-5-Early-Test-Drive
     - title: JUnit 5 – 早期试用体验 – 第2篇
       url: http://www.infoq.com/cn/articles/JUnit-5-Early-Test-Drive-Part-2
+    - title: JUnit 5 – 早期试用体验 – 第1篇
+      url: http://www.infoq.com/cn/articles/JUnit-5-Early-Test-Drive
     - title: 让我们再聊聊TDD 续 – 人人都在做TDD
       url: http://insights.thoughtworkers.org/talk-about-tdd-again-2/
     - title: 让我们再聊聊TDD
       url: http://insights.thoughtworkers.org/talk-about-tdd-again/
+    - title: 测试金字塔
+      url: http://zyzhang.github.io/blog/2013/04/28/test-pyramid/
+    - title: TestPyramid
+      url: https://martinfowler.com/bliki/TestPyramid.html
+
 
 
 - category: 微服务
@@ -75,6 +80,9 @@
       url: https://yq.aliyun.com/articles/8611
     - title: 微服务（Microservice）那点事
       url: https://yq.aliyun.com/articles/2764?spm=5176.100239.blogcont8611.6.Wu9qbq
+    - title: Microservices【精】
+      url: https://martinfowler.com/articles/microservices.html
+
 
 
 - category: 职业成长
