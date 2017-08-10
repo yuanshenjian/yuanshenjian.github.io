@@ -26,10 +26,12 @@ active: about
 ---
 
 ## Index
-Keep：<https://www.gotokeep.com/users/568f6e16c15d4a091a0a886c>
+Keep： <https://www.gotokeep.com/users/568f6e16c15d4a091a0a886c>
 
-Insight：<http://insights.thoughtworkers.org/author/yuanshenjian/> 
+Insight： <http://insights.thoughtworkers.org/author/yuanshenjian>
 
-简书：<http://www.jianshu.com/u/c379cdabd121> 
+简书： <http://www.jianshu.com/u/c379cdabd121>
 
-InfoQ：<http://www.infoq.com/cn/profile/-袁慎建>
+InfoQ： <http://www.infoq.com/cn/profile/-袁慎建>
+
+GitHub： <https://github.com/sjyuan-cc>

@@ -2,8 +2,14 @@
 
 - category: Agile
   entries:
+    - title: 我在ThoughtWorks中的敏捷实践【精】
+      url: http://www.infoq.com/cn/articles/my-agile-practice-in-thoughtworks/
+    - title: 项目管理中的敏捷实践
+      url: http://insights.thoughtworkers.org/agile-practices-in-project-management/
     - title: 敏捷教练的六顶帽子
       url: http://insights.thoughtworkers.org/six-goals-of-agile-coach/
+    - title: 团队敏捷转型的三个阶段
+      url: http://insights.thoughtworkers.org/three-stages-agile-transformation-team/
 
 
 - category: Clean code
@@ -36,11 +42,10 @@
   entries:
     - title: DDD & Microservices【精】
       url: http://insights.thoughtworkers.org/ddd-and-microservices/
-    - title: 实施领域驱动设计的正确姿势
-      url: http://icodeit.org/2017/01/why-ddd-is-so-hard/
     - title: 领域驱动设计实现之路【精】
       url: http://www.infoq.com/cn/articles/implementation-road-of-domain-driven-design
-
+    - title: 实施领域驱动设计的正确姿势
+      url: http://icodeit.org/2017/01/why-ddd-is-so-hard/
 
 - category: TDD
   entries:
@@ -56,8 +61,10 @@
 
 - category: 微服务
   entries:
+    - title: 认识微服务——一颗银弹
+      url: http://insights.thoughtworkers.org/microservices/
     - title: 关于微服务的发展方向，我们和5位专家聊了聊
-      url: https://mp.weixin.qq.com/s?__biz=MzA5Nzc4OTA1Mw==&mid=2659599120&idx=1&sn=dd213cf2328c7afce85bd3642409545e&chksm=8be99602bc9e1f146802b65184f18d06efece0fe06a72a7818fdca852e35ecce2041fb8bab78&mpshare=1&scene=1&srcid=0405WMDGgxMSlzdFB6EaPCwq&key=24fe34f0ac7da0981d1b567eade5186a7c9800240f7a10fcdf4611123798f7c01d99d6960323bf40451cc92188a859d26e30532a1394ab2b1159111ebe4ce9b71c903ae9252c14ecba7fc98d90d93f9f&ascene=0&uin=MjQzOTk2NDUyMg%3D%3D&devicetype=iMac+MacBookPro11%2C2+OSX+OSX+10.12.1+build(16B2555)&version=12010310&nettype=WIFI&fontScale=100&pass_ticket=kqu9ER7u%2F9rJdApBvXhPcT4vcHTxc6cJUyTx3lG%2FtDe0SIo0GbLdTP3IXlLYus%2FE
+      url: https://mp.weixin.qq.com/s?__biz=MzIwMzg1ODcwMw==&mid=2247486266&amp;idx=1&amp;sn=1932cf5e2c90ad69a7806488c94bc01a&source=41#wechat_redirect
     - title: 一个完整的微服务系统，应该包含哪些功能？
       url: http://www.infoq.com/cn/articles/what-complete-micro-service-system-should-include
     - title: 微服务的团队应对之道
