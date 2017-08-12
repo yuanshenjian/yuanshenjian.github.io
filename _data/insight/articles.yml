@@ -20,8 +20,10 @@
       url: https://mp.weixin.qq.com/s?__biz=MzIyOTc4MDQ3Nw==&mid=2247483826&idx=1&sn=affef18adfa24e06c759da1ba180472d&key=edbc4bce6a6454e80d321158341e5e66a3bca24cbea72f160a435e96c90a6e06ebc292239a30ab80655bb2f7ddabd6b9e401af84fbeb36476515202d529d6c72e4bdca00ec9079bc2f2ac4696aaa57d2&ascene=0&uin=MjQzOTk2NDUyMg%3D%3D&devicetype=iMac+MacBookPro11%2C2+OSX+OSX+10.12.1+build(16B2555)&version=12010310&nettype=WIFI&fontScale=100&pass_ticket=ymJkTmLQyCz45A7WxtxCxSnq7jrKhlp6cdlpJmWUrb%2FrruU1zbJKHtYmvFUvYLoM
 
 
-- category: 持续集成
+- category: DevOps
   entries:
+    - title: 从集装箱历史看DevOps的发展进程
+      url: http://insights.thoughtworkers.org/process-of-devops-development/
     - title: 遗留系统流水线的改进
       url: http://insights.thoughtworkers.org/improvement-of-legacy-system-pipeline/
     - title: 大型分布式团队的代码版本管理
