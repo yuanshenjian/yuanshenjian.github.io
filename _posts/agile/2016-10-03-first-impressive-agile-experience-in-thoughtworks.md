@@ -64,10 +64,10 @@ E项目是一个在线的物资跟踪监控系统。由[ThoughtWorks](https://th
 早在2001年，17位追求卓越的志愿者聚集在美国犹他州雪鸟独家圣地，讨论一个新的软件开发趋势，它被称作`轻量型软件开发过程`，后来他们将它定义为`敏捷`，并且发布了敏捷开发宣言：`一种把以人为本、团队合作、快速响应变化和可工作的软件作为宗旨的开发方法`。敏捷宣言可以总结为四句话：
 
 ```
-个体与交互    优于  流程与工具  
-客户协作     优于  合同谈判  
-响应变化     优于  遵循计划  
-可工作的软件  优于  面面俱到的文档  
+个体与交互    优于  流程与工具
+客户协作     优于  合同谈判
+响应变化     优于  遵循计划
+可工作的软件  优于  面面俱到的文档
 
 也就是说，尽管右项有其价值，我们更重视左项的价值。
 ```
@@ -82,7 +82,7 @@ E项目是一个在线的物资跟踪监控系统。由[ThoughtWorks](https://th
 
 ```
 1. Iteration通常始于IPM ，止于Showcase。
-2. 每天都会发生事件有Standup 。 
+2. 每天都会发生事件有Standup 。
 3. Pair、TDD、Code Review穿插在日常Coding中。
 4. Story kick-off之后，该Story就进入了开发环节。
 5. CI属于基础设施，通常在一个名为Iteration0的迭代完成，也就是正是开发开始之前就应该完成CI的搭建。
@@ -422,5 +422,5 @@ Retro是Retrospective的简写，即回顾。团队通常以回顾会议的形�
 ---
 
 
-此文章已经过优化发布于InfoQ，[阅读InfoQ文章](http://www.infoq.com/cn/articles/my-agile-practice-in-thoughtworks)
+此文章已经发布于InfoQ，[阅读InfoQ文章](http://www.infoq.com/cn/articles/my-agile-practice-in-thoughtworks)
 
