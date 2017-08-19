@@ -12,7 +12,17 @@
       url: http://insights.thoughtworkers.org/three-stages-agile-transformation-team/
 
 
-- category: Clean code
+- category: Career Growth
+  entries:
+    - title: 写给新人的一封信【精】
+      url: http://insights.thoughtworkers.org/a-letter-to-newcomers/
+    - title: 我选择，我喜欢
+      url: http://insights.thoughtworkers.org/choose-what-i-like/
+    - title: 走进神秘的ThoughtWorks咨询团队
+      url: http://insights.thoughtworkers.org/mysterious-consultant-team/
+
+
+- category: Clean Code
   entries:
     - title: 拯救Java Code Style强迫症
       url: http://insights.thoughtworkers.org/save-java-code-style-obsessive-compulsive-disorder/
@@ -30,7 +40,17 @@
       url: http://insights.thoughtworkers.org/code-management-of-large-distributed-team/
 
 
-- category: 高效学习
+- category: Domain-driven Design
+  entries:
+    - title: DDD & Microservices【精】
+      url: http://insights.thoughtworkers.org/ddd-and-microservices/
+    - title: 领域驱动设计实现之路【精】
+      url: http://www.infoq.com/cn/articles/implementation-road-of-domain-driven-design
+    - title: 实施领域驱动设计的正确姿势
+      url: http://icodeit.org/2017/01/why-ddd-is-so-hard/
+
+
+- category: Learning Efficiently
   entries:
     - title: 极限编程与极限生活
       url: http://insights.thoughtworkers.org/extreme-programming-and-extreme-life/
@@ -40,33 +60,7 @@
       url: http://www.jianshu.com/p/dbdac17eb9ff
 
 
-- category: 领域驱动设计
-  entries:
-    - title: DDD & Microservices【精】
-      url: http://insights.thoughtworkers.org/ddd-and-microservices/
-    - title: 领域驱动设计实现之路【精】
-      url: http://www.infoq.com/cn/articles/implementation-road-of-domain-driven-design
-    - title: 实施领域驱动设计的正确姿势
-      url: http://icodeit.org/2017/01/why-ddd-is-so-hard/
-
-- category: TDD
-  entries:
-    - title: JUnit 5 – 早期试用体验 – 第2篇
-      url: http://www.infoq.com/cn/articles/JUnit-5-Early-Test-Drive-Part-2
-    - title: JUnit 5 – 早期试用体验 – 第1篇
-      url: http://www.infoq.com/cn/articles/JUnit-5-Early-Test-Drive
-    - title: 让我们再聊聊TDD 续 – 人人都在做TDD
-      url: http://insights.thoughtworkers.org/talk-about-tdd-again-2/
-    - title: 让我们再聊聊TDD
-      url: http://insights.thoughtworkers.org/talk-about-tdd-again/
-    - title: 测试金字塔
-      url: http://zyzhang.github.io/blog/2013/04/28/test-pyramid/
-    - title: TestPyramid
-      url: https://martinfowler.com/bliki/TestPyramid.html
-
-
-
-- category: 微服务
+- category: Microservices
   entries:
     - title: 认识微服务——一颗银弹
       url: http://insights.thoughtworkers.org/microservices/
@@ -86,12 +80,17 @@
       url: https://martinfowler.com/articles/microservices.html
 
 
-
-- category: 职业成长
+- category: TDD
   entries:
-    - title: 写给新人的一封信
-      url: http://insights.thoughtworkers.org/a-letter-to-newcomers/
-    - title: 我选择，我喜欢
-      url: http://insights.thoughtworkers.org/choose-what-i-like/
-    - title: 走进神秘的ThoughtWorks咨询团队
-      url: http://insights.thoughtworkers.org/mysterious-consultant-team/
+    - title: JUnit 5 – 早期试用体验 – 第2篇
+      url: http://www.infoq.com/cn/articles/JUnit-5-Early-Test-Drive-Part-2
+    - title: JUnit 5 – 早期试用体验 – 第1篇
+      url: http://www.infoq.com/cn/articles/JUnit-5-Early-Test-Drive
+    - title: 让我们再聊聊TDD 续 – 人人都在做TDD
+      url: http://insights.thoughtworkers.org/talk-about-tdd-again-2/
+    - title: 让我们再聊聊TDD
+      url: http://insights.thoughtworkers.org/talk-about-tdd-again/
+    - title: 测试金字塔
+      url: http://zyzhang.github.io/blog/2013/04/28/test-pyramid/
+    - title: TestPyramid
+      url: https://martinfowler.com/bliki/TestPyramid.html

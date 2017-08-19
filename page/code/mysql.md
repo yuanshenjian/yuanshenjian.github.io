@@ -20,6 +20,7 @@ insert into customer(id, name)
 select id, name from person;
 ```
 
+---
 
 ## 从外部CSV文件更新MySQL表
 
