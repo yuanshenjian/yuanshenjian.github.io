@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Gradle Code Snippet
-permalink: /codes/gradle
+title: Gradle 锦囊
+permalink: /troubleshoots/gradle
 
 date: 2017-07-31
-tags: [Code, Gradle]
 
 ---
 
@@ -13,10 +12,14 @@ tags: [Code, Gradle]
 
 ---
 
-## 将集成测试和单元测试定义为不同的Gradle task
+## 如何将集成测试和单元测试定义为不同的Gradle task
 
 ##### 更新时间：2017-07-31
 
+#### 问题描述
+当集成测试比较耗时的时候，而有时候开发人员只需要单独运行单元测试。
+
+#### 解决方案
 ```groovy
 group 'java8-lambda'
 version '1.0-SNAPSHOT'

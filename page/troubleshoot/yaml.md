@@ -1,10 +1,9 @@
 ---
 layout: post
-title: YMAL Code Snippet
-permalink: /codes/yaml
+title: YMAL 锦囊
+permalink: /troubleshoots/yaml
 
 date: 2017-04-24
-tags: [Code, yaml]
 
 ---
 

@@ -34,7 +34,7 @@ MySQL数据库中有一个`customer`表，
 我需要将csv文件中的ucid更新到`customer`表中的`ucid`
 
 #### 解决方案
-思路分如下三部:
+思路分如下三步:
 
 ```
 1. 创建一个临时表temp_update_table，用来导入csv中的字段。
@@ -42,7 +42,39 @@ MySQL数据库中有一个`customer`表，
 3. 删除临时表
 ```
 
-[点击查看代码实现]({{ '/code/mysql#csvmysql' }} )
+代码实现
+
+```sh
+#!/usr/bin/env bash
+
+USERNAME=root
+PASSWORD=pass
+HOST=127.0.0.1
+PORT=3306
+DATABASE=customer
+
+IMPORT_CSV_FILE=/var/lib/mysql-files/customer-ucid-data.csv
+
+mysql -u${USERNAME} -p${PASSWORD} -P${PORT} ${DATABASE} -e "
+
+create temporary table temp_update_table (customer_id varchar(200), ucid varchar(200));
+
+load data infile '${IMPORT_CSV_FILE}'
+into table temp_update_table
+fields terminated by ','
+enclosed by '\"'
+lines terminated by '\n'
+(customer_id, ucid);
+
+update customer
+inner join temp_update_table
+on temp_update_table.customer_id = customer.id
+set customer.ucid = temp_update_table.ucid
+where customer.ucid is null;
+
+drop temporary table temp_update_table;
+"
+```
 
 ---
 

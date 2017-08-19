@@ -34,7 +34,8 @@ Mongo数据库中有一个`person`collection，
 我需要将csv文件中的ucid更新到`customer`表中的`ucid`
 
 #### 解决方案
-思路分如下三部:
+
+思路分如下三步
 
 ```
 1. 创建一个临时collection temp_update_person_collection，用来导入csv中的字段。
@@ -42,4 +43,28 @@ Mongo数据库中有一个`person`collection，
 3. 删除临时collection。
 ```
 
-[点击查看代码实现]({{ '/code/mongo#csvmongo-dbcollection' }} )
+代码实现
+
+```sh
+#!/usr/bin/env bash
+
+USERNAME=
+PASSWORD=
+HOST=127.0.0.1
+PORT=27017
+DATABASE=lead-management
+
+IMPORT_CUSTOMER_CSV_FILE=/var/lib/mongo-files/customer-ucid-data.csv
+
+mongoimport --host ${HOST}:${PORT} -d ${DATABASE} -c temp_update_person_collection --type csv --file ${IMPORT_CUSTOMER_CSV_FILE} --headerline
+
+mongo ${HOST}:${PORT}/${DATABASE} --eval '
+
+db.temp_update_person_collection.find().forEach(function(item){
+	db.person.update({ _id: ObjectId(item.customer_id) }, { $set: {ucid: item.ucid} }, false, true);
+})
+
+db.temp_update_person_collection.drop();
+'
+```
+

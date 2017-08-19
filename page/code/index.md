@@ -5,7 +5,7 @@ title: Code
 permalink: /codes/
 summary: "Code 锦囊"
 
-active: code
+//active: code
 
 ---
 

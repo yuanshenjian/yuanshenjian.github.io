@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Spring Code Snippet
-permalink: /codes/spring
+title: Spring 锦囊
+permalink: /troubleshoots/spring
 
 date: 2017-04-24
-tags: [Code, Spring data, Mongo]
 
 ---
 

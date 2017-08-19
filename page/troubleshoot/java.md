@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Java Code Snippet
-permalink: /codes/java
+title: Java 锦囊
+permalink: /troubleshoots/java
 
 date: 2017-07-09
-tags: [Code, Java]
 
 ---
 
@@ -14,6 +13,8 @@ tags: [Code, Java]
 ---
 
 ## Java8 LocalDateTime to Date
+
+##### 更新时间：2017-08-19
 
 ```java
 @Test
@@ -30,6 +31,8 @@ public static String formatDateToString(Date date) {
         return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
 }
 ```
+
+---
 
 ## Java MD5 加密
 
