@@ -1,26 +1,26 @@
 - letter: G
   collection:
     - title: Gradle
-      permalink: /code/gradle
+      permalink: /codes/gradle
 
 - letter: J
   collection:
     - title: Java
-      permalink: /code/java
+      permalink: /codes/java
 
 - letter: M
   collection:
     - title: MongoDB
-      permalink: /code/mongo
+      permalink: /codes/mongo
     - title: MySQL
-      permalink: /code/mysql
+      permalink: /codes/mysql
 
 - letter: S
   collection:
     - title: Spring
-      permalink: /code/spring
+      permalink: /codes/spring
 
 - letter: Y
   collection:
     - title: YAML
-      permalink: /code/yaml
+      permalink: /codes/yaml

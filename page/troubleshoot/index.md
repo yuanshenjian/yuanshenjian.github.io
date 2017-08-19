@@ -1,7 +1,7 @@
 ---
 bg: "tools.jpg"
 layout: page
-title: Troubleshoots
+title: Troubleshoot
 permalink: /troubleshoots/
 summary: "疑难杂症"
 

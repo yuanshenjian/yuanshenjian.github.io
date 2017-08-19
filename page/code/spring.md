@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spring Code Snippet
-permalink: /code/spring
+permalink: /codes/spring
 
 date: 2017-04-24
 tags: [Code, Spring data, Mongo]
@@ -15,12 +15,12 @@ tags: [Code, Spring data, Mongo]
 
 ## Spring data mongodb 条件查询
 
-##### 更新时间：2017-04-12   
+##### 更新时间：2017-04-12
 
 ```java
 public interface BookRepository extends MongoRepository<Book, String>, BookRepositoryCustom {
     // 分页查询owner的account为传入参数值的图书
-    @Query("{owner.account: ?0}") 
+    @Query("{owner.account: ?0}")
     Page<Book> findAll(String ownerAccount, Pageable pageable) throws Exception;
 
     // 分页查询图书类型在传入的类型列表中的图书

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mongo db Code Snippet
-permalink: /code/mongo
+permalink: /codes/mongo
 
 date: 2017-07-24
 tags: [Code, Database, Mongo]
@@ -30,7 +30,7 @@ mongoimport --host ${HOST}:${PORT} -d ${DATABASE} -c temp_update_person_collecti
 
 mongo ${HOST}:${PORT}/${DATABASE} --eval '
 
-db.temp_update_person_collection.find().forEach(function(item){	
+db.temp_update_person_collection.find().forEach(function(item){
 	db.person.update({ _id: ObjectId(item.customer_id) }, { $set: {ucid: item.ucid} }, false, true);
 })
 

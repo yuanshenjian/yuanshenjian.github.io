@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MySQL Code Snippet
-permalink: /code/mysql
+permalink: /codes/mysql
 
 date: 2017-07-19
 tags: [Code, MySQL]

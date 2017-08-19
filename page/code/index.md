@@ -1,12 +1,12 @@
 ---
 bg: "tools.jpg"
 layout: page
-title: Codes
-permalink: /code/
+title: Code
+permalink: /codes/
 summary: "Code 锦囊"
 
 active: code
-    
+
 ---
 
 {% for category in site.data.code.toc %}

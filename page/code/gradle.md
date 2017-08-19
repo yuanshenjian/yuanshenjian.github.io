@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Gradle Code Snippet
-permalink: /code/gradle
+permalink: /codes/gradle
 
 date: 2017-07-31
 tags: [Code, Gradle]

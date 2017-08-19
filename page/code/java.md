@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java Code Snippet
-permalink: /code/java
+permalink: /codes/java
 
 date: 2017-07-09
 tags: [Code, Java]
@@ -33,7 +33,7 @@ public static String formatDateToString(Date date) {
 
 ## Java MD5 加密
 
-##### 更新时间：2017-07-09   
+##### 更新时间：2017-07-09
 
 ```java
 import java.security.MessageDigest;
