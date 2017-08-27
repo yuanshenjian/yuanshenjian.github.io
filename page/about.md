@@ -30,11 +30,14 @@ Keep： <https://www.gotokeep.com/users/568f6e16c15d4a091a0a886c>
 
 Insight： <http://insights.thoughtworkers.org/author/yuanshenjian>
 
+异步社区： <http://www.epubit.com.cn/space/40420>
+
 简书： <http://www.jianshu.com/u/c379cdabd121>
 
 InfoQ： <http://www.infoq.com/cn/profile/-袁慎建>
 
 GitHub： <https://github.com/sjyuan-cc>
+
 
 ---
 
