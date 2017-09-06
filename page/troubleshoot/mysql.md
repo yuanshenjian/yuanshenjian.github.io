@@ -1,3 +1,4 @@
+
 ---
 layout: post
 title: MySQL 锦囊
@@ -9,6 +10,28 @@ date: 2016-06-20
 
 * content
 {:toc}
+
+---
+
+## MySQL修改表的一些常用操作
+
+##### 更新时间：2017-09-06
+
+```sql
+// 1. 添加外键
+ALTER TABLE `t_user`
+  ADD CONSTRAINT FK_User_projectId FOREIGN KEY (`project_id`) REFERENCES `t_project` (id);
+
+// 2. 添加/删除列
+ALTER TABLE `t_user` ADD COLUMN `nick_name` VARCHAR(25) DEFAULT NULL AFTER `name`;
+ALTER TABLE `t_user` DROP COLUMN `nick_name`;
+
+// 3. 修改列
+ALTER TABLE `t_user` MODIFY `nick_name` VARCHAR(30);
+ALTER TABLE `t_user` CHANGE COLUMN `nick_name` `nick_name_new` VARCHAR(25) DEFAULT NULL;
+  
+```
+
 
 ---
 
