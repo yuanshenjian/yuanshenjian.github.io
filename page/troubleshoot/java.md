@@ -12,7 +12,7 @@ date: 2017-07-09
 
 ---
 
-## Java8 LocalDateTime to Date
+## Java8 LocalDateTime/LocalDate to Date
 
 ##### 更新时间：2017-08-19
 
@@ -24,12 +24,18 @@ void formatDate() {
                 DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         Date date = Date.from(localDate.atZone(ZoneId.systemDefault()).toInstant());
 
-        assertThat(DateUtils.formatDateToString(date), is("2017-08-08 08:08:08"));
+        assertThat(DateUtils.formatDateToString(date), is("2017-08-08 08:08:08")); 
 }
 
 public static String formatDateToString(Date date) {
         return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
 }
+
+private Date currentDate() {
+    	LocalDate localDate = Instant.now().atZone(ZoneOffset.UTC).toLocalDate();
+        return Date.from(localDate.atStartOfDay(ZoneOffset.systemDefault()).toInstant());
+}
+
 ```
 
 ---
