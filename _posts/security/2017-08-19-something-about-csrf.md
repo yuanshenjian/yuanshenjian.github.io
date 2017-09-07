@@ -10,7 +10,7 @@ author: "袁慎建"
 
 
 brief: "
-作为一枚程序员，你一定经常看到或听到'CSRF'和'XSS'，如果你的主要职责不是网络安全和系统安全，你很可能跟我一样，能顺溜地喊出CSRF(Cross-site request forgery)和“畸形” XSS(Cross-site scripting)的全称，但对其背后的原理却模棱两可。
+作为一枚程序员，你一定经常看到或听到'CSRF'和'XSS'，如果你的主要职责不是网络安全和系统安全，有可能你能够顺溜地喊出CSRF(Cross-site request forgery)和“畸形” XSS(Cross-site scripting)的全称，但对其背后的原理却模棱两可。
 <br/><br/>
 本文一起来聊聊CSRF的那些事儿，旨在提高程序员对CSRF的认识，在必要的时候知道如何防御CSRF。
 "
@@ -23,7 +23,7 @@ brief: "
 ---
 
 ## Web安全的主旋律
-作为一枚程序员，你一定经常看到或听到`CSRF`和`XSS`，如果你的主要职责不是网络安全和系统安全，你很可能跟我一样，能顺溜地喊出CSRF(Cross-site request forgery)和“*畸形* ” XSS(Cross-site scripting)的全称，但对其背后的原理却模棱两可。
+作为一枚程序员，你一定经常看到或听到`CSRF`和`XSS`，如果你的主要职责不是网络安全和系统安全，有可能你能够顺溜地喊出CSRF(Cross-site request forgery)和“*畸形* ” XSS(Cross-site scripting)的全称，但对其背后的原理却模棱两可。
 
 *为什么会经常听到呢？*
 
