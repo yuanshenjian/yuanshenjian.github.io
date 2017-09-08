@@ -23,6 +23,8 @@
 
 - letter: M
   collection:
+    - title: MacOSX
+      permalink: /troubleshoots/mac-osx
     - title: Mongo
       permalink: /troubleshoots/mongo
     - title: MySQL
