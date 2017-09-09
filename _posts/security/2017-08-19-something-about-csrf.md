@@ -90,24 +90,30 @@ GET https://bank.cn/withdraw?account=sjyuan&amount=5000&for=FriendAccount
 从用户视角防御CSRF攻击，用户可以做的是提高意识和养成良好的使用习惯：
 
 ```
-1. 使用完系统之后，点击网站的登出链接注销用户Session`
-2. 慎重好奇点击一些来路不明的链接。
+1. 完成操作后，点击网站的登出按钮注销用户Session`
+2. 谨慎好奇点击一些来路不明的链接。
 ```
 
 根本上，我们要从技术上防御CSRF攻击，主要有两个出发点：
 
 ```
 1. 增加额外的用户身份认证机制来加强cookie认证。
-2. 摒弃在cookie中保存Session的机制方案，采用token机制，比如JWT。
+2. 控制好技术规范，正确使用Http动作。
+3. 摒弃在cookie中保存Session的机制方案，采用token机制，比如JWT。
 ```
 
+在展开讨论方案之前，我们先来剖析CSRF核心攻击点，找到核心攻击点，方可对症下药，既不会过度防御，也不会存在明显的防御不到位。
 
+用户对系统的使用，无非就是对服务器上的资源的`CRUD`（Create, Retrive, Update, Delete），`R`操作不会涉及到数据的更改，所以服务器要做的是防御好客户端的`CUD`请求。
 
+清楚了CSRF攻击点，我们就可以放行`R`操作，重点防御`CUD`操作。如果你的服务器从伴随请求自动发送的Cookie中提取用户身份信息进行验证（传统的Cookie中保存Session机制），就需要增加除此之外的额外认证。
+
+---
 
 ### 基于Http请求动作添加CSRF Token
+比较经典的做法是添加一个额外的Token，Token由服务器生成存储起来并返回客户端，客户端在提交`CUD`请求的时候附带Token，服务以后会校验Token是否匹配来达到防御目的。
 
-
-### 举例：Spring Security CSRF防护
+Spring security默认就启用了CSRF防御机制，如果我们发起的请求(POST, PUT, PATCH, DELETE)中没有携带任何csrf的Token，就会看到如下返回信息：
 
 ```json
 {
@@ -118,6 +124,7 @@ GET https://bank.cn/withdraw?account=sjyuan&amount=5000&for=FriendAccount
     "path": "/users"
 }
 ```
+从返回的信息中可以看出，Spring security会提取出请求参数中的`_csrf`或Header中的`X-CSRF-TOKEN`的值作为校验Token。
 
 
 *待续*
