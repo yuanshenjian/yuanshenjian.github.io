@@ -80,7 +80,7 @@ GET https://bank.cn/withdraw?account=sjyuan&amount=5000&for=FriendAccount
 
 *你可能会纳闷，为什么这个转账操作会被服务器接受呢？*
 
-首先，黑客的请求没有强制用户去做什么，他也没法获取用户从服务器上所获取的信息，他做的事情是向用户所访问的网站域名发出一个`GET`请求，而该请求会自动附上浏览器cookie中的用户身份认证信息（Session未过期），所以服务器认为这是一个认证过的用户请求。更糟糕的是，服务器上没有留下黑客的任何非法攻击痕迹（当然收款方账号可能提供技术之外的脚印），因为服务器认为该请求是我发的。
+首先，黑客没有强制我去做什么，他也没法获取我从服务器上所获取的信息，他做的事情是向我访问的网站域名发出一个`GET`请求，而该请求会自动附上浏览器cookie中的用户身份认证信息（Session未过期），所以服务器认为这是一个认证过的用户请求。更糟糕的是，服务器上没有留下黑客的任何非法攻击痕迹（当然收款方账号可能留下了技术之外的脚印），因为服务器认为该请求是我发的。
 
 ---
 
@@ -98,22 +98,18 @@ GET https://bank.cn/withdraw?account=sjyuan&amount=5000&for=FriendAccount
 
 ```
 1. 增加额外的用户身份认证机制来加强cookie认证。
-2. 控制好技术规范，正确使用Http动作。
-3. 摒弃在cookie中保存Session的机制方案，采用token机制，比如JWT。
+2. 控制好技术规范，正确使用HTTP动作。
+3. 摒弃检验Cookie中的用户身份信息的机制，采用token，比如JWT。
 ```
 
-在展开讨论方案之前，我们先来剖析CSRF核心攻击点，找到核心攻击点，方可对症下药，既不会过度防御，也不会存在明显的防御不到位。
-
-用户对系统的使用，无非就是对服务器上的资源的`CRUD`（Create, Retrive, Update, Delete），`R`操作不会涉及到数据的更改，所以服务器要做的是防御好客户端的`CUD`请求。
-
-清楚了CSRF攻击点，我们就可以放行`R`操作，重点防御`CUD`操作。如果你的服务器从伴随请求自动发送的Cookie中提取用户身份信息进行验证（传统的Cookie中保存Session机制），就需要增加除此之外的额外认证。
+在展开讨论方案之前，我们先来剖析CSRF核心攻击点。用户对系统的使用，无非就是对服务器资源的`CRUD`（Create, Retrive, Update, Delete），由于`R`操作不会涉及到数据的更改，所以服务器要做的是防御客户端的`CUD`请求。而CSRF攻击正是黑客利用用户的Cookie信息伪造用户的`CUD`请求。所以我们要增加黑客无法盗用的东西，比如保存在Cookie之外的Token。
 
 ---
 
-### 基于Http请求动作添加CSRF Token
-比较经典的做法是添加一个额外的Token，Token由服务器生成存储起来并返回客户端，客户端在提交`CUD`请求的时候附带Token，服务以后会校验Token是否匹配来达到防御目的。
+### 基于HTTP请求动作添加CSRF Token
+比较经典的做法是在`请求参数`或者`Header`中添加额外的Token。该Token由服务器生成保存在Session中，并返回客户端。客户端在提交`CUD`请求的时候附带Token，服务会从Session中取出Token与请求中的Token进行比对校验。
 
-Spring security默认就启用了CSRF防御机制，如果我们发起的请求(POST, PUT, PATCH, DELETE)中没有携带任何csrf的Token，就会看到如下返回信息：
+Spring security默认就启用了CSRF防御机制。如果我们发起的请求(`POST`, `PUT`, `PATCH`, `DELETE`)中没有携带任何CSRF的Token，服务器便会阻止请求：
 
 ```json
 {
@@ -124,12 +120,27 @@ Spring security默认就启用了CSRF防御机制，如果我们发起的请求(
     "path": "/users"
 }
 ```
-从返回的信息中可以看出，Spring security会提取出请求参数中的`_csrf`或Header中的`X-CSRF-TOKEN`的值作为校验Token。
+从返回的信息中可以得知，Spring security会提取出`请求参数`中的`_csrf`或`Header`中的`X-CSRF-TOKEN`的值作为校验Token。
 
+*怎么附加上这个Token呢？*
 
-*待续*
+Spring thymeleaf Template渲染页面时会自动将`_csrf`放在Form的隐藏域中。如果开发人员自己实现的Token验证机制，需要编写代码来附加上Token，懒一点的程序员会写一个`JavaScript`脚本来添加Token，但要当心非同源（请求地址与服务器不一致）的请求链接。
 
+---
 
+### 正确使用HTTP动作
+
+回到场景还原中的那个示例，黑客实际上通过了模拟了一个`GET`请求来请求服务器转账。按照流行的`RESTful`规范，它不应该是一个`GET`请求。所以，如果你的团队也在采用`RESTful`风格的API，遵守它的规范，正确使用HTTP动作，会增加CSRF攻击的难度。
+
+---
+
+### 采用Auth Token验证机制
+
+既然Cookie会被黑客盗用模拟用户请求，那么我们不在Cookie存储用户身份信息呢？比如说比较流行的JWT（后面会介绍*JWT的正确使用姿势*）。用户认证成功后生成一个经过密钥签名的Token，浏览器会将Token保存在Cookie或LocalStorage中，用户之后的请求都会在将Token取出来放在请求`Header`中，服务器校验`Header`中的Token即可完成身份认证。
+
+Token验证能够有效防御CSRF，那么它会面临另一种Web攻击`XSS`。下一篇文章一起来聊聊 *XSS的那些事儿*。
+
+---
 
 ## 参考
 
