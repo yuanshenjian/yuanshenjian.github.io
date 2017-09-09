@@ -97,7 +97,7 @@ GET https://bank.cn/withdraw?account=sjyuan&amount=5000&for=FriendAccount
 根本上，我们要从技术上防御CSRF攻击，主要有两个出发点：
 
 ```
-1. 增加额外的用户身份认证机制来加强cookie认证。
+1. 增加额外的校验机制来加强cookie认证。
 2. 控制好技术规范，正确使用HTTP动作。
 3. 摒弃检验Cookie中的用户身份信息的机制，采用token，比如JWT。
 ```
@@ -106,8 +106,11 @@ GET https://bank.cn/withdraw?account=sjyuan&amount=5000&for=FriendAccount
 
 ---
 
-### 基于HTTP请求动作添加CSRF Token
-比较经典的做法是在`请求参数`或者`Header`中添加额外的Token。该Token由服务器生成保存在Session中，并返回客户端。客户端在提交`CUD`请求的时候附带Token，服务会从Session中取出Token与请求中的Token进行比对校验。
+### 增加额外的校验机制来加强cookie认证
+
+关于增加额外的校验机制，经典的做法是基于HTTP请求动作添加CSRF Token，即在`请求参数`或者`Header`中添加额外的Token
+
+服务器首先会生成一个Token保存在Session中，然后返回客户端。客户端在提交`CUD`请求的时候附带Token，服务会从Session中取出Token与请求中的Token进行比对校验。
 
 Spring security默认就启用了CSRF防御机制。如果我们发起的请求(`POST`, `PUT`, `PATCH`, `DELETE`)中没有携带任何CSRF的Token，服务器便会阻止请求：
 
@@ -125,6 +128,12 @@ Spring security默认就启用了CSRF防御机制。如果我们发起的请求(
 *怎么附加上这个Token呢？*
 
 Spring thymeleaf Template渲染页面时会自动将`_csrf`放在Form的隐藏域中。如果开发人员自己实现的Token验证机制，需要编写代码来附加上Token，懒一点的程序员会写一个`JavaScript`脚本来添加Token，但要当心非同源（请求地址与服务器不一致）的请求链接。
+
+另一种做法是校验HTTP Header 中的Referer。
+
+根据HTTP协议，在 HTTP Header中有一个字段叫`Referer`，它记录了该HTTP请求的来源地址。那么，在转账案件中，黑客模拟我发起转账的请求Header的`Referer`值就不是我所访问的银行网站的域名。服务器便可以拒绝该请求。
+
+然而，这种方案是否可靠取决于浏览器厂商的实现是否安全漏洞，比如IE6(虽然可能已经淘汰)中的`Referer`是可以被篡改的。另外，用户也很可能因为该机制会记录下访问来源而设置浏览器不再提供`Referer`值，这将导致正常的用户请求也会被服务器拒绝。
 
 ---
 
