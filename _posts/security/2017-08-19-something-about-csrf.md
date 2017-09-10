@@ -25,6 +25,8 @@ brief: "
 ## Web安全的主旋律
 作为一枚程序员，你一定经常看到或听到`CSRF`和`XSS`，如果你的主要职责不是网络安全和系统安全，有可能你能够顺溜地喊出CSRF(Cross-site request forgery)和“*畸形* ” XSS(Cross-site scripting)的全称，但对其背后的原理却模棱两可。
 
+![]({{ site.url }}{{ site.img_path }}{{ '/security/something-about-csrf-1-web-security.jpg' }})
+
 *为什么会经常听到呢？*
 
 因为互联网时代，即Web+时代，它俩一直是安全话题的主旋律，它们是某些黑客对网站所采取的攻击手段，历史上有一些知名大型网站遭受重创。而近几年，XSS演变成为最流行的攻击方式，存在68%的网站可能会遭受XSS攻击。不发生则以，一发生就不得已。它们作为Web时代的主要威胁，犹如一颗定时炸弹定居在我们身边。
@@ -39,6 +41,8 @@ brief: "
 CSRF(Cross-site request forgery)，跨站请求伪造。又叫`one-click attack`或`session riding`， 一句话概述该攻击手法：*盗用用户的身份认证信息在用户当前已登录的Web应用程序上执行非用户本意的操作*。
 
 本质上，CSRF是在利用服务器对用户浏览器的信任。它不同于另一种Web攻击手法`XSS`，XSS则利用的是用户对指定网站的*信任*（下一篇文章会介绍）。
+
+![]({{ site.url }}{{ site.img_path }}{{ '/security/something-about-csrf-2-csrf.jpg' }})
 
 *那么CSRF如何是利用这种信任呢？*
 

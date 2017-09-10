@@ -29,6 +29,8 @@ brief: "
 
 在内行人看来，程序员是一个成天面对QA的"质疑"、PM的"夺命催"以及DEVs的"吐槽"，扛着身心压力的`苦行僧`。
 
+![图片来自网络]({{ site.url }}{{ site.img_path }}{{ '/tdd/ku-xing-seng.png' }})
+
 在我看来，程序员应该是：
 
 >手持神剑，心怀善念，胸有成竹、有理有据并且合情合理地跟QA、PM、DEV斗智斗勇的战士。
@@ -44,8 +46,6 @@ brief: "
 
 - 编写完代码多问自己一句："真的可靠地完成目标了吗？" 怎么问，写个测试来提问。这便是 **测试覆盖**。
 - 编写代码之前先问自己一句："怎么样才算完成目标了呢？" 怎么问，同样写个测试来提问。这便是 **TDD + 测试覆盖**。
-
-![图片来自网络]({{ site.url }}{{ site.img_path }}{{ '/tdd/ku-xing-seng.png' }})
 
 
 ---
@@ -78,7 +78,7 @@ class StringUtilsTest {
 
 顺便用一句话来形容单元测试：
 
->开发人员编写一小段代码，用于检验被检测代码的一个很小的、很明确的功能是否正确。
+***开发人员编写一小段代码，用于检验被检测代码的一个很小的、很明确的功能是否正确。***
 
 ![图片来自：https://martinfowler.com/bliki/TestPyramid.html]({{ site.url }}{{ site.img_path }}{{ '/tdd/test-pyramid.png' }})
 <div class="image-source-comment">图片来自：https://martinfowler.com/bliki/TestPyramid.html</div>
