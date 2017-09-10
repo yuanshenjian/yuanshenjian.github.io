@@ -156,7 +156,7 @@ Spring thymeleaf Template渲染页面时会自动将`_csrf`放在Form的隐藏�
 
 ### 采取Token验证机制
 
-既然Cookie会被黑客盗用模拟用户请求，那么我们不在Cookie存储用户身份信息呢？比如说比较流行的JWT（后面会介绍*JWT的正确使用姿势*）。用户认证成功后生成一个经过密钥签名的Token，浏览器会将Token保存在Cookie或LocalStorage中，用户之后的请求都会在将Token取出来放在请求`Header`中，服务器校验`Header`中的Token即可完成身份认证。
+既然Cookie会被黑客盗用模拟用户请求，那么我们不在Cookie存储用户身份信息呢？比如说比较流行的JWT（Java Web Token）。用户认证成功后生成一个经过密钥签名的Token，浏览器会将Token保存在Cookie或LocalStorage中，用户之后的请求都会在将Token取出来放在请求`Header`中，服务器校验`Header`中的Token即可完成身份认证。
 
 Token验证能够有效防御CSRF，那么它会面临另一种Web攻击`XSS`。下一篇文章我们一起来聊聊 *XSS的那些事儿*。
 
