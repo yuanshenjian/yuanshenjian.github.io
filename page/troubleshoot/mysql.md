@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: MySQL 锦囊
@@ -12,6 +11,34 @@ date: 2016-06-20
 {:toc}
 
 ---
+
+## MySQL常用的内见函数
+
+##### 更新时间：2017-09-11
+
+```sql
+// 1.时间
+select NOW();
+select CURDATE();
+select SYSDATE();
+
+
+// 2.随机数
+SELECT UUID();
+```
+
+
+## MySQL常用的转换函数
+
+##### 更新时间：2017-09-11
+
+```sql
+// 1.字符串转时间
+SELECT STR_TO_DATE('2011-12-21 02:20pm', '%Y-%m-%d %h:%i%p')
+SELECT STR_TO_DATE('2014-05-28 11:30:10','%Y-%m-%d %H:%i:%s')
+
+```
+
 
 ## MySQL修改表的一些常用操作
 

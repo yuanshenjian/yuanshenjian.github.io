@@ -147,7 +147,7 @@ Spring thymeleaf Template渲染页面时会自动将`_csrf`放在Form的隐藏�
 
 >In particular, the convention has been established that the GET and HEAD methods SHOULD NOT have the significance of taking an action other than retrieval. These methods ought to be considered "safe". This allows user agents to represent other methods, such as POST, PUT and DELETE, in a special way, so that the user is made aware of the fact that a possibly unsafe action is being requested.
 
-[RFC 2616](https://tools.ietf.org/html/rfc2616) 强调：一个`GET`或`HEAD`请求应该只是在查询服务器资源，它应该是安全的。如果你确实要以特殊的方式实现类似POST, PUT和DELETE的功能，此时你要清楚到这种不安全的操作会带来什么副作用。
+[RFC 2616](https://tools.ietf.org/html/rfc2616) 强调：一个`GET`或`HEAD`请求应该只是在查询服务器资源，它应该是安全的。如果你确实要以特殊的方式实现类似`POST`, `PUT`和`DELETE`的功能，此时你要清楚到这种不安全的操作会带来什么副作用。
 
 所以，我们应该去遵守常规的HTTP规范，尤其当你的团队采用了`RESTful`风格的API，正确地使用HTTP动作，可以减少很多不必要的麻烦。
 
