@@ -43,9 +43,33 @@ XSS是之所以能成功在于黑客注入的脚本程序在网页上得到执�
 <script>alert('I am a xss hacker.')</script>
 ```
 
-提交发布博客，当我再次查看网页的博客内容，没刷新一次页面，就会弹出一个对话框（GitHub Page博客就可以重现）:
+提交发布博客后，我查看网页的博客内容，页面刷新时，就会弹出一个对话框:
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/security/something-about-xss-1-alert.jpg' }})
+
+之所以会弹出这个对话框，是因为我刚写在内容中的那行JavaScript代码被执行了（*注入的代码被执行*）。我尝试把这行代码push到GitHub Page博客的Repository上，我就会遇到这种问题。它只是一句简单的警告弹框，是想在一个用户登录后的网站中嵌入下面代码呢：
+
+```js
+<script>
+     var cockie = window.cockie; // localStorage, sessionStorage
+     // Send cockie|localStorage|sessionStorage information to hacker
+</script>
+```
+如果我访问的博客网站使用了JWT做用户认证，将Token保存在sessionStorage（cookie或 localStorage）中，而我无意间访问了一个包含上述脚本的网页，我的身份认证信息就会被黑客窃取，后续的事情就不得而知了。
+
+---
+
+## XSS家族体系
+
+### 反射型（非持久型）
+
+---
+
+### 持久型
+
+---
+
+### 基于DOM
 
 
 *待续*
@@ -55,7 +79,9 @@ XSS是之所以能成功在于黑客注入的脚本程序在网页上得到执�
 ---
 
 ## 防御措施
+当我们使用Session的时候，我们要防范CSRF，当我们使用了Token的时候，我们又得防范XSS，Web世界太危险。
 
+---
 
 ## 参考
 
