@@ -35,8 +35,6 @@ XSS漏洞可以追溯到1990年代。`Twitter`，`Facebook`，`MySpace`，`Orkut
 
 ## 场景还原
 
-<script>alert('I am a xss hacker.')</script>
-
 XSS是之所以能成功在于黑客注入的脚本程序在网页上得到执行，那么它是怎么被注入？又是如何被执行的？我们来躺枪一次XSS攻击就知道怎么回事了。
 
 忙碌的一天过去了，下班后我打开博客，准备写篇*《XSS那些事儿》*。于是乎我偷偷的在内容处写入了一下代码：
@@ -45,7 +43,7 @@ XSS是之所以能成功在于黑客注入的脚本程序在网页上得到执�
 <script>alert('I am a xss hacker.')</script>
 ```
 
-提交发布博客，当我再次查看网页的博客内容，没刷新一次页面，就会弹出一个对话框:
+提交发布博客，当我再次查看网页的博客内容，没刷新一次页面，就会弹出一个对话框（GitHub Page博客就可以重现）:
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/security/something-about-xss-1-alert.jpg' }})
 
