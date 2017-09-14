@@ -10,7 +10,9 @@ author: "袁慎建"
 
 
 brief: "
-XSS的那些事儿
+作为一枚程序员，你一定经常看到或听到'CSRF'和'XSS'，如果你的主要职责不是网络安全和系统安全，有可能你能够顺溜地喊出CSRF(Cross-site request forgery)和“畸形” XSS(Cross-site scripting)的全称，但对其背后的原理却模棱两可。
+<br/><br/>
+上一篇文章我们聊过CSRF那些事儿，本文一起再来聊聊XSS的那些事儿。
 "
 
 ---
