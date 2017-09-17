@@ -1,5 +1,5 @@
 ---
-bg: "owl.jpg"
+bg: "insight.jpg"
 layout: page
 title: Insight
 permalink: /insight/
