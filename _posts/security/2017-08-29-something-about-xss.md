@@ -130,7 +130,7 @@ Web Framework在这方面一般都集成了XSS防御功能，比如Spring Securi
 
 >混乱猴子（Chaos Monkey）负责在一天随机停掉服务器。混乱大猩猩（Chaos Gorilla）负责随机关闭整个可用区（数据中心）。延迟猴子（Latency Monkey）则负责下系统之间注入网络延迟。
 
-Netflix的猴子军的目标是在生产环境的制造故障，来锻炼团队对故障的应对能力。它核心理念：*从错误中学习成长*。所以我们既然要防御XSS，不妨引入一直注入猴子（Injectiion Monkey），它主要负责向我们的网站中注入类似以下的脚本：
+Netflix的猴子军的目标是在生产环境的制造故障，来锻炼团队对故障的应对能力。它核心理念：*从错误中学习成长*。所以我们既然要防御XSS，不妨引入一直注入猴子（Injectiion Monkey），它主要负责向我们的网站中注入类似脚本：
 
 ```js
 "/><script>alert(document.cookie)</script><!--
