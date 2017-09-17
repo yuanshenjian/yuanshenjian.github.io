@@ -3,7 +3,7 @@ bg: "archive.jpg"
 layout: page
 permalink: /posts/
 title: "Archive"
-summary: "应有尽有"
+summary: "应有 尽有"
 
 active: archive
 ---
