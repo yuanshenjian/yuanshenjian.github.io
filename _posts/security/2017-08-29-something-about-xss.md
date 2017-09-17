@@ -23,7 +23,7 @@ brief: "
 ---
 
 ## XSS是什么
-通过上一篇 [*《CSRF那些事儿》*]({{ site.base_url }}{{ '/something-about-csrf' }}) 我们了解了CSRF，为了阻止CSRF攻击，有些团队可能会引入Token机制（比如JWT），而这又带来了另一个安全隐患`XSS`，本文我们来一起聊聊*XSS那些事儿*。
+通过上一篇 [*《CSRF的那些事儿》*]({{ site.base_url }}{{ '/something-about-csrf' }}) 我们了解了CSRF，为了阻止CSRF攻击，有些团队可能会引入Token机制（比如JWT），而这又带来了另一个安全隐患`XSS`，本文我们来一起聊聊*XSS那些事儿*。
 
 
 XSS，Cross-site scripting，跨站脚本攻击，为了区分与`CSS`，起名为`XSS`。黑客利用网站的漏洞，通过`代码注入`的方式将一些包含了恶意攻击脚本程序注入到网页中，企图在用户加载网页时执行脚本来实施攻击。脚本程序通常是JavaScript编写，当然还包括Java，VBScript，ActiveX等。常见的攻击手段是获取用户身份认证信息（Cookie，Session）、获取私密网页内容、植入病毒等。
@@ -37,7 +37,7 @@ XSS漏洞可以追溯到1990年代。`Twitter`，`Facebook`，`MySpace`，`Orkut
 
 XSS是之所以能成功在于黑客注入的脚本程序在网页上得到执行，那么它是怎么被注入？又是如何被执行的？我们来躺枪一次XSS攻击就知道怎么回事了。
 
-忙碌的一天过去了，下班后我打开博客，准备写篇*《XSS那些事儿》*。于是乎我偷偷的在内容处写入了以下代码：
+忙碌的一天过去了，下班后我打开博客，准备写篇*《XSS的那些事儿》*。于是乎我偷偷的在内容处写入了以下代码：
 
 ```js
 <script>alert('I am a xss hacker.')</script>
@@ -141,7 +141,7 @@ Netflix的猴子军的目标是在生产环境的制造故障，来锻炼团队�
 ---
 
 ### 特殊保护
-XSS通常会盗用用户身份信息，如果网站使用了Cookie中保存用户Session的机制，则需要将重要的Cookie设置为`httponly`，即不让JavaScript脚本去读取Cooike信息。使用这种机制需要防范CSRF攻击（具体参阅[CSRF那些事儿]({{ site.base_url }}{{ '/something-about-csrf' }})）。如果你的网站使用了Token机制，则需要重点实施上述两条措施。
+XSS通常会盗用用户身份信息，如果网站使用了Cookie中保存用户Session的机制，则需要将重要的Cookie设置为`httponly`，即不让JavaScript脚本去读取Cooike信息。使用这种机制需要防范CSRF攻击（具体参阅[CSRF的那些事儿]({{ site.base_url }}{{ '/something-about-csrf' }})）。如果你的网站使用了Token机制，则需要重点实施上述两条措施。
 
 
 ---
