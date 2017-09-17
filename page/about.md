@@ -1,5 +1,5 @@
 ---
-bg: "side-sport.jpg"
+bg: "side-sport.png"
 layout: page
 title: "About"
 permalink: /about/
