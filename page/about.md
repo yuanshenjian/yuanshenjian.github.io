@@ -3,7 +3,7 @@ bg: "side-sport.png"
 layout: page
 title: "About"
 permalink: /about/
-summary: "简约，简爱"
+summary: "运动 编程"
 active: about
 
 ---
