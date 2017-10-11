@@ -32,6 +32,8 @@
 
 - category: DevOps
   entries:
+    - title: 企业实施DevOps的七大挑战
+      url: http://insights.thoughtworks.cn/challenges-of-devops/
     - title: 从集装箱历史看DevOps的发展进程
       url: http://insights.thoughtworkers.org/process-of-devops-development/
     - title: 遗留系统流水线的改进
