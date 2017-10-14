@@ -102,8 +102,6 @@ Unit测试使得开发人员可以快活地活在自己的世界中，每个开�
 
 虽然Pair集成测试没有从根本上解决UI测试的痛点，但它提出了 *积小成多* 的理念，该理念告诉我们：***只要能够保证服务俩俩之间的集成是可靠的，我们就可以相信系统集成也是可靠的。***
 
-对该方案说NO之后，我们还在继续前进探索Yes的答案。
-
 ---
 
 ### 引入Contract概念的集成测试
@@ -188,6 +186,22 @@ CDCT具备了`引入Contract概念集成测试`的诸多优点，并且通过可
 
 ---
 
+## 技术实践
+
+>运筹帷幄之中，决胜千里之外。
+
+三国明星诸葛亮负责运筹帷幄，关、张、赵等武将负责冲锋陷阵，从而决胜千里之外的硝烟战场。团队确定了测试策略之后，应当交由优秀工具来实施执行。
+
+关于单元测试，业界已经有非常优秀的测试工具和框架，比如我们正在做的Springboot应用，`JUnit`, `Mockito`, `JMock`, `Hamcrest`等都是测试工具箱里的明星。对于CDCT，目前比较流行的有JVM框架 [Spring cloud Contract](http://cloud.spring.io/spring-cloud-contract/spring-cloud-contract.html)，以及支持多语言的 [Pact](https://docs.pact.io/)。
+
+如果团队正在开发一个Springboot应用，[Spring cloud Contract](http://cloud.spring.io/spring-cloud-contract/spring-cloud-contract.html) 是一个不错的选择。它使用Groovy DSL定义测试契约并生成测试套件，测试套件去验证服务提供方是否满足契约，测试通过之后会生成一个jar文件，该jar文件随后会作为一个可运行的Stub server，消费方基于Stub server编写测试，从而验证功能是否满足契约：
+
+![]({{ site.url }}{{ site.img_path }}{{ '/tdd/spring-cloud-contract.jpg' }})
+
+Spring Cloud Contract让CDCT得以实施，同时我们需要将自动化CDCT严格集成到CI中，从而保证各个微服务Team之间进行高效良好的协作。
+
+---
+
 ## 何去何从
 代价高昂的UI测试使得开发团队逐渐对它失去了信心，尤其引入了微服务架构，它所带来的复杂性使得业界摒弃UI测试的呼声高涨。早在2009年，著名的敏捷和TDD专家J.B. Rainsberger在InfoQ上提出 [Integration Tests Are a Scam](https://www.infoq.com/presentations/integration-tests-scam)。
 
@@ -201,40 +215,30 @@ Martin Fowller 在2012年的 [测试金字塔理论](https://martinfowler.com/bl
 
 [ThoughtWorks技术雷达](https://www.thoughtworks.com/radar/techniques/consumer-driven-contract-testing) 于2016年已经正式采纳消费者驱动契约测试。
 
-在编写测试和环境搭建方面，CDCT降低了开发人员编写测试的难度，让开发人员从不稳定的测试环境中解脱出来。随着微服务架构的盛行，目前越来越多的开发团队引入了CDCT，逐渐淡化UI测试。开发团队的测试策略发生了不同的演变：
+在编写测试和环境搭建方面，CDCT降低了开发人员编写测试的难度，让开发人员从不稳定的测试环境中解脱出来。随着微服务架构的盛行，目前越来越多的开发团队引入了CDCT，逐渐淡化UI测试。开发团队的测试策略正在发生不同的演变：
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/tdd/testpyamid-evolution.jpg' }})
 
-引入了CDCT并摆正了姿势，我们便可以大大弱化UI测试，甚至可以使用少量的人工测试来代替自动化UI测试。
-
-CDCT帮助我们缓解了UI测试的痛点，也要当心走极端，譬如有些团队的测试策略发生了下面的极端情况：
+引入了CDCT并摆出了正确的姿势，我们可以大大弱化UI测试，甚至可以使用少量的人工测试来代替自动化UI测试。CDCT帮助我们缓解了UI测试的痛点，也要当心走极端，譬如有些团队的测试策略发生了下面的极端情况：
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/tdd/testpyramid-bad-evolution.jpg' }})
 
-软件工程从不会生产银弹，一种新的方案的诞生只是解决了已有方案的痛点，好比微服务架构解决了单体的那些痛点之后，却又带来了足够的复杂性，需要团队达到一定的高度之后方可更好地驾驭。团队测试策略选择可以参考以下几条原则：
+软件工程从不会生产银弹，一种新的方案的诞生只是解决了已有方案的痛点，好比微服务架构解决了单体的那些痛点之后，却又带来了足够的复杂性，需要团队达到一定的高度之后方可更好地驾驭。团队在决定测试策略的时候可以参考以下几条原则：
 
 ```
-1. 单元测试成本低，运行效率高，性价比非常高，摆在第一位。
+1. 单元测试成本低，运行效率高，性价比非常高，始终摆在第一位。
 2. 高层测试只是测试防护体系的第二防线。
 3. 没有绝对的对与错，根据自身项目工程和技术能力选择适合团队的策略。
 ```
 
-第二条原则强调：*如果一个高层测试失败了，不仅仅表明功能代码中存在bug，还意味着单元测试的欠缺。因此，无论何时修复失败的端到端测试，都应该同时添加相应的单元测试。*
+其中第二条原则强调：*如果一个高层测试失败了，不仅仅表明功能代码中存在bug，还意味着单元测试的欠缺。因此，无论何时修复失败的端到端测试，都应该同时添加相应的单元测试。*
 
 
 ---
 
-## 工程技术实践
+## 写在最后
 
->运筹帷幄之中，决胜千里之外。
-
-三国明星诸葛亮，负责运筹帷幄，关、张、赵等武将随即根据已定方案冲锋陷阵。团队确定了测试策略之后，当交由优秀工具来实施执行。
-
-对于单元测试，业界已经有非常优秀的测试工具和框架，就拿我们整在做的Springboot应用，`JUnit`, `Mockito`, `JMock`, `Hamcrest`这些都是测试工具箱里的明星。对于CDCT，目前比较流行的有JVM框架 [Spring cloud Contract](http://cloud.spring.io/spring-cloud-contract/spring-cloud-contract.html)，以及支持多语言的 [Pact](https://docs.pact.io/)。
-
-如果团队正在开发一个Springboot应用，[Spring cloud Contract](http://cloud.spring.io/spring-cloud-contract/spring-cloud-contract.html) 是一个不错的选择。它使用Groovy DSL定义测试契约并生成测试套件，测试套件去验证服务提供方是否满足契约，测试通过之后会生成一个jar文件，该jar文件随后会作为一个可运行的Stub server，消费方基于Stub server编写测试，从而验证功能是否满足契约：
-
-![]({{ site.url }}{{ site.img_path }}{{ '/tdd/spring-cloud-contract.jpg' }})
+微服务架构的复杂度不仅体现在技术上，与之相辅相成的是系统的业务架构，而技术架构总是服务于业务架构。优秀的测试策略和工程技术实践让我们更好地构建复杂的架构体系并克服它所带来的挑战，而最终决定一个系统成功与否在于人。所以，团队中每一个人应该保持Open的心态，持续学习，提升自己的高度（技能和业务），掌握实施微服务的相关技能，比如利用DDD去做服务的划分，从而能够更好的驾驭微服务架构。
 
 
 
