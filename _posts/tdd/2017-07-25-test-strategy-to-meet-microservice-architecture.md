@@ -215,15 +215,17 @@ Martin Fowller 在2012年的 [测试金字塔理论](https://martinfowler.com/bl
 
 [ThoughtWorks技术雷达](https://www.thoughtworks.com/radar/techniques/consumer-driven-contract-testing) 于2016年已经正式采纳消费者驱动契约测试。
 
-在编写测试和环境搭建方面，CDCT降低了开发人员编写测试的难度，让开发人员从不稳定的测试环境中解脱出来。随着微服务架构的盛行，目前越来越多的开发团队引入了CDCT，逐渐淡化UI测试。开发团队的测试策略正在发生不同的演变：
+>We’ve decided to bring consumer-driven contract testing back from the archive for this edition even though we had allowed it to fade in the past. 
+
+微服务架构的盛行促使越来越多的开发团队开始引入CDCT，逐渐淡化UI测试。团队的测试策略正在发生不同的演变：
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/tdd/testpyamid-evolution.jpg' }})
 
-引入了CDCT并摆出了正确的姿势，我们可以大大弱化UI测试，甚至可以使用少量的人工测试来代替自动化UI测试。CDCT帮助我们缓解了UI测试的痛点，也要当心走极端，譬如有些团队的测试策略发生了下面的极端情况：
+引入了CDCT并摆出了正确的姿势，便可大大弱化UI测试，甚至可以使用少量的人工测试来代替自动化UI测试。CDCT帮助我们缓解了UI测试的痛点，但也要当心走极端，譬如有些团队的测试策略发生了下面的极端情况：
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/tdd/testpyramid-bad-evolution.jpg' }})
 
-软件工程从不会生产银弹，一种新的方案的诞生只是解决了已有方案的痛点，好比微服务架构解决了单体的那些痛点之后，却又带来了足够的复杂性，需要团队达到一定的高度之后方可更好地驾驭。团队在决定测试策略的时候可以参考以下几条原则：
+软件工程曾经从未产出银弹，相信未来也不会，一种新的方案的诞生只是解决了已有方案的痛点，好比微服务架构解决了单体的那些痛点之后，却又带来了足够的复杂性，从而对团队自身的能力提出了挑战。在选择测试策略的时候可以参考以下几条原则：
 
 ```
 1. 单元测试成本低，运行效率高，性价比非常高，始终摆在第一位。
