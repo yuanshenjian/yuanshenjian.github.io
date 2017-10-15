@@ -206,7 +206,7 @@ CDCT具备了`引入Contract概念集成测试`的诸多优点，并且通过可
 
 >集成测试是一个骗局，你可能需要编写2-5%集成测试来做一个E2E的测试，但它们可能到处在重复单元测，另外集成测试存在彼此重复。更糟糕的是，当集成测试失败时，你不知道哪里出了问题，不能及时准确定位问题。
 
-J.B. Rainsberger后来还在博客上发表了 [《Integration Tests Are a Scam》](http://blog.thecodewhisperer.com/permalink/integrated-tests-are-a-scam)，充分数据来阐述了该观点。他提出的最佳实践是：**用契约测试或协议测试来做集成测试！**
+J.B. Rainsberger后来还在博客上发表了 [《Integration Tests Are a Scam》](http://blog.thecodewhisperer.com/permalink/integrated-tests-are-a-scam)，文章借用强有力的数据分析来证实自己的观点。他提出的最佳实践是：**用契约测试或协议测试来做集成测试！**
 
 Martin Fowller 在2012年的 [测试金字塔理论](https://martinfowler.com/bliki/TestPyramid.html) 中也指出：
 
