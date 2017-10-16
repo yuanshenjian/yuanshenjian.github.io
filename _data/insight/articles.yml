@@ -64,6 +64,8 @@
 
 - category: Microservices
   entries:
+    - title: 微服务进展缓慢的5个难点
+      url: http://insights.thoughtworks.cn/five-problems-of-microservices/
     - title: 认识微服务——一颗银弹
       url: http://insights.thoughtworkers.org/microservices/
     - title: 关于微服务的发展方向，我们和5位专家聊了聊

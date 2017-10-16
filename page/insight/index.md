@@ -12,11 +12,11 @@ active: insight
 
 {% for article in site.data.insight.articles %}
 
----
-
-##  {{article.category}}
+###  {{article.category}}
 {% for entry in article.entries %}
 [{{ entry.title }}]({{ entry.url }})
 {% endfor %}
+
+---
 
 {% endfor %}
