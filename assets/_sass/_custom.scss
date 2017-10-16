@@ -163,10 +163,10 @@ p img {
   border: 0;
   display: block;
   margin: auto auto 20px;
-  box-shadow: 2px 2px 20px 2px #ccc;
   -ms-interpolation-mode: bicubic;
-  -webkit-box-shadow: 2px 2px 20px 2px #ccc;
-  -moz-box-shadow: 2px 2px 20px 2px #ccc;
+  //box-shadow: 1px 1px 5px 1px #ccc;
+  //-webkit-box-shadow: 1px 1px 5px 1px #ccc;
+  //-moz-box-shadow: 1px 1px 5px 1px #ccc;
 }
 
 hr {
