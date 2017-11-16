@@ -10,7 +10,7 @@ author: "袁慎建"
 published: false
 
 brief: "
-Java 编码规范
+项目中经典实用的Java代码规范
 "
 
 ---
