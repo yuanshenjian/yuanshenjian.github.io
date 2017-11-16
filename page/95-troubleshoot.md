@@ -5,7 +5,7 @@ title: Troubleshoot
 permalink: /troubleshoots/
 summary: "疑难 杂症"
 
-active: troubleshoots
+# active: troubleshoots
 ---
 
 {% for category in site.data.troubleshoot.toc %}

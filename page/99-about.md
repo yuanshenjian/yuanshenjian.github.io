@@ -8,6 +8,7 @@ active: about
 
 ---
 
+
 <div class="header-sjyuan">
     <img src="{{ site.url }}{{ site.img_path }}{{ '/header-sjyuan.jpg' }}">
 </div>

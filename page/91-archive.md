@@ -1,11 +1,12 @@
 ---
 bg: "archive.jpg"
 layout: page
-permalink: /posts/
+permalink: /archive/
 title: "Archive"
 summary: "应有 尽有"
 
-active: archive
+# active: archive
+
 ---
 
 {% for tag in site.tags %}

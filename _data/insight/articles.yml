@@ -45,6 +45,12 @@
 
 - category: Domain-driven Design
   entries:
+    - title: DDD实战篇：分层架构的代码结构【精】
+      url: http://insights.thoughtworks.cn/ddd-layered-architecture/
+    - title: DDD战术篇：领域模型的应用【精】
+      url: http://insights.thoughtworks.cn/ddd-domain-model/
+    - title: DDD战略篇：架构设计的响应力【精】
+      url: http://insights.thoughtworks.cn/ddd-architecture-design/
     - title: DDD & Microservices【精】
       url: http://insights.thoughtworkers.org/ddd-and-microservices/
     - title: 领域驱动设计实现之路【精】
