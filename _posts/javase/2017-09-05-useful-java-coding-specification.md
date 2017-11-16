@@ -7,7 +7,7 @@ category: [JAVASE]
 tag: [Java, Generic, 编码规范]
 
 author: "袁慎建"
-published: true
+published: false
 
 brief: "
 项目中经典实用的Java代码规范
