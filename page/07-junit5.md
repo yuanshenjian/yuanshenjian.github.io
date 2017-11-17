@@ -1,5 +1,5 @@
 ---
-bg: "insight.jpg"
+bg: "junit5.png"
 layout: page
 title: JUnit5
 permalink: /junit5/
