@@ -57,20 +57,23 @@ layout: default
 
     <div class="post-links">
       {% if page.next.url %}
-        <a class="link-to-post" href="{{ page.next.url }}">
-          <span class="link-to-post__next">&#10535; &nbsp;Next post</span>
-          <span class="link-to-post__title">{{ page.next.title }}</span>
-        </a>
+      <a class="link-to-post" href="{{ page.next.url }}">
+        <span class="link-to-post__next">&#10535; &nbsp;Next post</span>
+        <span class="link-to-post__title">{{ page.next.title }}</span>
+      </a>
       {% endif %}
 
       {% if page.previous.url %}
-        <a class="link-to-post" href="{{ page.previous.url }}">
-          <span class="link-to-post__prev">&#10535; &nbsp;Previous post</span>
-          <span class="link-to-post__title">{{ page.previous.title }}</span>
-        </a>
+      <a class="link-to-post" href="{{ page.previous.url }}">
+        <span class="link-to-post__prev">&#10535; &nbsp;Previous post</span>
+        <span class="link-to-post__title">{{ page.previous.title }}</span>
+      </a>
       {% endif %}
     </div>
-
+  </div>
+  <div class="post-toc">
+    <div class="title"><h4><a href="{{ page.url }}">{{ page.title }}</a></h4></div>
+    <div class="content"></div>
   </div>
 </article>
 
