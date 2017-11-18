@@ -165,7 +165,7 @@ a {
   text-shadow: 2px 0 5px #333;
   line-height: 50px;
   position: absolute;
-  bottom: 20%;
+  bottom: 30%;
   width: 80%;
 
   left: 10%;
@@ -175,7 +175,7 @@ a {
     text-decoration: none;
     &:hover { text-decoration: underline; }
     &:not(:last-child):after {
-      content: " , ";
+      //content: " , ";
       position: absolute;
       bottom: 0;
     }
