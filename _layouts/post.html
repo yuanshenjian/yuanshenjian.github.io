@@ -4,7 +4,7 @@ layout: default
 
 <article class="post">
 
-  <h1 class="post-title">{{ page.title }}</h1>
+  <h1 class="post-title"><i>{{ page.title }}</i></h1>
 
   <p class="post-meta">
     <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%Y-%m-%d" }}</time>
@@ -72,7 +72,7 @@ layout: default
     </div>
   </div>
   <div class="post-toc">
-    <div class="title"><h4><i><a href="{{ page.url }}">{{ page.title }}</a></i></h4></div>
+    <div class="title"><h5><a href="{{ page.url }}"><i>{{ page.title }}</i></a></h5></div>
     <div class="content"></div>
   </div>
 </article>
