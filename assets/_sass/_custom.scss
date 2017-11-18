@@ -59,7 +59,7 @@ blockquote {
   padding: 0 0 0 15px;
 }
 
-.image-source-comment{
+.image-source-comment {
   min-height: 22px;
   text-align: center;
   margin: 0 auto;
@@ -149,7 +149,7 @@ td {
   a {
     text-decoration: none;
   }
-  a:hover{
+  a:hover {
     text-decoration: underline;
   }
 }
@@ -208,15 +208,14 @@ hr {
   }
 }
 
-.header-sjyuan{
+.header-sjyuan {
   width: 200px;
   height: 200px;
   margin: 10px auto;
-  img{
+  img {
     border-radius: 50%
   }
 }
-
 
 @media only screen and (min-width: 420px) {
   .personal-receipt-qr-code {
@@ -226,9 +225,31 @@ hr {
   }
 }
 
+.post-toc {
+  display: none;
+}
 
+@media screen and (min-width: $break-point) {
+  .post-toc {
+    display: block;
+    max-height: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f8f8f7;
+    width: $aside-width;
 
-
+    .title {
+      margin-left: 35px;
+    }
+    .content {
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+  }
+}
 
 
 

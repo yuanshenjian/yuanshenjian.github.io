@@ -15,7 +15,8 @@ gulp.task('minifyjs', function () {
   return gulp.src([
     'assets/js/back-to-top.js',
     'assets/js/reward.js',
-    'assets/js/search.js'
+    'assets/js/search.js',
+    'assets/js/post-toc.js'
   ]).pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('assets/js'));
