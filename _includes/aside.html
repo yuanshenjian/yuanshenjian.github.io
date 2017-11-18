@@ -22,12 +22,12 @@
 
         </div>
 
-        <!--<p>-->
-          <!--{% if page.summary %}-->
-          <!--{{ page.summary }}-->
-          <!--{% endif %}-->
-        <!--</p>-->
-
+        {% if page.summary %}
+        <hr>
+        <p>
+          {{ page.summary }}
+        </p>
+        {% endif %}
       </div>
 
     </div>
