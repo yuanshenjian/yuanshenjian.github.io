@@ -2,8 +2,8 @@
 bg: "archive.jpg"
 layout: page
 permalink: /archives/
-title: "Archive"
-summary: "应有 尽有"
+title: "ARCHIVE"
+summary: "包罗万象"
 
 # active: archive
 

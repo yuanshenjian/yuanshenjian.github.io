@@ -3,7 +3,7 @@ bg: "insight.jpg"
 layout: page
 title: Fitness
 permalink: /fitness/
-summary: "健身与健康"
+summary: "健康生活"
 
 # active: fitness
 

@@ -3,7 +3,7 @@ bg: "insight.jpg"
 layout: page
 title: "INSIGHT"
 permalink: /insight/
-summary: "IT 视野"
+summary: "IT视野"
 
 active: insight
 
