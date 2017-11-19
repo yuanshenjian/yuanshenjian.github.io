@@ -7,18 +7,17 @@
     <div class="cover">
       <div class="cover-text">
         <div class="heading">
-          {{ page.title }}
-
-          <!--{% if page.tags %}-->
           <!--{{ page.title }}-->
-          <!--<hr>-->
-          <!--{% for tag in page.tags %}-->
-          <!--<a href="/posts/#{{ tag | downcase }}">{{ tag | downcase }}</a>-->
-          <!--{% endfor %}-->
-          <!--{% else %}-->
-          <!--<a href="{{ site.url }}{{ page.permalink }}">{{ page.title }}</a>-->
-          <!--<hr>-->
-          <!--{% endif %}-->
+
+          {% if page.tags %}
+          <a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a>
+          <hr>
+          {% for tag in page.tags %}
+          <div class="tag"><a href="/archives/#{{ tag | downcase }}">{{ tag }}</a></div>
+          {% endfor %}
+          {% else %}
+          <a href="{{ site.url }}{{ page.permalink }}">{{ page.title }}</a>
+          {% endif %}
 
         </div>
 

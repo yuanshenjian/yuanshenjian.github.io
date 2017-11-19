@@ -1,7 +1,7 @@
 ---
 bg: "archive.jpg"
 layout: page
-permalink: /archive/
+permalink: /archives/
 title: "Archive"
 summary: "应有 尽有"
 
