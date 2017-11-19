@@ -1,7 +1,7 @@
 ---
 bg: "side-sport.jpg"
 layout: page
-title: "About"
+title: "ABOUT"
 permalink: /about/
 summary: "运动 编程"
 active: about

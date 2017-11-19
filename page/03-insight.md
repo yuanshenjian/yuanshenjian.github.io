@@ -1,7 +1,7 @@
 ---
 bg: "insight.jpg"
 layout: page
-title: Insight
+title: "INSIGHT"
 permalink: /insight/
 summary: "IT 视野"
 
