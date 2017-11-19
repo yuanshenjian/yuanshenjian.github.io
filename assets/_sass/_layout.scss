@@ -94,10 +94,7 @@ a {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  font-weight: 400;
-  font-family: "Roboto Condensed", sans-serif;
   padding: 0 1rem;
-  text-transform: uppercase;
   a {
     -webkit-order: 1;
     -ms-flex-order: 1;
@@ -244,7 +241,7 @@ article {
   color: #b9b9b9;
   font-size: 70%;
   font-weight: bold;
-  font-family: 'Roboto Condensed', sans-serif;
+  //font-family: 'Roboto Condensed', sans-serif;
   a, a:hover, a:focus, a:visited {
     color: #333;
   }
