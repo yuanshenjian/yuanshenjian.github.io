@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL 锦囊
+title: Mongo 锦囊
 permalink: /troubleshoots/mongo
 
 date: 2016-06-20
