@@ -22,7 +22,9 @@ date: 2018-01-01
 ## 1. 概述
 本文档的目标是为那些编写测试、扩展作者和引擎作者以及构建工具和IDE供应商的程序员提供综合全面的参考。
 
-本文档英文原文PDF格式 [下载链接](http://junit.org/junit5/docs/current/user-guide/index.pdf)。
+本文档英文PDF格式 [下载链接](http://junit.org/junit5/docs/current/user-guide/index.pdf)。
+
+本文档中文PDF格式 [下载链接即将发布]()。
 
 ### 1.1. JUnit 5 是什么?
 与以前版本的JUnit不同，JUnit5由几个不同的模块组成，它们分别来自于三个不同的子项目。
