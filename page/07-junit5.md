@@ -11,7 +11,7 @@ date: 2018-01-01
 
 ---
 
-***本文档由 [ThoughtWorks](https://www.thoughtworks.com/) 咨询师 [袁慎建]({{ '/about' }})、[王亚鑫](http://www.jianshu.com/u/048f932015bc)、[何疆乐](http://www.jianshu.com/u/ab3e5acc3f2c)   倾情力作！正式版即将发布，敬请期待！*** 
+***本文档由 [ThoughtWorks](https://www.thoughtworks.com/) 咨询师 [袁慎建]({{ '/about' }})、[王亚鑫](http://www.jianshu.com/u/048f932015bc) 与 [何疆乐](http://www.jianshu.com/u/ab3e5acc3f2c)   倾情力作！正式版即将发布，敬请期待！*** 
 
 *Original online document: [JUnit 5 User Guide](http://junit.org/junit5/docs/current/user-guide/)*
 
@@ -218,7 +218,7 @@ JUnit Jupiter 支持使用下面表格中的注解来配置测试和扩展框架
 
 被`@Test`、`@TestTemplate`、`@RepeatedTest`、`@BeforeAll`、`@AfterAll`、`@BeforeEach` 或 `@AfterEach` 注解标注的方法不可以有返回值。
 
->⚠️  某些注解目前可能还处于实验阶段。详细信息请参阅 [实验性APIs]() 中的表格。
+>⚠️  某些注解目前可能还处于实验阶段。详细信息请参阅 [试验性APIs]() 中的表格。
 
 #### 3.1.1. 元注解和组合注解
 JUnit Jupiter注解可以被用作*元注解*。这意味着你可以定义你自己的*组合注解*，而自定义的组合注解会自动*继承*其元注解的语义。
@@ -1154,7 +1154,7 @@ class RepeatedTestsDemo {
 
 参数化测试可以用不同的参数多次运行测试。除了使用`@ParameterizedTest`注解，它们的声明跟`@Test`的方法没有区别。此外，你必须声明至少一个给每次调用提供参数的来源。
 
-> ⚠️ 参数化测试目前是一个实验性功能。详细信息请参阅 [实验性API]() 中的表格。
+> ⚠️ 参数化测试目前是一个试验性功能。详细信息请参阅 [试验性API]() 中的表格。
 
 ```java
 @ParameterizedTest
@@ -1497,7 +1497,7 @@ JUnit Juppiter的 [Annotations]() 章节描述的标准`@Test`注解跟JUnit 4�
 
 从JUnit Jupiter 5.0.2开始，动态测试必须始终由工厂方法创建；不过，在后续的发行版中，这可以通过注册工具来提供。
 
-> ⚠️ 动态测试目前是一个实验性功能。详细信息请参阅 [实验性API]() 中的表格。
+> ⚠️ 动态测试目前是一个试验性功能。详细信息请参阅 [试验性API]() 中的表格。
 
 
 #### 3.15.1. 动态测试示例
@@ -1751,12 +1751,80 @@ In addition to the public Launcher API method for registering test execution lis
 ---
 
 ## 8. API演变
-*即将上线*
+
+One of the major goals of JUnit 5 is to improve maintainers' capabilities to evolve JUnit despite its being used in many projects. With JUnit 4 a lot of stuff that was originally added as an internal construct only got used by external extension writers and tool builders. That made changing JUnit 4 especially difficult and sometimes impossible.
+
+JUnit 5的主要目标之一是提高维护者演进改善JUnit的能力，尽管它正在很多项目中被使用。使用JUnit 4中，很多最初作为内部构造而被添加的内容只能被外部扩展编写器和工具构建器使用。这就使得改变JUnit 4异常困难，甚至有时是不可能的。
+
+That’s why JUnit 5 introduces a defined lifecycle for all publicly available interfaces, classes, and methods.
+
+这就是为什么JUnit 5为所有公开的接口、类和方法引入了一个明确的生命周期。
+
+
+### 8.1 API 版本和状态
+
+每个发布的包都有一个版本号`<major>.<minor>.<patch>`，所有公开的接口、类和方法都使用 [@API Guardian](https://github.com/apiguardian-team/apiguardian) 项目中的 [@API](https://apiguardian-team.github.io/apiguardian/docs/current/api/) 进行注解。注解的`status`属性可以被赋予下面表格中的值。
+
+| 状态 | 描述 |
+|:---|:---|
+| INTERNAL | 只能被JUnit自身使用，可能会被删除，但不事先另行通知。 |
+| DEPRECATED | 不应再使用；可能会在下一个小版本中消失。 |
+| EXPERIMENTAL | 用于我们正在收集反馈的新的试验性功能。谨慎使用这个元素；它可能会在未来被提升为`MAINTAINED`或`STABLE`，但也可能在没有事先通知的情况下被移除，即使在一个补丁中。 |
+| MAINTAINED | 用于*至少*在当前主要版本的下一个次要版本中不会以反向不兼容的方式更改的功能。如果计划删除，则会首先将其降为`DEPRECATED`。 |
+| STABLE | 用于在当前主版本（5. *）中不会以反向不兼容的方式更改的功能。 |
+
+如果`@API`注解出现在某个类型上，则认为它也适用于该类型的所有公共成员。一个成员可以声明一个稳定性更低的`status`值。
+
+### 8.2 试验性API
+
+下表列出了哪些API当前被指定为*试验性的*（通过`@API(status = EXPERIMENTAL)`）。使用这样的API时应该谨慎。
+
+| 包名 | 类名 | 类型 |
+|:---|:---|:---|
+|org.junit.jupiter.api|DynamicContainer|类|
+|org.junit.jupiter.api|DynamicNode|类|
+|org.junit.jupiter.api|DynamicTest|类|
+|org.junit.jupiter.api|TestFactory|注解|
+|org.junit.jupiter.migrationsupport.rules|EnableRuleMigrationSupport|注解|
+|org.junit.jupiter.migrationsupport.rules|ExpectedExceptionSupport|类|
+|org.junit.jupiter.migrationsupport.rules|ExternalResourceSupport|类|
+|org.junit.jupiter.migrationsupport.rules|VerifierSupport|类|
+|org.junit.jupiter.params|ParameterizedTest|注解|
+|org.junit.jupiter.params.converter|ArgumentConversionException|类|
+|org.junit.jupiter.params.converter|ArgumentConverter|接口|
+|org.junit.jupiter.params.converter|ConvertWith|注解|
+|org.junit.jupiter.params.converter|JavaTimeConversionPattern|注解|
+|org.junit.jupiter.params.converter|SimpleArgumentConverter|类|
+|org.junit.jupiter.params.provider|Arguments|接口|
+|org.junit.jupiter.params.provider|ArgumentsProvider|接口|
+|org.junit.jupiter.params.provider|ArgumentsSource|注解|
+|org.junit.jupiter.params.provider|ArgumentsSources|注解|
+|org.junit.jupiter.params.provider|CsvFileSource|注解|
+|org.junit.jupiter.params.provider|CsvSource|注解|
+|org.junit.jupiter.params.provider|EnumSource|注解|
+|org.junit.jupiter.params.provider|MethodSource|注解|
+|org.junit.jupiter.params.provider|ValueSource|注解|
+|org.junit.jupiter.params.support|AnnotationConsumer|接口|
+|org.junit.platform.gradle.plugin|EnginesExtension|类|
+|org.junit.platform.gradle.plugin|FiltersExtension|类|
+|org.junit.platform.gradle.plugin|JUnitPlatformExtension|类|
+|org.junit.platform.gradle.plugin|JUnitPlatformPlugin|类|
+|org.junit.platform.gradle.plugin|PackagesExtension|类|
+|org.junit.platform.gradle.plugin|SelectorsExtension|类|
+|org.junit.platform.gradle.plugin|TagsExtension|类|
+|org.junit.platform.surefire.provider|JUnitPlatformProvider|类|
+
+
+### 8.3. @API工具支持
+
+[@API Guardian](https://github.com/apiguardian-team/apiguardian) 项目计划为使用 [@API](https://apiguardian-team.github.io/apiguardian/docs/current/api/) 注解的API的发布者和消费者提供工具支持。例如，工具支持可能会提供一种方法来检查是否按照`@API`注解声明来使用JUnit API。
+
 
 ---
 
 ## 9. 贡献者
-*即将上线*
+
+可以在GitHub上直接浏览 [当前贡献者列表](https://github.com/junit-team/junit5/graphs/contributors)
 
 ---
 
