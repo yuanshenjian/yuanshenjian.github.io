@@ -13,6 +13,8 @@ date: 2018-01-01
 
 ***此文档由 [ThoughtWorks](https://www.thoughtworks.com/) 咨询师 [王亚鑫](https://github.com/sunnyaxin) 和 [袁慎建]({{ '/about' }}) 倾情力作！文档即将正式发布，敬请期待！*** 
 
+*Original online document: [JUnit 5 User Guide](http://junit.org/junit5/docs/current/user-guide/)*
+
 
 * content
 {:toc}
