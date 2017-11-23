@@ -1,4 +1,5 @@
 ---
+
 bg: "junit5.png"
 layout: post
 title: "JUnit 5 用户指南"
@@ -10,6 +11,7 @@ active: junit5
 date: 2018-01-01
 
 ---
+
 
 ***本文档由 [ThoughtWorks](https://www.thoughtworks.com/) 咨询师 [袁慎建]({{ '/about' }})、[王亚鑫](http://www.jianshu.com/u/048f932015bc) 与 [何疆乐](http://www.jianshu.com/u/ab3e5acc3f2c)   倾情力作！正式版即将发布，敬请期待！*** 
 
@@ -26,7 +28,7 @@ date: 2018-01-01
 
 本文档英文PDF格式 [下载链接](http://junit.org/junit5/docs/current/user-guide/index.pdf)。
 
-本文档中文PDF格式 [下载链接即将发布]()。
+本文档中文PDF格式 [下载链接即将发布](https://github.com/sjyuan-cc/sjyuan-cc.github.io/raw/master/assets/documents/junit5-user-guide-cn.pdf)。
 
 ### 1.1. JUnit 5 是什么?
 与以前版本的JUnit不同，JUnit5由几个不同的模块组成，它们分别来自于三个不同的子项目。
@@ -46,7 +48,7 @@ JUnit 5需要Java 8（或更高）的运行时环境。不过，你仍然可以�
 与JUnit 5相关问题，可以在 [Stack Overflow](https://stackoverflow.com/questions/tagged/junit5)
 进行提问，或者在 [Gitter](https://gitter.im/junit-team/junit5) 上跟我们进行交流。
 
----
+
 
 ## 2. 安装
 最终版本和里程碑的包已经被部署到Maven仓库中心了。
@@ -172,7 +174,7 @@ JUnit Vintage测试引擎实现，允许在新的JUnit Platform上运行低版�
 
 - Maven工程：[junit5-maven-consumer](https://github.com/junit-team/junit5-samples/tree/r5.0.2/junit5-maven-consumer).
 
----
+
 
 ## 3. 编写测试
 
@@ -199,7 +201,7 @@ JUnit Jupiter 支持使用下面表格中的注解来配置测试和扩展框架
 所有的核心注解都位于`junit-jupiter-api`模块的 [org.junit.jupiter.api ](http://junit.org/junit5/docs/current/api/org/junit/jupiter/api/package-summary.html) 包中。
 
 | 注解          | 描述 |
-|:--------------|:------------|
+|:---|:---|
 | @Test         | 表示该方法是一个测试方法。与JUnit 4的`@Test`注解不同的是，它没有声明任何属性，因为JUnit Jupiter中的测试扩展是基于他们自己的专用注解来完成的。这样的方法会被*继承*，除非它们被*覆盖*了。|
 | @ParameterizedTest | 表示该方法是一个 [参数化测试]()。这样的方法会被*继承*，除非它们被*覆盖*了。|
 | @RepeatedTest | 表示该方法是一个 [重复测试]() 的测试模板。这样的方法会被*继承*，除非它们被*覆盖*了。 |
@@ -1628,22 +1630,22 @@ class DynamicTestsDemo {
 }
 ```
 
----
+
 
 ## 4. 运行测试
 *即将上线*
 
----
+
 
 ## 5. 扩展模型
 *即将上线*
 
----
+
 
 ## 6. 从JUnit 4迁移
 *即将上线*
 
----
+
 
 ## 7. 高级主题
 
@@ -1748,7 +1750,6 @@ In addition to the public Launcher API method for registering test execution lis
 除了以编程方式来注册测试执行监听器的公共 [`Launcher`](http://junit.org/junit5/docs/current/api/org/junit/platform/launcher/Launcher.html)  API方法之外，在运行时由Java的`java.util.ServiceLoader`工具发现的自定义 [`TestExecutionListener`](http://junit.org/junit5/docs/current/api/org/junit/platform/launcher/TestExecutionListener.html) 实现会被自动注册到`DefaultLauncher`。 例如，一个实现了 [`TestExecutionListener`](http://junit.org/junit5/docs/current/api/org/junit/platform/launcher/TestExecutionListener.html) 并声明在`/META-INF/services/org.junit.platform.launcher.TestExecutionListener`文件中的`example.TestInfoPrinter`类会被自动加载和注册。
 
 
----
 
 ## 8. API演变
 
@@ -1820,13 +1821,10 @@ That’s why JUnit 5 introduces a defined lifecycle for all publicly available i
 [@API Guardian](https://github.com/apiguardian-team/apiguardian) 项目计划为使用 [@API](https://apiguardian-team.github.io/apiguardian/docs/current/api/) 注解的API的发布者和消费者提供工具支持。例如，工具支持可能会提供一种方法来检查是否按照`@API`注解声明来使用JUnit API。
 
 
----
-
 ## 9. 贡献者
 
 可以在GitHub上直接浏览 [当前贡献者列表](https://github.com/junit-team/junit5/graphs/contributors)
 
----
 
 ## 10. 发布记录
 
