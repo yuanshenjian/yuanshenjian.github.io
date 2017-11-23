@@ -28,7 +28,7 @@ date: 2018-01-01
 
 本文档英文PDF格式 [下载链接](http://junit.org/junit5/docs/current/user-guide/index.pdf)。
 
-本文档中文PDF格式 [下载链接即将发布](https://github.com/sjyuan-cc/sjyuan-cc.github.io/raw/master/assets/documents/junit5-user-guide-cn.pdf)。
+本文档中文PDF格式 [预览版下载链接](https://github.com/sjyuan-cc/sjyuan-cc.github.io/raw/master/assets/documents/junit5-user-guide-cn.pdf)。
 
 ### 1.1. JUnit 5 是什么?
 与以前版本的JUnit不同，JUnit5由几个不同的模块组成，它们分别来自于三个不同的子项目。
