@@ -1634,7 +1634,6 @@ class DynamicTestsDemo {
 ```
 
 
-
 ## 4.运行测试
 
 ### 4.1. IDE支持
@@ -1644,8 +1643,9 @@ class DynamicTestsDemo {
 IntelliJ IDEA 从 2016.2 版本开始支持在JUnit平台上运行测试。更多的细节参考 [IntelliJ IDEA的相关博客](https://blog.jetbrains.com/idea/2016/08/using-junit-5-in-intellij-idea/)。
 
 ##### *表格1. Junit5 版本对应的 IntelliJ IDEA*
- **IntelliJ IDEA 版本** | **捆绑的 JUnit 5 版本**
- --------|---------
+
+| **IntelliJ IDEA 版本** | **捆绑的 JUnit 5 版本** |
+|:---|:---|
  2016.2 | M2
  2016.3.1 | M3
  2017.1.2 | M4
@@ -1657,7 +1657,8 @@ IntelliJ IDEA 从 2016.2 版本开始支持在JUnit平台上运行测试。更�
 为了能够使用JUnit5的不同版本，你需要在classpath中手动添加`junit-platform-launcher`,`junit-jupiter-engine`,`junit-vintage-engine`的 JARs 文件。
 
 ###### *添加Gradle依赖*
-```
+
+```java
 // Only needed to run tests in an IntelliJ IDEA that bundles an older version
 testRuntime("org.junit.platform:junit-platform-launcher:1.0.2")
 testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.2")
@@ -1665,7 +1666,8 @@ testRuntime("org.junit.vintage:junit-vintage-engine:4.12.2")
 ```
 
 ###### *添加Maven依赖*
-```
+
+```xml
 <!-- Only required to run tests in an IntelliJ IDEA that bundles an older version -->
 <dependency>
     <groupId>org.junit.platform</groupId>
@@ -1708,7 +1710,7 @@ JUnit 开发团队已经开发了一款基于 Gradle 的Junit5 插件，它可�
 
 要使用 JUnit Gradle 插件，需要确保使用的Gradle版本是2.5或更高，若满足条件，可以按以下模板配置项目中的 `build.gradle` 文件：
 
-```
+```groovy
 buildscript {
     repositories {
         mavenCentral()
@@ -1728,7 +1730,7 @@ apply plugin: 'org.junit.platform.gradle.plugin'
 一旦应用了 JUnit Gradle 插件，可按照如下方式进行配置。
 
 
-```
+```groovy
 junitPlatform {
     platformVersion '1.0.2' // optional, defaults to plugin version
     logManager 'org.apache.logging.log4j.jul.LogManager'
@@ -1747,7 +1749,7 @@ JUnit Gradle 插件在默认情况下会禁用标准的 Gradle `test`任务，�
 
 默认情况下，插件将会扫描项目中所有的测试输出文件夹。但是，开发者可以通过使用 `selectors` 的扩展元素来明确指定哪些测试应该被执行。
 
-```
+```groovy
 junitPlatform {
     // ...
     selectors {
@@ -1784,7 +1786,7 @@ junitPlatform {
 可以使用 `Filter` 扩展来配置测试计划的过滤器。默认情况下，所有的引擎和标签都被包含在测试计划中。但只有默认的 `includeClassNamePattern 
 (^.*Tests?$)` 被应用。开发者可以重写默认的匹配器，例子如下。当使用了多种匹配器时，JUnit Platform 会使用逻辑或将它们合并起来使用。
 
-```
+```groovy
 junitPlatform {
     // ...
     filters {
@@ -1812,8 +1814,7 @@ junitPlatform {
 ##### 配置参数
 通过使用 `configurationParameter` 或者 `configurationParameters` DSL 配置参数可以影响测试执行和路径。前者可以配置单独的配置参数，后者可以获取一个 map 变量配置多个键值对，所有的 key 和 value 都必须是 ```String``` 类型。
 
-```
-
+```groovy
 junitPlatform {
     // ...
     configurationParameter 'junit.jupiter.conditions.deactivate', '*'
@@ -1831,7 +1832,7 @@ junitPlatform {
 
 要配置基于 JUnit Jupiter 的测试支持，需要配置一个JUnit Jupiter API 的 `testCompile` 依赖以及JUnit Jupiter `TestEngine` 实现的 `testRuntime` 依赖。具体配置如下：
 
-```
+```groovy
 dependencies {
     testCompile("org.junit.jupiter:junit-jupiter-api:5.0.2")
     testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.2")
@@ -1840,7 +1841,7 @@ dependencies {
 
 开发者只要配置了一个JUnit4的 `testCompile` 依赖以及JUnit Vintage `TestEngine` 的 `testRuntime `依赖，JUnit Gradle 插件就可以运行基于JUnit 4 的测试。具体配置如下：
 
-```
+```groovy
 dependencies {
     testCompile("junit:junit:4.12")
     testRuntime("org.junit.vintage:junit-vintage-engine:4.12.2")
@@ -1856,7 +1857,7 @@ dependencies {
 
 在 [`junit5-gradle-consumer`](https://github.com/junit-team/junit5-samples/tree/r5.0.0-M4/junit5-gradle-consumer) 项目中，执行 `junitPlatformTest` 任务的输出结果如下：
 
-```
+```sh
 :junitPlatformTest
 
 Test run finished after 93 ms
@@ -1878,7 +1879,7 @@ BUILD SUCCESSFUL
 
 如果测试包含不通过的情况，那么build会失败，并且输出会如下所示：
 
-```
+```sh
 :junitPlatformTest
 
 Test failures (1):
@@ -1921,7 +1922,7 @@ Execution failed for task ':junitPlatformTest'.
 
 > ⚠️ 由于 Surefire2.20 中的内存泄漏，`junit-platform-surefire-provider` 仅仅在Surefire 2.19.1 中可用。
 
-```
+```xml
 ...
 <build>
     <plugins>
@@ -1947,7 +1948,7 @@ Execution failed for task ':junitPlatformTest'.
 
 要配置针对 JUnit Jupiter 测试的支持，你需要为JUnit Jupiter API配置 `test` 依赖，为 `maven-surefire-plugin` 增加JUnit Jupiter的 `TestEngine` 实现的依赖。
 
-```
+```xml
 ...
 <build>
     <plugins>
@@ -1985,7 +1986,7 @@ Execution failed for task ':junitPlatformTest'.
 
 只要你配置了 JUnit4 的 `test` 依赖，并增加 `maven-surefire-plugin` 的 JUnit Vintage `TestEngine` 实现的依赖，Unit Platform Surefire Provider 就可以运行基于JUnit4 的测试。具体配置如下：
 
-```
+```xml
 ...
 <build>
     <plugins>
@@ -2028,7 +2029,7 @@ Execution failed for task ':junitPlatformTest'.
 * 为了包含一个 tag，可以使用 `groups` 或者 `includeTags`
 * 为了排除一个 tag，可以使用 `excludedGroups` 或者 `excludeTags`
 
-```
+```xml
 ...
 <build>
     <plugins>
@@ -2054,7 +2055,7 @@ Execution failed for task ':junitPlatformTest'.
 ##### 配置参数
 通过配置参数可以影响测试路径和执行，使用属性 `configurationParameters` 并在 Java 的 `Properties` 文件中提供键值对。
 
-```
+```xml
 ...
 <build>
     <plugins>
@@ -2085,12 +2086,12 @@ Execution failed for task ':junitPlatformTest'.
 
 `junit-platform-console-standalone-1.0.0-M4.jar`这个可执行的jar包，包括了所有的依赖，它已经被发布在 Maven 中心库中了，路径是 [junit-platform-console-standalone](https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/)，可以通过以下命令[运行](https://docs.oracle.com/javase/tutorial/deployment/jar/run.html) 单机版的 `ConsoleLauncher `
 
-```
+```sh
 java -jar junit-platform-console-standalone-1.0.2.jar <Options>
 ```
 如下所示为一个输出的例子：
 
-```
+```sh
 ├─ JUnit Vintage
 │  └─ example.JUnit4Tests
 │     └─ standardJUnit4Test ✔
@@ -2123,7 +2124,7 @@ Test run finished after 64 ms
 
 #### Options
 
-```
+```sh
 Option                                        Description
 ------                                        -----------
 -h, --help                                    Display help information.
@@ -2286,7 +2287,6 @@ public class JUnit4SuiteDemo {
 3. JUnit Platform 配置文件：该文件命名为 `junit-platform.properties`，在根目录路径下，并遵循 Java `Properties` 文件的语法
 
 > 📒 配置参数按照上面的定义顺序进行查找，所以，在 'Launcher' 中的配置参数优先级高于在系统属性中或配置文件中的设置。同样的，通过系统属性应用的应用变量优先级高于配置文件。
-
 
 
 
