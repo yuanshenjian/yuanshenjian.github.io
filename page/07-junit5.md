@@ -2300,7 +2300,7 @@ JUnit Jupiter中的扩展可以通过 [`@ExtenWith`](http://junit.org/junit5/doc
 
 例如，要给某个测试方法注册一个自定义的 `MockitoExtension`，你可以参照如下的方式标注该方法:
 
-```
+```java
 @ExtendWith(MockitoExtension.class)
 @Test
 void mockTest() {
@@ -2310,7 +2310,7 @@ void mockTest() {
 
 若要为某个类或者其子类注册一个自定义的`MockitoExtension`，将注解添加到测试类上即可：
 
-```
+```java
 @ExtendWith(MockitoExtension.class)
 class MockTests {
     // ...
@@ -2319,7 +2319,7 @@ class MockTests {
 
 多个扩展类的注册可以通过如下形式完成：
 
-```
+```java
 @ExtendWith({ FooExtension.class, BarExtension.class })
 class MyTestsV1 {
     // ...
@@ -2328,13 +2328,14 @@ class MyTestsV1 {
 
 当然，另一种方式的多个扩展类的的注册形式，也可以是这样子：
 
-```
+```java
 @ExtendWith(FooExtension.class)
 @ExtendWith(BarExtension.class)
 class MyTestsV2 {
     // ...
 }
 ```
+
 上述的两种扩展注册方式是等价的，`MyTestV1` 和 `MyTestV2` 都会被 `FooExtension` 和 `BarExtension` 进行扩展，且扩展顺序跟声明顺序一致。
 
 #### 5.2.2. 自动扩展注册
@@ -2349,7 +2350,7 @@ class MyTestsV2 {
 
 例如，要启用扩展的自动检测，你可以通过在启动JVM时传入如下系统参数
 
-```
+```sh
 -Djunit.jupiter.extensions.autodetection.enabled=true
 ```
 
@@ -2373,7 +2374,8 @@ class MyTestsV2 {
 有时候，在没有明确的附加条件下运行测试集可能更有用。例如，开发者可能想要运行一些被标注了 `@Disable` 的测试，以便观察这些测试是否一直是*失败的*。为了完成这些工作，只需提供一个用于 `junit.jupiter.conditions.deactivate` 的关键词配置，以指定当前测试运行的哪些条件应该被停用（即不被解析）。该模式可以作为JVM系统属性提供，也可以作为 `LauncherDiscoveryRequest` 中的*配置参数*提供给`Launcher`, 或使用 JUnit Platform 的配置文件（详情见[配置变量](http://junit.org/junit5/docs/current/user-guide/#running-tests-config-params)）。
 
 例如，要停用JUnit的 `@Disable` 条件，你可以在JVM启动时传入系统参数完成：
-```
+
+```sh
 -Djunit.jupiter.conditions.deactivate=org.junit.*DisabledCondition
 ```
 
@@ -2427,7 +2429,7 @@ class MyTestsV2 {
 	
 ###### 一个关于测试执行的时间和日志的扩展示例：
 
-```
+```java
 import java.lang.reflect.Method;
 import java.util.logging.Logger;
 
@@ -2466,7 +2468,7 @@ public class TimingExtension implements BeforeTestExecutionCallback, AfterTestEx
 
 ###### 下面是一个测试类应用了 TimingExample 的示例：
 
-```
+```java
 @ExtendWith(TimingExtension.class)
 class TimingExtensionTests {
 
@@ -2485,7 +2487,7 @@ class TimingExtensionTests {
 
 以下是运行TimingExtensionTests时生成的日志的示例。
 
-```
+```sh
 INFO: Method [sleep20ms] took 24 ms.
 INFO: Method [sleep50ms] took 53 ms.
 ```
@@ -2498,7 +2500,7 @@ INFO: Method [sleep50ms] took 53 ms.
 
 ###### 一个异常处理扩展
 
-```
+```java
 public class IgnoreIOExceptionExtension implements TestExecutionExceptionHandler {
 
     @Override
@@ -2521,7 +2523,7 @@ public class IgnoreIOExceptionExtension implements TestExecutionExceptionHandler
 
 ###### 一个带有附加扩展名的测试模板
 
-```
+```java
 @TestTemplate
 @ExtendWith(MyTestTemplateInvocationContextProvider.class)
 void testTemplate(String parameter) {
@@ -2569,7 +2571,7 @@ static class MyTestTemplateInvocationContextProvider implements TestTemplateInvo
 
 在这个例子中，测试模板将被调用两次。调用的展示名称是调用上下文指定的“foo”和“bar”。每个调用都会注册一个自定义的 [`ParameterResolver`](http://junit.org/junit5/docs/current/api/org/junit/jupiter/api/extension/ParameterResolver.html) 用于解析方法参数。下面输出是使用`ConsoleLauncher`时产生的。
 
-```
+```sh
 └─ testTemplate(String) ✔
    ├─ foo ✔
    └─ bar ✔
