@@ -153,7 +153,8 @@ th,
 td {
   text-align: left;
   padding: .313em .625em;
-  border: 1px solid #efefef;
+  //border: 1px solid #efefef;
+  min-width: 50px;
 }
 
 table caption {
