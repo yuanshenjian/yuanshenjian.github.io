@@ -13,9 +13,7 @@ date: 2018-01-01
 ---
 
 
-***本文档由 [ThoughtWorks](https://www.thoughtworks.com/) 咨询师 [袁慎建](http://sjyuan.cc/about/)、[王亚鑫](http://www.jianshu.com/u/048f932015bc) 与 [何疆乐](http://www.jianshu.com/u/ab3e5acc3f2c)   倾情力作！正式版即将发布，敬请期待！*** 
-
-*Original online document: [JUnit 5 User Guide](http://junit.org/junit5/docs/current/user-guide/)*
+>***本文档由 [ThoughtWorks](https://www.thoughtworks.com/) 咨询师 [袁慎建](http://sjyuan.cc/about/)、[王亚鑫](http://www.jianshu.com/u/048f932015bc) 与 [何疆乐](http://www.jianshu.com/u/ab3e5acc3f2c)   倾情力作！*** 
 
 
 * content
@@ -23,13 +21,11 @@ date: 2018-01-01
 
 ---
 
+>*Original online document: [JUnit 5 User Guide](http://junit.org/junit5/docs/current/user-guide/)*
 
-<div style="page-break-after: always;"></div>
 
 ## 1. 概述
 本文档的目标是为那些编写测试、扩展作者和引擎作者以及构建工具和IDE供应商的程序员提供综合全面的参考。
-
-Original PDF document [Download](http://junit.org/junit5/docs/current/user-guide/index.pdf)。
 
 本文档中文PDF文档 [即将发布](#)。
 
@@ -3080,7 +3076,9 @@ That’s why JUnit 5 introduces a defined lifecycle for all publicly available i
 
 
 
+---
 
+>*正式版即将发布，敬请期待，欢迎给我们提反馈！*
 
 
 
