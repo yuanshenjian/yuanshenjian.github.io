@@ -294,6 +294,13 @@ article {
   text-transform: uppercase;
   text-align: center;
   line-height: 1.5em;
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 /*
@@ -326,5 +333,11 @@ article {
     color: #333;
     margin-top: 10px;
     display: block;
+  }
+}
+
+@media screen and (max-width: $sm-break-point) {
+  .footer-link-larger {
+    display: none;
   }
 }

@@ -42,14 +42,14 @@
 }
 
 .search-tool{
-  position: fixed; 
-  top: 0px ; 
-  bottom: 0px; 
-  left: 0px; 
-  right:  0px; 
+  position: fixed;
+  top: 0px ;
+  bottom: 0px;
+  left: 0px;
+  right:  0px;
   opacity: 0.95;
-  background-color: #111111; 
-  z-index: 9999; 
+  background-color: #111111;
+  z-index: 9999;
   display: none;
 }
 
@@ -88,7 +88,7 @@
   }
 
   .search-content {
-    position: fixed; 
+    position: fixed;
     top: 60px;
     width: 70%;
     margin: 0 15%;
