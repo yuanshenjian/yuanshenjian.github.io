@@ -36,7 +36,7 @@ date: 2018-01-01
 
 **JUnit Platform**是在JVM上 [启动测试框架](#71-junit-platform启动器api) 的基础平台。它还定义了[TestEngine](http://junit.org/junit5/docs/current/api/org/junit/platform/engine/TestEngine.html) API，该API可用于开发运行在平台上的测试框架。此外，平台还提供了一个从命令行或者 [Gradle](#421-gradle) 和 [Maven](#422-maven) 插件来启动平台的 [控制台启动器](#43-控制台启动器) ，它就好比一个 [基于JUnit 4的Runner](#44-使用junit4运行junit-platform) 在平台上运行任何`TestEngine`。
 
-**JUnit Jupiter** 是一个组合体，由在JUnit5中编写测试和扩展的新 [编程模型](#) 和 [扩展模型](#) 组成。另外，Jupiter子项目还提供了一个`TestEngine`，用于在平台上运行基于Jupiter的测试。
+**JUnit Jupiter** 是一个组合体，由在JUnit5中编写测试和扩展的新 [编程模型](#3-编写测试) 和 [扩展模型](#5-扩展模型) 组成。另外，Jupiter子项目还提供了一个`TestEngine`，用于在平台上运行基于Jupiter的测试。
 
 **JUnit Vintage** 提供了一个`TestEngine`，用于在平台上运行基于JUnit 3和JUnit 4 的测试。
 
@@ -72,42 +72,42 @@ JUnit 内部通用类库/实用工具。这些实用工具仅用于JUnit框架�
 
 `junit-platform-console`  
 
-支持从控制台中查找和执行JUnit Platform上的测试。详情参考 [控制台启动器]()。
+支持从控制台中查找和执行JUnit Platform上的测试。详情参考 [控制台启动器](#43-控制台启动器)。
 	
 
 `junit-platform-console-standalone`  
 
-一个包含了Maven仓库中的 [junit-platform-console-standalone](https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone) 目录下所有依赖项的可执行JAR包。详情参考 [控制台启动器]()。
+一个包含了Maven仓库中的 [junit-platform-console-standalone](https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone) 目录下所有依赖项的可执行JAR包。详情参考 [控制台启动器](#43-控制台启动器)。
 
 
 `junit-platform-engine`  	
 
-测试引擎的公共API。详情参考 [插入你自己的测试引擎]()
+测试引擎的公共API。详情参考 [插入你自己的测试引擎](#713-插入你自己的测试引擎)
 
 
 `junit-platform-gradle-plugin`  	
 
-支持使用 [Gralde]() 来查找和执行JUnit Platform上的测试。
+支持使用 [Gralde](#421-gradle) 来查找和执行JUnit Platform上的测试。
 
 
 `junit-platform-launcher`	
 
-配置和加载测试计划的公共API -- 典型的使用场景是IDE和构建工具。详情参考 [JUnit Platform启动器API]()。
+配置和加载测试计划的公共API -- 典型的使用场景是IDE和构建工具。详情参考 [JUnit Platform启动器API](#71-junit-platform启动器api)。
 
 
 `junit-platform-runner`
 
-在JUnit Platform上以JUnit 4的环境执行测试和测试套件的运行器。详情参考 [使用JUnit 4 运行JUnit Platform]()。
+在JUnit Platform上以JUnit 4的环境执行测试和测试套件的运行器。详情参考 [使用JUnit 4运行JUnit Platform](#44-使用junit-4运行junit-platform)。
    
    
 `junit-platform-suite-api`
 	
-在JUnit Platform上配置测试套件的注解。被 [JUnit Platform 运行器]() 所支持，也有可能被第三方的`TestEngine`实现所支持。 
+在JUnit Platform上配置测试套件的注解。被 [JUnit Platform运行器](#44-使用junit-4运行junit-platform) 所支持，也有可能被第三方的`TestEngine`实现所支持。 
 
 
 `junit-platform-surefire-provider`
 
-支持使用 [Maven Surefire]() 来查找和执行JUnit Platform上的测试。
+支持使用 [Maven Surefire](#422-maven) 来查找和执行JUnit Platform上的测试。
 
 
 #### 2.1.2. JUnit Jupiter
@@ -119,7 +119,7 @@ JUnit 内部通用类库/实用工具。这些实用工具仅用于JUnit框架�
 
 `junit-jupiter-api`
 
-[编写测试]() 和 [扩展]() 的JUnit Jupiter API。
+[编写测试](#3-编写测试) 和 [扩展](#5-扩展模型) 的JUnit Jupiter API。
 
 
 `junit-jupiter-engine`
@@ -129,7 +129,7 @@ JUnit Jupiter测试引擎的实现，仅仅在运行时需要。
 
 `junit-jupiter-params`
 
-支持JUnit Jupiter中的 [参数化的测试]()。
+支持JUnit Jupiter中的 [参数化的测试](#313-参数化测试)。
 
 
 `junit-jupiter-migration-support`
@@ -172,7 +172,6 @@ JUnit Vintage测试引擎实现，允许在新的JUnit Platform上运行低版�
 - Gradle工程：[junit5-gradle-consumer](https://github.com/junit-team/junit5-samples/tree/r5.0.2/junit5-gradle-consumer).
 
 - Maven工程：[junit5-maven-consumer](https://github.com/junit-team/junit5-samples/tree/r5.0.2/junit5-maven-consumer).
-
 
 ---
 
@@ -1632,7 +1631,7 @@ class DynamicTestsDemo {
 
 ---
 
-## 4.运行测试
+## 4. 运行测试
 
 ### 4.1. IDE支持
 
@@ -2195,7 +2194,7 @@ Option                                        Description
                                                 be repeated.
 ```
 
-### 4.4. 使用JUnit4运行JUnit Platform
+### 4.4. 使用JUnit 4运行JUnit Platform
 >The JUnitPlatform runner is a JUnit 4 based Runner which enables you to run any test whose programming model is supported on the JUnit Platform in a JUnit 4 environment — for example, a JUnit Jupiter test class.
 
 `JunitPlatform`运行器是一个基于JUnit 4的`Runner`，它让你能够在一个JUnit 4环境中的JUnit Platform上运行任何编程模型被支持的测试，例如，JUnit Jupiter测试类。
