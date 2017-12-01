@@ -39,14 +39,9 @@ active: fitness
 >***自律给我自由***
 
 
->视频源自 [Keep](https://gotokeep.com/) 官网网站，深感震撼，给正在Keep的小伙伴加油！
+>上述Keep语录摘自 [Keep](https://gotokeep.com/) 官网主页上颇感震撼的宣传视频，给正在Keep的小伙伴加油！
 
-
-<video src="{{ site.url }}{{ site.img_path }}/keep.mp4" controls="controls">浏览器不支持，建议使用Chrome或Safari</video>
-
-
-<br/>
-<br/>
+---
 
 ## 拉伸篇
 
