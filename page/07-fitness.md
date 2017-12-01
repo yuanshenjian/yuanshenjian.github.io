@@ -5,9 +5,11 @@ title: Fitness
 permalink: /fitness/
 summary: "健康生活"
 
-# active: fitness
+active: fitness
 
 ---
 
+## 拉伸篇
 
-*健康相关内容即将上线，敬请期待！*
+- [健身前后的拉伸动作]({{ site.url }}/fitness/stretch)
+

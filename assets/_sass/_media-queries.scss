@@ -99,6 +99,10 @@
 
 
 
+.nav-main {
+  //display: none;
+}
+
 @media screen and (min-width: $break-point) {
   table {
     display: table;
@@ -115,6 +119,7 @@
 
   .nav-main {
     padding: 0;
+    //display: none;
     text-align: left;
     a {
       font-size: 13px;
