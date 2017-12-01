@@ -1697,7 +1697,7 @@ Eclipse 4.7（*Oxygen*）的测试版支持JUnit Platform和Junit Jupiter。关�
 
 #### 4.1.3. 其他 IDE
 
-在本文写作之时，并没有其他任何IDE可以像IntelliJ IDEA或Eclipse的测试版一样可以直接在JUnit Platform上运行Java测试。但是，Junit团队提供了另外两种折中的方法让JUnit 5可以在其他的IDE上使用。你可以尝试手动使用 [Console Launcher](#) 或者通过 [ 基于JUnit的Runner](#) 来执行测试。
+在本文写作之时，并没有其他任何IDE可以像IntelliJ IDEA或Eclipse的测试版一样可以直接在JUnit Platform上运行Java测试。但是，Junit团队提供了另外两种折中的方法让JUnit 5可以在其他的IDE上使用。你可以尝试手动使用 [控制台启动器](#43-控制台启动器) 或者通过 [基于JUnit 4的Runner](#44-使用junit-4运行junit-platform) 来执行测试。
 
 
 ### 4.2. 构建工具支持
@@ -1809,6 +1809,8 @@ junitPlatform {
 ```
 
 如果你通过`engines {include …​}`或`engines {exclude …​}`来提供一个*测试引擎ID*，那么JUnit Gradle插件将会只运行你希望运行的那个测试引擎。同样，如果你通过`tags {include …​}`或者`tags {exclude …​}`提供一个*标记*，JUnit Gradle插件将只运行相应标记的测试（例如，通过JUnit Jupiter测试的`@Tag`注解来过滤）。同理，关于包名，可以通过`packages {include …​}`或者`packages {exclude …​}`配置要包含或排除的包名。
+
+<a id="配置参数-gradle"></a>
 
 ##### 配置参数
 你可以使用`configurationParameter`或者`configurationParameters` DSL来设置配置参数，从而影响测试发现和执行。前者可以配置单独的配置参数，后者可以使用一个配置参数的map来一次性配置多个键-值对。所有的key和value都必须是`String`类型。
@@ -2048,6 +2050,8 @@ JUnit团队已经为Maven Surefire开发了一个非常基本的提供者，它�
 ...
 ```
 
+<a id="配置参数-maven"></a>
+
 ##### 配置参数
 你可以使用`configurationParameters`属性以Java `Properties`文件的语法提供键值对来设置配置参数，从而影响测试发现和执行。
 
@@ -2119,7 +2123,7 @@ Test run finished after 64 ms
 >📒 ***退出码***  
 > 如果任何容器或测试失败，[ConsoleLauncher](http://junit.org/junit5/docs/current/api/org/junit/platform/console/ConsoleLauncher.html) 就会以状态码1退出，否则退出码为0.
 
-#### Options
+#### 4.3.1. Options
 
 ```sh
 Option                                        Description
@@ -2204,7 +2208,7 @@ Option                                        Description
 
 如果某个类被标注了`@RunWith(JUnitPlatform.class)`注解，它就可以在那些支持JUnit 4但是还不支持JUnit Platform的IDE和构建系统中直接运行。
 
->📒 由于JUnit Platform具备一些JUnit 4不具备的功能，因此运行器只能部分支持JUnit Platform的功能，特别是在报告方面（请参阅 [显示名称 vs 技术名称](#442-显示名称与技术名称)）。但是就目前来说，`JUnitPlatform`运行器是一个简单的入门方式。
+>📒 由于JUnit Platform具备一些JUnit 4不具备的功能，因此运行器只能部分支持JUnit Platform的功能，特别是在报告方面（请参阅 [显示名称与技术名称](#442-显示名称与技术名称)）。但是就目前来说，`JUnitPlatform`运行器是一个简单的入门方式。
 
 #### 4.4.1. 设置
 你需要在类路径中添加以下的组件和它们的依赖。可以在 [依赖元数据](#21-依赖元数据) 中查看关于group ID, artifact ID 和版本的详细信息。
@@ -2221,7 +2225,7 @@ Option                                        Description
 *  `junit-platform-commons` 在*test*范围内
 *  `opentest4j` 在*test*范围内
 
-#### 4.4.2. 展示名称 vs 技术名称
+#### 4.4.2. 展示名称与技术名称
 默认情况下，*显示名称*会被使用在测试产出物上，但是当`JUnitPlatform`运行器使用Gradle或者Maven等构建工具来运行测试时，生成的测试报告通常需要包含测试产出物的*技术名称*（例如，使用完整类名），而不是像测试类的简单名称或包含特殊字符的自定义显示名称这种较短的显示名称。为了在测试报告中使用技术名称，在`@RunWith(JUnitPlatform.class)`注解旁声明 `@UseTechnicalNames`注解即可。
 
 #### 4.4.3. 单一测试类
@@ -2272,16 +2276,16 @@ public class JUnit4SuiteDemo {
 ### 4.5. 配置参数
 除了告诉平台要包含哪些测试类、测试引擎以及要扫描哪些包等之外，有时还需要提供额外的自定义配置参数，该参数特定于特定的测试引擎。例如，JUnit Jupiter `TestEngine`支持以下用例中的*配置参数*。
 
-* [Changing the Default Test Instance Lifecycle](#)
-* [Enabling Automatic Extension Detection](#)
-* [Deactivating Conditions](#)
+* [更改默认的测试实例生命周期](#381-更改默认的测试实例生命周期)
+* [启用自动扩展检测](#启用自动扩展检测)
+* [停用条件](#531-停用条件)
 
 *配置参数*是一种基于文本的键值对，可以通过以下任何一种机制将其提供给运行在JUnit Platform上的测试引擎。
 
-1. `LauncherDiscoveryRequestBuilder `中的`configurationParameter()`和`configurationParameters()`方法可以用来构建提供给 [`Launcher` API](#) 的请求。当使用JUnit Platform提供的某一种工具运行测试时，你可以采用如下所示的方式指定配置参数：
- * [控制台启动器](#): 使用`--config`命令行选项。
- * [Gradle插件](#): 使用`configurationParameter`或者`configurationParameters`DSL。
- * [Maven Surefire 提供者](#配置参数): 使用 `configurationParameters` 属性。
+1. `LauncherDiscoveryRequestBuilder `中的`configurationParameter()`和`configurationParameters()`方法可以用来构建提供给 [`Launcher` API](#71-junit-platform启动器api) 的请求。当使用JUnit Platform提供的某一种工具运行测试时，你可以采用如下所示的方式指定配置参数：
+ * [控制台启动器](#43-控制台启动器): 使用`--config`命令行选项。
+ * [Gradle插件](#配置参数-gradle): 使用`configurationParameter`或者`configurationParameters`DSL。
+ * [Maven Surefire 提供者](#配置参数-maven): 使用 `configurationParameters` 属性。
 2. JVM 系统属性
 3. JUnit Platform配置文件：该文件命名为`junit-platform.properties`，在类路径根目下，并遵循Java `Properties`文件的语法。
 
@@ -2298,10 +2302,10 @@ public class JUnit4SuiteDemo {
 
 ### 5.2. 注册扩展
 
-JUnit Jupiter中的扩展可以通过 [`@ExtenWith`](http://junit.org/junit5/docs/current/api/org/junit/jupiter/api/extension/ExtendWith.html) 注解显式注册，或者通过Java的 [`ServiceLoader`机制](#) 自动注册。
+JUnit Jupiter中的扩展可以通过 [`@ExtenWith`](http://junit.org/junit5/docs/current/api/org/junit/jupiter/api/extension/ExtendWith.html) 注解显式注册，或者通过Java的 [`ServiceLoader`机制](#522-自动扩展注册) 自动注册。
 
-#### 5.2.1. 声明式的扩展注册
-开发者可以通过在测试接口、测试类、测试方法或者自定义的 [*组合注解*](#) 上标注`@ExtendWith(...)`并提供要注册扩展类的引用，从而以*声明式*的方式注册一个或多个扩展。
+#### 5.2.1. 声明式扩展注册
+开发者可以通过在测试接口、测试类、测试方法或者自定义的 [*组合注解*](#311-元注解和组合注解) 上标注`@ExtendWith(...)`并提供要注册扩展类的引用，从而以*声明式*的方式注册一个或多个扩展。
 
 例如，要给某个测试方法注册一个自定义的`MockitoExtension`，你可以参照如下的方式标注该方法。
 
@@ -2346,7 +2350,7 @@ class MyTestsV2 {
 
 #### 5.2.2. 自动扩展注册
 
-除了 [声明式扩展注册](#) 支持使用注解外，JUnit Jupiter同样也支持通过Java的`java.util.ServiceLoader`机制来做*全局的扩展注册*。采用这种机制后自动的检测`classpath`下的第三方扩展，并自动完成注册。
+除了 [声明式扩展注册](#521-声明式扩展注册) 支持使用注解外，JUnit Jupiter同样也支持通过Java的`java.util.ServiceLoader`机制来做*全局的扩展注册*。采用这种机制后自动的检测`classpath`下的第三方扩展，并自动完成注册。
 
 
 >Specifically, a custom extension can be registered by supplying its fully qualified class name in a file named org.junit.jupiter.api.extension.Extension within the /META-INF/services folder in its enclosing JAR file.
@@ -2357,7 +2361,7 @@ class MyTestsV2 {
 
 ##### 启用自动扩展检测
 
-自动检测是一种高级特性，因此默认情况下是关闭的。要启用它，只需要在配置文件中将 `junit.jupiter.extensions.autodetection.enabled`的*配置参数*设置为 `true`即可。该参数可以作为JVM系统属性、或作为一个传递给`Launcher`的`LauncherDiscoveryRequest`中的配置参数、再或者通过JUnit Platform配置文件（详情请参阅 [配置参数](#)）来提供。
+自动检测是一种高级特性，因此默认情况下是关闭的。要启用它，只需要在配置文件中将 `junit.jupiter.extensions.autodetection.enabled`的*配置参数*设置为 `true`即可。该参数可以作为JVM系统属性、或作为一个传递给`Launcher`的`LauncherDiscoveryRequest`中的配置参数、再或者通过JUnit Platform配置文件（详情请参阅 [配置参数](#45-配置参数)）来提供。
 
 例如，要启用扩展的自动检测，你可以在启动JVM时传入如下系统参数。
 
@@ -2384,7 +2388,7 @@ ExecutionCondition defines the Extension API for programmatic, conditional test 
 有关具体示例，请参阅 [`DisabledCondition`](https://github.com/junit-team/junit5/tree/r5.0.2/junit-jupiter-engine/src/main/java/org/junit/jupiter/engine/extension/DisabledCondition.java) 和 [`@Disable`](http://junit.org/junit5/docs/current/api/org/junit/jupiter/api/Disabled.html) 的源码。
 
 #### 5.3.1. 停用条件
-有时候，在没有明确的条件被激活的情况下运行测试套件可能更有用。例如，你可能想要运行某些即便被标注了`@Disable`的测试，从而观察这些测试是否一直是*失败的*。此时只需为`junit.jupiter.conditions.deactivate`配置参数提供一个匹配模式，以指定当前测试运行应停用哪些条件（即不被解析）。该匹配模式可以作为JVM系统属性、或作为一个传递给`Launcher`的`LauncherDiscoveryRequest`中的配置参数、再或者通过JUnit Platform配置文件（详情请参阅 [配置参数](#)）来提供。
+有时候，在没有明确的条件被激活的情况下运行测试套件可能更有用。例如，你可能想要运行某些即便被标注了`@Disable`的测试，从而观察这些测试是否一直是*失败的*。此时只需为`junit.jupiter.conditions.deactivate`配置参数提供一个匹配模式，以指定当前测试运行应停用哪些条件（即不被解析）。该匹配模式可以作为JVM系统属性、或作为一个传递给`Launcher`的`LauncherDiscoveryRequest`中的配置参数、再或者通过JUnit Platform配置文件（详情请参阅 [配置参数](#45-配置参数)）来提供。
 
 例如，要停用JUnit的 `@Disable` 条件，你可以在JVM启动时传入系统参数完成：
 
@@ -2591,11 +2595,11 @@ static class MyTestTemplateInvocationContextProvider implements TestTemplateInvo
    └─ bar ✔
 ```
 
-[`TestTemplateInvocationContextProvider`](http://junit.org/junit5/docs/current/api/org/junit/jupiter/api/extension/TestTemplateInvocationContextProvider.html) 扩展API主要用于实现不同类型的测试，这些测试依赖于某个类似于测试的方法的重复调用（尽管它们不在同一个上下文中）。 例如，使用不同的参数，以不同的方式准备测试类实例，或多次调用而不修改上下文。请参阅[重复测试](#) 或 [参数化测试](#) 的实现，它们都使用了该扩展点来提供其相关的功能。
+[`TestTemplateInvocationContextProvider`](http://junit.org/junit5/docs/current/api/org/junit/jupiter/api/extension/TestTemplateInvocationContextProvider.html) 扩展API主要用于实现不同类型的测试，这些测试依赖于某个类似于测试的方法的重复调用（尽管它们不在同一个上下文中）。 例如，使用不同的参数，以不同的方式准备测试类实例，或多次调用而不修改上下文。请参阅[重复测试](#312-重复测试) 或 [参数化测试](#313-参数化测试) 的实现，它们都使用了该扩展点来提供其相关的功能。
 
 ### 5.9. 在扩展中保持状态
 
-通常，扩展只实例化一次。随之而来的相关问题是：开发者如何能够在两次调用之间保持扩展的状态？`ExtensionContext` API提供了一个`Store`用来解决这一问题。扩展可以将值放入Store中供以后检索。请参阅 [`TimingExtension`](#) 了解如何使用具有方法级作用域的`Store`。要注意，在测试执行期间，被存储在一个`ExtensionContext`中的值在周围其他的`ExtensionContext`中是不可用的。由于`ExtensionContexts`可能是嵌套的，因此内部上下文的范围也可能受到限制。请参阅相应的Javadoc来了解有关通过 [Store](http://junit.org/junit5/docs/current/api/org/junit/jupiter/api/extension/ExtensionContext.Store.html) 存储和检索值的方法的详细信息。
+通常，扩展只实例化一次。随之而来的相关问题是：开发者如何能够在两次调用之间保持扩展的状态？`ExtensionContext` API提供了一个`Store`用来解决这一问题。扩展可以将值放入Store中供以后检索。请参阅 [`TimingExtension`](#一个为测试方法执行计时和记录的扩展) 了解如何使用具有方法级作用域的`Store`。要注意，在测试执行期间，被存储在一个`ExtensionContext`中的值在周围其他的`ExtensionContext`中是不可用的。由于`ExtensionContexts`可能是嵌套的，因此内部上下文的范围也可能受到限制。请参阅相应的Javadoc来了解有关通过 [Store](http://junit.org/junit5/docs/current/api/org/junit/jupiter/api/extension/ExtensionContext.Store.html) 存储和检索值的方法的详细信息。
 
 ### 5.10. 在扩展中支持的实用程序
 
@@ -2605,13 +2609,15 @@ static class MyTestTemplateInvocationContextProvider implements TestTemplateInvo
 
 当执行包含一个或多个测试方法的测试类时，除了用户提供的测试和生命周期方法外，还会调用大量的回调函数。 下图说明了用户提供的代码和扩展代码的相对顺序。
 
+<a id="511-用户代码和扩展代码"></a>
+
 ![](http://junit.org/junit5/docs/current/user-guide/images/extensions_lifecycle.png)
 
 ###### 用户代码和扩展代码
 
 用户提供的测试和生命周期方法以橙色表示，扩展提供的回调代码由蓝色显示。灰色框表示单个测试方法的执行，并将在测试类中对每个测试方法重复执行。
 
-下表进一步解释了 [用户代码和扩展代码](#) 图中的十二个步骤。
+下表进一步解释了 [用户代码和扩展代码](#511-用户代码和扩展代码) 图中的十二个步骤。
 
 | 步骤 | 接口/注解 |描述|
 |:---|:---|:---|
@@ -2998,7 +3004,7 @@ That’s why JUnit 5 introduces a defined lifecycle for all publicly available i
 
 **范围**：配置参数和错误修复。
 
->⚠️ 这是一个预发行版，包含一些重大更改。如果想在捆绑了旧版里程碑版本的IntelliJ IDEA中使用此版本，请参阅上面的 [说明](#)。
+>⚠️ 这是一个预发行版，包含一些重大更改。如果想在捆绑了旧版里程碑版本的IntelliJ IDEA中使用此版本，请参阅上面的 [说明](#411-intellij-idea)。
 
 关于此版本所有已关闭问题和请求的完整列表，请参阅GitHub上JUnit存储库中的 [5.0 RC3](https://github.com/junit-team/junit5/milestone/13?closed=1) 里程碑页面。
 
@@ -3012,8 +3018,8 @@ That’s why JUnit 5 introduces a defined lifecycle for all publicly available i
 
 ###### 新功能和改进
 - 现在可以通过许多新的方式提供`配置参数`：
-	- 通过类路径根目录下的`junit-platform.properties`文件。详情请参阅 [配置参数]()。
-	- 通过 [控制台启动器]() 中的`--config`命令行选项。
+	- 通过类路径根目录下的`junit-platform.properties`文件。详情请参阅 [配置参数](#45-配置参数)。
+	- 通过 [控制台启动器](#43-控制台启动器) 中的`--config`命令行选项。
 	- 通过Gradle插件的`configurationParameter`或`configurationParameters` DSL。
 	- 通过Maven Surefire提供这程序的`configurationParameters`属性。
 	
@@ -3033,7 +3039,7 @@ That’s why JUnit 5 introduces a defined lifecycle for all publicly available i
 - 默认的`getStore()`方法已经从`ExtensionContext`接口中移除。要访问全局存储，需要显式调用`getStore(Namespace.GLOBAL)`方法。
 
 ###### 新功能和改进
-- 现在可以通过名为`junit.jupiter.testinstance.lifecycle.default`的配置参数或JVM系统属性来设置*默认*的测试实例生命周期模式。详情请参阅 [更改默认测试实例生命周期]()。
+- 现在可以通过名为`junit.jupiter.testinstance.lifecycle.default`的配置参数或JVM系统属性来设置*默认*的测试实例生命周期模式。详情请参阅 [更改默认的测试实例生命周期](#381-更改默认的测试实例生命周期)。
 - 在参数化测试中使用`@CsvSource`或`@CsvFileSource`时，如果CSV解析器没有从输入中读取到任何字符，并且输入位于引号内，则返回空字符串`""`而不是`null`。
 
 
@@ -3051,7 +3057,7 @@ That’s why JUnit 5 introduces a defined lifecycle for all publicly available i
 
 **范围**：修复`junit-jupiter-engine`的Gradle消耗
 
->⚠️ 这是一个预发行版，包含一些重大更改。如果想在捆绑了旧版里程碑版本的IntelliJ IDEA中使用此版本，请参阅上面的 [说明](#)。
+> ⚠️ 这是一个预发行版，包含一些重大更改。如果想在捆绑了旧版里程碑版本的IntelliJ IDEA中使用此版本，请参阅上面的 [说明](#411-intellij-idea)。
 
 
 关于此版本所有已关闭的问题和请求的完整列表，请参阅GitHub上JUnit仓库中的 [5.0 RC2](https://github.com/junit-team/junit5/milestone/12?closed=1)里程碑页面。
@@ -3074,7 +3080,7 @@ That’s why JUnit 5 introduces a defined lifecycle for all publicly available i
 
 **范围**：5.0 GA之前的错误修复和文档改进
 
->⚠️ 这是一个预发行版，包含一些重大更改。如果想在捆绑了旧版里程碑版本的IntelliJ IDEA中使用此版本，请参阅上面的 [说明](#)。
+> ⚠️ 这是一个预发行版，包含一些重大更改。如果想在捆绑了旧版里程碑版本的IntelliJ IDEA中使用此版本，请参阅上面的 [说明](#411-intellij-idea)。
 
 关于此版本所有已关闭的问题和请求的完整列表，请参阅GitHub上JUnit仓库中的 [5.0 RC1](https://github.com/junit-team/junit5/milestone/9?closed=1)里程碑页面。
 
@@ -3107,7 +3113,6 @@ That’s why JUnit 5 introduces a defined lifecycle for all publicly available i
 
 #### JUnit Vintage
 除了内部重构之外没有变化。
-
 
 
 ### 5.0.0-M6
