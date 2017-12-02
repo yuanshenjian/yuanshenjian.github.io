@@ -42,8 +42,14 @@ GitHub： <https://github.com/sjyuan-cc>
 
 ---
 
-## Publication
+## Publications
 
+#### *JUnit 5 User Guide*
+
+- [JUnit 5 用户指南]({{ site.url }}{{ '/junit5/user-guide-cn' }})
+- [JUnit 5 User Guide](http://junit.org/junit5/docs/current/user-guide/)
+
+#### *JavaScript学习指南*
 *《JavaScript学习指南: Learning JavaScript 让网页变得栩栩如生的艺术 第3版》*
 
 - 异步社区： [Learning JavaScript 让网页变得栩栩如生的艺术](http://www.epubit.com.cn/book/details/4223)

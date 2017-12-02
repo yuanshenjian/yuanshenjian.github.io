@@ -1,4 +1,5 @@
 ---
+bg: "fitness.jpg"
 layout: post
 title: "食物营养成分概览"
 permalink: /fitness/nutrition-constituent

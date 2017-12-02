@@ -1,4 +1,5 @@
 ---
+bg: "fitness.jpg"
 layout: post
 title: "健身前后的拉伸锦集"
 permalink: /fitness/stretch
