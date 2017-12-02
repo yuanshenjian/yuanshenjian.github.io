@@ -5,7 +5,7 @@ title: "FITNESS"
 permalink: /fitness/
 summary: "自律给我自由"
 
-active: fitness
+# active: fitness
 
 ---
 
