@@ -1,5 +1,5 @@
 ---
-bg: "insight.jpg"
+bg: "fitness.jpg"
 layout: page
 title: "FITNESS"
 permalink: /fitness/
@@ -23,7 +23,8 @@ active: fitness
 >"只要我一出手就绝不会失手"  
 >"我的引子，追不上我"  
 >"我一跃，天翻地覆"  
->"在空气中，你会踩空，我不会"  
+>"在空气中，你会踩空，我不会"
+>
 >"我进化成另一个我"
 >
 >***那有什么天生如此，只是我们天天坚持***
@@ -33,16 +34,16 @@ active: fitness
 
 >上述Keep语录摘自 [Keep](https://gotokeep.com/) 官网主页上颇感震撼的宣传视频，给正在Keep的小伙伴加油！
 
+<!--<video src="{{ site.url }}{{ site.img_path }}{{ '/keep.mp4' }}" controls="controls"></video>
+-->
+---
+
+## 饮食篇
+- [食物营养成分概览]({{ site.url }}/fitness/nutrition-constituent)
+- [吃这些食物，可以让它变成肌肉](http://show.gotokeep.com/articles/586084562363ee3a3cdd8097)
+
 ---
 
 ## 拉伸篇
-
 - [健身前后的拉伸动作]({{ site.url }}/fitness/stretch)
 
-
----
-
-
-## 饮食篇
-
-- 【Keep】[吃这些食物，可以让它变成肌肉](http://show.gotokeep.com/articles/586084562363ee3a3cdd8097)

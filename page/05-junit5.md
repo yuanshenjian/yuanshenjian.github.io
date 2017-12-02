@@ -2595,7 +2595,7 @@ static class MyTestTemplateInvocationContextProvider implements TestTemplateInvo
    └─ bar ✔
 ```
 
-[`TestTemplateInvocationContextProvider`](http://junit.org/junit5/docs/current/api/org/junit/jupiter/api/extension/TestTemplateInvocationContextProvider.html) 扩展API主要用于实现不同类型的测试，这些测试依赖于某个类似于测试的方法的重复调用（尽管它们不在同一个上下文中）。 例如，使用不同的参数，以不同的方式准备测试类实例，或多次调用而不修改上下文。请参阅[重复测试](#312-重复测试) 或 [参数化测试](#313-参数化测试) 的实现，它们都使用了该扩展点来提供其相关的功能。
+[`TestTemplateInvocationContextProvider`](http://junit.org/junit5/docs/current/api/org/junit/jupiter/api/extension/TestTemplateInvocationContextProvider.html) 扩展API主要用于实现不同类型的测试，这些测试依赖于某个类似于测试的方法的重复调用（尽管它们不在同一个上下文中）。 例如，使用不同的参数，以不同的方式准备测试类实例，或多次调用而不修改上下文。请参阅 [重复测试](#312-重复测试) 或 [参数化测试](#313-参数化测试) 的实现，它们都使用了该扩展点来提供其相关的功能。
 
 ### 5.9. 在扩展中保持状态
 

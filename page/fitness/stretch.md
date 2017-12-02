@@ -3,6 +3,10 @@ layout: post
 title: "健身前后的拉伸锦集"
 permalink: /fitness/stretch
 
+categories: [FITNESS]
+tags: [Fitness, Stretch]
+
+
 date: 2017-11-29
 ---
 
