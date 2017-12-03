@@ -39,7 +39,8 @@ summary: "自律给我自由"
 ---
 
 ## 饮食篇
-- [食物营养成分概览]({{ site.url }}/fitness/nutrition-constituent)
+- [食物营养成分概览]({{ site.url }}{{ '/fitness/nutrition-constituent' }})
+- [三种适合健身吃的鱼]({{ site.url }}{{ '/fitness/food-three-kinds-of-fish-recommended-for-fitness' }})
 - [吃这些食物，可以让它变成肌肉](http://show.gotokeep.com/articles/586084562363ee3a3cdd8097)
 
 ---
