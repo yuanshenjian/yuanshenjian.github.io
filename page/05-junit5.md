@@ -12,10 +12,9 @@ active: junit5
 
 ---
 
-<h6>袁慎建 • 王亚鑫 • 何疆乐</h6>
+###### ***[袁慎建](http://sjyuan.cc/about/) • [王亚鑫](http://www.jianshu.com/u/048f932015bc) • [何疆乐](http://www.jianshu.com/u/ab3e5acc3f2c) @ [ThoughtWorks](https://www.thoughtworks.com/)*** 
 
->***本文档由 [ThoughtWorks](https://www.thoughtworks.com/) 咨询师 [袁慎建](http://sjyuan.cc/about/)、[王亚鑫](http://www.jianshu.com/u/048f932015bc) 与 [何疆乐](http://www.jianshu.com/u/ab3e5acc3f2c)   倾情力作！*** 
-
+---
 
 * content
 {:toc}
