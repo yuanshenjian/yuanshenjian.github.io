@@ -3307,18 +3307,194 @@ module foo.bar {
 ### 5.0.0-M4
 **发布时间**： 2017.04.01
 
-**范围**：
+**范围**：JUnit 5的第4个里程碑发布，主要关注点在于测试模板、反复测试和参数化测试。
+
+关于此版本所有已关闭的问题和pull request的完整列表，请参阅GitHub上的JUnit存储库中的 [5.0 M4](https://github.com/junit-team/junit5/milestone/7?closed=1) 页面。
+
+#### JUnit Platform
+
+##### Bug修复
+* 为了保证可重复的构建，JUnit Platform的Gradle插件为其依赖增加了一个修复版本（和插件版本相同），替换了默认的动态版本方案（即`1.+`）。
+* JUnit平台的Gradle插件如今明确地应用在`java`插件的内置Gradle中，因为它对应用程序有一个隐含的依赖关系。
+* `ReflectionUtils`中的所有`findMethods()`实现不再返回合成方法。结果中不再包含隐含的 [override-equal](https://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html#jls-8.4.2)方法。
+* 在`TestIdentifier`和`TestDescriptor`中引入`getLegacyReportingName()`。这使得JUnit Platform的Gradle插件和Surefire Provider能够通过`getLegacyReportingName()`解析类和方法名，而不再使用资源位置。
+* 在路径中包含空格（％20）的JAR文件现在在用于类路径扫描例程之前已被正确解码。
+* 更新了`ReflectionUtils`中的`findNestedClasses()`方法，以便搜索嵌套类也返回继承的嵌套类（无论它们是否为静态）。
+
+##### 弃用和彻底改变
+* 所有在`org.junit.platform.runner`包中的测试套件注解都移到了新`junit-platform-suite-api`模块中的`org.junit.platform.suite.api`包。其中包括例如`@SelectClasses`,`@SelectPackages`等注解。
+* 移除了`DiscoverySelectors`中基于名字的发现选择器`selectNames()`，推荐使用方法`selectPackage(String)`,`selectClass(String)`和`selectMethod(String)`。
+* `ClassNameFilter.includeClassNamePattern`被移除了，取而代之的请使用`ClassNameFilter.includeClassNamePatterns`。
+* `@IncludeClassNamePattern`被移除了，请改用`@IncludeClassNamePatterns`。
+* `ConsoleLauncher`的选项`--hide-details`被弃用了，请改用`--details none`
+* ZIP发布包包含的控制台启动器不再提供，取代它的是一个独立的可执行的JAR发行版。更多细节见下面的"New Feature"部分。
+* `ReflectionUtils`中的枚举类`MethodSortOrder`被重命名为`HierarchyTraversalMode`，产生的影响是应该使用`ReflectionSupport`来代替`ReflectionUtils`。
+* `Launcher`中的方法`execute(LauncherDiscoveryRequest launcherDiscoveryRequest)`已经被弃用，且在M5发布将会被移除。Instead use the following new method that registers supplied TestExecutionListeners in addition to already registered listeners but only for the supplied LauncherDiscoveryRequest: execute(LauncherDiscoveryRequest launcherDiscoveryRequest, TestExecutionListener…​ listeners)
+
+##### 新功能和改进
+* 自定义的`TestExecutionListener`实现现在可以通过Java的`ServiceLoader`机制自动注册。
+* `TestEngine `API添加了新的默认方法`getGroupId()`,`getArtifactId()`和`getVersion()`，这些方法用来调试和报告。默认情况下，包属性（一般来自JAR属性清单）用来决定发行ID和版本号；而组ID默认是空的。更多细节请参阅Javadoc的 [TestEngine](http://junit.org/junit5/docs/current/api/org/junit/platform/engine/TestEngine.html) 文档。
+* 已发现的测试引擎的记录信息得到增强，包括组ID，工件ID和每个测试引擎的版本，如果它们能够通过`getGroupId()`，`getArtifactId()`，以及`getVersion()`方法获取。
+* 现在，`ConsoleLauncher` 的`--scan-classpath`允许扫描JAR文件作为显式参数提供的测试（请参阅 [Options](#431-options)）。
+* 现在，`ConsoleLauncher`中新的`--details<Details>`选项允许在执行测试时选择一个输出细节的模式。可以使用`none`、`flat`、`tree`，或者`verbose`中的一个来指定该模式。如果没有指定，则只会输出汇总和测试失败信息（请参阅 [Options](#431-options)）。
+* 可执行的`junit-platform-console-standalone-1.0.2.jar`包在默认的构建过程中生成，并存储于已在**Maven Central**中发布的 `junit-platform-console-standalone/build/libs`路径下。该jar包包含了Jupiter和Vintage测试引擎及其所有依赖。它在手动管理其依赖项的项目中提供了JUnit 5的无障碍使用，类似于JUnit 4中广为人知的简单JAR包管理。
+* `ConsoleLauncher`中新增的`--exclude-classname (--N)`选项可以接受一个正则表达式来排除那些全类名匹配的类。当这个选项重复时，所有的模式将使用 "或" 语义进行组合。
+* 新的JUnit Platform支持包`org.junit.platform.commons.support`包含了许多正在维护的工具方法，这些方法可用于注解、反射，以及类路径扫描任务。我们鼓励`TestEngine`和`Extension`作者使用这些支持方法，以便与JUnit Platform的行为保持一致。
+* 压缩了`TestDescriptor.isTest()`和`TestDescriptor.isContainer()`的内部逻辑，使得其返回值从两个独立的布尔属性值转变为名为`TestDescriptor.Type`的枚举类.详细信息请参阅下一小节。
+* 引入了`TestDescriptor.Type`枚举类以及对应的方法`TestDescriptor.getType()`，用于定义所有可能的描述符类型。原来的`TestDescriptor.isTest（）`和`TestDescriptor.isContainer（）`现在委托给`TestDescriptor.Type`常量。
+* 引入了`TestDescriptor.prune()`和`TestDescriptor.pruneTree()`方法，它们允许引擎作者自定义JUnit平台触发修剪时的处理办法。
+* `TestIdentifier`现在使用新的`TestDescriptor.Type`枚举来存储底层类型。它可以通过新的`TestIdentifier.getType()`方法获取。此外，`TestIdentifier.isTest()`和`TestIdentifier.isContainer()`现在委托`TestDescriptor.Type`的常量。
+
+#### JUnit Jupiter
+
+###### Bug修复
+
+* 修复了通过方法选择器选择时阻止在相同类中发现多个方法的错误。
+* 当在超类中声明时，现在会检测到`@Nested`的非静态测试类。
+* 现在，当在一个类层次结构中的多个级别声明时，重写的`@BeforeEach`和`@AfterEach`方法会以正确执行顺序会被强制执行，其顺序始终是`super.before`->`this.before`->`this.test`->`this.after`->`super.after`，即使编译器添加了合成（synthetic）方法。
+* 现在，`TestExecutionExceptionHandlers`会被按照其注册顺序的反序执行，这类似于其他所有的'"after"`扩展。
+
+###### 弃用和彻底改变
+
+* 删除已弃用的`Assertions.expectThrows()`方法，`Assertions.assertThrows()`取代。
+* 由相同部分组成但顺序不同的`ExtensionContext.Namespaces`不再被认为是同一个。
+
+
+###### 新功能和改进
+
+* 新增了`@ParameterizedTest `注解，从而为*参数化测试*提供了极好的支持。请参阅 [参数化测试](#313-参数化测试)。
+* 新增了`@RepeatedTest`注解和`RepetitionInfo`API,从而为*重复测试*提供了极好的支持。请参阅 [重复测试](#312-重复测试)。
+* 引入了新的注解`@TestTemplate`，并附带了对应的扩展点`TestTemplateInvocationContextProvider`。
+* 现在，`Assertions.assertThrows()`方法在生成断言失败的消息时，会采用规范名称作为异常类型。
+* 现在，在测试方法上注册的`TestInstancePostProcessors`会被调用。
+* `Asserrions.fail`现在有了新的变体：`Assertions.fail(Throwable cause)`和`Assertions.fail(String message, Throwable cause)`。
+* 新的`Assertions.assertLinesMatch()`方法会比较字符串列表，应用了`Object :: equals`和正则表达式。 `assertLinesMatch()`还提供了一个快速转发机制，可以跳过每个调用中预期会更改的行，例如持续时间，时间戳，堆栈跟踪等。详细信息请参阅 [org.junit.jupiter.Assertions](http://junit.org/junit5/docs/current/api/org/junit/jupiter/api/Assertions.html) 的JavaDoc。
+* 现在可以通过Java的`ServiceLoader`机制自动注册扩展。详情请参阅 [自动扩展注册](#522-自动扩展注册)。
+
+#### JUnit Vintage
+
+###### Bug修复
+
+* 修复了导致只有最后一次测试失败的报告。例如，使用`ErrorCollector`规则时，只报告最后一次失败的检查。 现在，使用`org.opentest4j.MultipleFailuresError`会报告所有失败。
 
 
 ### 5.0.0-M3
 **发布时间**： 2016.11.30
 
-**范围**：
+**范围**：JUnit 5 第三次发布针对改善 JUnit 4 的互操作性，新增的发现选择器以及文档。
+
+对于本次发布相关的 commit 信息，可以通过查看[5.0 M3](https://github.com/junit-team/junit5/milestone/6?closed=1)里程碑页面在GitHub上的JUnit代码库了解。
+
+#### JUnit Platform
+
+###### Bug修复
+
+* 现在，在打印异常信息时，`ConsoleLauncher`所使用的`ColoredPrintingTestListener`输出实际异常类型以及堆栈跟踪。
+* 现在，在扫描类路径的根目录时，默认包中的测试类都会被提取出来。例如，在没有显式包被选择的时候，使用Unit Platform Gradle 插件。
+* 类路径扫描不再加载类名过滤器排除的类。
+* 类路径扫描不再尝试加载Java 9的`module-info.class`文件。
+
+###### 弃用与彻底改变
+
+* 重命名`ClasspathSelector`为`ClasspathRootSelector`,以避免与`ClasspathResourceSelector`混淆。
+* 重命名`JavaPackageSource`为`PackageSource`,以便于`PackageSelector`的命名方式保持一致。
+* 重命名`JavaMethodSource`为`MethodSource`,以便于`MethodSelector`的命名方式保持一致。
+* 现在，`PackageSource`，`ClassSource`，以及`MethodSource`直接实现`TestSource`接口，而非已经移除的`JavaSource`接口。
+* `DiscoverySelectors`中，基于名称的通用发现选择器（例如`selectName()`和`selectNames()`）已经被弃用，取而代之的是更加专用的`selectPackage(String)`，`selectClass(String)`,以及`selectMethod(String)`方法。
+* 现在，`ClassFliter`已经被重命名为`ClassNameFilter`，并且实现了`DiscoveryFilter<String>`,而非之前的`DiscoveryFilter<Class<?>>`。因此`ClassFilter`可以在类路径扫描的过程中，于类加载之前使用。
+* 现在，`ClassNameFilter.includeClassNamePattern`被弃用，并以`ClassNameFilter.includeClassNamesPatterns`取而代之。
+* 现在，`@IncludeClassNamePattern`被弃用，并以`@IncludeClassNamePatterns`取而代之。
+* 用于对`ConsoleLauncher`配置额外类路径实体的命令行选项`-p`已被重命名为`-cp`，以便与`java`其他可执行执行选项保持一致。另外，为`--classpath`命令行选项引入了一个新的别名`--class-path`,而原有命令行保持不变。
+* 对`ConsoleLauncher`的命令行选项`-a`和`--all`已被重命名为`--scan-class-path`。
+* 对`ConsoleLauncher`的短命令行选项`-C`，`-D`，以及`-r`都被弃用，取而代之的是对应的长命令行选项`--disable-ansi-colors`，`--hide-details`，以及`--reports-dir`，分别与之等价。
+* `ConsoleLauncher`不在支持无选择参数的使用方式。请使用新的显式选择器选项以明确包名、类名或方法名。另外，`--scan-class-path`现在可以接受一个可选参数，该参数可被用来选择需要被扫描的类路径。涉及多条类路径时，可以使用系统自带的路径分隔符将之隔离（Windows使用`;`，Unix使用`:`）。
+* `LauncherDiscoveryRequestBuilder`不再接受`selectors`，`filters`或配置参数映射的空值。
+* 现在需要将Gradle插件配置中的类名称，引擎ID和标签过滤器包装在filters扩展元素中（请参阅[配置过滤器](http://junit.org/junit5/docs/current/user-guide/#running-tests-build-gradle-filters)）。
+
+#### 新特性
+
+* `DiscoverySelectors`中新增的`selectUri（...）`方法用于选择URI。 `TestEngine`可以通过查询`UriSelector`的注册实例来检索这些值。
+* 在`DiscoverySelectors`中新增的`selectFile（...）`和`selectDirectory（...）`方法，用于选择文件系统中的文件和目录。 `TestEngine`可以通过查询`FileSelector`和`DirectorySelector`的已注册实例来检索这些值。
+* `DiscoverySelectors`中的新的`selectClasspathResource（String）`方法，用于按名称选择类路径资源（如XML或JSON文件），其中名称是当前类路径中资源的分离路径名。 `TestEngine`可以通过查询`ClasspathResourceSelector`的已注册实例来获取这些值。 此外，可以通过新的`ClasspathResourceSource`将类路径资源作为`TestIdentifier`的`TestSource`。
+* 现在，`DiscoverySelectors`中的`selectMethod（String）`方法支持完全限定的方法名作为参数的选择方法（例如“org.example.TestClass＃testMethod（org.junit.jupiter.api.TestInfo）”）.
+* 现在，`ConsoleLauncher`和`JUnit Platform Gradle`插件使用的`TestExecutionSummary`除了包含测试事件外，还包含所有容器事件的统计信息。
+* 现在，`TestExecutionSummary`可以用来获取所有失败的测试用例列表。
+* 现在，`ConsoleLauncher`，Gradle插件和`JUnitPlatform`运行器使用`^。* Tests？$`正则匹配方式作为测试运行中包含的类名的默认匹配模式。
+* Gradle插件现在允许明确地选择应该执行哪些测试（请参阅[配置选择器](http://junit.org/junit5/docs/current/user-guide/#running-tests-build-gradle-selectors)）。
+* 新的`@Testable`标签可以用来向IDE和开发工具供应商传递信息，用以说明被此注解所标注的元素是可测试的（即，它可以在JUnit平台上作为测试被执行）。
+* 现在，在使用`ClassNameFilter.includeClassNamePatterns`时，可以传递多个正则表达式，它们之间通过“或”语义组合。
+* 现在，`@IncludeClassNamePatterns`注解可以将多个正则表达式以“或”的语义组合，并传递到`JUnitPlatform`运行器中。
+* 现在，多个正则表达式可以通过“或”的语义，进行组合，并被传递给JUnit Platform Gradle 插件（参阅[Configuring Filters](http://junit.org/junit5/docs/current/user-guide/#running-tests-build-gradle-filters)）以及`ConsoleLauncher`（参阅[Options](http://junit.org/junit5/docs/current/user-guide/#running-tests-console-launcher-options)）。
+* 现在，可以通过使用`PackageNameFilter.includePackageNames`来指定被包含的包名或使用`PackageNameFilter.excludePackageNames`来指定被排除的包名。
+* 现在，`JUnitPlatform`运行器可以结合`@IncludePackages`注解指定希望包含的包名，也可以结合`@ExcludePackages`来指定希望排除在外的包名。
+* 现在，对于使用JUnit Platform Gradle插件和`ConsoleLauncher`的用户，可应通过配置过滤器完成包名的添加与排除。
+* 现在，`junit-platform-console`不在强依赖与[JOptSimple](https://pholser.github.io/jopt-simple/)。因此，现在对于一般的测试而言可以使用不同版本的库。
+* 现在，包选择器会扫描JAR文件。
+* Surefire供应商现在支持forking。
+* Surefire供应商想在支持使用标签过滤，可以通过以下方法：
+	* 包含: `groups/includeTags`
+	* 排除：`excludedGroups/excludeTags`
+* Surefire提供商现已获得Apache License v2.0许可。
+
+####JUnit Jupiter
+#####Bug 修复
+
+* 现在，`@AfterEach`标注的方法在类的层级结构中，将以*自下而上*的的语义顺序执行。
+* 现在，`DynamicTest.stream()`会为*测试执行器*接收一个`ThrowingConsumer`，而非以往的`Consumer`,从而允许定制动态测试流可能会抛出的检查异常。
+* 现在，当为对应的测试方法调用`@BeforeEach`和`@AfterEach`方法时，该测试方法级的扩展注册会被使用。
+* 现在，`JupiterTestEngine`支持通过接受数组或基本类型参数的唯一标识（方法的ID）来选择测试方法。
+* 现在，`ExtensionContext.Store`是线程安全的。
+
+#####弃用与突破性变化
+
+* `Executable`函数式接口已经被搬移到了新的专用包`org.junit.jupiter.api.function`中。
+* `Assertions.expectThrows()` 已经被弃用，并以`Assertions.assertThrows()`取而代之。
+
+#####新特性与改进
+
+* 支持`Assertions`中的lambda表达式的延迟和抢占超时。 请参阅[`AssertionsDemo`](http://junit.org/junit5/docs/current/user-guide/#writing-tests-assertions)中的示例，并参阅[org.junit.jupiter.Assertions](http://junit.org/junit5/docs/current/api/org/junit/jupiter/api/Assertions.html) Java文档获取更多详细信息。
+* 新的`assertIterableEquals()`断言会校验两个可迭代对象是否深度一致（查阅Java文档获取细节）
+* `Assertions.assertAll()`的新变体可以接收可执行流（即，`Stream<Executable>`）。
+* 现在，`Assertions.assertThrows()`方法将返回抛出的异常。
+* 现在，`@BeforeAll`与`@AfterAll`可以被声明在接口中的静态方法上。
+* JUnit Jupiter现在支持JUnit 4 中的`org.junit.rules.ExternalResource`, `org.junit.rules.Verifier`, `org.junit.rules.ExpectedException`规则，及其相关的子类，这更有利于JUnit 4代码库的版本迁移。
+
+####JUnit Vintage
+以上一版本相比暂无变化。
 
 ### 5.0.0-M2
 **发布时间**： 2016.07.23
 
-**范围**：
+**范围**： JUnit 5的第2个里程碑发布
+
+#### 变更摘要
+此版本主要是针对自从`5.0.0-M1`发现的错误发布的修补程序版本。
+
+以下是一个全局改变的列表。关于更改的详细信息，包括平台、Jupiter和Vintage，请参阅下面的章节。有关此版本的所有已关闭问题和请求的完整列表，请参阅GitHub上的JUnit存储库中的[5.0 M2](https://github.com/junit-team/junit5/milestone/4?closed=1)里程碑页面。
+
+* JUnit 5的Gradle构建可以正常在Microsoft Windows下运行。
+* 在AppVeyor上建立了针对Microsoft Windows的持续集成构建。
+
+#### JUnit Platform
+##### 修复Bug
+* 容器中的故障——例如，抛出异常的`@BeforeAll`方法——如今在使用`ConsoleLauncher`或JUnit平台Gradle插件时会构建失败。
+* JUnit Platform Surefire Provider不再静默忽略纯动态测试类——例如，只声明`@TestFactory`方法的测试类。
+* 在`junit-platform-console-<release version>` TAR和ZIP分布中包含的`junit-platform-console`和`junit-platform-console.bat`shell脚本，如今能够正确引用`ConsoleLauncher`，而不是`ConsoleRunner`。
+* 被`ConsoleLauncher`和JUnit平台Gradle插件使用的`TestExecutionSummary`如今包含了失败的错误信息。
+* 类路径扫描现在可以防止类加载和处理期间遇到的问题——例如，在处理格式错误的类时，潜在的异常被吞噬并记录在有问题的文件路径中，如果这个异常是一个列入黑名单的异常，比如，`OutOfMemoryError`，那么它将被重新抛出。
+
+##### 弃用
+* `DiscoverySelectors`中基于通用名称的发现选择器（也就是，`selectName()`和`selectNames()`）已经被废弃，建议使用`selectPackage(String)`,`selectClass(String)`和`selectMethod(String)`方法。
+
+##### 新特性
+* `DiscoverySelectors`中的新方法`selectMethod(String)`支持选择 *fully qualified method name*。
+
+#### JUnit Jupiter
+##### 修复Bug
+* 在类级别和方法级别使用`@ExtendWith`注解声明扩展实现的方法不再能够被多次注册。
+
+#### JUnit Vintage
+从*5.0.0-M1*开始没有发生变化。
 
 ### 5.0.0-M1
 **发布时间**： 2016.07.07
