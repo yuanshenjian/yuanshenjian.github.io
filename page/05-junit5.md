@@ -21,11 +21,6 @@ date: 2017-12-05
 
 ---
 
->*Original online document: [JUnit 5 User Guide](http://junit.org/junit5/docs/current/user-guide/)*
-
-
----
-
 {% include_relative junit5/chapter01-overview.md %}
 
 ---
@@ -66,9 +61,8 @@ date: 2017-12-05
 
 ---
 
->*此版本为完整版，目前处于公测阶段，欢迎给我们提反馈！*
-
-
+> *此版本为完整版，目前处于公测阶段，欢迎给我们提反馈！  
+>英文原始文档: [JUnit 5 User Guide](http://junit.org/junit5/docs/current/user-guide/)*
 
 
 
