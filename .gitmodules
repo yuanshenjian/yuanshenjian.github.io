@@ -1,0 +1,3 @@
+[submodule "junit5"]
+	path = page/junit5
+	url = https://github.com/sjyuan-cc/junit5-user-guide-cn.git
