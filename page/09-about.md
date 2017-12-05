@@ -26,10 +26,10 @@ active: about
 
 ---
 
-## Index
-Keep： <https://www.gotokeep.com/users/568f6e16c15d4a091a0a886c>
+<a id="index"></a>
 
-Insight： <http://insights.thoughtworkers.org/author/yuanshenjian>
+## Index
+Insight： <http://insights.thoughtworkers.org/author/yuanshenjian> 
 
 异步社区： <http://www.epubit.com.cn/space/40420>
 
@@ -38,6 +38,8 @@ Insight： <http://insights.thoughtworkers.org/author/yuanshenjian>
 InfoQ： <http://www.infoq.com/cn/profile/-袁慎建>
 
 GitHub： <https://github.com/sjyuan-cc>
+
+Email： [sjyuan@thoughtworks.com](#index)
 
 
 ---
