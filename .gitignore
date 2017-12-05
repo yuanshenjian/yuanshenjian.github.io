@@ -2,4 +2,10 @@ _site
 .sass-cache
 .jekyll-metadata
 node_modules
+**/.DS_Store
 .idea
+page/junit5/book.json
+page/junit5/README.md
+page/junit5/SUMMARY.md
+page/junit5/.gitignore
+
