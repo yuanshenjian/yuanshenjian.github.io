@@ -26,8 +26,6 @@ active: about
 
 ---
 
-<a id="index"></a>
-
 ## Index
 Insight： <http://insights.thoughtworkers.org/author/yuanshenjian> 
 
