@@ -23,6 +23,9 @@ brief: "敏捷开发的核心就是<i>在一个高度协作的环境下，不断
 
 ---
 
+此文章已发表于InfoQ，[阅读InfoQ文章](http://www.infoq.com/cn/articles/my-agile-practice-in-thoughtworks)
+
+
 >本文以我在[ThoughtWorks](https://thoughtworks.com/)中的E项目经历为依据，覆盖了[ThoughtWorks](https://thoughtworks.com/)日常独立交付项目中主要的敏捷实践。
 
 ## 项目回顾
@@ -419,8 +422,4 @@ Retro是Retrospective的简写，即回顾。团队通常以回顾会议的形�
 * Retro：Retrospective，回顾会议
 * TB: Team building，团队建设
 
----
-
-
-此文章已经发布于InfoQ，[阅读InfoQ文章](http://www.infoq.com/cn/articles/my-agile-practice-in-thoughtworks)
 
