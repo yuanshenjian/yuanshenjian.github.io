@@ -21,10 +21,10 @@ summary: "包罗万象"
         <li>
           {% if post.lastmod %}
             <a href="{{ post.url }}">{{ post.title }}</a>
-            <span class="date">{{ post.lastmod | date: "%d-%m-%Y"  }}</span>
+            <span class="date">{{ post.lastmod | date: "%Y-%m-%d"  }}</span>
           {% else %}
             <a href="{{ post.url }}">{{ post.title }}</a>
-            <span class="date">{{ post.date | date: "%d-%m-%Y"  }}</span>
+            <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
           {% endif %}
         </li>
       {% endif %}
