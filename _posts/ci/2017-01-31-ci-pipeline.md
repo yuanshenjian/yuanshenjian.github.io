@@ -3,7 +3,7 @@ layout: post
 title: "构建可持续部署的Pipeline"
 date: 2017-01-31
 categories: [CI]
-tags: [continuous-integration]
+tags: [CI, Jenkins]
 author: "袁慎建"
 
 brief: "CI的核心目标是快速频繁集成代码，通过一些手段（编译、代码检查、运行测试、覆盖率等）来持续地提供及时有效的反馈，可持续从何而来？前提就是这些手段都是行之有效的。</br></br>

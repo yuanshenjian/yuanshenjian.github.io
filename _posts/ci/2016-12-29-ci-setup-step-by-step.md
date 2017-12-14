@@ -3,7 +3,7 @@ layout: post
 title: "手把手搭建CI"
 date: 2016-12-29
 categories: [CI]
-tags: [continuous-integration]
+tags: [CI, Jenkins]
 author: "袁慎建"
 
 brief: "CI Dojo的第二次课程，本文将基于上次课程 <i>CI基础 & Setup环境</i> 搭建好的环境，通过Step by step的方式来介绍如何快速搭建一个 Jenkins CI pipeline。"

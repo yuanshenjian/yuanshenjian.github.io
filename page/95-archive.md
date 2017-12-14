@@ -13,9 +13,9 @@ summary: "包罗万象"
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
 
-  <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
+  <h3 class="category-key" id="{{ t | downcase }}">{{ t }}</h3>
 
-  <ul class="year">
+  <ul class="categories">
     {% for post in posts %}
       {% if post.tags contains t %}
         <li>
