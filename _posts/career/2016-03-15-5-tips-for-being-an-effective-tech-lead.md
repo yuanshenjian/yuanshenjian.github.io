@@ -4,7 +4,7 @@ layout: post
 title: "高效技术领导的5个锦囊妙计"
 date: 2016-03-15
 categories: [CAREER]
-tags: [TechLeader]
+tags: [Career, Tech Lead]
 
 author: "袁慎建"
 
