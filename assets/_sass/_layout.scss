@@ -262,15 +262,18 @@ article {
   font-size: 13px
 }
 
-.categories{
+.categories {
   font-size: 14px;
   padding: 0;
   list-style: none;
+  li {
+    padding: 5px;
+    border-bottom: 1px dotted #eae4da
+  }
 }
 
 .year li {
   padding: 5px;
-  padding: 8px 10px;
   border-bottom: 1px dotted #eae4da
 }
 

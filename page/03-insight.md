@@ -12,11 +12,15 @@ active: insight
 
 {% for article in site.data.insight.articles %}
 
-###  {{article.category}}
-{% for entry in article.entries %}
-[{{ entry.title }}]({{ entry.url }})
+<h3>{{article.category}}</h3>
+  <ul class="categories">
+    {% for entry in article.entries %}
+        <li>
+        <a href="{{ entry.url }}">{{ entry.title }}</a>
+        </li>
+    {% endfor %}
+  </ul>
 {% endfor %}
 
 ---
 
-{% endfor %}
