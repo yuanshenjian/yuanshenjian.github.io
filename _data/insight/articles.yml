@@ -45,6 +45,8 @@
 
 - category: Domain-driven Design
   entries:
+    - title: 打通架构与业务 领域驱动设计（DDD）加速企业产品持续演进
+      url: http://server.zhiding.cn/server/2017/1218/3101897.shtml
     - title: DDD实战篇：分层架构的代码结构【精】
       url: http://insights.thoughtworks.cn/ddd-layered-architecture/
     - title: DDD战术篇：领域模型的应用【精】
