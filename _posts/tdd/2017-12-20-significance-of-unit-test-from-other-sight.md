@@ -107,8 +107,8 @@ CI上有契约测试的Stage，但也是草率编写，甚至契约测试因为�
 - SRP(Single Responsibility Principle)，单一职责原则
 - OCP(Open Closed Principle)，开放封闭原则
 - LSP(Liskov Substitution Principle)，里氏替换原则
-- DIP(Dependency Inversion Principle)，依赖倒置原则
 - ISP(Interface Segregation Principle)，接口分离原则
+- DIP(Dependency Inversion Principle)，依赖倒置原则
 
 同时我们应该尽量避免编写`STUPID`代码：
 
