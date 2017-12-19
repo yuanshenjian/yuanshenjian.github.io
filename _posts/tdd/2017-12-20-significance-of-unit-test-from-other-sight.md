@@ -126,8 +126,8 @@ CI上有契约测试的Stage，但也是草率编写，甚至契约测试因为�
 - High cohesion，高内聚
 - Low coupling，低耦合
 - Polymorphism，多态
-- Indirect，中介
-- Information，信息专家
+- Indirection，中介
+- Information expert，信息专家
 - Protected Variations，受保护变化
 - Pure fabrication，纯虚构
 
