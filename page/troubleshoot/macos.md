@@ -11,6 +11,29 @@ date: 2017-09-07
 {:toc}
 
 ---
+## 如何禁止系统自动生成`.DS_store`文件
+
+##### 更新时间：2017-12-21
+
+#### 问题描述
+经常在提交代码的时候会发现系统自动生成了一个`.DS_store`文件，容易造成误提交。
+
+#### 解决方案
+`.DS_Store`是Mac OS保存文件夹的自定义属性的隐藏文件，如文件的图标位置或背景色，相当于Windows的`desktop.ini`。
+
+禁止自动生成：
+
+```sh
+$ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+```
+
+恢复自动生成：
+
+```sh
+$ defaults delete com.apple.desktopservices DSDontWriteNetworkStores
+```
+
+---
 
 ## 如何解决Java Web程序（Springboot）在某些Mac中运行集成测试非常慢
 
