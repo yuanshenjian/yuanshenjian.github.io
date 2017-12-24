@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "ThoughtWorks给你不一样的职业之旅"
+title: "ThoughtWorks给你不一样的入职之旅"
 date: 2017-12-15
 categories: [CAREER]
 tags: [Career, ThoughtWorks, Training]
