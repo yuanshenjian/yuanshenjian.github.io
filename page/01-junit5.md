@@ -8,7 +8,7 @@ summary: "中文版"
 
 active: junit5
 
-date: 2017-12-20
+date: 2018-01-01
 
 ---
 
@@ -58,11 +58,6 @@ date: 2017-12-20
 ---
 
 {% include_relative junit5/chapter10-release-notes.md %}
-
----
-
-> *此版本为完整版，目前处于公测阶段，欢迎给我们提反馈！  
->英文原始文档: [JUnit 5 User Guide](http://junit.org/junit5/docs/current/user-guide/)*
 
 
 
