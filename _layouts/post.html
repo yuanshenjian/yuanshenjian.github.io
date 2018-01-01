@@ -46,30 +46,30 @@ layout: default
       {% include ban_quan_yin.html %}
     </div>
 
-    <!--<div class="height-50"></div>-->
-    <!--<div class="row">-->
-      <!--<div class="col-lg-12">-->
-        <!--{% include share.html %}-->
-        <!--<br>-->
-        <!--{% include comments.html %}-->
-      <!--</div>-->
-    <!--</div>-->
+    <div class="height-50"></div>
+    <div class="row">
+      <div class="col-lg-12">
+        {% include share.html %}
+        <br>
+        {% include comments.html %}
+      </div>
+    </div>
 
-    <!--<div class="post-links">-->
-      <!--{% if page.next.url %}-->
-      <!--<a class="link-to-post" href="{{ page.next.url }}">-->
-        <!--<span class="link-to-post__next">&#10535; &nbsp;Next post</span>-->
-        <!--<span class="link-to-post__title">{{ page.next.title }}</span>-->
-      <!--</a>-->
-      <!--{% endif %}-->
+    <div class="post-links">
+      {% if page.next.url %}
+      <a class="link-to-post" href="{{ page.next.url }}">
+        <span class="link-to-post__next">&#10535; &nbsp;Next post</span>
+        <span class="link-to-post__title">{{ page.next.title }}</span>
+      </a>
+      {% endif %}
 
-      <!--{% if page.previous.url %}-->
-      <!--<a class="link-to-post" href="{{ page.previous.url }}">-->
-        <!--<span class="link-to-post__prev">&#10535; &nbsp;Previous post</span>-->
-        <!--<span class="link-to-post__title">{{ page.previous.title }}</span>-->
-      <!--</a>-->
-      <!--{% endif %}-->
-    <!--</div>-->
+      {% if page.previous.url %}
+      <a class="link-to-post" href="{{ page.previous.url }}">
+        <span class="link-to-post__prev">&#10535; &nbsp;Previous post</span>
+        <span class="link-to-post__title">{{ page.previous.title }}</span>
+      </a>
+      {% endif %}
+    </div>
   </div>
   <div class="post-toc">
     <div class="title"><h4><a href="{{ page.url }}"><i>{{ page.title }}</i></a></h4></div>
