@@ -253,6 +253,17 @@ article {
 
 }
 
+.version {
+  padding-bottom: .5em;
+  color: rgba(0,0,0,.6);
+  font-size: 70%;
+  font-weight: bold;
+  a, a:hover, a:focus, a:visited {
+    text-decoration: none;
+    color: rgba(0,0,0,.6);
+  }
+}
+
 /*
 * Archive
 * ========================================================================== */

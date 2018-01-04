@@ -6,6 +6,9 @@ permalink: /:title/
 url: http://sjyuan.cc
 img_path: /assets/images
 
+junit:
+  current_version: 5.0.2
+
 author:
   name: Yuan Shenjian
   first_name: Shenjian
