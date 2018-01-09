@@ -1,14 +1,14 @@
 ---
 bg: "troubleshoot.jpg"
 layout: page
-title: Troubleshoot
-permalink: /troubleshoots/
-summary: "疑难 杂症"
+title: Get Started
+permalink: /get-started/
+summary: "快速上手"
 
-# active: troubleshoots
 ---
 
-{% for category in site.data.troubleshoot.toc %}
+
+{% for category in site.data.get-started.toc %}
 
 <h3>{{ category.letter }}</h3>
   <ul class="categories">

@@ -27,7 +27,6 @@ $ ln -s /Users/sjyuan/Personal-sjyuan/ysj_hub/tools/sonarqube-6.7.1/bin/macosx-u
 ```
 前者是源文件的位置，要使用全路径，后者是快捷方式，会自动创建。
 
-
 ---
 
 
