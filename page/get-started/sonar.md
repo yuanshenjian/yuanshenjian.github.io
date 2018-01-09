@@ -12,14 +12,14 @@ date: 2018-01-09
 
 ---
 
-### Prerequisites
+## Prerequisites
 
 - [Sonarqube](https://www.sonarqube.org/downloads/), which is used to setup sonar server.
 - [Sonar Scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner), which is used to scan your project and publish the result to the sonar server.
 - JDK 8+
 - MySQL 5.7+
 
-### Setup sonar server
+## Setup sonar server
 Firstly, you should download [Sonarqube](https://www.sonarqube.org/downloads/), then unzip them into your user home directory.
 
 - `~/sonarqube-6.7.1`  (This directory depends on your choice)
@@ -33,7 +33,6 @@ $ bash sonar.sh start
 ```
 
 Wait for several seconds, you can visit sonar home page with `http://localhost:9000` in your browser.
-
 
 ***Tips***  
 In order to manage sonar server more conveniently, I recommend you to create a soft link to the `~/sonarqube-6.7.1/bin/macosx-universal-64/sonar.sh` file using command: 
@@ -50,7 +49,20 @@ $ sonar restart
 
 ---
 
-### Setup sonar scanner
+### Configure database
+By default, sonar server use the embedded H2 Database. In order to persitent history result, you may hope to change it to other database, such as MySQL. To do this, you can edit `~/sonarqube-6.7.1/conf/sonar.properties` file.
+
+```properties
+sonar.jdbc.url=jdbc:mysql://localhost:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance&useSSL=false
+sonar.jdbc.username=root
+sonar.jdbc.password=dev
+```
+
+Then, you need to restart sonar server.
+
+---
+
+## Setup sonar scanner
 Firstly, you should download [Sonar Scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner), then unzip them into your user home directory (This directory depends on your choice).
 
 - `~/sonar-scanner-3.0.3.778-macosx`
@@ -66,7 +78,7 @@ sonar.password=admin
 
 ---
 
-### Scan your project
+## Scan your project
 Once you setup a sonar server on your local machine, and confiure sonar scanner, you can use scanner to scan your project. I will instroduce two approaches to do this stuff.
 
 Firstly, you should create a file named `sonar-project.properties` in your project root.
@@ -96,8 +108,8 @@ sonar.java.binaries=build/classes
 
 ```
 
-#### Use sonar scanner(Recommended)
-Add the sonar scanner home to system path.
+### Use sonar scanner
+Use sonar scanner is a recommended way. First, you should add the sonar scanner home to system path.
 
 ```sh
 $ export SONAR_SCANNER_HOME=~/sonar-scanner-3.0.3.778-macosx
@@ -111,7 +123,7 @@ $ sonar-scanner
 ```
 
 
-#### Use gradle plugin
+### Use gradle plugin
 Also, a gradle plugin can be helpful. Just config as follow in `build.gradle` of your project.
 
 ```groovy
@@ -155,7 +167,7 @@ $ ./gradlew sonarqube -Dsonar.host.url=http://localhost:90001
 
 ---
 
-### Troubleshoots
+## Troubleshoots
 
 #### No quality profiles have been found, you probably don't have any language plugin installed
 
@@ -189,7 +201,7 @@ $ export SONAR_SCANNER_OPTS="-Xmx512m"
 
 ---
 
-### Reference
+## Reference
 
 - If you want to specify `sonar-project.properties` file location and use is mutiple module project. Please see [Advanced SonarQube Scanner Usages](https://docs.sonarqube.org/display/SCAN/Advanced+SonarQube+Scanner+Usages).
 
