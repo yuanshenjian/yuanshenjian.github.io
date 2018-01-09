@@ -11,6 +11,26 @@ date: 2017-09-07
 {:toc}
 
 ---
+
+## Mac OSX中快速创建一个软连接
+
+##### 更新时间：2018-01-09
+
+#### 问题描述
+有时候会下载一些bin文件，比如 [Sonar](https://www.sonarqube.org/)，通过执行其目录中的一个 `sonar.sh`文件来管理Sonar server的，
+
+#### 解决方案
+建立一个软连接：
+
+```sh
+$ ln -s /Users/sjyuan/Personal-sjyuan/ysj_hub/tools/sonarqube-6.7.1/bin/macosx-universal-64/sonar.sh /usr/local/bin/sonar
+```
+前者是源文件的位置，要使用全路径，后者是快捷方式，会自动创建。
+
+
+---
+
+
 ## 如何禁止系统自动生成`.DS_store`文件
 
 ##### 更新时间：2017-12-21
