@@ -22,7 +22,7 @@ date: 2018-01-09
 ### Setup sonar server
 Firstly, you should download [Sonarqube](https://www.sonarqube.org/downloads/), then unzip them into your user home directory.
 
-- `~/sonarqube-6.7.1`
+- `~/sonarqube-6.7.1`  (This directory depends on your choice)
 
 
 Now, you can start up sonar server.
@@ -51,7 +51,7 @@ $ sonar restart
 ---
 
 ### Setup sonar scanner
-Firstly, you should download [Sonar Scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner), then unzip them into your user home directory.
+Firstly, you should download [Sonar Scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner), then unzip them into your user home directory (This directory depends on your choice).
 
 - `~/sonar-scanner-3.0.3.778-macosx`
 
