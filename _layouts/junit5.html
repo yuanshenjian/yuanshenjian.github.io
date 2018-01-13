@@ -18,6 +18,15 @@ layout: default
     {% endif %}
   </p>
   <div class="post-content">
+    <div class="junit5-versions">
+      <ul>
+        {% for version in site.data.junit5.versions %}
+        <li>
+          <a href="{{ site.url }}{{ '/junit5/' }}{{ version.name }}{{ '/user-guide-cn' }}">{{ 'Version ' }}{{ version.name }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
     <div>
       {{ content }}
     </div>

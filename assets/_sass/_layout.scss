@@ -255,12 +255,12 @@ article {
 
 .version {
   padding-bottom: .5em;
-  color: rgba(0,0,0,.6);
+  color: rgba(0, 0, 0, .6);
   font-size: 70%;
   font-weight: bold;
   a, a:hover, a:focus, a:visited {
     text-decoration: none;
-    color: rgba(0,0,0,.6);
+    color: rgba(0, 0, 0, .6);
   }
 }
 
@@ -281,6 +281,21 @@ article {
   li {
     padding: 5px;
     border-bottom: 1px dotted #eae4da
+  }
+}
+
+.junit5-versions {
+  line-height: 15px;
+  ul {
+    font-size: 14px;
+    padding: 0;
+    list-style: none;
+    li {
+      padding-bottom: 5px;
+      a {
+        text-decoration: none;
+      }
+    }
   }
 }
 
