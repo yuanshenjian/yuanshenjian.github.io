@@ -220,20 +220,44 @@ hr {
   }
 }
 
-@media only screen and (min-width: 420px) {
-  .personal-receipt-qr-code {
-    background-image: url('/assets/images/qr-code-receipt-horizontal.jpg');
-    width: 395px;
-    height: 220px;
-  }
-}
-
 .post-toc {
   display: none;
 }
 
 #markdown-toc, .post-toc {
   font-size: 15px;
+  a {
+    text-decoration: none;
+  }
+  a:hover{
+    color: #160da5;
+  }
+}
+
+.junit5-versions {
+  line-height: 15px;
+  ul {
+    font-size: 14px;
+    padding: 0;
+    list-style: none;
+    li {
+      padding-bottom: 5px;
+      a {
+        text-decoration: none;
+      }
+      a:hover{
+        color: #160da5;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  .personal-receipt-qr-code {
+    background-image: url('/assets/images/qr-code-receipt-horizontal.jpg');
+    width: 395px;
+    height: 220px;
+  }
 }
 
 @media screen and (min-width: $break-point) {

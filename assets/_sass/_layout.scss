@@ -284,21 +284,6 @@ article {
   }
 }
 
-.junit5-versions {
-  line-height: 15px;
-  ul {
-    font-size: 14px;
-    padding: 0;
-    list-style: none;
-    li {
-      padding-bottom: 5px;
-      a {
-        text-decoration: none;
-      }
-    }
-  }
-}
-
 .year li {
   padding: 5px;
   border-bottom: 1px dotted #eae4da
@@ -372,7 +357,7 @@ article {
   }
 }
 
-@media screen and (max-width: $sm-break-point) {
+@media screen and (max-width: $md-break-point) {
   .footer-link-larger {
     display: none;
   }

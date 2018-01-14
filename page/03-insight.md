@@ -5,7 +5,7 @@ title: "INSIGHT"
 permalink: /insight/
 summary: "IT视野"
 
-active: insight
+# active: insight
 
 ---
 
