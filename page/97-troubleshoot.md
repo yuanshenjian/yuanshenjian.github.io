@@ -14,7 +14,7 @@ summary: "疑难 杂症"
   <ul class="categories">
     {% for item in category.collection %}
         <li>
-        <a href="{{ item.permalink }}">{{ item.title }}</a>
+        <a href="{{ '/troubleshoots' }}{{ item.permalink }}">{{ item.title }}</a>
         </li>
     {% endfor %}
   </ul>

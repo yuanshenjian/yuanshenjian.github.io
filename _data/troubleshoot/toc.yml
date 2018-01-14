@@ -2,52 +2,52 @@
 - letter: G
   collection:
   - title: Git
-    permalink: /troubleshoots/git
+    permalink: /git
   - title: Gradle
-    permalink: /troubleshoots/gradle
+    permalink: /gradle
 
 
 - letter: I
   collection:
     - title: Intellij IDEA
-      permalink: /troubleshoots/intellij
+      permalink: /intellij
 
 - letter: J
   collection:
     - title: Java
-      permalink: /troubleshoots/java
+      permalink: /java
     - title: Jenkins
-      permalink: /troubleshoots/jenkins
+      permalink: /jenkins
     - title: JSON
-      permalink: /troubleshoots/json
+      permalink: /json
 
 - letter: M
   collection:
     - title: MacOSX
-      permalink: /troubleshoots/mac-osx
+      permalink: /mac-osx
     - title: Mongo
-      permalink: /troubleshoots/mongo
+      permalink: /mongo
     - title: MySQL
-      permalink: /troubleshoots/mysql
+      permalink: /mysql
 
 
 - letter: N
   collection:
     - title: Node
-      permalink: /troubleshoots/node
+      permalink: /node
 
 - letter: P
   collection:
     - title: Postgres
-      permalink: /troubleshoots/postgresql
+      permalink: /postgresql
 
 - letter: S
   collection:
     - title: Spring
-      permalink: /troubleshoots/spring
+      permalink: /spring
 
 - letter: Y
   collection:
     - title: YAML
-      permalink: /troubleshoots/yaml
+      permalink: /yaml
 

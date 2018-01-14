@@ -46,7 +46,7 @@ Email： [sjyuan@thoughtworks.com](#index)
 
 #### *JUnit 5 User Guide*
 
-- [JUnit 5 用户指南]({{ site.url }}{{ '/junit5/user-guide-cn' }})
+- [JUnit 5 用户指南]({{ site.url }}{{ '/junit5/current/user-guide-cn' }})
 - [JUnit 5 User Guide](http://junit.org/junit5/docs/current/user-guide/)
 
 #### *JavaScript学习指南*

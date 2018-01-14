@@ -10,6 +10,7 @@ date: 2017-01-26
 {:toc}
 
 ---
+
 ## 如何在创建Java源文件的时候，移除类Header注释
 
 ##### 更新时间：2017-06-23
@@ -32,6 +33,8 @@ date: 2017-01-26
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/troubleshoot/intellij-remove-header-comment.png' }})
 
+
+---
 
 ## 如何显示编辑器行号
 
