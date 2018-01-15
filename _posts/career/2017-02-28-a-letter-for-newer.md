@@ -18,6 +18,8 @@ brief: "最近工作和生活中发生了一些事情，正值一年毕业季，
 
 ---
 
+> 本文同时发表于 [ThoughtWorks洞见](http://insights.thoughtworkers.org/a-letter-to-newcomers/)。
+
 ## 情从何起
 最近工作和生活中发生了一些事情，促使我想写点东西，给新人写点东西，何谓新人，后文会有介绍。先来缕一缕最近所发生的事情：
 
