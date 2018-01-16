@@ -117,7 +117,7 @@ date: 2017-11-29
 ---
 
 ### 胸部拉伸
-![]({{ site.url }}{{ site.img_path }}{{ '/fitness/stretch/belly-stretch.jpg' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/fitness/stretch/chest-pectorales-stretch.jpg' }})
 
 **步骤**  
 
