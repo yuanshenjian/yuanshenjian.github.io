@@ -22,6 +22,7 @@ brief: "ThoughtWorks是一家极具创造力的公司，在这里，人才是最
 
 ---
 
+> 本文同时发表于 [ThoughtWorks洞见](http://insights.thoughtworks.cn/training-in-thoughtworks/)。
 
 ## 不一样的旅程
 ThoughtWorks是一家极具创造力的公司，在这里，人才是最重要的资产。如果你以应届生的身份加入TW，你将获得5周的出国留学机会（ThoughtWorks University，简称TWU），如果你通过社招加入TW，你会获得为期三天的TWI。除了TWU、TWI，TW还提供诸如NHO、Session、Workshop、Buddy/Sponsor、TL、极光计划（领导力）等数不胜数的培训。所有这些培训都在让你的职业之旅变得不一样。
