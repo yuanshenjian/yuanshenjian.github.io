@@ -137,9 +137,15 @@ $ docker run -d -e WORKDIR=$(pwd)/goagent -e GO_SERVER_URL=https://172.17.0.1:81
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/ci-red.jpg' }})
 
-那么如何让CI变绿，请进入主题 [*在Pipeline中使用Docker执行构建任务*]()。
+可以看到构建失败的原始是因为在Go Agent上没有安装JDK，那么如何在不安装JDK的前提下让构建通过？请进入主题 [*在Pipeline中使用Docker执行构建任务*]()。
 
+---
 
+## 延伸阅读
+- [手把手搭建CI]({{ site.url }}{{ '/ci-setup-step-by-step/' }})
+- [CI基础 & Setup环境]({{ site.url }}{{ '/ci-basics/' }})
+- [构建可持续部署的Pipeline]({{ site.url }}{{ '/ci-pipeline/' }})
+- [持续集成的容器化策略]({{ site.url }}{{ '/ci-container-strategy/' }})
 
 
 
