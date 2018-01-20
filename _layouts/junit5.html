@@ -64,8 +64,10 @@ layout: default
     </div>
   </div>
   <div class="post-toc">
-    <div class="title"><h4><a href="{{ page.url }}"><i>{{ page.title }} @{% if page.version %}{{ page.version }}{% else
-      %}{{ site.junit.current_version }}{% endif %}</i></a></h4></div>
+    <div class="title">
+      <h4><a href="{{ page.url }}"><i>{{ page.title }}</i></a></h4>
+      <span>v {% if page.version %}{{ page.version }}{% else %}{{ site.junit.current_version }}{% endif %}</span>
+    </div>
     <div class="separator"><hr/></div>
     <div class="content"></div>
   </div>

@@ -222,6 +222,9 @@ hr {
 
 .post-toc {
   display: none;
+  .title{
+    line-height: 10px;
+  }
 }
 
 #markdown-toc, .post-toc {
