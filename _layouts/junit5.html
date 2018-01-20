@@ -9,10 +9,10 @@ layout: default
   <p class="version">
     {% for contributor in site.data.junit5.contributors %}
     {% if forloop.index > 1 %}•{% endif %}
-    <a href="{{ contributor.index }}">{{ contributor.name }}</a>
+    <a href="{{ contributor.index }}" target="_blank">{{ contributor.name }}</a>
     {% endfor %}
     @
-    <a href="https://www.thoughtworks.com/">ThoughtWorks</a> -
+    <a href="https://www.thoughtworks.com/" target="_blank">ThoughtWorks</a> -
     {% if page.version %}
     <span><a href="{{ site.url }}{{ '/junit5/'}}{{ page.version }}{{ '/user-guide-cn/'}}">Version {{ page.version }}</a></span>
     {% else %}
