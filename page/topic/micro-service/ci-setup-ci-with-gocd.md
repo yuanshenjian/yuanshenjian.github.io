@@ -12,24 +12,19 @@ date: 2018-01-17
 
 ---
 
+本节课我们要在Mac OSX上使用Docker来搭建来一步步地搭建CI基础设施（GoCD）。在开始之前，为了提升CI的效率，预先在本地安装一个私有的nexus仓库，用来存放构建过程的Artifacts（镜像文件）。
 
-GoCD是如何工作的
+课程主要内容：
 
-
-手把手搭建CI
-本章节我们在Mac OSX上使用GoDC来一步步地搭建CI，在此之前，为了提升CI的效率，安装一个私有的nexus仓库，用来存放构建过程的Artifacts（镜像文件）。
-
-主要任务有：
-
-- 安装配置 Nexus
-- 安装配置Go Server/Agent
-- 在Pipeline中使用Agent构建
-- Pipeline as Code
+- 安装和配置Nexus
+- 安装和配置Go Server
+- 安装和配置Go Agent
+- 创建第一个Pipeline
 
 ---
 
 ### 准备工作
-在本地Mac OSX上需要安装如下工具：
+需要每个人在本地Mac OSX上需要安装如下工具：
 
 - Docker
 - Docker Compose
@@ -37,7 +32,7 @@ GoCD是如何工作的
 
 ---
 
-### 安装配置 Nexus
+### 安装配置Nexus
 **启动一个Nexus服务**
 
 ```
@@ -64,9 +59,9 @@ $ docker run -d -v $(pwd)/nexusdata:/nexus-data -p 5000:5000 -p 8081:8081 sonaty
 
 ---
 
-### 安装配置Go Server/Agent
+### 安装配置Go Server + Go Agent
 
-**启动Go Server**
+#### 启动Go Server
 
 安装好私有仓库，我们可以使用镜像启动一个Go Server：
 
@@ -78,7 +73,7 @@ docker run -d -v $(pwd)/goserver:/godata -v $HOME:/home/go -p8153:8153 -p8154:81
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/go-server-home-page.jpg' }})
 
-**自定义Go Agent**
+#### 自定义Go Agent
 
 因为我们要在Go Agent里使用docker来做一些构建任务，并且使用rancher compose来做部署，所以需要在原生的Go Agent镜像中安装docker和rancher compose cli，在`~/mst/ci-cd/`目录下创建一个`Dockerfile`文件:
 
@@ -96,20 +91,20 @@ RUN curl -O -L https://github.com/rancher/rancher-compose/releases/download/v0.1
        && mv rancher-compose-v0.12.5/rancher-compose /usr/local/bin/
 ```
 
-**构建Go Agent镜像**
+基于上述Dockerfile构建一个自定义的Go Agent镜像：
 
 ```sh
 $ cd ~/mst/ci-cd/
 $ docker build -t gocd/gocd-agent-alpine-3.5:v17.12.0-rancher dockerfiles/gocd-agent-with-rancher-cli/
 ```
 
-**启动并注册Go Aent**
+#### 启动并注册Go Agent
 
-在启动Go Agent前，我们需要将下面命令中的`AGENT_AUTO_REGISTER_KEY`替换成自己机器上Go Server中的`agentAutoRegisterKey`，如何获取这个`agentAutoRegisterKey`？访问`http://127.0.0.1:8153/go/admin/config_xml`，会看到如下图所示的`agentAutoRegisterKey`:
+在启动Go Agent前，我们需要将下面命令中的`AGENT_AUTO_REGISTER_KEY`替换成自己机器上Go Server中的`agentAutoRegisterKey`。要获取这个`agentAutoRegisterKey`，访问`http://127.0.0.1:8153/go/admin/config_xml`，会看到如下图所示的`agentAutoRegisterKey`:
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/agent-auto-register-key.jpg' }})
 
-完成替换后，使用如下命令启动并注册Go Agent：
+完成替换后，使用替换后的命令启动并注册Go Agent：
 
 ```sh
 $ cd ~/mst/ci-cd/
@@ -122,22 +117,22 @@ $ docker run -d -e WORKDIR=$(pwd)/goagent -e GO_SERVER_URL=https://172.17.0.1:81
 
 ---
 
-### 在Pipeline中使用Agent执行任务
-到目前为止，我们的Go Server和Go Agent安装配置完毕，接下来我们要创建一个Pipeline，并为Pipeline设置一个Stage，从而使用已注册的Agent来执行任务。
+### 创建第一个Pipeline
+到目前为止，我们的Go Server和Go Agent安装配置完毕。接下来我们来创建第一个Pipeline，并为Pipeline设置一个Stage，进而使用已注册的Agent来执行任务。
 
-首先，创建一个名为`mst-user-service`的Pipeline，group为`mst`，并配置Materials：
+首先，创建一个名为`mst-user-service`的Pipeline，Group为`mst`，并配置Materials：
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/basic-setting-marerials.jpg' }})
 
-此外，我们配置一个Stage和一个Job：
+为Pipeline配置一个Stage和一个Job：
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/stage-job.jpg' }})
 
-运行Pipeline，我们看到CI红了：
+运行Pipeline，我们的CI红了：
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/ci-red.jpg' }})
 
-可以看到构建失败的原始是因为在Go Agent上没有安装JDK，那么如何在不安装JDK的前提下让构建通过？请进入主题 [*在Pipeline中使用Docker执行构建任务*]({{ site.url }}{{ '/topics/micro-service/build-pipeline-with-docker/' }})。
+从日志上可以看出构建失败的原始是因为Go Agent上没有安装JDK，那么如何在不安装JDK的前提下让构建通过？请进入主题 [*在Pipeline中使用Docker执行构建任务*]({{ site.url }}{{ '/topics/micro-service/build-pipeline-with-docker/' }})。
 
 ---
 
