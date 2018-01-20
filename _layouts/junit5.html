@@ -9,7 +9,7 @@ layout: default
   <p class="version">
     {% for contributor in site.data.junit5.contributors %}
     {% if forloop.index > 1 %}•{% endif %}
-      <a href="{{ contributor.index }}">{{ contributor.name }}</a>
+    <a href="{{ contributor.index }}">{{ contributor.name }}</a>
     {% endfor %}
     @
     <a href="https://www.thoughtworks.com/">ThoughtWorks</a> -
@@ -24,7 +24,8 @@ layout: default
       <ul>
         {% for version in site.data.junit5.versions %}
         <li>
-          <a href="{{ site.url }}{{ '/junit5/' }}{{ version.name }}{{ '/user-guide-cn/' }}">{{ 'Version ' }}{{ version.name }}</a>
+          <a href="{{ site.url }}{{ '/junit5/' }}{{ version.name }}{{ '/user-guide-cn/' }}">{{ 'Version ' }}{{
+            version.name }}</a>
         </li>
         {% endfor %}
       </ul>
@@ -32,7 +33,9 @@ layout: default
     <div>
       {{ content }}
     </div>
-    <div class="highlighter-rouge"><pre class="highlight"><code class="hljs css">版本 <span class="hljs-selector-class">{% if page.version %}{{page.version}}{% else %}{{site.junit.current_version}}{% endif %}</span><br/>最后更新 <span class="hljs-selector-tag">{% if page.last_updated_date %}{{page.last_updated_date}}{% else %}{% for page in site.pages %}{% if page.version == site.junit.current_version%}{{page.last_updated_date}}{% endif %}{% endfor %}{% endif %}</span></code></pre>
+    <div class="highlighter-rouge">
+      <pre class="highlight"><code class="hljs css">版本 <span class="hljs-selector-class">{% if page.version %}{{page.version}}{% else %}{{site.junit.current_version}}{% endif %}</span><br/>最后更新 <span
+        class="hljs-selector-tag">{% if page.last_updated_date %}{{page.last_updated_date}}{% else %}{% for page in site.pages %}{% if page.version == site.junit.current_version%}{{page.last_updated_date}}{% endif %}{% endfor %}{% endif %}</span></code></pre>
     </div>
     <hr/>
     <div class="edition-claim">
@@ -61,10 +64,9 @@ layout: default
     </div>
   </div>
   <div class="post-toc">
-    <div class="title"><h4><a href="{{ page.url }}"><i>{{ page.title }}</i></a></h4></div>
-    <div class="separator">
-      <hr/>
-    </div>
+    <div class="title"><h4><a href="{{ page.url }}"><i>{{ page.title }} @{% if page.version %}{{ page.version }}{% else
+      %}{{ site.junit.current_version }}{% endif %}</i></a></h4></div>
+    <div class="separator"><hr/></div>
     <div class="content"></div>
   </div>
 </article>
