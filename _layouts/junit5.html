@@ -7,14 +7,16 @@ layout: default
   <h1 class="post-title"><i>{{ page.title }}</i></h1>
 
   <p class="version">
-    <a href="http://sjyuan.cc/about/">袁慎建</a> •
-    <a href="http://www.jianshu.com/u/048f932015bc">王亚鑫</a> •
-    <a href="http://www.jianshu.com/u/ab3e5acc3f2c">何僵乐</a> @
-    <a href="https://www.thoughtworks.com/">ThoughtWorks</a> - Version
+    {% for contributor in site.data.junit5.contributors %}
+    {% if forloop.index > 1 %}•{% endif %}
+      <a href="{{ contributor.index }}">{{ contributor.name }}</a>
+    {% endfor %}
+    @
+    <a href="https://www.thoughtworks.com/">ThoughtWorks</a> -
     {% if page.version %}
-    <span>{{ page.version }}</span>
+    <span><a href="{{ site.url }}{{ '/junit5/'}}{{ page.version }}{{ '/user-guide-cn/'}}">Version {{ page.version }}</a></span>
     {% else %}
-    <span>{{ site.junit.current_version }}</span>
+    <span><a href="{{ site.url }}{{ '/junit5/'}}{{ site.junit.current_version }}{{ '/user-guide-cn/'}}">Version {{ site.junit.current_version }}</a></span>
     {% endif %}
   </p>
   <div class="post-content">
@@ -22,7 +24,7 @@ layout: default
       <ul>
         {% for version in site.data.junit5.versions %}
         <li>
-          <a href="{{ site.url }}{{ '/junit5/' }}{{ version.name }}{{ '/user-guide-cn' }}">{{ 'Version ' }}{{ version.name }}</a>
+          <a href="{{ site.url }}{{ '/junit5/' }}{{ version.name }}{{ '/user-guide-cn/' }}">{{ 'Version ' }}{{ version.name }}</a>
         </li>
         {% endfor %}
       </ul>
