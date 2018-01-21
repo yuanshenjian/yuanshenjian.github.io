@@ -2,22 +2,26 @@
 bg: "insight.jpg"
 layout: page
 title: "TECH TOPIC"
-permalink: /topic-practice/
+permalink: /topics/
 summary: "技术主题实践"
 
 active: topic
 
 ---
 
-
-{% for category in site.data.topic.toc %}
-
-<h3>{{ category.topic }}</h3>
+{% for topic in site.data.topic.toc %}
+  {% assign existed = false %}
+  {% for page in site.pages %}{% if page.topic == topic.name %}{% assign existed = true %}{% break %}{% endif %}{% endfor %}
+  {% if existed %}
+  <h3>{{ topic.name }}</h3>
   <ul class="categories">
-    {% for item in category.collection %}
+    {% for page in site.pages %}
+      {% if page.topic == topic.name %}
         <li>
-        <a href="{{ '/topics/micro-service' }}{{ item.permalink }}">{{ item.title }}</a>
+        <a href="{{ page.permalink }}">{{ page.title }}</a>
         </li>
+      {% endif %}
     {% endfor %}
   </ul>
+  {% endif %}
 {% endfor %}

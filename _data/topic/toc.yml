@@ -1,5 +1,3 @@
 
-- topic: Micro service
-  collection:
-  - title: 构建基于GoCD的持续集成基础设施
-    permalink: /setup-ci-with-gocd
+- name: Micro service
+- name: TDD
