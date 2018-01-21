@@ -35,7 +35,8 @@ date: 2018-01-17
 ---
 
 ### 安装配置Nexus
-**启动一个Nexus服务**
+
+#### 启动一个Nexus服务
 
 ```
 $ docker run -d -v $(pwd)/nexusdata:/nexus-data -p 5000:5000 -p 8081:8081 sonatype/nexus3
@@ -44,7 +45,7 @@ $ docker run -d -v $(pwd)/nexusdata:/nexus-data -p 5000:5000 -p 8081:8081 sonaty
 等待1~2分钟至启动完毕，在浏览器中访问 `http://127.0.0.1:8081`，你会看到Nexus的主界面：
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/nexus-home-page.jpg' }})
 
-**创建私有仓库**
+#### 创建私有仓库
 
 接下来，我们以`admin/admin123`用户登录进入系统，创建一个名为`mst-nexus`，类型为`docker(hosted)`的仓库:
 
@@ -53,7 +54,7 @@ $ docker run -d -v $(pwd)/nexusdata:/nexus-data -p 5000:5000 -p 8081:8081 sonaty
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/config-nexus.jpg' }})
 
 
-**配置Docker Daemon**
+#### 配置Docker Daemon
 
 在Mac OSX中，我们需要针对http请求放开权限，并且将`127.0.0.1:5000`添加到 `Inscure registers`列表中：
 
@@ -138,7 +139,7 @@ $ docker run -d -e WORKDIR=$(pwd)/goagent -e GO_SERVER_URL=https://172.17.0.1:81
 
 ---
 
-## 延伸阅读
+### 延伸阅读
 - [CI基础 & Setup环境]({{ site.url }}{{ '/ci-basics/' }})
 - [手把手搭建CI]({{ site.url }}{{ '/ci-setup-step-by-step/' }})
 - [构建可持续部署的Pipeline]({{ site.url }}{{ '/ci-pipeline/' }})
