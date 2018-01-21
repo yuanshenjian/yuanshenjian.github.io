@@ -6,7 +6,7 @@ permalink: /topics/micro-service/build-pipeline-with-docker/
 
 topic: Micro service
 
-date: 2018-01-18
+date: 2018-01-20
 ---
 
 * content
@@ -14,7 +14,7 @@ date: 2018-01-18
 
 ---
 
-上节课我们完成了 [搭建基于GoCD的持续集成基础设施]({{ site.url }}{'/topics/micro-service/setup-ci-with-gocd/'})，课程以我们的第一个Pipeline的失败结束，那么本节课的核心目标是扩展我们Pileline的Stage，并让Pipeline由红转绿。
+上节课我们完成了 [搭建基于GoCD的持续集成基础设施]({{ site.url }}{{'/topics/micro-service/setup-ci-with-gocd/'}})，最后以我们的第一个pipeline的失败而结束，那么本节课的核心目标是扩展Pileline，并让Pipeline由红转绿。
 
 主要任务有：
 
@@ -24,26 +24,24 @@ date: 2018-01-18
 
 ---
 
-### 准备工作
+## 准备工作
+将上节课中的Go server、Go agent、Nexus三个容器启动：
 
-- 将上节课 [搭建基于GoCD的持续集成基础设施]({{ site.url }}{'/topics/micro-service/setup-ci-with-gocd/'}) 运行起来。
-
-	```
-	$ docker ps -a 
-	$ docker start <go_service_contain_id>
-	$ docker start <go_agent_contain_id>
-	$ docker start <go_nexus_contain_id>
-	```
+```sh
+$ docker ps -a 
+$ docker start <go_server_contain_id>
+$ docker start <go_agent_contain_id>
+$ docker start <go_nexus_contain_id>
+```
 
 ---
 
-### 扩展并配置Stage
-
-#### 更新`Compile` Stage
+## 扩展并配置Stage
+上节课我们为了演示Pipeline，创加了一个名为`compile`的stage，该stage中直接执行了`./gradlew compileJava`，现在我们来将task交由Docker容器去执行。
 
 首先我们将上节课中创建的`compile` stage更新为`test`，并将Task更改为执行工程根目录的Shell脚本。
 
-```
+```sh
 $ bash -e scripts/test.sh
 ```
 
@@ -51,13 +49,13 @@ $ bash -e scripts/test.sh
 
 添加一个名为`build` 的stage，并按照上述方式配置task为：
 
-```
+```sh
 $ bash -e scripts/build.sh
 ```
 
 ---
 
-### 编写build Scripts
+## 编写build scripts
 更新后的stage中，task都执行了shell脚本，接下来我们需要在 [mst-user-service](https://github.com/tw-ms-training/mst-user-service) 代码库中添加这些脚本。
 
 建议按照下面指令创建script目录（代码库的地址填写你自己的）：
@@ -96,17 +94,30 @@ if [[ -z $DOCKER_REGISRTY ]]; then
   DOCKER_REGISRTY=127.0.0.1:5000
 fi
 
-IMAGE_NAME=${DOCKER_REGISRTY}/tw-mst/mst-user-service:${GO_PIPELINE_COUNTER}
+IMAGE_NAME=${DOCKER_REGISRTY}/tw-ms-training/user-service:${GO_PIPELINE_COUNTER}
 
 docker build -t $IMAGE_NAME .
 docker push $IMAGE_NAME
 docker rmi $IMAGE_NAME
 ```
 
-创建好shell脚本，做一次commit提交。
+上述`build.sh`脚本中，`docker build -t $IMAGE_NAME .`命令基于项目根目录中的`Docerfile`构建了一个镜像，所以我们还需要创建一个`Dockerfile`：
 
+```docker
+FROM openjdk:8-alpine
 
-#### Docker权限问题
+MAINTAINER sjyuan <sjyuan@thoughtworks.com>
+
+COPY build/libs/*.jar /app/*.jar
+
+WORKDIR /app
+
+CMD java -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -XX:+PrintHeapAtGC -verbose:gc -XX:+PrintTenuringDistribution -XX:+PrintGCApplicationStoppedTime -Xloggc:gc_cdm.log -jar *.jar
+```
+
+最后做一次commit。
+
+### Docker进程权限问题
 如果你的`test` Stage在执行的时候出现如下错误：
 
 ```sh
@@ -129,7 +140,7 @@ $ chmod 666 /var/run/docker.sock
 
 ---
 
-### Pipeline as Code
+## Pipeline as Code
 到目前为止，我们在Go Server的Web Page上手动创建的Pipeline，但这些手动的操作不可以被持久化以及复用，就像人工测试测试一样，必须每次都重复一样的操作，不利于自动化管理。GoCD支持从代码生成Pipeline，即Pipeline as Code。这种方式最直观的两个好处是：
 
 - 可以对Code进行版本控制。
@@ -151,7 +162,7 @@ Go会去扫描`https://github.com/tw-ms-training/mst-pipelines`代码库，所�
 
 针对我们之前创建的pipeline，创建一个`mst-user-service.gocd.yml`文件：
 
-*mst-pipeline/pipelines/mst-user-service.gocd.yml*
+*~/mst-pipeline/pipelines/mst-user-service.gocd.yml*
 
 ```yaml
 pipelines:
@@ -190,10 +201,11 @@ pipelines:
 
 做一次commit，Go会基于该配置文件生成一条Pipeline。如果你的配置文件中的Pipeline名称与你手动创建的一样，会产生冲突，将手动创建的删除掉即可，或者更改配置文件中的名称。
 
+到目前为止，我们的服务还没有被部署到一个可以访问的地方。关于Pipeline的最后一站部署，请进入下一个主题 [使用Rancher Compose部署服务]({{ site.url }}{{ '/topics/micro-service/deploy-with-rancher-compose/' }})
 
 ---
 
-### 延伸阅读
+## 延伸阅读
 - [CI基础 & Setup环境]({{ site.url }}{{ '/ci-basics/' }})
 - [手把手搭建CI]({{ site.url }}{{ '/ci-setup-step-by-step/' }})
 - [构建可持续部署的Pipeline]({{ site.url }}{{ '/ci-pipeline/' }})
