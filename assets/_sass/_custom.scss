@@ -238,20 +238,21 @@ hr {
 }
 
 .junit5-versions {
-  line-height: 15px;
+  line-height: 10px;
+  font-size: 14px;
   ul {
     font-size: 14px;
     padding: 0;
     list-style: none;
     li {
       padding-bottom: 5px;
-      a {
-        text-decoration: none;
-      }
-      a:hover{
-        color: #160da5;
-      }
     }
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover{
+    color: #160da5;
   }
 }
 

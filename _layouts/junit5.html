@@ -21,14 +21,17 @@ layout: default
   </p>
   <div class="post-content">
     <div class="junit5-versions">
-      <ul>
+      <br>
         {% for version in site.data.junit5.versions %}
-        <li>
-          <a href="{{ site.url }}{{ '/junit5/' }}{{ version.name }}{{ '/user-guide-cn/' }}">{{ 'Version ' }}{{
-            version.name }}</a>
-        </li>
+          <span>
+            <a href="{{ site.url }}{{ '/junit5/' }}{{ version.name }}{{ '/user-guide-cn/' }}">
+              {{ 'v' }}{{ version.name }}
+            </a>
+            &nbsp;&nbsp;
+          </span>
+        {% assign current = forloop.index | modulo:5 %}
+        {% if current == 0 %} <br/><br/> {% endif %}
         {% endfor %}
-      </ul>
     </div>
     <div>
       {{ content }}
@@ -68,7 +71,9 @@ layout: default
       <h4><a href="{{ page.url }}"><i>{{ page.title }}</i></a></h4>
       <span>v {% if page.version %}{{ page.version }}{% else %}{{ site.junit.current_version }}{% endif %}</span>
     </div>
-    <div class="separator"><hr/></div>
+    <div class="separator">
+      <hr/>
+    </div>
     <div class="content"></div>
   </div>
 </article>
