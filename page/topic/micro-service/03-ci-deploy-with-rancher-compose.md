@@ -39,7 +39,7 @@ $ docker start <go_nexus_contain_id>
 ---
 
 ## 搭建Rancher部署环境
-跟之前一样，我们使用docker启动一个Rancer server，但是请注意，我们这次是在linux机器上启动，我这里使用了一个VM（IP: 10.202.129.3），该机器中同样需要安装docker和docker-compose。Mac OXS机器上可以借用 [Virtualbox](https://www.virtualbox.org/wiki/Downloads) 启动一个linux虚拟机。
+跟之前一样，我们使用docker启动一个Rancer server。
 
 ### 配置Rancher server
 
@@ -47,7 +47,7 @@ $ docker start <go_nexus_contain_id>
 $ docker run -d --restart=unless-stopped -p 8080:8080 rancher/server:v1.6.13
 ```
 
-等待1~2分钟启动完毕，浏览器通过`http://10.202.129.3:8080`访问Rancher的主界面。
+等待1~2分钟启动完毕，在浏览器通过 <http://10.29.5.155:8080> 访问Rancher的主界面。
 
 *待完善*
 
@@ -105,7 +105,7 @@ $ docker-compose up -d
 ---
 
 ## 部署mst-user-service
-现在，我们将`mst-user-service`部署到`10.202.129.3`上，我们需要在pipeline添加一个`deploy` stage，然后准备好部署脚本`deploy.sh`。除了这些，我们还需要提前在`mst-user-service`项目中创建`docker-compose.yml`和`rancher-compose.yml`文件，最后在Go agent中使用docker compose cli将服务部署上去。
+现在，我们将`mst-user-service`部署到`10.29.5.155`上，我们需要在pipeline添加一个`deploy` stage，然后准备好部署脚本`deploy.sh`。除了这些，我们还需要提前在`mst-user-service`项目中创建`docker-compose.yml`和`rancher-compose.yml`文件，最后在Go agent中使用docker compose cli将服务部署上去。
 
 ### 编写*-compose.yml
 `docker-compose.yml`用于管理编排容器，`rancher-compose.yml`用户管理容器的集群，我们需要在`mst-user-service`中创建这两个文件。
@@ -180,12 +180,12 @@ pipelines:
 set -x
 set -e
 
-export RANCHER_URL=http://10.202.129.3:8080/v2-beta/projects/1a5
+export RANCHER_URL=http://10.29.5.155:8080/v2-beta/projects/1a5
 export RANCHER_ACCESS_KEY=0776A1C81D57800F4CE9
 export RANCHER_SECRET_KEY=Z2i8KcmfzeroaAy148wuPnxjyhwGxmxm3qZWsZC8
 
 if [[ -z $DOCKER_REGISRTY ]]; then
-  DOCKER_REGISRTY=10.202.129.3:5000
+  DOCKER_REGISRTY=10.29.5.155:5000
 fi
 IMAGE_NAME=${DOCKER_REGISRTY}/tw-ms-train/user-service:${GO_PIPELINE_COUNTER}
 
@@ -196,7 +196,7 @@ rancher-compose -p mst-user-service up -d -c --upgrade
 上述脚本定义了三个环境变量`RANCHER_URL`、`RANCHER_ACCESS_KEY`、`RANCHER_SECRET_KEY `，这三个变量是Rancher server的地址以及访问密钥，当Go agent在执行本地使用docker compose cli向Rancher server发出命令时用到的验证信息。要获取`RANCHER_ACCESS_KEY`和`RANCHER_SECRET_KEY`，我们需要在Rancher server创建一个。
 
 ### 创建API Key
-访问Rancher server web页面`http://10.202.129.3:8080`，在导航栏`API`上点击`Keys`，然后`Keys`点击`Add Environment API key`按钮：
+访问Rancher server web页面 <http://10.29.5.155:8080>，在导航栏`API`上点击`Keys`，然后`Keys`点击`Add Environment API key`按钮：
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/rancher-api-key.jpg' }})
 

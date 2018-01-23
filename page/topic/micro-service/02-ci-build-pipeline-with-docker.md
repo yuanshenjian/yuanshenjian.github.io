@@ -91,7 +91,7 @@ set -e
 docker run --rm -v /tmp/gradle-caches:/root/.gradle/caches -v $WORKDIR/pipelines/$GO_PIPELINE_NAME:/opt/app -w /opt/app gradle:4.4.1-jdk8 gradle clean bootRepackage
 
 if [[ -z $DOCKER_REGISRTY ]]; then
-  DOCKER_REGISRTY=127.0.0.1:5000
+  DOCKER_REGISRTY=10.29.5.155:5000
 fi
 
 IMAGE_NAME=${DOCKER_REGISRTY}/tw-ms-training/user-service:${GO_PIPELINE_COUNTER}
@@ -117,27 +117,6 @@ CMD java -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -XX:+
 
 最后做一次commit。
 
-### Docker进程权限问题
-如果你的`test` Stage在执行的时候出现如下错误：
-
-```sh
-docker: Cannot connect to the Docker daemon. Is the docker daemon running on this host?.
-```
-说明在Go Agent中执行docker失败，这是由于`/var/run/docker.sock`的权限问题导致。要解决这个问题，先来回顾一下我们上节课在注册Go Agent的命令：
-
-```sh
-$ docker run -d -e WORKDIR=$(pwd)/goagent -e GO_SERVER_URL=https://172.17.0.1:8154/go -v $(pwd)/goagent:/godata -v $HOME:/home/go -v /var/run/docker.sock:/var/run/docker.sock:rw -v $HOME/.docker:/home/go/.docker:rw -e AGENT_AUTO_REGISTER_KEY=211f2c07-97cb-47b2-9eaf-af1326f190e2 -e AGENT_AUTO_REGISTER_RESOURCES=docker -e AGENT_AUTO_REGISTER_HOSTNAME=superman gocd/gocd-agent-alpine-3.5:v17.12.0-rancher
-```
-
-以上命令中 `-v /var/run/docker.sock:/var/run/docker.sock:rw`是将本机的docker.sock挂在到Go Agent容器中，我们赋予的rw权限如果没有生效，需要登录到Go Agent 更改`/var/run/docker.sock`的权限:
-
-```sh
-$ docker exex -it <go_agent_id> bash
-$ chmod 666 /var/run/docker.sock
-```
-
-重新执行Pipeline即可。
-
 ---
 
 ## Pipeline as Code
@@ -146,7 +125,7 @@ $ chmod 666 /var/run/docker.sock
 - 可以对Code进行版本控制。
 - 可以复用。
 
-在GoCD中启用Pipeline as Code只需要一个简单的配置，访问`http://127.0.0.1:8153/go/admin/config_xml`，加入如下配置：
+在GoCD中启用Pipeline as Code只需要一个简单的配置，访问 <http://10.29.5.155:8153/go/admin/config_xml>，加入如下配置：
 
 ```xml
 <config-repos>
@@ -172,7 +151,7 @@ pipelines:
     locking: off
     materials:
       app:
-        git: git@github.com:tw-ms-training/mst-user-service.git
+        git: https://github.com/tw-ms-training/mst-user-service
         branch: master
     stages:
       - test:
@@ -202,6 +181,30 @@ pipelines:
 做一次commit，Go会基于该配置文件生成一条Pipeline。如果你的配置文件中的Pipeline名称与你手动创建的一样，会产生冲突，将手动创建的删除掉即可，或者更改配置文件中的名称。
 
 到目前为止，我们的服务还没有被部署到一个可以访问的地方。关于Pipeline的最后一站部署，请进入下一个主题 [使用Rancher Compose部署服务]({{ site.url }}{{ '/topics/micro-service/deploy-with-rancher-compose/' }})
+
+---
+
+## Troubleshoot
+
+### Docker进程权限问题
+如果你的`test` Stage在执行的时候出现如下错误：
+
+```sh
+docker: Cannot connect to the Docker daemon. Is the docker daemon running on this host?.
+```
+说明在Go Agent中执行docker失败，这是由于`/var/run/docker.sock`的权限问题导致。要解决这个问题，先来回顾一下我们上节课在注册Go Agent的命令：
+
+```sh
+$ docker run -d -e WORKDIR=$(pwd)/goagent -e GO_SERVER_URL=https://172.17.0.1:8154/go -v $(pwd)/goagent:/godata -v $HOME:/home/go -v /var/run/docker.sock:/var/run/docker.sock:rw -v $HOME/.docker:/home/go/.docker:rw -e AGENT_AUTO_REGISTER_KEY=211f2c07-97cb-47b2-9eaf-af1326f190e2 -e AGENT_AUTO_REGISTER_RESOURCES=docker -e AGENT_AUTO_REGISTER_HOSTNAME=superman gocd/gocd-agent-alpine-3.5:v17.12.0-rancher
+```
+
+以上命令中 `-v /var/run/docker.sock:/var/run/docker.sock:rw`是将本机的docker.sock挂在到Go Agent容器中，我们赋予的rw权限如果没有生效，更改`/var/run/docker.sock`的权限:
+
+```sh
+$ chmod 666 /var/run/docker.sock
+```
+
+重新执行Pipeline即可。
 
 ---
 
