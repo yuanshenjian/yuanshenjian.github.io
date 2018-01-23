@@ -224,12 +224,30 @@ hr {
   display: none;
 }
 
-#markdown-toc, .post-toc {
+#markdown-toc {
   font-size: 15px;
+  list-style: none;
+  margin-left: -35px;
+  li {
+    list-style: none;
+  }
   a {
     text-decoration: none;
   }
-  a:hover{
+  a:hover {
+    color: #160da5;
+  }
+}
+
+.post-toc {
+  font-size: 15px;
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
     color: #160da5;
   }
 }
@@ -248,7 +266,7 @@ hr {
   a {
     text-decoration: none;
   }
-  a:hover{
+  a:hover {
     color: #160da5;
   }
 }
@@ -277,7 +295,6 @@ hr {
       margin-right: 20px;
     }
     .content {
-      margin-left: 20px;
       margin-top: 20px;
       margin-right: 20px;
     }
