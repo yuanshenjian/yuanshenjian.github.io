@@ -62,21 +62,11 @@ $ mkdir mst
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure("2") do |config|
-  config.vm.define :mst_ubuntu do |config|
+  config.vm.define :mst_ci do |config|
      config.vm.box = "ubuntu/trusty64"
-     config.vm.hostname = "tw-mst"
+     config.vm.hostname = "tw-mst-ci"
      config.vm.synced_folder "./vagrant_shared", "/vagrant"
      config.vm.network :private_network, ip: "10.29.5.155"
-     config.vm.network :forwarded_port, guest: 80, host: 80
-     config.vm.network :forwarded_port, guest: 8080, host: 8080
-     config.vm.network :forwarded_port, guest: 8081, host: 8081
-     config.vm.network :forwarded_port, guest: 5000, host: 5000
-     config.vm.network :forwarded_port, guest: 5001, host: 5001
-     config.vm.network :forwarded_port, guest: 8500, host: 8500
-     config.vm.network :forwarded_port, guest: 8153, host: 8153
-     config.vm.network :forwarded_port, guest: 8154, host: 8154
-     config.vm.network :forwarded_port, guest: 6379, host: 6379
-     config.vm.network :forwarded_port, guest: 3306, host: 3306
      config.vm.provision :shell, path: "./vagrant_shared/setup_docker.sh"
      config.vm.provider "virtualbox" do |vb|
        vb.memory = "4096"

@@ -25,7 +25,7 @@ date: 2018-01-20
 ---
 
 ## 准备工作
-将上节课中的Go server、Go agent、Nexus三个容器启动：
+在10.29.5.155的VM上将上节课中的Go server、Go agent、Nexus三个容器启动：
 
 ```sh
 $ docker ps -a 
@@ -78,7 +78,7 @@ $ touch deploy.sh
 set -x
 set -e
 
-docker run --rm -v /tmp/gradle-caches:/root/.gradle/caches -v $WORKDIR/pipelines/$GO_PIPELINE_NAME:/opt/app -w /opt/app gradle:4.4.1-jdk8 gradle clean test
+docker run --rm -v /tmp/gradle-caches:/root/.gradle/caches -v $WORKDIR/pipelines/$GO_PIPELINE_NAME:/opt/app -w /opt/app gradle:3.5-jdk8 gradle clean test
 ```
 
 *build.sh*
@@ -88,7 +88,7 @@ docker run --rm -v /tmp/gradle-caches:/root/.gradle/caches -v $WORKDIR/pipelines
 set -x
 set -e
 
-docker run --rm -v /tmp/gradle-caches:/root/.gradle/caches -v $WORKDIR/pipelines/$GO_PIPELINE_NAME:/opt/app -w /opt/app gradle:4.4.1-jdk8 gradle clean bootRepackage
+docker run --rm -v /tmp/gradle-caches:/root/.gradle/caches -v $WORKDIR/pipelines/$GO_PIPELINE_NAME:/opt/app -w /opt/app gradle:3.5-jdk8 gradle clean bootRepackage
 
 if [[ -z $DOCKER_REGISRTY ]]; then
   DOCKER_REGISRTY=10.29.5.155:5000
@@ -204,7 +204,7 @@ $ docker run -d -e WORKDIR=$(pwd)/goagent -e GO_SERVER_URL=https://172.17.0.1:81
 $ chmod 666 /var/run/docker.sock
 ```
 
-重新执行Pipeline即可。
+重新运行Pipeline即可。
 
 ---
 

@@ -25,9 +25,9 @@ date: 2018-01-21
 
 ## 准备工作
 
-由于我们在 [搭建基于GoCD的持续集成基础设施]({{ site.url }}{{'/topics/micro-service/build-pipeline-with-docker/' }}) 那节课中注册Go agent时，已经将在Go agent中安装了Rancher Compose，所以现在我们安装和配置一个Rancher server。
+由于我们在 [搭建基于GoCD的持续集成基础设施]({{ site.url }}{{'/topics/micro-service/build-pipeline-with-docker/' }}) 那节课中注册Go agent时，已经将在Go agent中安装了Rancher Compose，这节课我们来搭建一个部署环境，并利用rancher compose cli将服务部署到。
 
-同样，将Go server、Go agent、Nexus三个容器启动（如果已启动可以跳过）：
+同样，在`10.29.5.155`的VM中将Go server、Go agent、Nexus三个容器启动（如果已启动可以跳过）：
 
 ```sh
 $ docker ps -a 
@@ -39,22 +39,51 @@ $ docker start <go_nexus_contain_id>
 ---
 
 ## 搭建Rancher部署环境
-跟之前一样，我们使用docker启动一个Rancer server。
+为了保持部署环境的独立性，我们再次使用Vagrant创建一个ubuntu的VM(`10.29.25.155`)，在之前的Vagrantfile中添加一个虚拟机的配置：
 
-### 配置Rancher server
+*~/mst/vm/Vagrantfile*
 
 ```sh
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure("2") do |config|
+  ...
+  config.vm.define :mst_rancher do |config|
+     config.vm.box = "ubuntu/trusty64"
+     config.vm.hostname = "tw-mst-rancher"
+     config.vm.synced_folder "./vagrant_shared", "/vagrant"
+     config.vm.network :private_network, ip: "10.29.25.155"
+     config.vm.provision :shell, path: "./vagrant_shared/setup_docker.sh"
+     config.vm.provider "virtualbox" do |vb|
+       vb.memory = "4096"
+     end
+   end
+end
+```
+
+
+### 配置Rancher server
+登录到`10.29.25.155`的VM中，从rancher镜像中启动一个rancher server:
+
+```sh
+$ cd ~/mst/vm
+$ vagrant ssh mst_rancher
 $ docker run -d --restart=unless-stopped -p 8080:8080 rancher/server:v1.6.13
 ```
 
-等待1~2分钟启动完毕，在浏览器通过 <http://10.29.5.155:8080> 访问Rancher的主界面。
+等待1~2分钟启动完毕，在浏览器通过 <http://10.29.25.155:8080> 访问Rancher的主界面。
 
 *待完善*
 
 ### 安装MySQL和Redis
 我们的服务使用了Redis存储JWT token的黑名单，使用MySQL作为核心数据库服务，所以要在部署环境中预装好MySQL和Redis。
 
-在`10.202.129.3`机器上使用docker-compose启动MySQL和Redis，创建`docker-compose.yml`文件：
+在`10.29.25.155`的VM上使用docker-compose启动MySQL和Redis，创建`docker-compose.yml`文件：
 
 *~/mst/docker-compose.yml*
 
@@ -105,7 +134,7 @@ $ docker-compose up -d
 ---
 
 ## 部署mst-user-service
-现在，我们将`mst-user-service`部署到`10.29.5.155`上，我们需要在pipeline添加一个`deploy` stage，然后准备好部署脚本`deploy.sh`。除了这些，我们还需要提前在`mst-user-service`项目中创建`docker-compose.yml`和`rancher-compose.yml`文件，最后在Go agent中使用docker compose cli将服务部署上去。
+现在，我们将`mst-user-service`部署到`10.29.25.155`上，我们需要在pipeline添加一个`deploy` stage，然后准备好部署脚本`deploy.sh`。除了这些，我们还需要提前在`mst-user-service`项目中创建`docker-compose.yml`和`rancher-compose.yml`文件，最后在Go agent中使用docker compose cli将服务部署上去。
 
 ### 编写*-compose.yml
 `docker-compose.yml`用于管理编排容器，`rancher-compose.yml`用户管理容器的集群，我们需要在`mst-user-service`中创建这两个文件。
@@ -180,7 +209,7 @@ pipelines:
 set -x
 set -e
 
-export RANCHER_URL=http://10.29.5.155:8080/v2-beta/projects/1a5
+export RANCHER_URL=http://10.29.25.155:8080/v2-beta/projects/1a5
 export RANCHER_ACCESS_KEY=0776A1C81D57800F4CE9
 export RANCHER_SECRET_KEY=Z2i8KcmfzeroaAy148wuPnxjyhwGxmxm3qZWsZC8
 
@@ -196,7 +225,7 @@ rancher-compose -p mst-user-service up -d -c --upgrade
 上述脚本定义了三个环境变量`RANCHER_URL`、`RANCHER_ACCESS_KEY`、`RANCHER_SECRET_KEY `，这三个变量是Rancher server的地址以及访问密钥，当Go agent在执行本地使用docker compose cli向Rancher server发出命令时用到的验证信息。要获取`RANCHER_ACCESS_KEY`和`RANCHER_SECRET_KEY`，我们需要在Rancher server创建一个。
 
 ### 创建API Key
-访问Rancher server web页面 <http://10.29.5.155:8080>，在导航栏`API`上点击`Keys`，然后`Keys`点击`Add Environment API key`按钮：
+访问Rancher server web页面 <http://10.29.25.155:8080>，在导航栏`API`上点击`Keys`，然后`Keys`点击`Add Environment API key`按钮：
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/rancher-api-key.jpg' }})
 
