@@ -179,7 +179,7 @@ pipelines:
     locking: off
     materials:
       app:
-        git: git@github.com:tw-ms-training/mst-user-service.git
+        git: https://github.com/tw-ms-training/mst-user-service.git
         branch: master
     stages:
       - test:
