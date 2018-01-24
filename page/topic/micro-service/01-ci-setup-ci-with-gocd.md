@@ -1,12 +1,10 @@
 ---
-layout: post
+layout: topic
 title: 搭建基于GoCD的持续集成基础设施
-
 permalink: /topics/micro-service/setup-ci-with-gocd/
-
 topic: Micro service
-
 date: 2018-01-19
+author: 袁慎建
 ---
 
 * content
@@ -18,7 +16,7 @@ date: 2018-01-19
 
 课程主要内容：
 
-- 安装和配置Ubuntu VM
+- 安装和配置Vagrant VM
 - 安装和配置Nexus
 - 安装和配置Go server
 - 安装和配置Go agent
@@ -32,9 +30,11 @@ date: 2018-01-19
 - [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 - [Vagrant](https://www.vagrantup.com/)
 
+另外我们需要两台Ubuntu的VM，一台用于安装GoCD，一台用于安装Nexus。这里我们使用一台Vagrant VM(`10.29.5.155`) 和一台Scaleworks VM(`10.202.129.3`)。
+
 ---
 
-## 安装和配置Ubuntu VM
+## 安装和配置Vagrant VM
 首先下载安装 [Vagrant](https://www.vagrantup.com/downloads.html)(v2.0.1) 和 [Virtualbox](https://www.virtualbox.org/wiki/Downloads)(v5.2.6)。
 
 Vagrant是一个命令行工具，用于管理虚拟机生命周期（启动，关机，注销，移除等），非常易用，官方文档的 [getting-started](https://www.vagrantup.com/intro/getting-started/) 是一个很好的学习文档。
@@ -65,9 +65,9 @@ Vagrant.configure("2") do |config|
   config.vm.define :mst_ci do |config|
      config.vm.box = "ubuntu/trusty64"
      config.vm.hostname = "tw-mst-ci"
-     config.vm.synced_folder "./vagrant_shared", "/vagrant"
+     config.vm.synced_folder "~/mst/vm/ci/vagrant_shared", "/vagrant"
      config.vm.network :private_network, ip: "10.29.5.155"
-     config.vm.provision :shell, path: "./vagrant_shared/setup_docker.sh"
+     config.vm.provision :shell, path: "~/mst/vm/ci/vagrant_shared/setup_docker.sh"
      config.vm.provider "virtualbox" do |vb|
        vb.memory = "4096"
      end
@@ -85,7 +85,7 @@ end
 
 在启动VM之前，我们来创建provision的shell脚本，用于安装docker和docker-compose(也可以使用Ansible)。
 
-*~mst/vm/vagrant\_shared/setup\_docker.sh*
+*~mst/vm/ci/vagrant\_shared/setup\_docker.sh*
 
 ```sh
 #! /usr/bin/env bash
@@ -100,14 +100,14 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-启动Vagrant，等待启动以及安转docker和docker-compose:
+启动Vagrant VM，等待启动以及安转docker和docker-compose:
 
 ```sh
 $ vagrant up
 ...
 ```
 
-ssh登录到VM，后续所有操作都在VM中进行：
+ssh登录到VM：
 
 ```sh
 $ vagrant ssh
@@ -137,7 +137,7 @@ Last login: Tue Jan 23 03:35:48 2018 from 10.0.2.2
 vagrant@tw-mst:~$
 ```
 
-查看VM中的docker和docker-compose:
+查看Vagrant VM中的docker和docker-compose:
 
 ```sh
 $ docker -v
@@ -149,18 +149,18 @@ docker-compose version 1.18.0, build 8dd22a9
 ---
 
 ## 安装配置Nexus
-为了提升CI的效率，预先在本地安装一个私有的nexus仓库作为docker registry，用来存放构建过程的Artifacts（镜像文件）。
+为了提升CI的效率，我们在Scaleworks VM上安装Nexus作为Docker Registry，用来存放构建过程的Artifacts（镜像文件）。后续会用这台机器安装Rancher agent以及部署服务（如果你机器性能足够好，可以使用Vagrant在本地来搭建VM）。
 
 ### 配置Docker Registry
-在没有ssl证书的情况下，要让docker使用我们搭建的非安全的Registry，我们需要更改Docker的配置文件，添加下面的配置：
+在没有ssl证书的情况下，要让Vagrant VM中的docker能够使用我们搭建的非安全的Registry，我们需要更改Vagrant VM中的Docker配置文件，添加下面的配置：
 
 */etc/default/docker*
 
 ```properties
-DOCKER_OPTS="--insecure-registry 10.29.5.155:5000"
+DOCKER_OPTS="--insecure-registry 10.202.129.3:5000"
 ```
 
-更新配置后重启docker，重启后执行docker登录registry。另外，nexus容器会关闭，需要再次启动nexus容器:
+更新配置后重启Docker：
 
 ```sh
 $ sudo service docker restart
@@ -169,30 +169,29 @@ docker start/running, process 13199
 ```
 
 ### 启动Nexus服务
-配置好非安全的registry，我们来启动一个Nexus服务：
+配置好非安全的Registry，我们登录到Scaleworks VM中启动Nexus服务（以下操作在`10.202.129.3`机器中进行）：
 
 ```
-$ mkdir ~/mst/ci
+$ mkdir -p ~/mst/ci
 $ cd ~/mst/ci
 $ docker run -d -u root -v $(pwd)/nexus-data:/nexus-data -p 5000:5000 -p 8081:8081 sonatype/nexus3
 ```
 
-等待1~2分钟至启动完毕，在浏览器中访问 <http://10.29.5.155:8081/>，你会看到Nexus的主界面：
+等待1~2分钟至启动完毕，在浏览器中访问 <http://10.202.129.3:8081/>，你会看到Nexus的主界面：
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/nexus-home-page.jpg' }})
 
 
 ### 创建私有仓库
-
-接下来，我们以`admin/admin123`用户登录进入系统，创建一个名为`mst-nexus`，类型为`docker(hosted)`的仓库:
+接下来，我们以默认的`admin/admin123`登录系统，创建一个名为`mst-nexus`，类型为`docker(hosted)`的仓库:
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/nexus-repository-creation.jpg' }})
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/config-nexus.jpg' }})
 
-私有库创建完毕后，使用docker登录registry(简单起见，这里直接使用明文密码)：
+私有库创建完毕后，我们在Vagrant VM中使用Docker登录Registry(简单起见，这里直接使用明文密码)：
 
 ```sh
-$ docker login 10.29.5.155:5000 -u admin -p admin123
+$ docker login 10.202.129.3:5000 -u admin -p admin123
 WARNING! Using --password via the CLI is insecure. Use --password-stdin.
 Login Succeeded
 ```
@@ -203,10 +202,19 @@ Login Succeeded
 GoCD是ThoughtWorks的一款开源产品。要使用GoCD，我们需要Setup `Go server`和`Go agent`。
 
 ### 启动Go server
+到目前为止，我们已经安装配置了Nexus私有仓库，接下来要在Vagrant VM中使用镜像启动Go server。
 
-安装好私有仓库，我们可以使用镜像启动一个Go server：
+在你本地机器使用Vagrant ssh登录到Vagrant VM：
 
 ```sh
+$ cd ~/mst/vm
+$ vagrant ssh mst_ci
+```
+
+启动Go server（后续操作在Vagrant VM中进行）：
+
+```sh
+$ cd ~/mst/ci/vm
 $ docker run -d -v $(pwd)/go-server:/godata -v $HOME:/home/go -p8153:8153 -p8154:8154 gocd/gocd-server:v17.12.0
 ```
 
@@ -215,10 +223,9 @@ $ docker run -d -v $(pwd)/go-server:/godata -v $HOME:/home/go -p8153:8153 -p8154
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/go-server-home-page.jpg' }})
 
 ### 自定义Go agent
+因为我们要在Go agent里使用Docker来做一些构建任务，并且使用Rancher Compose来做部署，所以需要在原生的Go agent镜像中安装Docker和Rancher CLI，在`~/mst/ci/custom-agent-config/`目录下创建一个`Dockerfile`文件:
 
-因为我们要在Go agent里使用docker来做一些构建任务，并且使用rancher compose来做部署，所以需要在原生的Go agent镜像中安装`docker`和`rancher compose cli`，在`~/mst/ci/`目录下创建一个`Dockerfile`文件:
-
-*~/mst/ci/custom-agent/Dockerfile*
+*~/mst/ci/custom-agent-config/Dockerfile*
 
 ```sh
 FROM gocd/gocd-agent-alpine-3.5:v17.12.0
@@ -237,7 +244,7 @@ RUN curl -O -L https://github.com/rancher/rancher-compose/releases/download/v0.1
 基于上述Dockerfile构建一个自定义的Go agent镜像：
 
 ```sh
-$ cd ~/mst/ci/custom-agent
+$ cd ~/mst/ci/custom-agent-config
 $ docker build -t gocd/gocd-agent-alpine-3.5:v17.12.0-rancher ./
 ```
 
@@ -252,7 +259,7 @@ $ docker build -t gocd/gocd-agent-alpine-3.5:v17.12.0-rancher ./
 ```sh
 $ cd ~/mst/ci/
 $ sudo chmod 666 /var/run/docker.sock
-$ docker run -d -e WORKDIR=$(pwd)/go-agent -e GO_SERVER_URL=https://172.17.0.1:8154/go -v $(pwd)/go-agent:/godata -v /var/run/docker.sock:/var/run/docker.sock:rw -v $HOME/.docker:/home/go/.docker:rw -e AGENT_AUTO_REGISTER_KEY=d87c20de-bea6-4332-9474-d2ebf48c606f -e AGENT_AUTO_REGISTER_RESOURCES=docker -e AGENT_AUTO_REGISTER_HOSTNAME=superman gocd/gocd-agent-alpine-3.5:v17.12.0-rancher
+$ docker run -d -e WORKDIR=$(pwd)/go-agent -e GO_SERVER_URL=https://10.29.5.155:8154/go -v $(pwd)/go-agent:/godata -v /var/run/docker.sock:/var/run/docker.sock:rw -v $HOME/.docker:/home/go/.docker:rw -e AGENT_AUTO_REGISTER_KEY=e91e80ec-65ad-4d5e-b683-07274fe0245f -e AGENT_AUTO_REGISTER_RESOURCES=docker -e AGENT_AUTO_REGISTER_HOSTNAME=superman gocd/gocd-agent-alpine-3.5:v17.12.0-rancher
 ```
 
 等待1~2分钟至启动完毕，在Go server web界面上进入`AGENT` Tab启用agent：
@@ -264,7 +271,7 @@ $ docker run -d -e WORKDIR=$(pwd)/go-agent -e GO_SERVER_URL=https://172.17.0.1:8
 ## 创建第一个Pipeline
 到目前为止，我们的Go server和Go agent安装配置完毕。接下来我们来创建第一个Pipeline，并为Pipeline设置一个stage，进而使用已注册的agent来执行任务。
 
-首先，创建一个名为`mst-user-service`的Pipeline，Group为`mst`，并配置Materials：
+首先，创建一个名为`mst-user-service`的Pipeline，Group为`mst`，并配置Materials为`https://github.com/tw-ms-training/mst-user-service.git`：
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/basic-setting-marerials.jpg' }})
 
@@ -306,6 +313,7 @@ WARNING: Error loading config file: /home/vagrant/.docker/config.json - open /ho
 $ sudo chmod 644 /home/vagrant/.docker/config.json
 ```
 
+---
 
 ## 延伸阅读
 - [CI基础 & Setup环境]({{ site.url }}{{ '/ci-basics/' }})
@@ -313,5 +321,9 @@ $ sudo chmod 644 /home/vagrant/.docker/config.json
 - [构建可持续部署的Pipeline]({{ site.url }}{{ '/ci-pipeline/' }})
 - [持续集成的容器化策略]({{ site.url }}{{ '/ci-container-strategy/' }})
 
+---
+
+## 代码库
+- [mst-user-service](https://github.com/tw-ms-training/mst-user-service.git)
 
 

@@ -1,12 +1,10 @@
 ---
-layout: post
+layout: topic
 title: 在Pipeline中使用Docker执行构建任务
-
 permalink: /topics/micro-service/build-pipeline-with-docker/
-
 topic: Micro service
-
 date: 2018-01-20
+author: 袁慎建
 ---
 
 * content
@@ -25,13 +23,12 @@ date: 2018-01-20
 ---
 
 ## 准备工作
-在10.29.5.155的VM上将上节课中的Go server、Go agent、Nexus三个容器启动：
+在你本地的Vagrant VM（`10.29.5.155`）上将上节课中的Go server、Go agent容器启动，另外确保你搭建的Nexus服务正常启动：
 
 ```sh
 $ docker ps -a 
 $ docker start <go_server_contain_id>
 $ docker start <go_agent_contain_id>
-$ docker start <go_nexus_contain_id>
 ```
 
 ---
@@ -195,7 +192,7 @@ docker: Cannot connect to the Docker daemon. Is the docker daemon running on thi
 说明在Go Agent中执行docker失败，这是由于`/var/run/docker.sock`的权限问题导致。要解决这个问题，先来回顾一下我们上节课在注册Go Agent的命令：
 
 ```sh
-$ docker run -d -e WORKDIR=$(pwd)/goagent -e GO_SERVER_URL=https://172.17.0.1:8154/go -v $(pwd)/goagent:/godata -v $HOME:/home/go -v /var/run/docker.sock:/var/run/docker.sock:rw -v $HOME/.docker:/home/go/.docker:rw -e AGENT_AUTO_REGISTER_KEY=211f2c07-97cb-47b2-9eaf-af1326f190e2 -e AGENT_AUTO_REGISTER_RESOURCES=docker -e AGENT_AUTO_REGISTER_HOSTNAME=superman gocd/gocd-agent-alpine-3.5:v17.12.0-rancher
+$ docker run -d -e WORKDIR=$(pwd)/go-agent -e GO_SERVER_URL=https://172.17.0.1:8154/go -v $(pwd)/go-agent:/godata -v $HOME:/home/go -v /var/run/docker.sock:/var/run/docker.sock:rw -v $HOME/.docker:/home/go/.docker:rw -e AGENT_AUTO_REGISTER_KEY=211f2c07-97cb-47b2-9eaf-af1326f190e2 -e AGENT_AUTO_REGISTER_RESOURCES=docker -e AGENT_AUTO_REGISTER_HOSTNAME=superman gocd/gocd-agent-alpine-3.5:v17.12.0-rancher
 ```
 
 以上命令中 `-v /var/run/docker.sock:/var/run/docker.sock:rw`是将本机的docker.sock挂在到Go Agent容器中，我们赋予的rw权限如果没有生效，更改`/var/run/docker.sock`的权限:
