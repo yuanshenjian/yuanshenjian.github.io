@@ -241,7 +241,7 @@ rancher-compose -p mst-user-service up -d -c --upgrade
 ## 访问mst-user-service
 到目前为止，我们完成了`mst-user-service`的部署。因为没有暴露端口，我们还不能访问服务。要访问到服务，我们还要在Rancher上创建一个Load balance服务，用于暴露访问端口，以及确保服务集群的高可用。
 
-创建一个名为`mst-lb`的Stack，然后在该Stack中添加一个Load Balancer服务：
+点击`Add Stack`创建一个名为`mst-lb`的Stack，然后在该Stack上点击`Add Load Balancer`添加一个Load Balancer服务：
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/rancher-lb-addition.jpg' }})
 
