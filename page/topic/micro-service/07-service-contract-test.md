@@ -117,7 +117,7 @@ Contract.make {
 
 创建测试基类：
 
-*com.thoughtworks.mstorderservice.contract.ContractVerifierBase.java*
+*com.thoughtworks.mstgoodsservice.contract.ContractVerifierBase.java*
 
 ```java
 @RunWith(SpringRunner.class)
