@@ -277,14 +277,6 @@ stubrunner:
 
 ```groovy
 publishing {
-    publications {
-        stubs(MavenPublication) {
-            groupId 'com.thoughtworks'
-            artifactId "mst-goods-service"
-            version '0.1.1-' + System.getProperty('COUNTER')
-            artifact verifierStubsJar
-        }
-    }
     repositories {
         maven {
             Credentials {
@@ -309,15 +301,6 @@ publishing {
             artifactId "mst-goods-service"
             version '0.0.1-' + System.getProperty('COUNTER')
             artifact verifierStubsJar
-        }
-    }
-    repositories {
-        maven {
-            Credentials {
-                username "admin"
-                password "admin123"
-            }
-            url = "http://iotrnexus.chinanorth.cloudapp.chinacloudapi.cn:8081/repository/mvnlocal/"
         }
     }
 }
