@@ -281,7 +281,7 @@ publishing {
         maven {
             Credentials {
                 username "admin"
-                password "admin123"
+                password "********"
             }
             url = "http://iotrnexus.chinanorth.cloudapp.chinacloudapi.cn:8081/repository/mvnlocal/"
         }
