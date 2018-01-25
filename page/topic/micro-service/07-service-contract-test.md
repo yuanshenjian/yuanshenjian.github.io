@@ -263,9 +263,7 @@ stubrunner:
 ```
 
 
-### Extension
-
-#### 集成到Pipeline
+### Extension - 集成到Pipeline
 
 1. 如何在Consumer和Provider共享Stub.jar？
 2. 如何对stub.jar进行版本管理？
