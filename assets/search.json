@@ -11,36 +11,35 @@ layout: null
     },
   {% endfor %}
 
-  {% for category in site.data.topic.toc %}
-    {% for item in category.collection %}
-      {
-        "title" : "{{ item.title }} - Topic",
-        "url" : "{{ site.baseurl }}{{ '/topics/micro-service' }}{{ item.permalink }}"
-      }
-    {% if forloop.rindex != 1  %}, {% endif %}
-    {% endfor %}
-  {% if forloop.rindex != 1  %}, {% endif %}
-  {% endfor %}
-
   {% for article in site.data.insight.articles %}
     {% for entry in article.entries %}
-      ,
       {
       "title" : "{{ entry.title }} - Insight",
       "url" : "{{ entry.url }}"
       }
+      ,
     {% endfor %}
   {% endfor %}
 
   {% for version in site.data.junit5.versions %}
-    ,
     {
       "title" : "JUnit 5用户指南 {{ version.name }} - JUnit5",
       "url" : "{{ site.baseurl }}{{ '/junit5/' }}{{ version.name }}{{ '/user-guide-cn' }}"
     }
-  {% endfor %}
     ,
-    {
+  {% endfor %}
+  {% for topic in site.data.topic.toc %}
+    {% for page in site.pages %}
+      {% if page.topic == topic.name %}
+        {
+          "title" : "{{ page.title }} - {{ page.topic }}",
+          "url" : "{{ site.baseurl }}{{ page.permalink }}"
+        }
+        ,
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  {
     "title" : "JUnit 5用户指南 current - JUnit5",
     "url" : "{{ site.baseurl }}{{ '/junit5/current/user-guide-cn' }}"
     }
