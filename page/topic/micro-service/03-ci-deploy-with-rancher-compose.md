@@ -14,7 +14,7 @@ author: 袁慎建
 
 上节课我们成功地 [在Pipeline中使用Docker执行构建任务]({{ site.url }}{{ '/topics/micro-service/build-pipeline-with-docker/' }})，从测试到打包，都利用了宿主机的docker进程进行容器化构建。本节课我们来完成Pipeline最后一站：*部署*。
 
-主要任务有：
+本节课主要内容：
 
 - 搭建Rancher部署环境
 - 部署应用服务
