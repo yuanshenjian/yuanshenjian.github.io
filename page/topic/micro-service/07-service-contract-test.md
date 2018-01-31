@@ -204,7 +204,7 @@ public class ContractVerifierTest extends ContractVerifierBase {
 }
 ```
 
-运行一下测试，测试通过：
+运行测试：
 
 ```sh
 ./gradlew clean test
