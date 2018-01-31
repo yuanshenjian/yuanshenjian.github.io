@@ -178,29 +178,27 @@ $ ./gradlew generateContractTests
 
 ```java
 public class ContractVerifierTest extends ContractVerifierBase {
+    @Test
+    public void validate_query_goods_with_ids() throws Exception {
+        // given:
+        MockMvcRequestSpecification request = given();
 
-	@Test
-	public void validate_query_goods_with_ids() throws Exception {
-		// given:
-			MockMvcRequestSpecification request = given();
+        // when:
+        ResponseOptions response = given().spec(request)
+                .get("/api/goods");
 
-		// when:
-			ResponseOptions response = given().spec(request)
-					.get("/api/goods");
-
-		// then:
-			assertThat(response.statusCode()).isEqualTo(200);
-			assertThat(response.header("Content-Type")).matches("application/json.*");
-		// and:
-			DocumentContext parsedJson = JsonPath.parse(response.getBody().asString());
-			assertThatJson(parsedJson).array().contains("['id']").isEqualTo(2);
-			assertThatJson(parsedJson).array().contains("['name']").isEqualTo("iPhone X");
-			assertThatJson(parsedJson).array().contains("['price']").isEqualTo(5095);
-			assertThatJson(parsedJson).array().contains("['id']").isEqualTo(1);
-			assertThatJson(parsedJson).array().contains("['name']").isEqualTo("iPhone SE2");
-			assertThatJson(parsedJson).array().contains("['price']").isEqualTo(2095);
-	}
-
+        // then:
+        assertThat(response.statusCode()).isEqualTo(200);
+        assertThat(response.header("Content-Type")).matches("application/json.*");
+        // and:
+        DocumentContext parsedJson = JsonPath.parse(response.getBody().asString());
+        assertThatJson(parsedJson).array().contains("['id']").isEqualTo(2);
+        assertThatJson(parsedJson).array().contains("['name']").isEqualTo("iPhone X");
+        assertThatJson(parsedJson).array().contains("['price']").isEqualTo(5095);
+        assertThatJson(parsedJson).array().contains("['id']").isEqualTo(1);
+        assertThatJson(parsedJson).array().contains("['name']").isEqualTo("iPhone SE2");
+        assertThatJson(parsedJson).array().contains("['price']").isEqualTo(2095);
+    }
 }
 ```
 
@@ -290,10 +288,9 @@ stubrunner:
 @ActiveProfiles("test")
 @AutoConfigureStubRunner
 public class GoodsClientTest {
-
     @Autowired
     private StubFinder stubFinder;
-
+    
     @Test
     public void find_goods() throws IOException {
         int port = stubFinder.findStubUrl("com.thoughtworks", "mst-goods-service").getPort();
