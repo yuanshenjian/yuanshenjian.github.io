@@ -75,6 +75,8 @@
 
 - category: Microservices
   entries:
+    - title: 「微前端」- 将微服务理念扩展到前端开发
+      url: https://mp.weixin.qq.com/s/AB670Ae-ANJAtPNxJl3Wtw
     - title: 微服务进展缓慢的5个难点
       url: http://insights.thoughtworks.cn/five-problems-of-microservices/
     - title: 认识微服务——一颗银弹
@@ -97,6 +99,8 @@
 
 - category: TDD
   entries:
+    - title: 项目实施DevOps时，我们是如何做测试的
+      url: http://insights.thoughtworks.cn/qa-in-devops/
     - title: JUnit 5 – 早期试用体验 – 第2篇
       url: http://www.infoq.com/cn/articles/JUnit-5-Early-Test-Drive-Part-2
     - title: JUnit 5 – 早期试用体验 – 第1篇
