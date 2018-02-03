@@ -197,22 +197,22 @@ public class MstOrderServiceApplication {
 
 ---
 
-## Consul-Template
-Consul-Template是基于Consul的自动替换配置文件的应用，它提供了一种便捷的方式从Consul中获取存储的值，Consul-Template守护进程会查询Consul实例来更新系统指定的任何模板，而且更新完成后，模板还可以选择运行任意的命令。
+## Consul Template
+Consul Template是基于Consul的自动替换配置文件的应用，它提供了一种便捷的方式从Consul中获取存储的值，Consul Template守护进程会查询Consul实例来更新系统指定的任何模板，而且更新完成后，模板还可以选择运行任意的命令。
 
-Consul-Template可以查询Consul中的服务目录、Key、Key-values等。这种强大的抽象功能和查询语言模板使得Consul-Template特别适合于动态创建配置文件。例如：创建Apache/Nginx Proxy Balancers、Varnish Servers、Application Configurations等等。
+Consul Template可以查询Consul中的服务目录、Key和Key-values等。这种强大的抽象功能和查询语言模板使得Consul Template特别适合于动态创建配置文件。例如：创建Apache/Nginx Proxy Balancers、Varnish Servers、Application Configurations等等。
 
-那么接下来，我们使用Consule Template来动态配置Nginx并生成Nginx的配置文件。
+接下来，我们使用Consule Template来动态配置Nginx并生成Nginx的配置文件。
 
-
-### 安装Consul-Template和Nginx
-
-Mac OS
+### 安装
+Mac OSX可以使用以下命令来安装和Consul-template和Nginx，其他操作系统使用对应的命令安转。
 
 ```sh
 $ brew install nginx
 $ brew install consul-template
 ```
+
+### 配置模板
 
 创建Consul Template Configuration文件`config.json`
 
@@ -256,6 +256,8 @@ $ cat /usr/local/etc/nginx/servers/ms-nginx.conf
 ```
 
 
+### 动态替换
+
 在Consul中为服务添加路由Key/Value
 
 - `matchers/mst-user-service` -> `/api/(users)`
@@ -267,21 +269,7 @@ $ cat /usr/local/etc/nginx/servers/ms-nginx.conf
 
 *~/consult-template/config.ctmpl*
 
-```nginx
-...
-server {
-   listen 8999 default_server;
-
- {{range services}} {{$name := .Name}}
-   {{if (printf "matchers/%s" $name | keyExists)}}
-   location ~* {{ printf "matchers/%s" $name | key }} {
-     proxy_pass http://{{$name}};
-   }
-   {{end}}
- {{end}}
-...
-}
-```
+![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/consul-template.jpg' }})
 
 修改完之后，需要重启Consul Template，此后在Consul界面中更改了Key/Value之后会自动生效。
 
