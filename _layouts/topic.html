@@ -8,10 +8,13 @@ layout: default
 
   <p class="post-meta">
     <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%Y-%m-%d" }}</time>
-
     {% if page.author %}
       &nbsp;/&nbsp;
-      <span>{{ page.author }}</span>
+      {% if page.author_index %}
+        <a href="{{ page.author_index }}"><span>{{ page.author }}</span></a>
+      {% else %}
+        <span>{{ page.author }}</span>
+      {% endif %}
     {% endif %}
   </p>
 

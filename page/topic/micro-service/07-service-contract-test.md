@@ -3,7 +3,7 @@ layout: topic
 title: 基于Spring Cloud Contract的契约测试
 permalink: /topics/micro-service/service-contract-test/
 topic: Micro service
-date: 2018-01-29
+date: 2018-02-03
 author: 袁慎建
 ---
 
