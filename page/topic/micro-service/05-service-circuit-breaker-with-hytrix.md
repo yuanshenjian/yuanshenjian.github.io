@@ -117,6 +117,10 @@ public class MstOrderServiceApplication {
 *application.yml*
 
 ```yaml
+feign:
+  hystrix:
+    enable: true
+
 circuitBreaker:
   requestVolumeThreshold: 2
 
