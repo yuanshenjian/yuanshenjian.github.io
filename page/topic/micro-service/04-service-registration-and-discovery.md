@@ -33,7 +33,7 @@ $ git clone git@github.com:tw-ms-training/mst-order-service.git
 $ git clone git@github.com:tw-ms-training/mst-goods-service.git
 ```
 
-看是之前，先来了解一下服务注册与发现工作原理：
+开始之前，先来了解一下服务注册与发现工作原理：
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/service-registration-theory.jpg' }})
 
@@ -126,7 +126,7 @@ public class MstUserServiceApplication {
 ### 授权health check
 consul会调用`GET /health` API来检查应用的健康状态，所以我们需要配置Spring Security，让它放行这个API：
 
-*com.thoughtworks.mstorderservice.configuration.security.WebSecurityConfig.java*
+*WebSecurityConfig.java*
 
 ```java
 @Configuration
@@ -185,7 +185,7 @@ public class MstOrderServiceApplication {
 
 接下来在`mst-order-service`创建一个接口测试服务之间的调用：
 
-```
+```java
 @FeignClient("mst-user-service")  
  public interface UserClient {
      @GetMapping("/api/users/names")
