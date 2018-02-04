@@ -98,7 +98,7 @@ dependencyManagement {
 }
 ```
 
-在应用入口通过注解注解启用断路器：
+在应用入口通过@EnableCircuitBreaker注解来启用断路器：
 
 ```java
 @EnableCircuitBreaker
