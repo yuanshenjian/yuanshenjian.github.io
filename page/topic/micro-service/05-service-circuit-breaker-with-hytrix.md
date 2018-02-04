@@ -112,12 +112,22 @@ public class MstOrderServiceApplication {
 }
 ```
 
-- application.yml 中加入
+配置应用程序application.yml：
+
+*application.yml*
 
 ```yaml
-feign:
-  hystrix:
-    enabled: true
+circuitBreaker:
+  requestVolumeThreshold: 2
+
+metrics:
+  rollingStats:
+    numBuckets: 5
+
+execution:
+  isolation:
+    thread:
+      timeoutInMilliseconds: 2000
 ```
 
 在GoodsClient中加入fallback，指定服务降级的返回值
