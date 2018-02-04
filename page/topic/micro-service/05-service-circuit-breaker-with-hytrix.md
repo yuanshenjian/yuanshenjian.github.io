@@ -112,7 +112,7 @@ public class MstOrderServiceApplication {
 }
 ```
 
-配置应用程序application.yml：
+配置应用程序：
 
 *application.yml*
 
