@@ -198,7 +198,7 @@ public class MstOrderServiceApplication {
 ---
 
 ## Consul Template
-Consul Template是基于Consul的自动替换配置文件的应用，它提供了一种便捷的方式从Consul中获取存储的值，Consul Template守护进程会查询Consul实例来更新系统指定的任何模板，而且更新完成后，模板还可以选择运行任意的命令。
+Consul Template是基于Consul的自动替换配置文件的应用，它提供了一种便捷的方式从Consul中获取存储的值，Consul Template守护进程会查询Consul实例来更新系统指定的任何模板，并且在更新完成后，模板还可以选择运行任意的命令。
 
 Consul Template可以查询Consul中的服务目录、Key和Key-values等。这种强大的抽象功能和查询语言模板使得Consul Template特别适合于动态创建配置文件。例如：创建Apache/Nginx Proxy Balancers、Varnish Servers、Application Configurations等等。
 

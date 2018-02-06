@@ -248,7 +248,7 @@ Spring Cloud Config还提供了自动刷新功能以及安全加密等功能，�
 ## Spring Boot Actuator
 `spring-boot-starter-actuator`模块提供了应用程序的交互入口，它暴露了一些端点用于应用程序的监控和管理。比如服务注册和发现中提到的Health Check就是它暴露的API。它还提供内置的端口：
 
-- 应用配置。获取应用中加载的应用配置、环境变量、自动化配置等信息。比如，端口`/info`、`/env`、`/beans`等。
+- 应用配置。获取应用中加载的应用配置、环境变量、自动化配置报告等信息。比如，端口`/autoconfig`、`/info`、`/env`、`/beans`等。
 - 度量指标。获取应用程序运行过程中用于监控的度量指标（线程池、HTTP请求统计、磁盘信息、缓存状态）。比如，端口`/metrics`、`/health`。
 - 操作控制。提供了对应用的关闭等操作类功能。比如，端口`/shutdown`
 
