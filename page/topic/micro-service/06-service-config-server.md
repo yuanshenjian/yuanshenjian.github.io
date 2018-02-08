@@ -12,7 +12,7 @@ author: 袁慎建
 
 ---
 
-在之前的课程中我们掌握了如何 [利用Consul进行服务注册和服务发现]({{ site.url }}{{ '/topics/micro-service/service-registration-and-discovery-with-consul/' }})，也实现了 [服务的容错机制]({{ site.url }}{{ '/topics/micro-service/service-circuit-breaker-with-hytrix/' }})。到目前为止，我们的每个服务的配置文件都是host在自身代码库中，当服务数量达到一定数量后，管理这些分散的配置文件会成为一个痛点。这节课我么就来解决配置文件管理的痛点。
+在之前的课程中我们掌握了如何 [利用Consul进行服务注册和服务发现]({{ site.url }}{{ '/topics/micro-service/service-registration-and-discovery-with-consul/' }})，也实现了 [基于Hytrix的服务容错保护]({{ site.url }}{{ '/topics/micro-service/service-fault-tolerant-protected-with-hytrix' }})。到目前为止，我们的每个服务的配置文件都是host在自身代码库中，当服务数量达到一定数量后，管理这些分散的配置文件会成为一个痛点。这节课我么就来解决配置文件管理的痛点。
 
 本节课主要内容：
 
@@ -130,7 +130,7 @@ spring:
 - host-key：如果是SSH获取需要Key，它的值便是Config Server的`~/.ssh/id_rsa.pub`文件的值。另外，还有一种`username/password`的授权方式。
 - repos：可以指定多个repository，这个适用于需要配置多个配置文件仓库的项目，比如生产配置信息隔离。
 
-提交配置文件仓库，启动Config Server，服务正常启动后我们可以发送请求检索配置信息，Spring Cloud Config Server提供了如下获取配置信息的API（建议都请求试一试这些API）：
+提交配置文件仓库，启动Config Server，服务正常启动后我们可以发送请求检索配置信息，Spring Cloud Config Server提供了如下获取配置信息的API（建议动手试一试这些API）：
 
 - `GET /{application}/{profile}[/{label}]`
 - `GET /{application}-{profile}.yml`

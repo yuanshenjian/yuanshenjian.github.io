@@ -12,7 +12,7 @@ author: 袁慎建
 
 ---
 
-上节课我们使用了 [基于Spring Cloud Config的服务配置中心]({{ site.url }}{{ '/topics/micro-service/service-registration-and-discovery-with-consul/' }}) 将应用服务的配置文件进行了统一管理。课程到目前为止，服务注册、服务发现、服务熔断、服务配置管理都已经就绪。
+上节课我们使用了 [基于Spring Cloud Config的服务配置中心]({{ site.url }}{{ '/topics/micro-service/service-config-server/' }}) 将应用服务的配置文件进行了统一管理。课程到目前为止，服务注册、服务发现、服务熔断、服务配置管理都已经就绪。
 
 我们知道微服务的一大特性是能独立部署，那么要做到独立部署，就需要保证服务之间的协作的有效性。如何保证？这节课我们引入一种服务之间的契约测试来帮助我们达成这个目标。
 
