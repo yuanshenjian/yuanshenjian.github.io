@@ -118,8 +118,9 @@
   }
 
   .nav-main {
+    // Toggle for junit pdf
+    display: none;
     padding: 0;
-    //display: none;
     text-align: left;
     a {
       font-size: 13px;
