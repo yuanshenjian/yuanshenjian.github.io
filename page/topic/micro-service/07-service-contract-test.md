@@ -25,7 +25,7 @@ author: 袁慎建
 ---
 
 ## 准备工作
-在本地准备`mst-user-service`、`mst-order-service`、`mst-goods-service`代码库，从第一节课的User Journey中找一个存在跨服务间调用的请求，这里以Goods和Order为例，如果你的功能代码还没有实现，我们就索性采用TDD的方式来驱动出来。
+在本地准备`mst-user-service`、`mst-order-service`、`mst-goods-service`代码库，从第一节课的User Journey中找一个存在跨服务间调用的请求，这里以Goods和Order为例，如果你的功能代码还没有实现，就让我们以TDD的方式驱动出来。
 
 ---
 
@@ -386,7 +386,7 @@ Consumer端：
 
 *application-test.yml*
 
-```yml
+```yaml
 stubrunner:
   ids:
     - com.thoughtworks:mst-goods-service:0.0.1-${BUILD_NUMBER}
