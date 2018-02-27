@@ -13,16 +13,7 @@ author_index: https://www.jianshu.com/u/a6b3075161bd
 
 ---
 
-本文内容：
-
-- 简述API Gateway
-- 使用Zuul实现API网关
-- Zuul的原理
-- 源码及参考资料
-
----
-
-## 简述API Gateway
+## API Gateway
 API Gateway 是随着微服务（Microservice）这个概念一起兴起的一种架构模式，它用于解决微服务过于分散，没有一个统一的出入口进行流量管理的问题。
 我们用两张图来解释：
 ![image.png](http://upload-images.jianshu.io/upload_images/2964790-d287498d8630c45d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -31,17 +22,19 @@ API Gateway 是随着微服务（Microservice）这个概念一起兴起的一�
 ![image.png](http://upload-images.jianshu.io/upload_images/2964790-9e8c61b786640e77.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 在请求不同微服务的API前，先通过一个统一的流量入口。
-还可以针对不同的渠道和客户端提供不同的API Gateway,对于该模式的使用由另外一个大家熟知的方式叫Backend for front-end, 在Backend for front-end模式当中，我们可以针对不同的客户端分别创建其BFF
+还可以针对不同的渠道和客户端提供不同的API Gateway,对于该模式的使用由另外一个大家熟知的方式叫Backend for front-end, 在Backend for front-end模式当中，我们可以针对不同的客户端分别创建其BFF。
+
 ![](http://upload-images.jianshu.io/upload_images/2964790-4140181e8c00714e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ---
 
-## 使用Zuul实现API网关
-现在我们一起来使用Spring Cloud Zuul实现一个简单的API Gateway。
+## 使用Zuul实现API Gateway
+现在我们使用Spring Cloud Zuul实现一个简单的API Gateway，先来体会一下API Gateway的魅力，稍后会对Zuul的工作原理做一个介绍。
 
 ### 依赖管理
+创建一个空的gradle project，添加依赖：
 
-创建一个空的gradle project，添加依赖
+*build.gradle*
 
 ```groovy
 buildscript {
