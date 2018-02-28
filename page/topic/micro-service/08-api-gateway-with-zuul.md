@@ -16,15 +16,18 @@ author_index: https://www.jianshu.com/u/a6b3075161bd
 ## API Gateway
 API Gateway 是随着微服务（Microservice）这个概念一起兴起的一种架构模式，它用于解决微服务过于分散，没有一个统一的出入口进行流量管理的问题。
 我们用两张图来解释：
-![image.png](http://upload-images.jianshu.io/upload_images/2964790-d287498d8630c45d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/api-gateway-original.jpg' }})
+
 
 当使用微服务构建整个API服务时，一般有许多不同的应用在运行，如上图所示的`mst-user-service, mst-good-service, mst-order-service`，这些应用会需要一些通用的功能，比如Authentication, 这些功能过于分散，代码就需要在三个服务中都写一遍，因此需要有一个统一的出入口来管理流量，就像下图
-![image.png](http://upload-images.jianshu.io/upload_images/2964790-9e8c61b786640e77.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/api-gateway-optimization.jpg' }})
 
 在请求不同微服务的API前，先通过一个统一的流量入口。
 还可以针对不同的渠道和客户端提供不同的API Gateway,对于该模式的使用由另外一个大家熟知的方式叫Backend for front-end, 在Backend for front-end模式当中，我们可以针对不同的客户端分别创建其BFF。
 
-![](http://upload-images.jianshu.io/upload_images/2964790-4140181e8c00714e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/api-gateway-bff.jpg' }})
 
 ---
 
@@ -184,8 +187,13 @@ public class PreFilter extends ZuulFilter {
 
 请求`/api/addresses/{id}`
 这是mst-user-service里的一个api，mst-user-service的host是`http://127.0.0.1:8090`，mst-zuul-service的host是`http://127.0.0.1:8082`
-![请求3次及以下的结果](http://upload-images.jianshu.io/upload_images/2964790-7e62704b1f1475c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![请求超过3次的结果](http://upload-images.jianshu.io/upload_images/2964790-e25aad54570d3f89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+请求3次及以下的结果：
+![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/api-gateway-less-3.jpg' }})
+
+请求超过3次的结果：
+![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/api-gateway-more-3.jpg' }})
+
 
 得到429的status是因为我们在zuul服务中的application.yml中添加了限流配置，设置了limit为3，而refresh-interval为60，意思是60秒内最多可接受3次请求，60秒后才可以重新接受请求。
 
@@ -194,7 +202,8 @@ public class PreFilter extends ZuulFilter {
 ## Zuul的原理
 
 1. zuul的架构图
-![zuul的架构图](https://upload-images.jianshu.io/upload_images/1233356-a1d5173cccadea6f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/640)
+![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/api-gateway-zuul.jpg' }})
+
 zuul提供了一个框架，可以对过滤器进行动态的加载，编译，运行。过滤器之间没有直接的相互通信。他们是通过一个RequestContext的静态类来进行数据传递的。RequestContext类中有ThreadLocal变量来记录每个Request所需要传递的数据。
 2. zuul的过滤器类型
 	- PRE：这种过滤器在请求到达Origin Server之前调用。比如身份验证，在集群中选择请求的Origin Server，记log等，workshop中用的就是这种过滤器。
@@ -203,7 +212,7 @@ zuul提供了一个框架，可以对过滤器进行动态的加载，编译，�
 	- ERROR：在其他阶段发生错误时执行该过滤器。
 	- 客户定制：比如我们可以定制一种STATIC类型的过滤器，用来模拟生成返回给客户的response。
 3. 过滤器的生命周期
-![过滤器的生命周期](https://upload-images.jianshu.io/upload_images/1233356-89166d91e67d62fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/640)
+![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/api-gateway-filter-lifecycle.jpg' }})
 
 	一个请求会先按顺序通过所有的前置过滤器，之后在路由过滤器中转发给后端应用，得到响应后又会通过所有的后置过滤器，最后响应给客户端。在整个流程中如果发生了异常则会跳转到错误过滤器中。
 
