@@ -37,7 +37,7 @@ Spring Cloud Config的目标是将各个微服务的配置文件集中存储一�
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/spring-cloud-config-theory.jpg' }})
 
 ## Setup Config Repository
-我们在GitHub上创建一个 [mst-config-storage](https://github.com/tw-ms-training/mst-config-storage)，在工程中创建一个跟`mst-user-service`的子目录，并创建两个配置文件：
+我们在GitHub上创建一个 [mst-config-storage](https://github.com/tw-ms-training/mst-config-storage)，在工程根目录中创建一个`mst-user-service`的子目录，并创建两个配置文件：
 
 *mst-config-storage/mst-user-service/application-qa.yml*
 

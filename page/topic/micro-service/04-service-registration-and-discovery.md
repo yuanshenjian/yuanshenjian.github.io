@@ -45,7 +45,7 @@ $ git clone git@github.com:tw-ms-training/mst-goods-service.git
 ---
 
 ## 服务注册
->服务进程在注册中心注册自己的位置。它通常注册自己的主机和端口号，有时还有身份验证信息，协议，版本号，以及运行环境的详细资料。
+>服务进程在注册中心注册自己的位置。它通常注册自己的主机和端口号，有时还包含了身份验证信息、协议、版本号以及运行环境的详细资料。
 
 首先我们使用docker启动一个consul服务，然后配置在应用程序中启用服务发现。
 
@@ -237,6 +237,7 @@ $ brew install consul-template
 创建Nginx模板文件`config.ctmpl`：
 
 *~/consult-template/config.ctmpl*
+
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/consul-template-origin.jpg' }})
 
 

@@ -211,5 +211,3 @@ $ chmod 666 /var/run/docker.sock
 - [构建可持续部署的Pipeline]({{ site.url }}{{ '/ci-pipeline/' }})
 - [持续集成的容器化策略]({{ site.url }}{{ '/ci-container-strategy/' }})
 
-
-

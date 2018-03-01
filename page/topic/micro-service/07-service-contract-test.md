@@ -205,7 +205,7 @@ public class ContractVerifierTest extends ContractVerifierBase {
 运行测试：
 
 ```sh
-./gradlew clean test
+$ ./gradlew clean test
 ```
 
 #### 发布Artifact
@@ -234,7 +234,7 @@ publishing {
 执行`publish`任务发布：
 
 ```sh
-./gradlew publish
+$ ./gradlew publish
 ```
 
 ---
@@ -318,7 +318,7 @@ public class GoodsClientTest {
 运行测试：
 
 ```sh
-./gradlew clean test
+$ ./gradlew clean test
 ```
 
 ---

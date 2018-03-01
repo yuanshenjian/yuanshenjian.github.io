@@ -60,3 +60,9 @@ BFF，即 Backend For Frontend（服务于前端的后端），也就是服务�
 - 应用缓存。项目中时常存在一些需要缓存的临时数据，此时 BFF 作为业务的汇聚点，距离用户请求最近，遂将该缓存操作放在 BFF 层。
 
 - 第三方入口。在业务中需要与第三交互时，将该交互放在 BFF 层，这样可以只暴露必要信息给第三方，从而便于控制第三方的访问。
+
+---
+
+## 动手练练
+回顾 [微服务Workshop启动]({{ site.url }}{{ '/topics/micro-service/microservice-workshop-starup/' }}) 一文，里面所涉及的那个User Journey中的 `4.Query shopping cart`的查询请求存在服务间的调用，动手传建一个BFF，从而避免了此请求中服务之间的调用。
+

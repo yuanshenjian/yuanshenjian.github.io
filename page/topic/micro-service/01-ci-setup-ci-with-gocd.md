@@ -12,7 +12,7 @@ author: 袁慎建
 
 ---
 
-本节课我们要在Ubuntu机器上使用Docker来搭建来一步步地搭建CI基础设施（GoCD）。针对Mac OSX系统的开发人员，推荐使用Virtualbox 来Setup一个Ubuntu VM。
+本节课我们一起来在Ubuntu机器上使用Docker来搭建来一步步地搭建CI基础设施（GoCD）。针对Mac OSX系统的开发人员，推荐使用Virtualbox 来Setup一个Ubuntu VM。
 
 课程主要内容：
 

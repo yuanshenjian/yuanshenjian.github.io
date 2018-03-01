@@ -201,20 +201,23 @@ public class PreFilter extends ZuulFilter {
 
 ## Zuul的原理
 
-1. zuul的架构图
+### Zuul的架构图
+
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/api-gateway-zuul.jpg' }})
 
 zuul提供了一个框架，可以对过滤器进行动态的加载，编译，运行。过滤器之间没有直接的相互通信。他们是通过一个RequestContext的静态类来进行数据传递的。RequestContext类中有ThreadLocal变量来记录每个Request所需要传递的数据。
-2. zuul的过滤器类型
-	- PRE：这种过滤器在请求到达Origin Server之前调用。比如身份验证，在集群中选择请求的Origin Server，记log等，workshop中用的就是这种过滤器。
-	- ROUTING：在这种过滤器中把用户请求发送给Origin Server。发送给Origin Server的用户请求在这类过滤器中build。并使用Apache HttpClient或者Netfilx Ribbon发送给Origin Server。
-	- POST：这种过滤器在用户请求从Origin Server返回以后执行。比如在返回的response上面加response header，做各种统计等。并在该过滤器中把response返回给客户。
-	- ERROR：在其他阶段发生错误时执行该过滤器。
-	- 客户定制：比如我们可以定制一种STATIC类型的过滤器，用来模拟生成返回给客户的response。
-3. 过滤器的生命周期
+
+### Zuul的过滤器类型
+- PRE：这种过滤器在请求到达Origin Server之前调用。比如身份验证，在集群中选择请求的Origin Server，记log等，workshop中用的就是这种过滤器。
+- ROUTING：在这种过滤器中把用户请求发送给Origin Server。发送给Origin Server的用户请求在这类过滤器中build。并使用Apache HttpClient或者Netfilx Ribbon发送给Origin Server。
+- POST：这种过滤器在用户请求从Origin Server返回以后执行。比如在返回的response上面加response header，做各种统计等。并在该过滤器中把response返回给客户。
+- ERROR：在其他阶段发生错误时执行该过滤器。
+- 客户定制：比如我们可以定制一种STATIC类型的过滤器，用来模拟生成返回给客户的response。
+
+### 过滤器的生命周期
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/api-gateway-filter-lifecycle.jpg' }})
 
-	一个请求会先按顺序通过所有的前置过滤器，之后在路由过滤器中转发给后端应用，得到响应后又会通过所有的后置过滤器，最后响应给客户端。在整个流程中如果发生了异常则会跳转到错误过滤器中。
+一个请求会先按顺序通过所有的前置过滤器，之后在路由过滤器中转发给后端应用，得到响应后又会通过所有的后置过滤器，最后响应给客户端。在整个流程中如果发生了异常则会跳转到错误过滤器中。
 
 ---
 
