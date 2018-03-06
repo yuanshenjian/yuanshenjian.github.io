@@ -3,7 +3,7 @@ layout: topic
 title: 基于EFK的日志管理系统
 permalink: /topics/micro-service/devops-log-system-with-efk/
 topic: Micro service
-date: 2018-02-19
+date: 2018-02-18
 author: 潘旖旎
 author_index: https://www.jianshu.com/u/46c6cdbb1d7d
 ---
@@ -59,9 +59,19 @@ Fluentd是一个开源的数据收集器，专为处理数据流设计，使用J
 ---
 	
 ## 搭建EFK
-参考fluentd的官方文档，我们创建EFK项目，项目目录结构如下：
+根据fluent官网，我们搭建了EFK项目，项目目录结构如下：
 
-![category.png](http://upload-images.jianshu.io/upload_images/7982144-616c1fe0c7a40b79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+```
+mst-efk/
+ esticasearch/   
+ filebeat/
+ fluentd/
+ kibana/
+ nginx/
+ README.md
+ docker-compose.yml
+```
+你可直接下载源码：<https://github.com/tw-ms-training/mst-efk>
 
 配置docker-compose.yml文件
 
