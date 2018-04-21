@@ -19,9 +19,13 @@ layout: compress
   <article class="post">
     <h1 class="post-title"><i>{{ page.title }}</i></h1>
     <p class="version">
-      {% for contributor in site.data.junit5.contributors %}
-      {% if forloop.index > 1 %}•{% endif %}
-      <a href="{{ contributor.index }}" target="_blank">{{ contributor.name }}</a>
+      {% for version in site.data.junit5.versions %}
+      {% if page.version == version.name %}
+        {% for contributor in version.contributors %}
+          {% if forloop.index > 1 %}•{% endif %}
+          <a href="{{ contributor.index }}" target="_blank">{{ contributor.name }}</a>
+        {% endfor %}
+      {% endif %}
       {% endfor %}
       @
       <a href="https://www.thoughtworks.com/" target="_blank">ThoughtWorks</a> -
