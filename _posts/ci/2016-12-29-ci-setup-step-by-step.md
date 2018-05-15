@@ -17,7 +17,7 @@ brief: "CI Dojo的第二次课程，本文将基于上次课程 <i>CI基础 & Se
 ---
 
 ## 第一个Build
-CI Dojo的第二次课程，基于上次课程 [CI基础 & Setup环境]({{'/dojo/ci/basics'}}) 搭建好的环境，通过Step by step的方式来搭建一个[Jenkins CI](https://jenkins.io/)。
+CI Dojo的第二次课程，基于上次课程 [CI基础 & Setup环境]({{'/ci-basics'}}) 搭建好的环境，通过Step by step的方式来搭建一个[Jenkins CI](https://jenkins.io/)。
 
 内容涵盖了两大部分， `配置Jenkins` 和 `Step by step Build`，Jenkins基础配置如下：
 
@@ -42,7 +42,7 @@ Step by step Build如下：
 ## 配置Jenkins
 > 夯实地基，方可建筑高楼
 
-在 [CI基础 & Setup环境]({{'/dojo/ci/basics'}}) 那节课程中，我们已经Setup了Jenkins CI，并成功启动了Jenkins服务，此时我们看到的只是一个非常基础的Jenkins，为了满足项目的需求，我们要对其做一些配置。比如邮件通知、用户权限配置，以及执行一些任务所用到的工具([Gradle]()、[Git]()、[JDK]()等）。
+在 [CI基础 & Setup环境]({{'/ci-basics'}}) 那节课程中，我们已经Setup了Jenkins CI，并成功启动了Jenkins服务，此时我们看到的只是一个非常基础的Jenkins，为了满足项目的需求，我们要对其做一些配置。比如邮件通知、用户权限配置，以及执行一些任务所用到的工具([Gradle]()、[Git]()、[JDK]()等）。
 
 ---
 
@@ -211,4 +211,4 @@ Jenkins提供了用户权限控制，这其实是一个基础的配置。通常J
 到此，一个可以报告测试状态的CI Build搭建起来，过程并不复杂，我们已经能够直观的看到CI的效果了。下一节课我们来讨论构建构建可持续部署Pipeline的策略并加以实践。
 
 
-上节课内容回顾：[CI基础 & Setup环境]({{'/dojo/ci/basics'}})
+上节课内容回顾：[CI基础 & Setup环境]({{'/ci-basics'}})
