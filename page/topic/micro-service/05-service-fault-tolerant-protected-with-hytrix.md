@@ -2,7 +2,7 @@
 layout: topic
 title: 基于Hystix的服务容错保护
 permalink: /topics/micro-service/service-fault-tolerant-protected-with-hytrix/
-topic: Micro service
+topic: Micro Service
 date: 2018-01-29
 author: 赵琪琪
 author_index: https://www.jianshu.com/u/2db65e841261

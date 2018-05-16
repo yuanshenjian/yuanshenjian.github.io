@@ -2,7 +2,7 @@
 layout: topic
 title: 在Pipeline中使用Docker执行构建任务
 permalink: /topics/micro-service/build-pipeline-with-docker/
-topic: Micro service
+topic: Micro Service
 date: 2018-01-20
 author: 袁慎建
 ---

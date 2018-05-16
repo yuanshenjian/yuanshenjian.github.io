@@ -2,7 +2,7 @@
 layout: topic
 title: 基于Spring Cloud Config的服务配置中心
 permalink: /topics/micro-service/service-config-server/
-topic: Micro service
+topic: Micro Service
 date: 2018-02-01
 author: 袁慎建
 ---

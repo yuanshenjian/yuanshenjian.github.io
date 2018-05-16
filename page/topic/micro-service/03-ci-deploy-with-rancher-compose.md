@@ -2,7 +2,7 @@
 layout: topic
 title: 使用Rancher Compose部署服务
 permalink: /topics/micro-service/deploy-with-rancher-compose/
-topic: Micro service
+topic: Micro Service
 date: 2018-01-21
 author: 袁慎建
 ---

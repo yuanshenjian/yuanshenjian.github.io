@@ -3,7 +3,7 @@ bg: "insight.jpg"
 layout: page
 title: "TECH TOPIC"
 permalink: /topics/
-summary: "技术主题实践"
+summary: "专题实践"
 
 active: topic
 

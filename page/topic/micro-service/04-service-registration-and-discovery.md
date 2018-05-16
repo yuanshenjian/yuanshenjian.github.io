@@ -2,7 +2,7 @@
 layout: topic
 title: 基于Consul的服务注册和服务发现
 permalink: /topics/micro-service/service-registration-and-discovery-with-consul/
-topic: Micro service
+topic: Micro Service
 date: 2018-01-27
 author: 赵琪琪
 author_index: https://www.jianshu.com/u/2db65e841261

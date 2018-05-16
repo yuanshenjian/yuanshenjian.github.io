@@ -2,7 +2,7 @@
 layout: topic
 title: 搭建基于GoCD的持续集成基础设施
 permalink: /topics/micro-service/setup-ci-with-gocd/
-topic: Micro service
+topic: Micro Service
 date: 2018-01-19
 author: 袁慎建
 ---

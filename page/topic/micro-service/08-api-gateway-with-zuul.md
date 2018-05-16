@@ -2,7 +2,7 @@
 layout: topic
 title: 基于Netflix Zuul的API Gateway
 permalink: /topics/micro-service/api-gateway-with-zuul/
-topic: Micro service
+topic: Micro Service
 date: 2018-02-15
 author: 谭艺冰
 author_index: https://www.jianshu.com/u/a6b3075161bd

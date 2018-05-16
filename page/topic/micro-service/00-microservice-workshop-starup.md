@@ -2,7 +2,7 @@
 layout: topic
 title: 微服务Workshop启动
 permalink: /topics/micro-service/microservice-workshop-starup/
-topic: Micro service
+topic: Micro Service
 date: 2018-01-18
 author: 袁慎建
 ---
