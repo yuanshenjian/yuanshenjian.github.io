@@ -33,8 +33,8 @@ layout: compress
           {% endfor %}
         {% endif %}
       {% endfor %}
-      @
-      <a href="https://www.thoughtworks.com/" target="_blank">ThoughtWorks</a> -
+      <a href="https://www.thoughtworks.com/" target="_blank">ThoughtWorks</a>
+      -
       {% if page.version %}
       <span><a href="{{ site.url }}{{ '/junit5/'}}{{ page.version }}{{ '/user-guide-cn/'}}">Version {{ page.version }}</a></span>
       {% else %}
@@ -60,11 +60,11 @@ layout: compress
       </div>
       <div class="highlighter-rouge">
       <pre class="highlight"><code class="hljs css">版本 <span class="hljs-selector-class">{% if page.version %}{{page.version}}{% else %}{{site.junit.current_version}}{% endif %}</span><br/>最后更新 <span
-        class="hljs-selector-tag">{% if page.last_updated_date %}{{page.last_updated_date}}{% else %}{% for page in site.pages %}{% if page.version == site.junit.current_version%}{{page.last_updated_date}}{% endif %}{% endfor %}{% endif %}</span></code></pre>
+        class="hljs-selector-tag">{% if page.last_updated_date %}{{page.last_updated_date}}{% else %}{% for page in site.pages %}{% if page.version == site.junit.current_version%}{{page.last_updated_date}}{% break %}{% endif %}{% endfor %}{% endif %}</span></code></pre>
       </div>
       <hr/>
       <div class="edition-claim">
-        Posted by <a href="{{ site.url }}{{ '/about' }}">{{ site.author.name }}</a> @ <a href="https://thoughtworks.com/">ThoughtWorks®</a>
+        Posted by <a href="{{ site.url }}{{ '/about' }}">{{ site.author.name }}</a>
         <p>
           <b>版权声明：</b>自由转载•非商用•非衍生•保持署名 | <a
           href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative

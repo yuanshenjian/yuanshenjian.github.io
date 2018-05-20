@@ -12,6 +12,48 @@ date: 2017-09-07
 
 ---
 
+## 简单高效oh-my-zsh配置
+
+##### 更新时间：2018-05-20
+
+#### 问题描述
+Mac自带的terminal办公效率偏低，那么如何通过oh-my-zsh来提高办公效率？
+
+#### 解决方案
+
+##### 安装 [oh-my-zsh](http://ohmyz.sh/)
+
+```sh
+$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+##### 安装插件
+
+`~/.oh-my-zsh/plugins/`
+
+```sh
+$ git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+##### 启用插件
+
+编辑文件`~/.zshrc`
+
+```
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+```
+
+```sh
+$ source ~/.zshrc
+```
+
+---
+
 ## Mac OSX中快速创建一个软连接
 
 ##### 更新时间：2018-01-09
