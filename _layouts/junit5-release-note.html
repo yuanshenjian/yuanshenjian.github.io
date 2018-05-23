@@ -1,0 +1,96 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+{% include css_js_source.html %}
+{% include head.html %}
+<meta name="keywords"
+      content="袁慎建, JUnit 5用户手册, JUnit 5中文手册, JUnit 5, JUnit 5中文指导手册, JUnit 5 User Guide, Yuan Shenjian, Shenjian Yuan, {{ site.description }}, ThoughtWorks, 思特沃克, {{ site.title }}, 博客, {{ page.title }}, 程序员, 程序袁, {{ site.description }}">
+
+<body>
+<div id="shadow"></div>
+
+{% include header.html %}
+{% include aside.html %}
+
+<main class="content-wrapper">
+  <article class="post">
+    <h1 class="post-title"><i>{{ page.title }}</i></h1>
+    <p class="version">
+      {% if page.version == null %}
+      {% assign current_page_version = site.junit.current_version %}
+      {% else %}
+      {% assign current_page_version = page.version %}
+      {% endif %}
+
+      {% for version in site.data.junit5.versions %}
+      {% if current_page_version == version.name %}
+      {% for contributor in version.contributors %}
+      {% if forloop.index > 1 %}•{% endif %}
+      <a href="{{ contributor.index }}" target="_blank">{{ contributor.name }}</a>
+      {% endfor %}
+      {% endif %}
+      {% endfor %}
+      @
+      <a href="https://www.thoughtworks.com/" target="_blank">ThoughtWorks</a>
+      -
+      {% if page.version %}
+      <span><a href="{{ site.url }}{{ '/junit5/'}}{{ page.version }}{{ '/user-guide-cn/'}}">Version {{ page.version }}</a></span>
+      {% else %}
+      <span><a href="{{ site.url }}{{ '/junit5/'}}{{ site.junit.current_version }}{{ '/user-guide-cn/'}}">Version {{ site.junit.current_version }}</a></span>
+      {% endif %}
+    </p>
+    <div class="post-content">
+      <div>
+        {{ content }}
+      </div>
+      <div class="highlighter-rouge">
+      <pre class="highlight"><code class="hljs css">版本 <span class="hljs-selector-class">{% if page.version %}{{page.version}}{% else %}{{site.junit.current_version}}{% endif %}</span><br/>最后更新 <span
+        class="hljs-selector-tag">{% if page.last_updated_date %}{{page.last_updated_date}}{% else %}{% for page in site.pages %}{% if page.version == site.junit.current_version%}{{page.last_updated_date}}{% break %}{% endif %}{% endfor %}{% endif %}</span></code></pre>
+      </div>
+      <hr/>
+      <div class="edition-claim">
+        Posted by <a href="{{ site.url }}{{ '/about' }}">{{ site.author.name }}</a>
+        <p>
+          <b>版权声明：</b>自由转载•非商用•非衍生•保持署名 | <a
+          href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative
+          Commons
+          BY-NC-ND 3.0</a>
+        </p>
+        </p>
+        <div>原文链接：<a href="{{ page.url }}">{{ site.url}}{{ page.url }}</a></div>
+      </div>
+
+      <div class="height-50"></div>
+      <div class="row">
+        <div class="col-lg-12">
+          {% include share.html %}
+        </div>
+      </div>
+
+      <div class="height-50"></div>
+
+      <div>
+        {% include ban_quan_yin.html %}
+      </div>
+    </div>
+    <div class="post-toc">
+      <div class="title">
+        <h4><a href="{{ page.url }}"><i>{{ page.title }}</i></a></h4>
+        <span>v {% if page.version %}{{ page.version }}{% else %}{{ site.junit.current_version }}{% endif %}</span>
+      </div>
+      <div class="separator">
+        <hr/>
+      </div>
+      <div class="content"></div>
+    </div>
+  </article>
+</main>
+
+{% include footer.html %}
+
+</body>
+</html>
+
