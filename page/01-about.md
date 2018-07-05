@@ -20,7 +20,7 @@ active: about
 
 关注代码整洁 && TDD，关注软件质量
 
-任 [ThoughtWorks](https://thoughtworks.com/) Consultant职位
+[ThoughtWorks](https://thoughtworks.com/) 培训师
 
 ***袁慎建***，江湖人称神剑
 
