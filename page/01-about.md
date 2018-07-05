@@ -14,13 +14,13 @@ active: about
 </div>
 
 ## SJ
-崇尚简约，热爱***编程*** && 运动***[健身]({{ site.url }}{{ '/fitness/' }})*** && 知识***分享***
+崇尚简约，热爱***编程***、运动***[健身]({{ site.url }}{{ '/fitness/' }})***、知识***分享***
 
-擅长敏捷开发实践，持续集成 && 持续交付
+擅长敏捷开发实践、持续集成、架构设计
 
-关注代码整洁 && TDD，关注软件质量
+关注整洁代码、TDD、重构、简单设计
 
-[ThoughtWorks](https://thoughtworks.com/) 培训师
+[ThoughtWorks](https://thoughtworks.com/) 咨询师、培训师
 
 ***袁慎建***，江湖人称神剑
 
