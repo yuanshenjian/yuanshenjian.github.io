@@ -4,7 +4,7 @@ layout: post
 title: "从另一个角度告诉你单元测试的意义"
 date: 2017-12-20
 categories: [TDD]
-tag: [TDD, Test, Unit Test]
+tag: [XP, TDD, Test, Unit Test]
 
 author: "袁慎建"
 
@@ -35,7 +35,7 @@ brief: "
 
 如果将软件生命周期大致划分成两部分：
 
-![]({{ site.url }}{{ site.img_path }}{{ '/tdd/lifecycle-of-sofeware.jpg' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/xp/lifecycle-of-sofeware.jpg' }})
 
 我们认为左边部分正在享受着微服务架构的益处，而右边部分在遭受着微服务架构复杂性的折磨。
 
