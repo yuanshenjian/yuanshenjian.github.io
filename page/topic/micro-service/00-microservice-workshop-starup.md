@@ -78,6 +78,7 @@ author: 袁慎建
 - [mst-order-service](https://github.com/tw-ms-training/mst-order-service)
 - [mst-goods-service](https://github.com/tw-ms-training/mst-goods-service)
 - [Slides](https://drive.google.com/drive/folders/1UFRdwXQUOiFMdBlbKUbPzOzOQTIGxX7A)
+
 上述代码库已经包含了后续培训的很多功能，建议你从头开始，借助 <https://start.spring.io/>生成空project，跟着后续教程一步一步展开。
 
 
