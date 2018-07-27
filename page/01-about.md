@@ -16,11 +16,9 @@ active: about
 ## SJ
 崇尚简约，热爱***编程***、运动***[健身]({{ site.url }}{{ '/fitness/' }})***、知识***分享***
 
-擅长敏捷开发实践、持续集成、架构设计
+擅长敏捷开发、持续集成、架构设计
 
-关注整洁代码、TDD、重构、简单设计
-
-[ThoughtWorks](https://thoughtworks.com/) 程序员培训师
+[ThoughtWorks](https://thoughtworks.com/) 培训师、咨询师
 
 ***袁慎建***，江湖人称神剑
 
@@ -46,7 +44,7 @@ Email： [sjyuan@thoughtworks.com](#index)
 
 #### *JUnit 5 User Guide*
 
-- [JUnit 5 用户指南]({{ site.url }}{{ '/junit5/current/user-guide-cn' }})
+- [JUnit 5 用户指南]({{ site.url }}{{ '/junit5/user-guide-cn' }})
 - [JUnit 5 User Guide](http://junit.org/junit5/docs/current/user-guide/)
 
 #### *JavaScript学习指南*
