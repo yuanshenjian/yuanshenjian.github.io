@@ -2,7 +2,7 @@
 layout: post
 
 title: "我的简单设计价值观"
-date: 2018-07-15
+date: 2018-07-19
 categories: [TDD]
 tag: [XP, Simple Design]
 
