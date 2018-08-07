@@ -178,7 +178,7 @@ Kent Beck提出的简单设计原则更多关注的是代码设计，其实当�
 
 - 在与客户正式场合的沟通中，我们始终应该明确沟通主题，确定目标（*通过测试* ）
 - 通过加强结构思考力来提升表达的结构性和清晰度，从而达到言简意赅（*消除重复*，*揭示意图* ）
-- 最后我们达到了前面三点之后尽量不说多余的废话
+- 最后，我们达到了前面三点之后尽量不说多余的废话
 
 
 简单设计价值观甚至会影响你的生活方式，辅以断、舍、离的心态修炼，相信你的生活会逐渐变得简约而不简单。
@@ -198,3 +198,6 @@ Kent Beck提出的简单设计原则更多关注的是代码设计，其实当�
 <a id="note-2"></a>
 
 2. 参考Martin Fowler博客 [BeckDesignRules](https://martinfowler.com/bliki/BeckDesignRules.html#footnote-kent-empathy)
+
+
+> 我的博客即将搬运同步至腾讯云+社区，邀请大家一同入驻：<https://cloud.tencent.com/developer/support-plan?invite_code=2u3d25d0ch8gw>
