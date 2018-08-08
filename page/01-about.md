@@ -14,7 +14,7 @@ active: about
 </div>
 
 ## Profile
-> 简约而精致，健身而健康，分享而快乐
+> 简约而简单，健身而健康，分享而快乐
 
 袁慎建，[ThoughtWorks](https://thoughtworks.com/) 培训师、咨询师
 
