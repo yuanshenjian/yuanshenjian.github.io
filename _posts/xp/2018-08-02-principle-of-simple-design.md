@@ -3,7 +3,7 @@ layout: post
 
 title: "简单设计原则"
 date: 2018-08-02
-categories: [TDD]
+categories: [XP]
 tag: [XP, Simple Design]
 
 author: "袁慎建"

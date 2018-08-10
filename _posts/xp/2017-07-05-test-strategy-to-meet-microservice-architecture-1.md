@@ -3,8 +3,8 @@ layout: post
 
 title: "微服务架构下的测试应对策略（上）"
 date: 2017-07-05
-categories: [TDD, Microservice]
-tag: [XP, TDD, Test, Mocroservice]
+categories: [Micro Service]
+tag: [XP, Test, Micro Service]
 
 author: "袁慎建"
 

@@ -3,7 +3,7 @@ layout: post
 
 title: "我的简单设计价值观"
 date: 2018-07-19
-categories: [TDD]
+categories: [XP]
 tag: [XP, Simple Design]
 
 author: "袁慎建"

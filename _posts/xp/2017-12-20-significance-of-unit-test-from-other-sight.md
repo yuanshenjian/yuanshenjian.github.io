@@ -3,7 +3,7 @@ layout: post
 
 title: "从另一个角度告诉你单元测试的意义"
 date: 2017-12-20
-categories: [TDD]
+categories: [XP]
 tag: [XP, TDD, Test, Unit Test]
 
 author: "袁慎建"
