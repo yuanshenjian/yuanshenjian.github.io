@@ -4,8 +4,8 @@ layout: post
 title: "使用Raml构建Restful API"
 date: 2017-04-02
 time: "12:22"
-categories: [RESTFUL API]
-tag: [API Design, RAML, Test, Desing]
+categories: [API]
+tag: [API Design]
 author: "袁慎建"
 
 brief: "

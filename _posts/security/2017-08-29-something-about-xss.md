@@ -4,7 +4,7 @@ layout: post
 title: "XSS的那些事儿"
 date: 2017-08-29
 categories: [Security]
-tag: [Web, Security, XSS]
+tag: [Web Security]
 
 author: "袁慎建"
 

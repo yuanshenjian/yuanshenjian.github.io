@@ -5,11 +5,11 @@ title: "FITNESS"
 permalink: /fitness/
 summary: "自律给我自由"
 
-# active: fitness
+active: fitness
 
 ---
 
-<h1>程序员的健身坊</h1>
+<h1>健身而健康</h1>
 
 * content
 {:toc}

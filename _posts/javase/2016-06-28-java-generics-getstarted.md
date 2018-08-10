@@ -4,7 +4,7 @@ layout: post
 title: "Java泛型•认识泛型"
 date: 2016-06-28
 category: [JAVASE]
-tag: [Java,Generic]
+tag: [Java]
 
 author: "袁慎建"
 brief: "

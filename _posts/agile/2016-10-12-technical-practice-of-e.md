@@ -4,7 +4,7 @@ layout: post
 title: "我在E项目上的技术实践"
 date: 2016-10-12
 categories: [AGILE]
-tags: [Agile,ThoughtWorks]
+tags: [Agile]
 
 author: "袁慎建"
 

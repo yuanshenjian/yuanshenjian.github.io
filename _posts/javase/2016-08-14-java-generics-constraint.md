@@ -4,7 +4,7 @@ layout: post
 title: "Java泛型•约束和局限性"
 date: 2016-08-14
 category: [JAVASE]
-tag: [Java,Generic]
+tag: [Java]
 
 author: "袁慎建"
 brief: "

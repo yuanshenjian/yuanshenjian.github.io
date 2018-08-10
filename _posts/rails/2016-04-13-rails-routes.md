@@ -4,7 +4,7 @@ layout: post
 title: "Ruby on Rails 路由解析"
 date: 2016-04-13
 categories: [RAILS]
-tag: [Ruby,Rails,Routes]
+tag: [Rails]
 author: "袁慎建"
 brief: "
 Rails中URL的约定严格基于 <i>RESTful</i> 风格的。客户端的请求其实是在操作一些资源，同一资源的不同的请求动作(<i>GET, POST, PUT, PATCH, DELETE</i>)分别对资源进行不同的操作(CRUD)。默认的情况下，我们只需要在routes.rb文件中配置好资源，Rails会为该资源生成7种不同的路由，根据路由就可以将客户端的请求转交给服务端对应的控制器进行处理，然后做出正确的响应。Rails Route能识别这种资源式(<i>RESTful</i>风格)的路由以及非资源式的路由，它是客户端请求和服务端控制器的粘合剂，能将URL分发给控制器进行处理。

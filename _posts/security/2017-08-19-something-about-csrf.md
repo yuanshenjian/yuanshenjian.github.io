@@ -4,7 +4,7 @@ layout: post
 title: "CSRF的那些事儿"
 date: 2017-08-19
 categories: [Security]
-tag: [Web, Security, CSRF]
+tag: [Web Security]
 
 author: "袁慎建"
 

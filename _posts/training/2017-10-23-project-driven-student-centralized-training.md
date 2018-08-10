@@ -3,8 +3,8 @@ layout: post
 
 title: "以学习者为中心的项目驱动培训"
 date: 2017-10-23
-categories: [CAREER]
-tags: [Career, ThoughtWorks, Training]
+categories: [TRAINING]
+tags: [Training]
 
 author: "袁慎建"
 

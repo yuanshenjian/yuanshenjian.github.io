@@ -5,7 +5,7 @@ title: "TECH TOPIC"
 permalink: /topics/
 summary: "专题实践"
 
-active: topic
+# active: topic
 
 ---
 

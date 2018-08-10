@@ -4,7 +4,7 @@ layout: post
 title: "Java泛型•通配符限定"
 date: 2016-07-12
 category: [JAVASE]
-tag: [Java,Generic]
+tag: [Java]
 
 author: "袁慎建"
 brief: "

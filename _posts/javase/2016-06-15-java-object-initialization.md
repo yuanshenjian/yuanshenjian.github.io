@@ -4,7 +4,7 @@ layout: post
 title: "浅析Java对象初始化"
 date: 2016-06-15
 category: [JAVASE]
-tag: [Java,Initializer]
+tag: [Java]
 
 author: "袁慎建"
 brief: "

@@ -7,7 +7,7 @@ desc: "我在ThoughtWorks中的敏捷实践"
 keywords: "ThoughtWorks,Agile,Practice"
 
 categories: [AGILE]
-tags: [Agile,ThoughtWorks]
+tags: [Agile]
 
 author: "袁慎建"
 

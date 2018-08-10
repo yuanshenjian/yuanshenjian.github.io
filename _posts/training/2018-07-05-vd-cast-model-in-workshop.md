@@ -4,7 +4,7 @@ layout: post
 title: "Workshop中的价值交付投射模型"
 date: 2018-07-05
 categories: [TRAINING]
-tags: [Career, ThoughtWorks, Agile]
+tags: [Training]
 
 author: "袁慎建"
 

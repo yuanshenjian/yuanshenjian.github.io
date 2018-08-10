@@ -4,7 +4,7 @@ layout: post
 title: "Buddy/Sponsor培训•信任的构建"
 date: 2016-05-15
 categories: [CAREER]
-tags: [Career, ThoughtWorks, Buddy, Sponsor]
+tags: [Career]
 
 author: "袁慎建"
 

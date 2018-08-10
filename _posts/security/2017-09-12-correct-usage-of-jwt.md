@@ -4,7 +4,7 @@ layout: post
 title: "JWT的正确使用姿势"
 date: 2017-09-12
 categories: [Security]
-tag: [Web, Security, JWT]
+tag: [Web Security]
 
 author: "袁慎建"
 

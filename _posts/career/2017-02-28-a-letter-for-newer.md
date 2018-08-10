@@ -4,7 +4,7 @@ layout: post
 title: "写给新人的一封信"
 date: 2017-02-28
 categories: [CAREER]
-tags: [Career, ThoughtWorks]
+tags: [Career]
 
 author: "袁慎建"
 

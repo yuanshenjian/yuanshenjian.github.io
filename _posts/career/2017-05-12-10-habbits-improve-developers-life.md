@@ -5,7 +5,7 @@ title: "改善程序员生活质量的 3+10 习惯"
 date: 2017-05-12
 time: "15:46"
 categories: [LIFE]
-tag: [Life, Career, Health]
+tag: [Career, Health]
 author: "袁慎建"
 
 brief: "程序员的工作性质决定了这个群体面临着一些问题，比如久坐引起的颈椎和腰椎疾病。身为ThoughtWorks的一名程序员，也难免长时间与电脑为舞，为了规避这些问题，自己通过长期养成的一些习惯来改善自己的工作效率和生活质量。</br></br>
@@ -21,7 +21,7 @@ brief: "程序员的工作性质决定了这个群体面临着一些问题，比
 ## 一封离职邮件
 2017年的一天，代码伴随着手指极具节奏感地输出在IDE上，突然某Chrome插件弹出一封邮件提示：*“今天是我在ThoughtWorks的最后一天”*。遇到这种离职邮件，我都会点进去，一来看看是否是自己曾经共事的小伙伴，二来了解一下小伙伴离职的原因。离职原因无出其右：`跳出去接受更有挑战的机会`。但这次我受惊了：`因为患有严重的颈椎病，去寻求治疗`...
 
-![]({{ site.url }}{{ site.img_path }}{{ '/life/10-habbits-improve-developers-life-0-leaving-email.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/career/10-habbits-improve-developers-life-0-leaving-email.png' }})
 
 ---
 
@@ -45,7 +45,7 @@ brief: "程序员的工作性质决定了这个群体面临着一些问题，比
 
 >根本原因在于认知！
 
-![]({{ site.url }}{{ site.img_path }}{{ '/life/10-habbits-improve-developers-life-1-perception.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/career/10-habbits-improve-developers-life-1-perception.png' }})
 
 最快改变一个人的认知的方式是残酷地摧毁这个人先前的认知。举个真实极端点的例子：某某因为工作长期无节制的饮食和无规律的作息查出胃癌晚期的时候，即便用所有的钱去换回健康也为时过晚，我相信此时ta比任何人都知道健康的重要性，如果可以再来，他一定会摒弃之前所有的不良习惯，好好生活。
 
@@ -98,7 +98,7 @@ brief: "程序员的工作性质决定了这个群体面临着一些问题，比
 
 >我已经给身边的好几位朋友推荐了代餐，而我自己通过长时间的饮食，成功减去内脂和小肚皮上的肉！
 
-![]({{ site.url }}{{ site.img_path }}{{ '/life/10-habbits-improve-developers-life-2-nutrition.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/career/10-habbits-improve-developers-life-2-nutrition.png' }})
 
 ---
 
@@ -115,7 +115,7 @@ brief: "程序员的工作性质决定了这个群体面临着一些问题，比
 
 在作息中，子午觉对健康极为重要，它还是一种不花钱的养生方法，睡好子午觉，你的身体多了一层保障了。
 
-![]({{ site.url }}{{ site.img_path }}{{ '/life/10-habbits-improve-developers-life-3-rest.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/career/10-habbits-improve-developers-life-3-rest.png' }})
 
 ---
 
@@ -126,7 +126,7 @@ brief: "程序员的工作性质决定了这个群体面临着一些问题，比
 
 那么如何缓解这些问题？除了坐姿端正，注意休息，更要加强运动锻炼。因为运动一方面能够加强肌肉的力量和耐力，另一方面能够活动身体的各个关节，能够有效缓解一个长时间保持一个动作导致局部肌肉过劳。
 
-![]({{ site.url }}{{ site.img_path }}{{ '/life/10-habbits-improve-developers-life-4-sport.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/career/10-habbits-improve-developers-life-4-sport.png' }})
 
 
 那么问题来了，如何科学地运动呢？

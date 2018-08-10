@@ -4,7 +4,7 @@ layout: post
 title: "Java泛型•虚拟机执行泛型代码"
 date: 2016-07-25
 category: [JAVASE]
-tag: [Java,Generic]
+tag: [Java]
 
 author: "袁慎建"
 brief: "
