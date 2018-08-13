@@ -20,7 +20,7 @@ brief: "
 
 ---
 
-上节课我们 [使用Rancher Compose部署了mst-user-service]({{ site.url }}{{ '/topics/micro-service/deploy-with-rancher-compose/' }})，我们的Pipeline已经搭建完毕，这节课我们切换到跟开发人员更密切的主题：如何在众多微服务中管理我们的服务注册和发现。
+上节课我们 [使用Rancher Compose部署了mst-user-service]({{ site.url }}{{ '/deploy-with-rancher-compose/' }})，我们的Pipeline已经搭建完毕，这节课我们切换到跟开发人员更密切的主题：如何在众多微服务中管理我们的服务注册和发现。
 
 本节课主要内容：
 

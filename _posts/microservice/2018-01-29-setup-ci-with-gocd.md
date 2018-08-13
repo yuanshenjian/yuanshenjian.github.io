@@ -289,7 +289,7 @@ $ docker run -d -e WORKDIR=$(pwd)/go-agent -e GO_SERVER_URL=https://10.29.5.155:
 
 ![]({{ site.url }}{{ site.img_path }}{{ '/topic/microservice/ci-red.jpg' }})
 
-从日志上可以看出构建失败的原始是因为Go agent上没有安装JDK，那么如何在不安装JDK的前提下让构建通过？请进入主题 [*在Pipeline中使用Docker执行构建任务*]({{ site.url }}{{ '/topics/micro-service/build-pipeline-with-docker/' }})。
+从日志上可以看出构建失败的原始是因为Go agent上没有安装JDK，那么如何在不安装JDK的前提下让构建通过？请进入主题 [*在Pipeline中使用Docker执行构建任务*]({{ site.url }}{{ '/build-pipeline-with-docker/' }})。
 
 ---
 

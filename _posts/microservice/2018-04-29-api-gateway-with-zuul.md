@@ -189,7 +189,7 @@ public class PreFilter extends ZuulFilter {
 
 启动consul和两个服务(mst-user-service, mst-zuul-service)
 [基于Consul的服务注册和服务发现
-]({{ site.url }}{{ '/topics/micro-service/service-registration-and-discovery-with-consul/' }})
+]({{ site.url }}{{ '/service-registration-and-discovery/' }})
 
 
 请求`/api/addresses/{id}`

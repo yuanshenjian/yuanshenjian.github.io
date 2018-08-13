@@ -22,7 +22,7 @@ brief: "
 
 ---
 
-上节课我们完成了 [搭建基于GoCD的持续集成基础设施]({{ site.url }}{{'/topics/micro-service/setup-ci-with-gocd/'}})，最后以我们的第一个pipeline的失败而结束，那么本节课的核心目标是扩展Pileline，并让Pipeline由红转绿。
+上节课我们完成了 [搭建基于GoCD的持续集成基础设施]({{ site.url }}{{'/setup-ci-with-gocd/'}})，最后以我们的第一个pipeline的失败而结束，那么本节课的核心目标是扩展Pileline，并让Pipeline由红转绿。
 
 主要任务有：
 
@@ -187,7 +187,7 @@ pipelines:
 
 做一次commit，Go会基于该配置文件生成一条Pipeline。如果你的配置文件中的Pipeline名称与你手动创建的一样，会产生冲突，将手动创建的删除掉即可，或者更改配置文件中的名称。
 
-到目前为止，我们的服务还没有被部署到一个可以访问的地方。关于Pipeline的最后一站部署，请进入下一个主题 [使用Rancher Compose部署服务]({{ site.url }}{{ '/topics/micro-service/deploy-with-rancher-compose/' }})
+到目前为止，我们的服务还没有被部署到一个可以访问的地方。关于Pipeline的最后一站部署，请进入下一个主题 [使用Rancher Compose部署服务]({{ site.url }}{{ '/deploy-with-rancher-compose/' }})
 
 ---
 

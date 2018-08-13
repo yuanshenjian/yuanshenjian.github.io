@@ -19,7 +19,7 @@ brief: "
 
 ---
 
-上节课我们成功地 [在Pipeline中使用Docker执行构建任务]({{ site.url }}{{ '/topics/micro-service/build-pipeline-with-docker/' }})，从测试到打包，都利用了宿主机的docker进程进行容器化构建。本节课我们来完成Pipeline最后一站：*部署*。
+上节课我们成功地 [在Pipeline中使用Docker执行构建任务]({{ site.url }}{{ '/build-pipeline-with-docker/' }})，从测试到打包，都利用了宿主机的docker进程进行容器化构建。本节课我们来完成Pipeline最后一站：*部署*。
 
 本节课主要内容：
 
@@ -31,7 +31,7 @@ brief: "
 
 ## 准备工作
 
-由于我们在 [搭建基于GoCD的持续集成基础设施]({{ site.url }}{{'/topics/micro-service/build-pipeline-with-docker/' }}) 那节课中注册Go agent时，已经将在Go agent中安装了Rancher Compose，这节课我们来搭建一个部署环境，并利用Rancher CLI将服务部署到。
+由于我们在 [搭建基于GoCD的持续集成基础设施]({{ site.url }}{{'/build-pipeline-with-docker/' }}) 那节课中注册Go agent时，已经将在Go agent中安装了Rancher Compose，这节课我们来搭建一个部署环境，并利用Rancher CLI将服务部署到。
 
 同样，在Vagrant VM(`10.29.5.155`)中将Go server、Go agent容器启动（如果已启动可以跳过）：
 

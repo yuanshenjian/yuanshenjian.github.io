@@ -21,7 +21,7 @@ brief: "
 ---
 
 
-上节课我们学习了 [BFF]({{ site.url }}{{ '/topics/micro-service/bff/' }}) 的思想，并针对mst-user-service、mst-order-service、mst-goods-service三个服务搭建了一套BFF架构。但到目前为止，我们每个服务的日志依旧分散，这对于日志的收集、管理、检索十分不便。因此，本节课将采用EFK这套日志数据管理解决方案来集中化管理服务日志。
+上节课我们学习了 [BFF]({{ site.url }}{{ '/bff/' }}) 的思想，并针对mst-user-service、mst-order-service、mst-goods-service三个服务搭建了一套BFF架构。但到目前为止，我们每个服务的日志依旧分散，这对于日志的收集、管理、检索十分不便。因此，本节课将采用EFK这套日志数据管理解决方案来集中化管理服务日志。
 
 本节课主要内容:
 

@@ -20,7 +20,7 @@ brief: "
 
 ---
 
-上节课我们搭建了 [基于Consul的服务注册和服务发现]({{ site.url }}{{ '/topics/micro-service/service-registration-and-discovery-with-consul/' }})，为微服务互相调用提供了服务查询列表。微服务在互相调用的过程中，因为下游服务产生了延时导致上游服务不可用，而延时可能会一直蔓延下去，最糟糕的情况是，整个系统面临 [`雪崩`](https://zh.wikipedia.org/wiki/%E9%9B%AA%E5%B4%A9)，这节课我们借助一些技术手段提升服务的容错能力。
+上节课我们搭建了 [基于Consul的服务注册和服务发现]({{ site.url }}{{ '/service-registration-and-discovery/' }})，为微服务互相调用提供了服务查询列表。微服务在互相调用的过程中，因为下游服务产生了延时导致上游服务不可用，而延时可能会一直蔓延下去，最糟糕的情况是，整个系统面临 [`雪崩`](https://zh.wikipedia.org/wiki/%E9%9B%AA%E5%B4%A9)，这节课我们借助一些技术手段提升服务的容错能力。
 
 
 本文主要内容：

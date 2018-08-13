@@ -19,7 +19,7 @@ brief: "
 
 ---
 
-在之前的课程中我们掌握了如何 [利用Consul进行服务注册和服务发现]({{ site.url }}{{ '/topics/micro-service/service-registration-and-discovery-with-consul/' }})，也实现了 [基于Hytrix的服务容错保护]({{ site.url }}{{ '/topics/micro-service/service-fault-tolerant-protected-with-hytrix' }})。到目前为止，我们的每个服务的配置文件都是host在自身代码库中，当服务数量达到一定数量后，管理这些分散的配置文件会成为一个痛点。这节课我么就来解决配置文件管理的痛点。
+在之前的课程中我们掌握了如何 [利用Consul进行服务注册和服务发现]({{ site.url }}{{ '/service-registration-and-discovery/' }})，也实现了 [基于Hytrix的服务容错保护]({{ site.url }}{{ '/service-fault-tolerant-protected-with-hytrix' }})。到目前为止，我们的每个服务的配置文件都是host在自身代码库中，当服务数量达到一定数量后，管理这些分散的配置文件会成为一个痛点。这节课我么就来解决配置文件管理的痛点。
 
 本节课主要内容：
 
