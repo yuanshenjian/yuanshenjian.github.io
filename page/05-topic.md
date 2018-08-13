@@ -11,14 +11,14 @@ summary: "专题实践"
 
 {% for topic in site.data.topic.toc %}
   {% assign existed = false %}
-  {% for page in site.pages %}{% if page.topic == topic.name %}{% assign existed = true %}{% break %}{% endif %}{% endfor %}
+  {% for post in site.posts %}{% if post.topic == topic.name %}{% assign existed = true %}{% break %}{% endif %}{% endfor %}
   {% if existed %}
   <h3>{{ topic.name }}</h3>
   <ul class="categories">
-    {% for page in site.pages %}
-      {% if page.topic == topic.name %}
+    {% for post in site.posts %}
+      {% if post.topic == topic.name %}
         <li>
-        <a href="{{ page.permalink }}">{{ page.title }}</a>
+        <a href="{{ post.url }}">{{ post.title }}</a>
         </li>
       {% endif %}
     {% endfor %}
