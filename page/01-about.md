@@ -3,7 +3,7 @@ bg: "about-sjyuan.jpg"
 layout: page
 title: "ABOUT"
 permalink: /about/
-summary: "简单 • 健康 • 快乐"
+summary: "简约 • 简单"
 active: about
 
 ---

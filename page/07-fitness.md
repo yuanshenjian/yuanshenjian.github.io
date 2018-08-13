@@ -3,13 +3,13 @@ bg: "fitness.jpg"
 layout: page
 title: "FITNESS"
 permalink: /fitness/
-summary: "自律给我自由"
+summary: "健身 • 健康"
 
 active: fitness
 
 ---
 
-<h1>健身而健康</h1>
+<h1>自律给我自由</h1>
 
 * content
 {:toc}
