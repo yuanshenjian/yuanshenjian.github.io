@@ -198,6 +198,3 @@ Kent Beck提出的简单设计原则更多关注的是代码设计，其实当�
 <a id="note-2"></a>
 
 2. 参考Martin Fowler博客 [BeckDesignRules](https://martinfowler.com/bliki/BeckDesignRules.html#footnote-kent-empathy)
-
-
-> 我的博客即将搬运同步至腾讯云+社区，邀请大家一同入驻：<https://cloud.tencent.com/developer/support-plan?invite_code=2u3d25d0ch8gw>
