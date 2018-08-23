@@ -180,7 +180,7 @@ Standup，就是每日站会。我听过一个有趣的事情：在敏捷开发�
 
 ---
 
-### Story kick-off
+### Story Kick Off
 >在一个Story开始前，确保`BA`, `QA`, `DEV`对Story的理解达成一致，并严格按照`AC`来验收。当然，前提是Story本身是不容置疑的。
 
 Story kick off，指的是对某一个Story进行开卡，也就是启动该Stroy，从而使其进入开发阶段。Story kick off的时候，通常需要三个角色一起参与：BA、QA以及要开发该Story的DEV。
