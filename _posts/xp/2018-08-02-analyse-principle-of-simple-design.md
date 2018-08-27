@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "简单设计原则"
+title: "解析简单设计原则"
 date: 2018-08-02
 categories: [XP]
 tag: [XP, Simple Design]
