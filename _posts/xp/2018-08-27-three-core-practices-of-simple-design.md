@@ -122,19 +122,25 @@ Robert C在*《代码整洁之道》*[[6]](#note-6) 一书中提供了很多案�
 ## 注释
 
 <a id="note-1"></a>
-1\. 用户故事是极限编程中的一个实践，请参阅 [我在ThoughtWorks中的敏捷实践]({{ site.url }}{{'/first-impressive-agile-experience-in-thoughtworks/'}})
+
+1. 用户故事是极限编程中的一个实践，请参阅 [我在ThoughtWorks中的敏捷实践]({{ site.url }}{{'/first-impressive-agile-experience-in-thoughtworks/'}})
 	
-<a id="note-2"></a>
-2\. 关于编码Kata，欢迎访问 <http://www.cyber-dojo.org/>
+	<a id="note-2"></a>
 
-<a id="note-3"></a>
-3\. 有关Tasking更多解读，欢迎阅读ThoughtWorks仝键老师的 [像机器一样思考系列文章](https://www.zybuluo.com/jtong/note/403738)
+2. 关于编码Kata，欢迎访问 <http://www.cyber-dojo.org/>
 
-<a id="note-4"></a>
-4\. 我已经将 [TDD实现斐波那契数](https://www.bilibili.com/video/av27452115/) 的视频发表于B站
+	<a id="note-3"></a>
 
-<a id="note-5"></a>
-5\. 关于重构的练习，欢迎使用 [GlidedRose](https://github.com/emilybache/GildedRose-Refactoring-Kata) 案例
+3. 有关Tasking更多解读，欢迎阅读ThoughtWorks仝键老师的 [像机器一样思考系列文章](https://www.zybuluo.com/jtong/note/403738)
 
-<a id="note-6"></a>
-6\. 关于编程方面的书籍，欢迎从我的GitHub [programming-books](https://github.com/sjyuan-cc/programming-books) 库中获取
+	<a id="note-4"></a>
+
+4. 我已经将 [TDD实现斐波那契数](https://www.bilibili.com/video/av27452115/) 的视频发表于B站
+
+	<a id="note-5"></a>
+
+5. 关于重构的练习，欢迎使用 [GlidedRose](https://github.com/emilybache/GildedRose-Refactoring-Kata) 案例
+
+	<a id="note-6"></a>
+
+6. 关于编程方面的书籍，欢迎从我的GitHub [programming-books](https://github.com/sjyuan-cc/programming-books) 库中获取
