@@ -42,6 +42,14 @@ active: fitness
 
 ---
 
-## 拉伸
+## 健身
+
+### 拉伸
 - [健身前后的拉伸动作]({{ site.url }}/fitness/stretch)
 
+---
+
+## 户外
+
+### 爬山
+- [拜访太白山拔仙台]({{ site.url }}/fitness/climb-to-top-of-taibai-mountains/)
