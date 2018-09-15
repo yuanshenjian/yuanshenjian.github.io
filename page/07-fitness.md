@@ -52,4 +52,4 @@ active: fitness
 ## 户外
 
 ### 爬山
-- [拜访太白山拔仙台]({{ site.url }}/fitness/climb-to-top-of-taibai-mountains/)
+- [拜访太白山拔仙台]({{ site.url }}/climb-to-top-of-taibai-mountain/)
