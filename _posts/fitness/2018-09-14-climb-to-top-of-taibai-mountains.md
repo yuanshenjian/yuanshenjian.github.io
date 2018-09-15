@@ -4,7 +4,7 @@ layout: post
 title: "太白山登顶两日游"
 date: 2018-09-14
 categories: [Fitness]
-tag: [Fitness]
+tag: [Fitness, Outdoors]
 
 author: "袁慎建"
 
