@@ -20,6 +20,8 @@ layout: default
     {{ content }}
 
     <hr/>
+    <hr/>
+    {% include author-information.html %}
     <div class="edition-claim">
       Posted by <a href="{{ site.url }}{{ '/about' }}">{{ site.author.name }}</a> • {{ page.date | date: "%B " }}
       {% assign d = page.date | date: "%-d" %}{% case d %}{% when '1' or '21' or '31 %}{{ d }}st{%
@@ -28,9 +30,9 @@ layout: default
       {{ page.date | date: "%Y" }}
       <p>
         <b>版权声明：</b>自由转载•非商用•非衍生•保持署名 | <a
-        href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative
+        href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative
         Commons
-        BY-NC-ND 3.0</a>
+        BY-NC-ND 4.0</a>
       </p>
       </p>
       <div>原文链接：<a href="{{ page.url }}">{{ site.url}}{{ page.url }}</a></div>
@@ -40,6 +42,7 @@ layout: default
            onmouseover="showQRCode('personal-receipt-qr-code')" href="javascript:void(0);">支持原创</a>
         <div class="personal-receipt-qr-code" id="personal-receipt-qr-code"></div>
       </div>
+
     </div>
 
     <div>
@@ -50,8 +53,7 @@ layout: default
     <div class="row">
       <div class="col-lg-12">
         {% include share.html %}
-        <br>
-        {% include comments.html %}
+
       </div>
     </div>
 
