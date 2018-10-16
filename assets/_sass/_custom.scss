@@ -187,6 +187,18 @@ hr {
   background-repeat: no-repeat;
 }
 
+
+.personal-qr-code {
+  margin-left: -5px;
+  display: none;
+  width: 220px;
+  height: 220px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url('/assets/images/qr-code-sj.jpg');
+}
+
+
 .personal-receipt-qr-code {
   margin-left: -5px;
   display: none;
