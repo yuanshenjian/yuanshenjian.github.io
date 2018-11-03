@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "深度解读敏捷宣言"
+title: "深入解读敏捷宣言"
 date: 2018-10-30
 categories: [AGILE]
 tags: [Agile]
