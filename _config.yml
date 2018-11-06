@@ -3,7 +3,7 @@ description: 程序袁CC
 keywords: sjyuan,blog,Jekyll,github
 baseurl: ""
 permalink: /:title/
-url: http://sjyuan.cc
+url: https://sjyuan.cc
 img_path: /assets/images
 
 junit:
