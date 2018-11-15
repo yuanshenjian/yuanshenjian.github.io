@@ -134,7 +134,7 @@ That is, there is value in the item on the right, we value the items on the left
 
 ---
 
-## 总结
+## 写在最后
 >敏捷虽好，不要盲从，更不要迷信
 
 敏捷开发方法有她的优势，也有她的门槛。市面上存在不少有形无神的伪敏捷组织。他们天天站会，甚至，他们也模仿Scrum搞了个3355，但他们仍然苦于对变化的龟速响应。
