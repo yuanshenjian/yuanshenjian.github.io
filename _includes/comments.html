@@ -28,3 +28,20 @@
     });
 </script>
 {% endif %}
+
+{% if site.gitment %}
+<div class="comment-container" id="comment-container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  var gitment = new Gitment({
+    owner: '{{ site.gitment.owner}}',
+    repo: '{{ site.gitment.repo}}',
+    oauth: {
+      client_id: '{{ site.gitment.oauth.client_id}}',
+      client_secret: '{{ site.gitment.oauth.client_secret}}',
+    },
+  })
+  gitment.render('comment-container')
+</script>
+{% endif %}
