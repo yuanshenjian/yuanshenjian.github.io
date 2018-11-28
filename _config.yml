@@ -21,14 +21,6 @@ author:
   email: sjyuan@thoughtworks.com
   cv:   # A online CV can be printed as PDF, leave blank if you don't have now
 
-# comment
-gitment:
-  owner: sjyuan-cc
-  repo: sjyuan-cc.github.io
-  oauth:
-    client_id: 7496a0eec255a36f5c0c
-    client_secret: 7a917626d8eee8782f47ec4d09d601f2f9d9285c
-
 encoding: utf-8
 
 # other settings

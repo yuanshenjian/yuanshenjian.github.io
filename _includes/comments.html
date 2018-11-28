@@ -35,6 +35,7 @@
 <div class="comment-container" id="comment-container"></div>
 <script>
   var gitment = new Gitment({
+    id: '{{ page.title }}',
     owner: '{{ site.gitment.owner }}',
     repo: '{{ site.gitment.repo }}',
     oauth: {
