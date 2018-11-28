@@ -19,7 +19,6 @@ brief: "
 
 ---
 
-x
 * content
 {:toc}
 
