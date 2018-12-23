@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "深入浅出里氏替换原则"
+title: "让里氏替换原则为你效力"
 date: 2018-12-15
 categories: [OOD]
 tag: [OO]
