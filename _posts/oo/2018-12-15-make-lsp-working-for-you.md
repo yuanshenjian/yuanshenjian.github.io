@@ -246,3 +246,8 @@ class QuadsTest {
 5. DbC: Design by Contract
 6. SoC: Segregation of Concerns
 7. HP: Hollywood Principle
+
+---
+
+## 参考阅读
+- [写了这么多年代码，你真的了解SOLID吗？](https://insights.thoughtworks.cn/do-you-really-know-solid/)
