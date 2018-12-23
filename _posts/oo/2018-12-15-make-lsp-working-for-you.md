@@ -239,13 +239,13 @@ class QuadsTest {
 ---
 
 ## 注释
-1. KiSS: Keep it simple, stupid
-2. DRY: Don't Repeat Yourself
-3. LKP: Least Knowledge Principle (LOD: Law of Demeter)
-4. CoC: Convention over Configuration
-5. DbC: Design by Contract
-6. SoC: Segregation of Concerns
-7. HP: Hollywood Principle
+- KiSS: Keep it simple, stupid
+- DRY: Don't Repeat Yourself
+- LKP: Least Knowledge Principle (LOD: Law of Demeter)
+- CoC: Convention over Configuration
+- DbC: Design by Contract
+- SoC: Segregation of Concerns
+- HP: Hollywood Principle
 
 ---
 
