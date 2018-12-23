@@ -23,7 +23,7 @@ layout: default
     <hr/>
     {% include author-information.html %}
     <div class="edition-claim">
-      Posted by <a href="{{ site.url }}{{ '/about' }}">{{ site.author.name }}</a> • {{ page.date | date: "%B " }}
+      Posted by <a href="{{ site.url }}{{ '/about' }}">{{ site.author.name }}@ThoughtWorks</a> • {{ page.date | date: "%B " }}
       {% assign d = page.date | date: "%-d" %}{% case d %}{% when '1' or '21' or '31 %}{{ d }}st{%
       when '2' or '22'
       %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
