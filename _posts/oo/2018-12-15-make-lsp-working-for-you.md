@@ -48,7 +48,7 @@ SOLID由五大原则构成：
 ## 打破里氏替换原则
 > In a computer program, if S is a subtype of T, then objects of type T may be replaced with objects of type S without altering any of the desirable properties of the program (correctness, task performed, etc.) --  Barbara Liskov in 1987
 
-简单描述LSP：***一个子类实例对象替换掉其父类实例对象，不会引发程序的任何变化*。**
+简单描述LSP：***一个子类实例对象替换掉其父类实例对象，不会引发程序的任何变化。***
 
 如果要保证这点，我们在设计类的继承关系的时候，子类不应重写父类的方法，这样保证了父类的行为没有被修改。来看个代码示例，一个`Square`类继承自`Rectangle`类，我们计算它们的面积：
 
@@ -132,7 +132,7 @@ public class Parrot extends Bird {}
 如何决定继承关系，你可以用`Is-A`来进行初步验证，比如`A parrot is a bird`。当你使用`Is-A`读起来就能让自己发笑得的时候，就说明这个继承就明显不合理了。比如，你有一架飞机，它也能飞，为了复用你让飞机继承鸟 -- `A Plane is a Bird`。当关系不是那么明显的时候怎么办？比如，`A Square is a Rectangle`，下文我将给出答案。
 
 
-所以，继承首先它应该体现一种现实世界的真实规则`Is-A`，复用是它提供的一个核心能力，也是我们期望在设计上能获得的好处，*而要达到复用，就要遵守一个规则：子类不去更改父类已有的行为，否则就与复用不沾边了。*（复用，代表你啥也不用做，直接具备的行为，如果你重新实现了，那叫新的实现，你付出了新的努力。至于你要添加新的行为，你请自便）
+所以，继承首先它应该体现一种现实世界的真实规则`Is-A`，复用是它提供的一个核心能力，也是我们期望在设计上能获得的好处，*而要达到复用，就要遵守一个规则：子类不去更改父类已有的行为，否则就与复用不沾边了*（复用，代表你啥也不用做，直接具备的行为，如果你重新实现了，那叫新的实现，你付出了新的努力。至于你要添加新的行为，你请自便）。
 
 我想你已经能够运用`Is-A`来避免很多明显恰当的继承关系。而当你面临模棱两可的继承场景时，从复用的视角出发，LSP提供了很好的校验规则。
 
@@ -142,7 +142,7 @@ public class Parrot extends Bird {}
 ## 抽象是为了更好地复用
 回到文章一开始的例子，使用`Is-A`来解读：`A Square is a Rectangle`，好像还凑合，但有点把握不准。
 
-让`Square`继承自`Rectangle`，`Square`能够复用`Rectangle`中的所有行为，假如你不对`Square`做任何事情就能完美复用，但这样子出来的正方形可能宽和高就不一样了。（不能满足客户需求，这可都是无用功）为了满足客户需求，你就不得不对`setWidth`和`setHeight`进行重写：
+让`Square`继承自`Rectangle`，`Square`能够复用`Rectangle`中的所有行为，假如你不对`Square`做任何事情就能完美复用，但这样子出来的正方形可能宽和高就不一样了（无法满足客户真实需求，这可都是无用功哟）。为了满足客户需求，你就不得不对`setWidth`和`setHeight`进行重写：
 
 ```java
 public class Square extends Rectangle {
