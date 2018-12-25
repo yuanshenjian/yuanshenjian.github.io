@@ -14,9 +14,9 @@ active: about
 </div>
 
 ## Profile
-> 简约而简单，健身而健康，分享而快乐
+袁慎建，[ThoughtWorks](https://thoughtworks.com/) 程序员、培训师、咨询师
 
-袁慎建，[ThoughtWorks](https://thoughtworks.com/) 培训师、咨询师
+PADI潜水员（AOW）
 
 ---
 
