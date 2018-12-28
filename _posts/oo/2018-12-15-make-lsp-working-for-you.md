@@ -117,7 +117,7 @@ public class Square extends Rectangle {
 
 恰巧LSP中提到了子类和父类的概念，所以不得不说说`继承`。在这之前，我假设：*在做面向对象软件设计的你认同面向对象设计的价值 -- 提升软件的对变化的响应力*。
 
-继承的最核心的目的之一是为了复用，很多时候我们为了复用采用了继承。如果我们设计继承单纯为了复用，你可能会问为啥不用组合？而且很多时候提倡`组合优于继承`。这就需要我们思考面向对象的设计初衷：面向对象建立在对真实世界的抽象前提上，它很大程度上反映了我们的真实世界。比如一只鹦鹉是一只鸟，鸟能飞，也能飞，所以让鹦鹉继承自鸟，鹦鹉具备了飞的能力。
+继承的最核心的目的之一是为了复用，很多时候我们为了复用采用了继承。如果我们设计继承单纯为了复用，你可能会问为啥不用组合？而且很多时候提倡`组合优于继承`。这就需要我们思考面向对象的设计初衷：面向对象建立在对真实世界的抽象前提上，它很大程度上反映了我们的真实世界。比如一只鹦鹉是一只鸟，鸟能飞，鹦鹉也能飞，所以让鹦鹉继承自鸟，鹦鹉具备了飞的能力。
 
 ```java
 public class Bird {
@@ -190,7 +190,7 @@ public abstract class Quads {
     protected int height;
     
     public abstract void setWidth(int width);
-    public abstract void setHeight(int width);
+    public abstract void setHeight(int height);
     
     public int calculateArea() { return width * height; }
 }
