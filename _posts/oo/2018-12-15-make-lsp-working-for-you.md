@@ -139,7 +139,7 @@ public class Parrot extends Bird {}
 
 ---
 
-## 抽象是为了更好地复用
+## 抽象有助于恰当的复用
 回到文章一开始的例子，使用`Is-A`来解读：`A Square is a Rectangle`，好像还凑合，但有点把握不准。
 
 让`Square`继承自`Rectangle`，`Square`能够复用`Rectangle`中的所有行为，假如你不对`Square`做任何事情就能完美复用，但这样子出来的正方形可能宽和高就不一样了（无法满足客户真实需求，这可都是无用功哟）。为了满足客户需求，你就不得不对`setWidth`和`setHeight`进行重写：
@@ -179,7 +179,7 @@ void should_return_area_when_calculate_given_width_and_height_valid() {
 
 那规矩又是什么呢？此时你必须重写`setWidth`和`setHeight`，毕竟满足客户才是你首要目的。到这个时候，已经说明了该继承关系出了点问题。你需要做的是跳出来，重新审视一下你的设计：
 
-*`Square`和`Rectangle`都有宽和高，并且计算面积的方式一样，不同的是`setWidth`和`setHeight`。是否可以将共同的特征进一步抽象提炼。就这样逼着自己去思考，你可能很快就抽象出一个四边形，因为`setWidth`和`setHeight`行为不确定，先将它们抽象化，从而实现多态特征*
+*`Square`和`Rectangle`都有宽和高，并且计算面积的方式一样，不同的是`setWidth`和`setHeight`。是否可以将共同的特征进一步抽象提炼。就这样逼着自己去思考，你可能很快就抽象出一个四边形，因为`setWidth`和`setHeight`行为不确定，先将它们抽象化，从而实现多态特征，并且让新的基类Quads恰当地被复用*
 
 
 你很快用Java代码实现：
