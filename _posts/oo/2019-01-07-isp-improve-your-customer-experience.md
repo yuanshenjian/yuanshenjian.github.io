@@ -2,11 +2,12 @@
 layout: post
 
 title: "接口隔离原则造福使用者"
-date: 2018-12-25
+date: 2019-01-07
 categories: [OOD]
 tag: [OO]
 
 author: "袁慎建"
+published: false
 
 brief: "
 从事软件开发的朋友或多或少都听过以下一些原则：比如KiSS、DRY、LKP、COC、DbC、SoC、HP、SOLID等。这些原则已经在业界被证实了自身的价值，尤其当谈到面向对象设计的时候，SOLID则是一个避不开的主题。
