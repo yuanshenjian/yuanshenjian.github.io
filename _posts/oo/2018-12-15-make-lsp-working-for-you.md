@@ -179,7 +179,7 @@ void should_return_area_when_calculate_given_width_and_height_valid() {
 
 那规矩又是什么呢？此时你必须重写`setWidth`和`setHeight`，毕竟满足客户才是你首要目的。到这个时候，已经说明了该继承关系出了点问题。你需要做的是跳出来，重新审视一下你的设计：
 
-*`Square`和`Rectangle`都有宽和高，并且计算面积的方式一样，不同的是`setWidth`和`setHeight`。是否可以将共同的特征进一步抽象提炼。就这样逼着自己去思考，你可能很快就抽象出一个四边形，因为`setWidth`和`setHeight`行为不确定，先将它们抽象化。*
+*`Square`和`Rectangle`都有宽和高，并且计算面积的方式一样，不同的是`setWidth`和`setHeight`。是否可以将共同的特征进一步抽象提炼。就这样逼着自己去思考，你可能很快就抽象出一个四边形，因为`setWidth`和`setHeight`行为不确定，先将它们抽象化，从而实现多态特征*
 
 
 你很快用Java代码实现：
