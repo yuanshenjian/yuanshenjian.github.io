@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "聊聊面向对象设计中Is-A"
+title: "聊聊面向对象设计中的Is-A"
 date: 2018-12-25
 categories: [OOD]
 tag: [OO]
