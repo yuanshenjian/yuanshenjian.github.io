@@ -17,6 +17,8 @@ brief: "
 * content
 {:toc}
 
+---
+
 ## Feedback的特殊意义
 Feedback作为名词，可以理解为一种信息载体，该信息通常用于表达认可或建议。
 
