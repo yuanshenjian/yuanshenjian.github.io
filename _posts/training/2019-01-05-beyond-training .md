@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "超越培训 - 能力建设新模式"
+title: "超越培训"
 date: 2019-01-05
 categories: [TRAINING]
 tags: [Training]
