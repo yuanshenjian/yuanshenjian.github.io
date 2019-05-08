@@ -34,7 +34,7 @@ Feedback作为动词，指提供反馈或接收反馈，是一个人向外传达
 
 在ThoughtWorks，Feedback的重要性犹如发动机于车，像Interview、Interview++、Probation Review、Quater Review、Annual Review等重要绩效考核环节无不都在依靠Feedback这架发动机来推进。操控这架发动机的是每一位TWer，一群TWer在一起凝聚成独特的气场，久而久之沉淀成一种文化 -- 扁平文化。
 
-扁平组织弃用了传统的KPI绩效考核，而绩效考核关系到每个员工的职业发展，这让Feedback的意义尤为凸显，如何做好Feedback（动词）以及如何鉴别Feedback（名词），可以说是每一位TWer加入ThoughtWorks的第一门必修课。
+ThoughtWorks摒弃了传统的KPI绩效考核，而绩效考核关系到每个员工的职业发展，这让Feedback的意义尤为凸显，如何做好Feedback（动词）以及如何鉴别Feedback（名词），可以说是每一位TWer加入ThoughtWorks的第一门必修课。
 
 我认为，好的Feedback需要具备三个基本的属性：
 
