@@ -2,14 +2,22 @@
 layout: post
 
 title: "在ThoughWorks，你应该知道的Feedback"
-date: 2019-02-15
+date: 2019-04-15
 categories: [CAREER]
 tags: [ThoughtWorks]
 
 author: "袁慎建"
 
 brief: "
+Feedback作为名词，可以理解为一种信息载体，该信息通常承载了认可或建议。
 </br></br>
+Feedback作为动词，指提供反馈或接收反馈，是一个人向外传达信息以及从外部接收信息的过程。
+</br></br>
+在ThoughtWorks，Feedback是两者的有机结合体，她于ThoughWorks的重要性犹如发动机于车，像Interview、Interview++、Probation Review、Quater Review、Annual Review等重要绩效考核环节无不都在依靠Feedback这架发动机来推进。操控这架发动机的是每一位TWer，一群TWer在一起凝聚成独特的气场，久而久之沉淀成一种文化 -- 扁平文化。
+</br></br>
+扁平组织弃用了传统的KPI绩效考核，而绩效考核关系到每个员工的职业发展，这让Feedback的意义尤为凸显，如何做好Feedback（动词）以及如何鉴别Feedback（名词），可以说是每一位TWer加入ThoughtWorks的第一门必修课。
+</br></br>
+我认为，好的Feedback需要具备三个基本的属性...
 "
 
 ---
@@ -92,7 +100,7 @@ ThoughtWorks胜任力模型中定义了一个核心维度 - `发展他人`，从
 ### 有料
 你在给别人提Feedback时候，你大多时候是在`表达认可`或`提出建议`，针对这两种情况存在着两个极端结果是`溜须拍马`或`人身攻击`。而我们中国人常常提到说话要讲究方式，为人处世秉承中庸之道，而中庸之道恰恰是一把很难把握的尺子，如何在提Feedback的时候用好这把尺子呢？
 
-方法其实很简单 -- `有事说事，不聊态度，不谈信仰`。有事说事，这是你提Feedback的最核心的料，这个事一定只是某个现象本身，
+方法其实很简单 -- `有事说事，不聊态度，不谈信仰`。有事说事，这是你提Feedback的最核心的料，既然是料，就需要是真实，是一个真实存在的事实，
 
 
 

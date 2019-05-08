@@ -2,7 +2,7 @@
 layout: post
 
 title: "超越培训 -- 比培训多做一点点"
-date: 2019-01-05
+date: 2019-03-26
 categories: [TRAINING]
 tags: [Training]
 
