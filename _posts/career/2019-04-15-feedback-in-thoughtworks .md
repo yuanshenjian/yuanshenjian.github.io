@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "在ThoughWorks，你应该知道的Feedback"
+title: "在ThoughtWorks，你应该知道的Feedback"
 date: 2019-04-15
 categories: [CAREER]
 tags: [ThoughtWorks]
@@ -28,7 +28,8 @@ Feedback作为动词，指提供反馈或接收反馈，是一个人向外传达
 ---
 
 ## Feedback的特殊意义
-> Feedback作为名词，可以理解为一种信息载体，该信息通常承载了认可或建议。  
+> Feedback作为名词，可以理解为一种信息载体，该信息通常承载了认可或建议。 
+>  
 > Feedback作为动词，指提供反馈或接收反馈，是一个人向外传达信息以及从外部接收信息的过程。
 
 在ThoughtWorks，Feedback的重要性犹如发动机于车，像Interview、Interview++、Probation Review、Quater Review、Annual Review等重要绩效考核环节无不都在依靠Feedback这架发动机来推进。操控这架发动机的是每一位TWer，一群TWer在一起凝聚成独特的气场，久而久之沉淀成一种文化 -- 扁平文化。
@@ -71,7 +72,7 @@ ThoughtWorks胜任力模型中定义了一个核心维度 - `发展他人`，从
 ### Feedback于组织的意义
 再说个关于试用期的案例。两年前，我把一朋友成功推荐到中国区某Office，遗憾的是，他在第五个月三周的时候被劝退了。好好的，怎么会被劝退呢？我怀着疑惑去了解了他这5个多月仅有的两次Interview++记录，并没有看出任何风险，唯一让我看出有问题的记录里存在诸多无效的反馈。比如，"Java SpringBoot框架技能需要提升"。
 
-他的两次Interview++都是他Buddy找人代理的，因为他的Buddys是中国区另一个Office某大项目上的Tech Lead，平时沟通交流的机会很少，这无形中埋下了一个雷。我们知道Buddy有责任去帮助新人度过试用期，怎么帮？一方面关注新人的成长，给新人有效Feedback去帮助Ta成长，另一方面要帮助新人收集反馈并过滤无效的反馈，帮助新人制定改进措施。
+他的两次Interview++都是他Buddy找人代理的，因为他的Buddy是中国区另一个Office某大项目上的Tech Lead，平时沟通交流的机会很少，这无形中埋下了一个雷。我们知道Buddy有责任去帮助新人度过试用期，怎么帮？一方面关注新人的成长，给新人有效Feedback去帮助Ta成长，另一方面要帮助新人收集反馈并过滤无效的反馈，帮助新人制定改进措施。
 
 如果Buddy能做好这两件事，新人的试用期会有如神助。但是很遗憾，就我最近两年在项目上的观察，项目上不少Buddy并没有履行好这两个职责。试想如果Buddy都做不好会怎么样？于新人，可能会类似我的这个朋友，被意外的劝退。于组织，新人转正后没法给后续加入的新人带来正向引导，久而久之造成文化稀释，优秀的人逐渐离开，ThoughtWorks沦为平庸，我想这是所有ThoughtWorkers都不愿意看到的。
 
