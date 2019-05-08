@@ -13,7 +13,7 @@ Feedback作为名词，可以理解为一种信息载体，该信息通常承载
 </br></br>
 Feedback作为动词，指提供反馈或接收反馈，是一个人向外传达信息以及从外部接收信息的过程。
 </br></br>
-在ThoughtWorks，Feedback是两者的有机结合体，她于ThoughWorks的重要性犹如发动机于车，像Interview、Interview++、Probation Review、Quater Review、Annual Review等重要绩效考核环节无不都在依靠Feedback这架发动机来推进。操控这架发动机的是每一位TWer，一群TWer在一起凝聚成独特的气场，久而久之沉淀成一种文化 -- 扁平文化。
+在ThoughtWorks，Feedback的重要性犹如发动机于车，像Interview、Interview++、Probation Review、Quater Review、Annual Review等重要绩效考核环节无不都在依靠Feedback这架发动机来推进。操控这架发动机的是每一位TWer，一群TWer在一起凝聚成独特的气场，久而久之沉淀成一种文化 -- 扁平文化。
 </br></br>
 扁平组织弃用了传统的KPI绩效考核，而绩效考核关系到每个员工的职业发展，这让Feedback的意义尤为凸显，如何做好Feedback（动词）以及如何鉴别Feedback（名词），可以说是每一位TWer加入ThoughtWorks的第一门必修课。
 </br></br>
@@ -28,11 +28,10 @@ Feedback作为动词，指提供反馈或接收反馈，是一个人向外传达
 ---
 
 ## Feedback的特殊意义
-Feedback作为名词，可以理解为一种信息载体，该信息通常承载了认可或建议。
+> Feedback作为名词，可以理解为一种信息载体，该信息通常承载了认可或建议。  
+> Feedback作为动词，指提供反馈或接收反馈，是一个人向外传达信息以及从外部接收信息的过程。
 
-Feedback作为动词，指提供反馈或接收反馈，是一个人向外传达信息以及从外部接收信息的过程。
-
-在ThoughtWorks，Feedback是两者的有机结合体，她于ThoughWorks的重要性犹如发动机于车，像Interview、Interview++、Probation Review、Quater Review、Annual Review等重要绩效考核环节无不都在依靠Feedback这架发动机来推进。操控这架发动机的是每一位TWer，一群TWer在一起凝聚成独特的气场，久而久之沉淀成一种文化 -- 扁平文化。
+在ThoughtWorks，Feedback的重要性犹如发动机于车，像Interview、Interview++、Probation Review、Quater Review、Annual Review等重要绩效考核环节无不都在依靠Feedback这架发动机来推进。操控这架发动机的是每一位TWer，一群TWer在一起凝聚成独特的气场，久而久之沉淀成一种文化 -- 扁平文化。
 
 扁平组织弃用了传统的KPI绩效考核，而绩效考核关系到每个员工的职业发展，这让Feedback的意义尤为凸显，如何做好Feedback（动词）以及如何鉴别Feedback（名词），可以说是每一位TWer加入ThoughtWorks的第一门必修课。
 
