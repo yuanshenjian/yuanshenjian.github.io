@@ -51,7 +51,7 @@ Spring Cloud Config的目标是将各个微服务的配置文件集中存储一�
 ```yaml
 user:
   default: sjyuan-qa
-  home-page: http://sjyuan.cc
+  home-page: http://sjyuan.club
 ```
 
 *mst-config-storage/mst-user-service/application-uat.yml*
@@ -59,7 +59,7 @@ user:
 ```yaml
 user:
   default: sjyuan-uat
-  home-page: http://sjyuan.cc
+  home-page: http://sjyuan.club
 ```
 
 ---

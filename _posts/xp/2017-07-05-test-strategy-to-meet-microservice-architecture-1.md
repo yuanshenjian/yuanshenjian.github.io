@@ -129,7 +129,7 @@ request {
     body([
             name: $(regex('[a-z]{6, 20}')),
             email: 'sjyuan@thoughtworks.com',
-            homePage: 'http://sjyuan.cc'
+            homePage: 'http://sjyuan.club'
     ])
     headers {
         contentType('application/json')
@@ -143,7 +143,7 @@ request {
     body([
             name: $(regex('[a-z]{6, 20}')),
             email: 'sjyuan@thoughtworks.com',
-            homePage: 'http://sjyuan.cc',
+            homePage: 'http://sjyuan.club',
             gender: 'M'
     ])
     headers {
