@@ -23,7 +23,7 @@ brief: "敏捷开发的核心就是<i>在一个高度协作的环境下，不断
 
 ---
 
-此文章已发表于InfoQ，[阅读InfoQ文章](http://www.infoq.com/cn/articles/my-agile-practice-in-thoughtworks)
+此文章已发表于InfoQ，[阅读InfoQ文章](https://www.infoq.cn/article/my-agile-practice-in-thoughtworks)
 
 
 >本文以我在[ThoughtWorks](https://thoughtworks.com/)中的E项目经历为依据，覆盖了[ThoughtWorks](https://thoughtworks.com/)日常独立交付项目中主要的敏捷实践。
