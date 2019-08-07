@@ -6,7 +6,7 @@ title: "JUnit 5 用户指南"
 permalink: /junit5/user-guide-cn/
 summary: "中文版"
 
-active: junit5
+# active: junit5
 
 ---
 

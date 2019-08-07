@@ -5,7 +5,7 @@ permalink: /archives/
 title: "ARCHIVE"
 summary: "包罗万象"
 
-# active: archive
+active: archive
 
 ---
 

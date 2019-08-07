@@ -2,7 +2,7 @@
 bg: "insight.jpg"
 layout: page
 title: "TECH TOPIC"
-permalink: /topics/
+permalink: /topics/micro-service
 summary: "专题实践"
 
 # active: topic
