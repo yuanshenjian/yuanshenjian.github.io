@@ -14,7 +14,7 @@ active: about
 </div>
 
 ## 简介
-袁慎建，[ThoughtWorks](https://thoughtworks.com/)咨询师，培训师
+袁慎建，[ThoughtWorks](https://thoughtworks.com/)敏捷教练
 
 PADI潜水员（AOW）
 

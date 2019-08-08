@@ -5,7 +5,7 @@ title: "FITNESS"
 permalink: /fitness/
 summary: "健身 • 健康"
 
-# active: fitness
+active: fitness
 
 ---
 
