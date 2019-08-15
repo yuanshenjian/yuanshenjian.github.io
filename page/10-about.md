@@ -22,15 +22,16 @@ PADI潜水员（AOW）
 
 ---
 
-## 出版物
+## 贡献
 
-[JUnit 5 中文用户指南]({{ site.url }}{{ '/junit5/user-guide-cn' }})
+- [JUnit 5 中文用户指南]({{ site.url }}{{ '/junit5/user-guide-cn' }})
 
-[JavaScript学习指南: 让网页变得栩栩如生的艺术 第3版](https://item.jd.com/12123997.html)
+- [JavaScript学习指南: 让网页变得栩栩如生的艺术 第3版](https://item.jd.com/12123997.html)
 
-![]({{ site.url }}{{ site.img_path }}{{ '/about/learning-javascript.jpg' }})
+  ![]({{ site.url }}{{ site.img_path }}{{ '/about/learning-javascript.jpg' }})
 
-
+- 平板支撑小程序
+  ![]({{ site.url }}{{ site.img_path }}{{ '/about/wechat-little-program-plank.jpg' }})  
 ---
 
 ## 技术专题
