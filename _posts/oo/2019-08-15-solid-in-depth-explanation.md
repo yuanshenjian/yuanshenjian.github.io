@@ -33,7 +33,7 @@ brief: "
 
 - **S**ingle Responsibility Principle，单一职责原则
 - **O**pen Close Principle，开闭原则
-- **L**iskow Substitution Principle，里氏替换原则
+- **L**iskov Substitution Principle，里氏替换原则
 - **I**nterface Segregation Principle，接口隔离原则
 - **D**ependency Inversion Principle，依赖倒置原则
 
