@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "面向对象设计SOLID原则的创业经"
+title: "面向对象设计SOLID创业经"
 date: 2019-08-15
 categories: [OOD]
 tag: [OO]
