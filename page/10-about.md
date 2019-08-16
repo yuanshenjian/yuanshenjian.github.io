@@ -14,11 +14,11 @@ active: about
 </div>
 
 ## 简介
-袁慎建，[ThoughtWorks](https://thoughtworks.com/)敏捷教练
+- 袁慎建，[ThoughtWorks](https://thoughtworks.com/)敏捷教练
 
-PADI潜水员（AOW）
+- PADI潜水员（AOW）
 
-健身爱好者
+- 健身爱好者
 
 ---
 
@@ -37,4 +37,4 @@ PADI潜水员（AOW）
 
 ## 技术专题
 
-[微服务实践]({{ site.url }}{{ '/topics/micro-service'}})
+- [微服务实践]({{ site.url }}{{ '/topics/micro-service'}})
