@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "听面向对象先生讲SOLID创业故事"
+title: "听面向对象先生聊SOLID创业故事"
 date: 2019-08-15
 categories: [OOD]
 tag: [OO]
