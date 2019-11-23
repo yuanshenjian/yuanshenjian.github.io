@@ -57,11 +57,11 @@ brief: "
 3. 消除重复
 4. 最少元素
 
-![]({{ site.url }}{{ site.img_path }}{{ '/xp/design-facts.png' }})
+![]({{ site.url }}{{ site.img_path }}{{ '/xp/design-facts.jpg' }})
 
 ---
 
-## 原则解读
+## 原则解读d
 
 ### 通过测试
 *通过测试* 通常会被一概地理解为通过所编写的测试，这个点成立的两个前提条件是：
