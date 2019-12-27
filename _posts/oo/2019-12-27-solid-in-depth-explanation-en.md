@@ -252,7 +252,7 @@ We have learned many kinds of techniques(design principles, design patterns, ref
 ## Appreciation
 This article is originally written in [Chinese](https://sjyuan.club/solid-in-depth-explanation/). Thanks to the translation team, the English edition is published now. 
 
-### Translators' recommendation
+#### Translators' recommendation
 
 
 ***Yangjie Lu*** from ThoughtWorks China Chengdu Office: 
