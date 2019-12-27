@@ -250,11 +250,10 @@ We have learned many kinds of techniques(design principles, design patterns, ref
 ---
 
 ## Appreciation
-This article is originally written in Chinese. Thanks to the translation team, the English edition is published now. 
+This article is originally written in [Chinese](https://sjyuan.club/solid-in-depth-explanation/). Thanks to the translation team, the English edition is published now. 
 
-Translators' recommendation:
+### Translators' recommendation
 
- 
 
 ***Yangjie Lu*** from ThoughtWorks China Chengdu Office: 
 
@@ -272,11 +271,11 @@ Translators' recommendation:
 
 We also greatly appreciate them who has provided much support:
 
-- Yuan Liu, from ThoughtWorks China Xi'an Office
-- Zhang Xin, from ThoughtWorks China Chengdu office
-- Kelvin Yong, from ThoughtWorks Singapore office
-- Sergey Bukahrov, from ThoughtWorks Singapore office
-- Natalie Chin, from ThoughtWorks Singapore office
+- ***Yuan Liu***, from ThoughtWorks China Xi'an Office
+- ***Zhang Xin***, from ThoughtWorks China Chengdu office
+- ***Kelvin Yong***, from ThoughtWorks Singapore office
+- ***Sergey Bukahrov***, from ThoughtWorks Singapore office
+- ***Natalie Chin***, from ThoughtWorks Singapore office
 
 
 
