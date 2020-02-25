@@ -3,7 +3,7 @@ description: 袁慎建的博客
 keywords: sjyuan,blog,Jekyll,github
 baseurl: ""
 permalink: /:title/
-url: https://sjyuan.club
+url: https://xp-bootcamp.cn
 img_path: /assets/images
 
 junit:
