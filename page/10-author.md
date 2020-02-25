@@ -4,7 +4,7 @@ layout: page
 title: "作者"
 permalink: /author/
 summary: "简约 • 分享"
-active: author
+active: 作者
 
 ---
 
@@ -14,11 +14,11 @@ active: author
 </div>
 
 ## 简介
-- 袁慎建，[ThoughtWorks](https://thoughtworks.com/)敏捷教练
+- 袁慎建 / YUAN SHENJIAN
 
-- PADI潜水员（AOW）
+- ThoughtWorks 咨询师
 
-- 健身爱好者
+- sjyuan@thoughtworks.com
 
 ---
 
