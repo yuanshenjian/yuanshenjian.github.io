@@ -31,10 +31,5 @@ active: about
   ![]({{ site.url }}{{ site.img_path }}{{ '/about/learning-javascript.jpg' }})
 
 - 平板支撑小程序
-  ![]({{ site.url }}{{ site.img_path }}{{ '/about/wechat-little-program-plank.jpg' }})  
+  ![]({{ site.url }}{{ site.img_path }}{{ '/about/wechat-little-program-plank.jpg' }})
 
----
-
-## 技术专题
-
-- [微服务实践]({{ site.url }}{{ '/topics/micro-service'}})
