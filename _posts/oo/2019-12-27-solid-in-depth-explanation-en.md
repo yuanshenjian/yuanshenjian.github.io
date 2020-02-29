@@ -4,7 +4,7 @@ layout: post
 title: "SOLID entrepreneurial story of Mr. Object-Oriented"
 date: 2019-12-27
 categories: [OOD]
-tag: [OO]
+tag: [Object-Oriented Design]
 
 author: "袁慎建"
 published: true
@@ -26,7 +26,7 @@ Main members Introduction:
 - Mr. Yuan: boss, alias Mr. Object-Oriented, Referred to as Yuan
 - Ms. Wu, Ms. Cai, Mr. Xiao, Mr. Shi, Mr Fa, Ms. Ren, Mr. Xing, employees
 
- 
+
 
 After doing so many years of Object-Oriented programming, I still write code that violates the SOLID principles. I understand it at a glance, but am embarrassed when coding. The understanding of SOLID is not enough. What should I do?
 
@@ -50,7 +50,7 @@ SOLID principles are usually abstract, Even developers experienced in OO may not
 
 Yuan has a metal tool rental store. In the early days of the business, he had  two types of customers. Type A customers needed scissors, hammers, wrenches, and chainsaws. Type B customers needed hammers, wrenches, fruit knives, and screwdrivers. For convenience, Yuan would put the six tools in a single toolbox, and rented the toolbox to both types of customers.
 
-Yuan received complaints from those customers after several rentals, because it caused them much trouble. Firstly, having extra two tools made the toolbox heavy and the customers were more exhausted carrying it. Secondly, after they went back home, they would get confused: "What are these two tools, I didn’t borrow them? Are the extra tools value added service? But how should I use it?" Finally, Type A customers, who had never used the fruit knife and the screwdriver, but he had to maintain and take care of the extra two tools, which was inconvenient. Similarly, Type B customers faced the same problem. 
+Yuan received complaints from those customers after several rentals, because it caused them much trouble. Firstly, having extra two tools made the toolbox heavy and the customers were more exhausted carrying it. Secondly, after they went back home, they would get confused: "What are these two tools, I didn’t borrow them? Are the extra tools value added service? But how should I use it?" Finally, Type A customers, who had never used the fruit knife and the screwdriver, but he had to maintain and take care of the extra two tools, which was inconvenient. Similarly, Type B customers faced the same problem.
 
 To improve the customers' experience, Yuan separated the big tool box into two smaller tool boxes based on customers' needs, and rented them to A and B respectively. After that, he received favorable feedback from both types of customers.
 
@@ -106,13 +106,13 @@ After more than half a year of rapid development, the number of people in each d
 - Hold annual meetings
 - Review business licenses
 
-So, if Yuan wanted to deal with reimbursement or pay wages, he can just communicate with Ms. Cai. As for who is doing the work, Yuan did not need to care at all. Certainly, it was much easier for other departments to cooperate with the finance department. Since then, the same process was similarly established in all departments. 
+So, if Yuan wanted to deal with reimbursement or pay wages, he can just communicate with Ms. Cai. As for who is doing the work, Yuan did not need to care at all. Certainly, it was much easier for other departments to cooperate with the finance department. Since then, the same process was similarly established in all departments.
 
-Yuan finally enjoyed the perks of being a boss. Before getting off work, he typed this down: The departments must cooperate through agreed agreements, instead of caring about who is responsible for the agreements within. 
+Yuan finally enjoyed the perks of being a boss. Before getting off work, he typed this down: The departments must cooperate through agreed agreements, instead of caring about who is responsible for the agreements within.
 
 ***[Interpretation of DIP]***
 
-**In the beginning, Yuan went directly to a specific executive in the department to communicate. It means that Yuan relied on the specific implementation details. The communication cost increased every time the executive changed. Later on, he asked Ms. Cai to provide a service list. Here, Ms. Cai acted as an abstraction or interface. After that, he only communicated with Ms. Cai. Yuan changed from relying on specific implementation details to relying on abstraction.** 
+**In the beginning, Yuan went directly to a specific executive in the department to communicate. It means that Yuan relied on the specific implementation details. The communication cost increased every time the executive changed. Later on, he asked Ms. Cai to provide a service list. Here, Ms. Cai acted as an abstraction or interface. After that, he only communicated with Ms. Cai. Yuan changed from relying on specific implementation details to relying on abstraction.**
 
 
 **In software design, DIP advocates that users rely on an abstract service interface, instead of relying on a specific service executor. From relying on a concrete implementation to relying on an abstract interface. That is what "inversion" means.**
@@ -123,11 +123,11 @@ Yuan finally enjoyed the perks of being a boss. Before getting off work, he type
 
 ## Improve work efficiency by single responsibility
 
-Yuan initially assigned Ms.Cai as the head of the four departments of human resources, administration, finance and legal. After the business expanded, he only recruited 10 more people for these departments. Ms. Cai felt very stressed because she had to assign tasks properly to each colleague to ensure that the company can carry out daily activities, personnel assessment, and training and payroll. Also, there are some sensitive activities like business audits, account review and information security audits. 
+Yuan initially assigned Ms.Cai as the head of the four departments of human resources, administration, finance and legal. After the business expanded, he only recruited 10 more people for these departments. Ms. Cai felt very stressed because she had to assign tasks properly to each colleague to ensure that the company can carry out daily activities, personnel assessment, and training and payroll. Also, there are some sensitive activities like business audits, account review and information security audits.
 
 
 
-Ms Cai was clearly tired. There was once she made a blunder at work that almost caused the company to go under. 
+Ms Cai was clearly tired. There was once she made a blunder at work that almost caused the company to go under.
 
 
 
@@ -179,7 +179,7 @@ Before going to bed, Yuan turned on his laptop and typed down the memo: Separati
 
 ## Introduce middleman as reading ambassadors to liberate himself
 
-After several years of expansion, Yuan’s company has been operating well. He started to think about how to build a culture for his company. 
+After several years of expansion, Yuan’s company has been operating well. He started to think about how to build a culture for his company.
 
 Yuan has always attached great importance to reading and he wanted to organize a reading community in the company - a weekly sharing session. In the beginning, he proposed that the administration department and the human resources department should take responsibility for this.The two departments should take turns, and he communicated with each owner.
 
@@ -203,7 +203,7 @@ Yuan was liberated after this adjustment. He no longer needed to worry about whi
 
 As the reading session blossomed in the company, Yuan thought that he would give a 12-month bonus to the one who read the most and shared the most in the year...
 
- 
+
 
 ***[Interpretation of OCP]***
 
@@ -242,7 +242,7 @@ The SOLID principle is actually helping us to design high cohesion and low coupl
 
 Finally, I want to share a key term with the technical staff – user perspective / business perspective:
 
- 
+
 
 We have learned many kinds of techniques(design principles, design patterns, refactoring techniques, etc.).  However, if we forget the original intention and deviate from our goal,  our code may not bring much value no matter how cool and robust it is. We should start from the business need and look at the problem from the user's perspective, then start writing simple and usable code.
 
@@ -250,16 +250,16 @@ We have learned many kinds of techniques(design principles, design patterns, ref
 ---
 
 ## Appreciation
-This article is originally written in [Chinese](https://sjyuan.club/solid-in-depth-explanation/). Thanks to the translation team, the English edition is published now. 
+This article is originally written in [Chinese](https://sjyuan.club/solid-in-depth-explanation/). Thanks to the translation team, the English edition is published now.
 
 #### Translators' recommendation
 
 
-***Yangjie Lu*** from ThoughtWorks China Chengdu Office: 
+***Yangjie Lu*** from ThoughtWorks China Chengdu Office:
 
 > Thanks Shenjian for inviting me write this translator sequence and working with us to translate this blog.《SOLID entrepreneurial story of Mr. Object-Oriented》uses an interesting way to explain what is SOLID principles. It’s easy to understand and impressive, I think it doesn’t only suit for developers, also suits for trainers who are trying to explain the abstract SOLID principles in the form of a story. Recently, I’m working on a team, we have people from five countries, I want to share this blog with them, so I think it’s time to work with our author Shenjian to translate it. Also hope this can share with more people and help more people to understand what is SOLID.
 
- 
+
 
 ***Ruolin Liang*** from ThoughtWorks China Shenzhen Office:
 

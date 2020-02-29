@@ -7,6 +7,7 @@ time: "12:22"
 categories: [API]
 tag: [API Design]
 author: "袁慎建"
+published: false
 
 brief: "
 当下微服务架构的流行趋势下，一个项目或多或少被拆成多个小的服务，服务于服务之间主要采取RESTFul API进行通信。而新衍生的问题是：一个开发团队按照服务被分成多个小的Team，如何有效管理服务之间的API契约？</br></br>

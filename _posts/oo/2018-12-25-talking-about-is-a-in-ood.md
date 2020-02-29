@@ -4,7 +4,7 @@ layout: post
 title: "聊聊面向对象设计中的Is-A"
 date: 2018-12-25
 categories: [OOD]
-tag: [OO]
+tag: [Object-Oriented Design]
 
 author: "袁慎建"
 
@@ -42,7 +42,7 @@ class Man extends Person{ }
 class Person {
     private int age;
     private double height;
-    
+
     public void walk(){ }
 }
 

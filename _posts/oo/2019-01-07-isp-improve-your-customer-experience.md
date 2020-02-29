@@ -4,7 +4,7 @@ layout: post
 title: "接口隔离原则造福使用者"
 date: 2019-01-07
 categories: [OOD]
-tag: [OO]
+tag: [Object-Oriented Design]
 
 author: "袁慎建"
 published: false

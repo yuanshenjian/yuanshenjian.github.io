@@ -4,7 +4,7 @@ layout: post
 title: "让里氏替换原则为你效力"
 date: 2018-12-15
 categories: [OOD]
-tag: [OO]
+tag: [Object-Oriented Design]
 
 author: "袁慎建"
 
@@ -165,12 +165,12 @@ public class Square extends Rectangle {
 @Test
 void should_return_area_when_calculate_given_width_and_height_valid() {
     // Replace with Square
-    Rectangle rectangle = new Rectangle(); 
+    Rectangle rectangle = new Rectangle();
     rectangle.setHeight(3);
     rectangle.setWidth(5);
 
     // 25 if using Square
-    assertThat(rectangle.calculateArea()).isEqualTo(15); 
+    assertThat(rectangle.calculateArea()).isEqualTo(15);
 }
 ```
 
@@ -188,10 +188,10 @@ void should_return_area_when_calculate_given_width_and_height_valid() {
 public abstract class Quads {
     protected int width;
     protected int height;
-    
+
     public abstract void setWidth(int width);
     public abstract void setHeight(int height);
-    
+
     public int calculateArea() { return width * height; }
 }
 ```
