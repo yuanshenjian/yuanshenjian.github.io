@@ -4,7 +4,7 @@ layout: post
 title: "写给OOCL应届生的一封信"
 date: 2019-07-02
 categories: [CAREER]
-tags: [ThoughtWorks]
+tags: [Career]
 
 author: "袁慎建"
 
@@ -42,7 +42,7 @@ ThoughtWorks培训团队多年聚焦在员工的能力培养上，在不断的�
 
 ```
 我们一直在实践中探寻更好的教学方法，身体力行的同时也在帮助更多的真正想学习的人，我们认为：
- 
+
     思维方式 over 现成答案
 
     编程习惯 over 每日作业

@@ -4,7 +4,7 @@ layout: post
 title: "初次做技术领导的3个陷阱"
 date: 2016-03-27
 categories: [CAREER]
-tags: [Career, Tech Lead, Translation]
+tags: [Career]
 
 author: "袁慎建"
 
