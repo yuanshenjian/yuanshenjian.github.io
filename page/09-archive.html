@@ -1,6 +1,6 @@
 ---
 bg: "archive.jpg"
-layout: page
+layout: post
 permalink: /archives/
 title: "ARCHIVE"
 summary: "包罗万象"
@@ -8,6 +8,20 @@ summary: "包罗万象"
 active: 存档
 
 ---
+
+* content
+{:toc}
+
+---
+
+{% for tag in site.tags %}
+{% assign t = tag | first %}
+{% assign posts = tag | last %}
+
+<a href="#{{ t | downcase }}">{{ t }}</a> |
+
+{% endfor %}
+
 
 {% for tag in site.tags %}
   {% assign t = tag | first %}
@@ -31,4 +45,11 @@ active: 存档
     {% endfor %}
   </ul>
 
+
 {% endfor %}
+
+<div class="post-toc">
+  <div class="title"><h4><a href="{{ page.url }}"><i>{{ page.title }}</i></a></h4></div>
+  <div class="separator"><hr/></div>
+  <div class="content"></div>
+</div>
