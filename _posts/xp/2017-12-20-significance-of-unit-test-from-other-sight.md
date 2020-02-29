@@ -3,8 +3,8 @@ layout: post
 
 title: "从另一个角度告诉你单元测试的意义"
 date: 2017-12-20
-categories: [XP]
-tag: [XP, TDD]
+categories: [eXtreme Programming]
+tag: [eXtreme Programming, TDD]
 
 author: "袁慎建"
 

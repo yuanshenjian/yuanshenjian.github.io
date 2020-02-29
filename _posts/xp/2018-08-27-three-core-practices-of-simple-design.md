@@ -3,8 +3,8 @@ layout: post
 
 title: "简单设计落地三板斧"
 date: 2018-08-27
-categories: [XP]
-tag: [XP, Simple Design]
+categories: [eXtreme Programming]
+tag: [eXtreme Programming, Simple Design]
 
 author: "袁慎建"
 
@@ -128,7 +128,7 @@ TDD、重构和整洁代码并不能直接让我们设计出来的代码就天�
 <a id="note-1"></a>
 
 1. 用户故事是极限编程中的一个实践，请参阅 [我在ThoughtWorks中的敏捷实践]({{ site.url }}{{'/first-impressive-agile-experience-in-thoughtworks/'}})
-	
+
 	<a id="note-2"></a>
 
 2. 关于编码Kata，欢迎访问 <http://www.cyber-dojo.org/>

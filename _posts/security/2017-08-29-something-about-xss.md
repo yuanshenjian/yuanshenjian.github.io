@@ -3,8 +3,8 @@ layout: post
 
 title: "XSS的那些事儿"
 date: 2017-08-29
-categories: [Security]
-tag: [Web Security]
+categories: [Web]
+tag: [Web Development]
 
 author: "袁慎建"
 
@@ -113,7 +113,7 @@ JavaScript同时会处理用户输入并将其渲染出来。如果用户输入�
 在安全架构方面，我们对JavaScript的定位是 *仅用于提高用户体验*。所以浏览器校验只是用来防君子，根本上需要在服务器端搭设一层可靠的防御网。针对双重校验，我们可以的事情主要有：
 
 ```
-1. 严格控制输入的格式，比如年龄的input中，只允许用户输入数字。 
+1. 严格控制输入的格式，比如年龄的input中，只允许用户输入数字。
 2. 对数据进行HTMLEncode处理，对URL进行URLEncode。
 2. 过滤或移除特殊的HTML标签。例如: <script>, <iframe>, &lt; for <, &gt; for >, &quot for等
 3. 过滤JavaScript事件的标签。例如 "onclick=", "onfocus" 等。

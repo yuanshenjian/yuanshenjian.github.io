@@ -3,9 +3,8 @@ layout: post
 
 title: "解析简单设计原则"
 date: 2018-08-02
-categories: [XP]
-tag: [XP, Simple Design]
-
+categories: [eXtreme Programming]
+tag: [eXtreme Programming, Simple Design]
 author: "袁慎建"
 
 brief: "
@@ -194,7 +193,7 @@ Kent Beck提出的简单设计原则更多关注的是代码设计，其实当�
 	- Runs all the tests
 	- Has no duplicated logic. Be wary of hidden duplication like parallel class hierarchies
 	- States every intention important to the programmer
-	- Has the fewest possible classes and methods 	
+	- Has the fewest possible classes and methods
 <a id="note-2"></a>
 
 2. 参考Martin Fowler博客 [BeckDesignRules](https://martinfowler.com/bliki/BeckDesignRules.html#footnote-kent-empathy)

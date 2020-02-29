@@ -232,7 +232,7 @@ hr {
   }
 }
 
-.post-toc {
+.post-toc, .archive-toc{
   display: none;
 }
 
@@ -247,11 +247,34 @@ hr {
     text-decoration: none;
   }
   a:hover {
-    color: #160da5;
+    color: #a58b0c;
   }
 }
 
-.post-toc {
+.archive-toc {
+  ul{
+    line-height:20px;
+  }
+}
+.archive-content, .archive-toc-top {
+  padding: 1em 1em;
+}
+
+.archive-toc-top {
+  padding-left: 20px;
+  font-size: 14px;
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    color: #a58b0c;
+  }
+  #selected {
+    color: #a53848;
+  }
+}
+
+.post-toc, .archive-toc {
   font-size: 15px;
   ul {
     list-style: none;
@@ -260,8 +283,17 @@ hr {
     text-decoration: none;
   }
   a:hover {
-    color: #160da5;
+    color: #a59816;
   }
+
+}
+
+#selected {
+  color: #a59816;
+}
+
+#unselected {
+  color: #2156a5;
 }
 
 .junit5-versions {
@@ -298,14 +330,14 @@ hr {
 }
 
 @media screen and (min-width: $break-point) {
-  .post-toc {
+  .post-toc, .archive-toc {
     max-height: 100%;
     height: 100%;
     overflow-y: scroll;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #f8f8f7;
+    background-color: #fafaf9;
     width: $aside-width;
 
     .title, .separator {

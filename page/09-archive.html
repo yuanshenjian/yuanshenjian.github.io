@@ -1,6 +1,6 @@
 ---
 bg: "archive.jpg"
-layout: post
+layout: default
 permalink: /archives/
 title: "ARCHIVE"
 summary: "包罗万象"
@@ -9,21 +9,20 @@ active: 存档
 
 ---
 
-* content
-{:toc}
 
----
+<div class="archive-toc-top">
+  {% for tag in site.tags %}
+  {% assign t = tag | first %}
+  {% assign posts = tag | last %}
 
-{% for tag in site.tags %}
-{% assign t = tag | first %}
-{% assign posts = tag | last %}
+  <a href="#{{ t | downcase }}" class="selected">{{ t }}</a> &nbsp;&nbsp;
 
-<a href="#{{ t | downcase }}">{{ t }}</a> |
+  {% endfor %}
 
-{% endfor %}
+</div>
 
-
-{% for tag in site.tags %}
+<div class="archive-content">
+  {% for tag in site.tags %}
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
 
@@ -31,25 +30,33 @@ active: 存档
 
   <ul class="categories">
     {% for post in posts %}
-      {% if post.tags contains t %}
-        <li>
-          {% if post.lastmod %}
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <span class="date">{{ post.lastmod | date: "%Y-%m-%d"  }}</span>
-          {% else %}
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
-          {% endif %}
-        </li>
+    {% if post.tags contains t %}
+    <li>
+      {% if post.lastmod %}
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span class="date">{{ post.lastmod | date: "%Y-%m-%d"  }}</span>
+      {% else %}
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
       {% endif %}
+    </li>
+    {% endif %}
     {% endfor %}
   </ul>
 
+  {% endfor %}
+</div>
 
-{% endfor %}
-
-<div class="post-toc">
-  <div class="title"><h4><a href="{{ page.url }}"><i>{{ page.title }}</i></a></h4></div>
-  <div class="separator"><hr/></div>
-  <div class="content"></div>
+<div class="archive-toc">
+  <div class="title"><h4>所有类别</h4></div>
+  <div class="separator">
+    <hr/>
+  </div>
+  <div class="content">
+    {% for tag in site.tags %}
+    {% assign t = tag | first %}
+    {% assign posts = tag | last %}
+    <ul><a href="#{{ t | downcase }}">{{ t }}</a></ul>
+    {% endfor %}
+  </div>
 </div>

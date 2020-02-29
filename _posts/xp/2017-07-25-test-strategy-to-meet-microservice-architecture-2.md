@@ -3,8 +3,8 @@ layout: post
 
 title: "微服务架构下的测试应对策略（下）"
 date: 2017-07-25
-categories: [XP]
-tag: [XP, TDD]
+categories: [eXtreme Programming]
+tag: [eXtreme Programming, TDD]
 
 author: "袁慎建"
 
@@ -78,7 +78,7 @@ Martin Fowller 在2012年的 [测试金字塔理论](https://martinfowler.com/bl
 
 [ThoughtWorks技术雷达](https://www.thoughtworks.com/radar/techniques/consumer-driven-contract-testing) 于2016年已经正式采纳消费者驱动契约测试。
 
->We’ve decided to bring consumer-driven contract testing back from the archive for this edition even though we had allowed it to fade in the past. 
+>We’ve decided to bring consumer-driven contract testing back from the archive for this edition even though we had allowed it to fade in the past.
 
 微服务架构的盛行促使越来越多的开发团队开始引入CDCT，逐渐淡化UI测试。团队的测试策略正在发生不同的演变：
 
