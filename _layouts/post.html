@@ -20,6 +20,7 @@ layout: default
     {{ content }}
 
     <hr/>
+    <div class="height-50"></div>
 <!--    {% include author-information.html %}-->
     <div class="edition-claim">
       Posted by <a href="{{ site.url }}{{ '/about' }}">{{ site.author.name }}@ThoughtWorks</a> • {{ page.date | date: "%B " }}
@@ -32,8 +33,6 @@ layout: default
         href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative
         Commons
         BY-NC-ND 4.0</a>
-      </p>
-      </p>
       <div>原文链接：<a href="{{ page.url }}">{{ site.url}}{{ page.url }}</a></div>
       <div>
         <a class="personal-wechat" onmouseenter="showQRCode('personal-receipt-qr-code')"
@@ -42,7 +41,7 @@ layout: default
         <div class="personal-receipt-qr-code" id="personal-receipt-qr-code"></div>
       </div>
     </div>
-    <div class="height-50"></div>
+    <div class="height-30"></div>
     <div class="row">
       <div class="col-lg-12">
         {% include share.html %}
