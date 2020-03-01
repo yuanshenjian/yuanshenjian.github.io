@@ -14,7 +14,7 @@ author:
   first_name: Shenjian
   last_name: Yuan
   avatar: /static/assets/img/landing/avatar.jpg
-  github_username: sjyuan-cc
+  github_username: yuanshenjian
   linkedin_id:
   facebook_username:
   twitter_username:
@@ -54,7 +54,7 @@ compress_html:
 
 gitalk:
   clientID: '0b21881f88d50f192dd2'
-  clientSecret: 'e72699eb777853101da0ad0b8eca2abf0ff693df'
-  repo: 'sjyuan-cc.github.io'
-  owner: 'sjyuan-cc'
-  admin: ['sjyuan-cc']
+  clientSecret: '0ef973c404b0680248f396ee59be3492adcc1e07'
+  repo: 'yuanshenjian.github.io'
+  owner: 'yuanshenjian'
+  admin: ['yuanshenjian']
