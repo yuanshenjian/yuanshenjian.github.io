@@ -15,10 +15,6 @@ active: 作者
 
 - **邮箱**：sjyuan@thoughtworks.com
 
-- **简书**：[https://www.jianshu.com](<https://www.jianshu.com/u/c379cdabd121>)
-
-- **GitHub**：<https://github.com/yuanshenjian>
-
 ---
 
 #### 业余作品
