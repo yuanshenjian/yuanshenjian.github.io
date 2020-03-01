@@ -32,7 +32,6 @@ function enableTocToggle() {
           $(".archive-toc").css("display", "none");
         }
       }
-
     });
   } else {
     $(".post-toc").css("display", "none");
