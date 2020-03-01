@@ -9,11 +9,15 @@ active: 作者
 ---
 
 #### 作者简介
-- 姓名：袁慎建 / YUAN SHENJIAN
+- **姓名**：袁慎建 / YUAN SHENJIAN
 
-- 职业：ThoughtWorks 咨询师
+- **职业**：ThoughtWorks 咨询师
 
-- 邮箱：sjyuan@thoughtworks.com
+- **邮箱**：sjyuan@thoughtworks.com
+
+- **简书**：[https://www.jianshu.com](<https://www.jianshu.com/u/c379cdabd121>)
+
+- **GitHub**：<https://github.com/yuanshenjian>
 
 ---
 
