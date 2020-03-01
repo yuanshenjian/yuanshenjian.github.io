@@ -8,16 +8,16 @@ active: 作者
 
 ---
 
-#### 简介
-- 袁慎建 / YUAN SHENJIAN
+#### 作者简介
+- 姓名：袁慎建 / YUAN SHENJIAN
 
-- ThoughtWorks 咨询师
+- 职业：ThoughtWorks 咨询师
 
-- sjyuan@thoughtworks.com
+- 邮箱：sjyuan@thoughtworks.com
 
 ---
 
-#### 小作品
+#### 业余作品
 - [JavaScript学习指南: 让网页变得栩栩如生的艺术 第3版](https://item.jd.com/12123997.html)
 - 平板支撑小程序
 
