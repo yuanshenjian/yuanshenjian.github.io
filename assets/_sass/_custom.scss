@@ -323,14 +323,49 @@ hr {
   min-height: 300px;
 }
 
-
 @media only screen and (min-width: 420px) {
   .personal-receipt-qr-code {
     background-image: url('/assets/images/qr-code-receipt-horizontal.png');
     width: 395px;
     height: 220px;
   }
+  .header-icons {
+    isplay: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    a {
+      border: none!important;
+    }
+    .icon:hover{
+      color: #000000;
+      background-color: #fff;
+    }
+    .icon {
+      width: 40px;
+      height: 40px;
+      font-size: 30px;
+      line-height: 30px;
+      padding: 10px;
+      border-radius: 50%;
+      margin: auto;
+      border: 2px solid #fff;
+      color: #fff;
+      text-align: center;
+    }
+    .fa {
+      display: inline-block;
+      font: 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
 }
+
 
 @media screen and (min-width: $break-point) {
   .post-toc, .archive-toc {
