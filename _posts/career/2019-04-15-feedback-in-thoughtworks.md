@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "在ThoughtWorks，你应该知道的Feedback"
+title: "在ThoughtWorks，希望你知道的Feedback"
 date: 2019-04-15
 categories: [CAREER]
 tags: [Career]
