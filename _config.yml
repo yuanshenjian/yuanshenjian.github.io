@@ -51,3 +51,10 @@ compress_html:
   comments: ["<!-- ", " -->"]
   clippings: all
   endings: all
+
+gitalk:
+  clientID: '0b21881f88d50f192dd2'
+  clientSecret: 'e72699eb777853101da0ad0b8eca2abf0ff693df'
+  repo: 'sjyuan-cc.github.io'
+  owner: 'sjyuan-cc'
+  admin: ['sjyuan-cc']

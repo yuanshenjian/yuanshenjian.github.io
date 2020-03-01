@@ -41,7 +41,6 @@ layout: default
            onmouseover="showQRCode('personal-receipt-qr-code')" href="javascript:void(0);">支持原创</a>
         <div class="personal-receipt-qr-code" id="personal-receipt-qr-code"></div>
       </div>
-
     </div>
     <div class="height-50"></div>
     <div class="row">
@@ -50,19 +49,7 @@ layout: default
       </div>
     </div>
 
-    <div id="gitalk-container"></div>
-    <script>
-      var gitTalk = new Gitalk({
-        clientID: '0b21881f88d50f192dd2',
-        clientSecret: 'e72699eb777853101da0ad0b8eca2abf0ff693df',
-        repo: 'sjyuan-cc.github.io',
-        owner: 'sjyuan-cc',
-        admin: ['sjyuan-cc'],
-        id: location.pathname,
-        distractionFreeMode: false
-      });
-      gitTalk.render('gitalk-container');
-    </script>
+    {% include comments.html %}
 
     <div class="post-links">
       {% if page.next.url %}

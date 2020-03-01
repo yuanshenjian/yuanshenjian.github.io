@@ -22,3 +22,6 @@ active: 作者
 - 平板支撑小程序
 
   ![]({{ site.url }}{{ site.img_path }}{{ '/about/little-products.jpg' }})
+
+
+{% include comments.html %}
