@@ -32,11 +32,11 @@ function enableTocToggle() {
           $(".archive-toc").css("display", "none");
         }
       }
-      if ($(window).width() <= 960) {
-        $(".post-toc").css("display", "none");
-        $(".archive-toc").css("display", "none");
-      }
+
     });
+  } else {
+    $(".post-toc").css("display", "none");
+    $(".archive-toc").css("display", "none");
   }
 }
 
