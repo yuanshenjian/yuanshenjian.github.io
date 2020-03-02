@@ -21,7 +21,7 @@ active: 作者
 - [JavaScript学习指南: 让网页变得栩栩如生的艺术 第3版](https://item.jd.com/12123997.html)
 - 平板支撑小程序
 
-  ![]({{ site.url }}{{ site.img_path }}{{ '/about/little-products.jpg' }})
+  ![]({{ site.url }}{{ site.img_path }}{{ '/author/little-products.jpg' }})
 
 
 {% include comments.html %}
