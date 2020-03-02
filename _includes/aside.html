@@ -1,7 +1,9 @@
-{% if page.bg %}
-<aside class="sidebar" role="note" style="background-image: url({{ site.url }}{{ site.img_path }}/{{ page.bg }})">
+{% if page.permalink contains "author" %}
+<aside class="sidebar sidebar-auth" role="note">
+  {% elsif page.permalink contains "archive"  %}
+  <aside class="sidebar sidebar-archive" role="note">
   {% else %}
-  <aside class="sidebar" role="note" style="background-image: url({{ site.url }}{{ site.img_path }}/writing.jpg)">
+  <aside class="sidebar sidebar-home" role="note">
     {% endif %}
 
     <div class="cover">
