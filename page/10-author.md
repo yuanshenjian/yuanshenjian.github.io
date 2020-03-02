@@ -13,15 +13,12 @@ active: 作者
 
 - **职业**：ThoughtWorks 咨询师
 
+- **领域**：敏捷软件开发
+
+- **兴趣**：健身 && 多种球类运动
+
 - **邮箱**：sjyuan@thoughtworks.com
 
----
-
-#### 业余作品
-- [JavaScript学习指南: 让网页变得栩栩如生的艺术 第3版](https://item.jd.com/12123997.html)
-- 平板支撑小程序
-
-  ![]({{ site.url }}{{ site.img_path }}{{ '/author/little-products.jpg' }})
 
 
 {% include comments.html %}
