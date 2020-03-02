@@ -98,11 +98,6 @@
 }
 
 
-
-.nav-main {
-  //display: none;
-}
-
 @media screen and (min-width: $break-point) {
   table {
     display: table;
@@ -118,8 +113,6 @@
   }
 
   .nav-main {
-    // Toggle for junit pdf
-    //display: none;
     padding: 0;
     text-align: left;
     a {
