@@ -1,4 +1,4 @@
- $(document).ready(function () {
+$(document).ready(function () {
   var initial = 0;
   var show = true;
 
@@ -27,7 +27,7 @@
     }
   });
 
-	$("#search-content").keyup(function (e) {
+  $("#search-content").keyup(function (e) {
     var now = new Date().getTime();
     if (e.keyCode == 17 && shouldToggle(now)) {
       toggleSearch(show);
@@ -39,7 +39,7 @@
     toggleSearch(false);
   });
 
-  $("#search-btn").click(function() {
+  $("#search-btn").click(function () {
     toggleSearch(true);
     $("#search-content").focus();
   });
@@ -58,4 +58,12 @@
         });
       }
     });
+
+  if ($(window).width() > 640) {
+    $.ajax({
+    }).done(function () {
+      $('.sidebar').css({"background-image": "url('/assets/images/site/sidebar-home.jpg')"});
+    });
+  }
+
 });
