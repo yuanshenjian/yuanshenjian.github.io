@@ -59,9 +59,10 @@ $(document).ready(function () {
       }
     });
 
-  if ($(window).width() > 640) {
+  if ($(window).width() > 960) {
     $.ajax({
-    }).done(function () {
+      url: '/assets/images/site/sidebar-home.jpg'
+    }).done(function (data) {
       $('.sidebar').css({"background-image": "url('/assets/images/site/sidebar-home.jpg')"});
     });
   }
