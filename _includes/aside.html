@@ -1,9 +1,9 @@
 {% if page.permalink contains "author" %}
-<aside class="sidebar sidebar-auth" role="note">
+<aside class="sidebar" type = "author" role="note">
   {% elsif page.permalink contains "archive"  %}
-  <aside class="sidebar sidebar-archive" role="note">
+  <aside class="sidebar" type = "archive" role="note">
   {% else %}
-  <aside class="sidebar sidebar-home" role="note">
+  <aside class="sidebar" type = "home" role="note">
     {% endif %}
 
     <div class="cover">

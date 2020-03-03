@@ -363,15 +363,3 @@ article {
     display: none;
   }
 }
-
-@media screen and (min-width: $md-break-point) {
-  .sidebar-home {
-    //background-image: url('/assets/images/site/sidebar-home.jpg')
-  }
-  .sidebar-auth {
-    //background-image: url('/assets/images/site/sidebar-author.jpg')
-  }
-  .sidebar-archive {
-    //background-image: url('/assets/images/site/sidebar-archive.jpg')
-  }
-}
