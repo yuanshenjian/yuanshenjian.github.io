@@ -2,7 +2,7 @@
 bg: "about-sjyuan.jpg"
 layout: page
 title: "作者"
-permalink: /author/
+permalink: /me/
 summary: "简约 • 分享"
 active: 作者
 
