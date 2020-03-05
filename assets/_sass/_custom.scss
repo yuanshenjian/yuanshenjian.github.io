@@ -368,6 +368,11 @@ hr {
   }
 }
 
+@media screen and (min-width: $md-break-point) {
+  .author-header{
+    display: none;
+  }
+}
 
 @media screen and (min-width: $break-point) {
   .post-toc, .archive-toc {

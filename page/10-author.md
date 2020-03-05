@@ -8,7 +8,10 @@ active: 作者
 
 ---
 
+{% include author-header.html %}
+
 #### 作者简介
+
 - **姓名**：袁慎建 / YUAN SHENJIAN
 
 - **职业**：ThoughtWorks 咨询师
