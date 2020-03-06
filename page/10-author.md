@@ -1,5 +1,5 @@
 ---
-bg: "about-sjyuan.jpg"
+bg: "author"
 layout: page
 title: "作者"
 permalink: /me/

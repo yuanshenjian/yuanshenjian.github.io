@@ -1,65 +1,58 @@
-{% if page.permalink contains "me" %}
-<aside class="sidebar sidebar-author" role="note">
-  {% elsif page.permalink contains "archive" %}
-  <aside class="sidebar sidebar-archive" role="note">
-    {% else %}
-    <aside class="sidebar sidebar-home" role="note">
+<aside class="sidebar sidebar-{{page.bg}}" role="note">
+  <div class="cover">
+    <div class="cover-text">
+      <div class="heading">
+        <!--{{ page.title }}-->
+
+        {% if page.tags %}
+        <a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a>
+        <hr>
+        {% for tag in page.tags %}
+        <div class="tag"><a href="/archives/#{{ tag | downcase }}">{{ tag }}</a></div>
+        {% endfor %}
+        {% else %}
+        <a href="{{ site.url }}{{ page.permalink }}">{{ page.title }}</a>
+        {% endif %}
+
+      </div>
+
+      {% if page.summary %}
+      <hr>
+      <p>
+        {{ page.summary }}
+      </p>
       {% endif %}
-
-      <div class="cover">
-        <div class="cover-text">
-          <div class="heading">
-            <!--{{ page.title }}-->
-
-            {% if page.tags %}
-            <a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a>
-            <hr>
-            {% for tag in page.tags %}
-            <div class="tag"><a href="/archives/#{{ tag | downcase }}">{{ tag }}</a></div>
-            {% endfor %}
-            {% else %}
-            <a href="{{ site.url }}{{ page.permalink }}">{{ page.title }}</a>
-            {% endif %}
-
-          </div>
-
-          {% if page.summary %}
-          <hr>
-          <p>
-            {{ page.summary }}
-          </p>
-          {% endif %}
-          <div class="height-80"></div>
-          <div class="header-icons">
-            <a aria-label="My Home Page" href="{{ site.url }}"><i class="icon fa fa-home" aria-hidden="true"></i></a>
-            <a aria-label="My JianShu" target="_blank" href="{{site.author.jianshu}}"><i
-              class="icon fa"><b>简</b></i></a>
-            <a aria-label="My Github" target="_blank" href="https://github.com/{{site.author.github_username}}"><i
-              class="icon fa fa-github-alt" aria-hidden="true"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div id="switcher"></div>
-    </aside>
-
-    <div class="search-tool">
-      <input type="text" class="form-control search-content" id="search-content"
-             placeholder="搜索文章...">
-
-      <div class="close-search">
-        <img src="{{ site.url }}{{ site.img_path }}/site/search/close.png" id="close-btn"/>
+      <div class="height-80"></div>
+      <div class="header-icons">
+        <a aria-label="My Home Page" href="{{ site.url }}"><i class="icon fa fa-home" aria-hidden="true"></i></a>
+        <a aria-label="My JianShu" target="_blank" href="{{site.author.jianshu}}"><i
+          class="icon fa"><b>简</b></i></a>
+        <a aria-label="My Github" target="_blank" href="https://github.com/{{site.author.github_username}}"><i
+          class="icon fa fa-github-alt" aria-hidden="true"></i></a>
       </div>
     </div>
+  </div>
 
-    <div class="search" id="search">
-      <img src="{{ site.url }}{{ site.img_path }}/site/search/search.png" id="search-btn"
-           title="Double click Ctrl"/>
-    </div>
+  <div id="switcher"></div>
+</aside>
 
-    <div id="back-to-top" data-toggle="tooltip" class="back-to-top" data-placement="left" title="回到顶部">
-      <a href="javascript:void(0);">
-        <div class="arrow"></div>
-        <div class="stick"></div>
-      </a>
-    </div>
+<div class="search-tool">
+  <input type="text" class="form-control search-content" id="search-content"
+         placeholder="搜索文章...">
+
+  <div class="close-search">
+    <img src="{{ site.url }}{{ site.img_path }}/site/search/close.png" id="close-btn"/>
+  </div>
+</div>
+
+<div class="search" id="search">
+  <img src="{{ site.url }}{{ site.img_path }}/site/search/search.png" id="search-btn"
+       title="Double click Ctrl"/>
+</div>
+
+<div id="back-to-top" data-toggle="tooltip" class="back-to-top" data-placement="left" title="回到顶部">
+  <a href="javascript:void(0);">
+    <div class="arrow"></div>
+    <div class="stick"></div>
+  </a>
+</div>
