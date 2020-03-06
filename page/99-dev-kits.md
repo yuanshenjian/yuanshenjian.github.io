@@ -2,7 +2,7 @@
 bg: "kits"
 layout: post
 title: "开发者工具箱"
-permalink: /dev-kits/
+permalink: /dev-kits
 summary: "高效 • 实用"
 
 ---
