@@ -14,7 +14,7 @@ author: "袁慎建"
 
 ---
 
-我在阅读Bob大叔的《敏捷软件开发：原则、模式与实践》第十章的时候第一次接触`Design by Contract`这个概念。Bob大叔在讲解面向对象设计SOLID原则中的LSP(Liskov Substitution Principle)的时候借助DBC来支撑LSP。
+我在阅读Bob大叔的《敏捷软件开发：原则、模式与实践》第十章的时候第一次接触`Design by Contract`这个概念。Bob大叔在讲解面向对象设计SOLID原则中的LSP(Liskov Substitution Principle)的时候借助DBC来支撑LSP[1]。
 
 
 当时的场景是这样子的：
@@ -98,7 +98,7 @@ public class Client {
 
 1. 对象的行为方式才是软件真正所关注的问题。
 2. 行为方式是可以进行合理假设的，它是客户程序所依赖的。
-3. 在OOD中，IS-A的关系是就行为而言的。
+3. 在OOD中，IS-A的关系是就行为而言的[2]。
 
 
 
@@ -106,10 +106,12 @@ public class Client {
 
 聊了这么多，说起来我们好像是在基于用户的合理假设来审视我们的模型设计，而这种用户的合理假设可能会让人觉得心里不踏实，如何才能知道客户的真正要求呢？Bob大叔提到了一项技术，也就是我们要聊的主题DBC (Design By Contract)，能够帮助明确用户的合理的假设。
 
-当然这个技术不是他原创的，下一篇文章我会来聊聊DBC到底是个什么东西？
+下一篇文章我会来聊聊DBC到底是个什么东西？
 
 
 
 ## 参考阅读
 
+1. [听面向对象先生聊SOLID创业故事]({{site.url}}{{'/solid-in-depth-explanation'}})
+2. [聊聊面向对象设计中的Is-A]({{site.url}}{{'/talking-about-is-a-in-ood'}})
 
