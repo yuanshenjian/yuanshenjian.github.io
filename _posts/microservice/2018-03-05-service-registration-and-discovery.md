@@ -9,6 +9,8 @@ author_index: https://www.jianshu.com/u/2db65e841261
 categories: [Micro Service]
 tag: [Workshop@Micro Service]
 
+published: false
+
 brief: "
 微服务治理Workshop系列之服务注册与发现。
 "
@@ -171,7 +173,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 dependencies {
      ...
      compile('org.springframework.cloud:spring-cloud-starter-feign')
-     ... 
+     ...
 }
 ```
 
@@ -193,7 +195,7 @@ public class MstOrderServiceApplication {
 接下来在`mst-order-service`创建一个接口测试服务之间的调用：
 
 ```java
-@FeignClient("mst-user-service")  
+@FeignClient("mst-user-service")
  public interface UserClient {
      @GetMapping("/api/users/names")
      List<String> getUserNames();

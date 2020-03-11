@@ -8,6 +8,8 @@ author: 袁慎建
 categories: [Micro Service]
 tag: [Workshop@Micro Service]
 
+published: false
+
 brief: "
 微服务治理Workshop系列之部署，使用Rancher部署服务。
 "
@@ -36,7 +38,7 @@ brief: "
 同样，在Vagrant VM(`10.29.5.155`)中将Go server、Go agent容器启动（如果已启动可以跳过）：
 
 ```sh
-$ docker ps -a 
+$ docker ps -a
 $ docker start <go_service_contain_id>
 $ docker start <go_agent_contain_id>
 ```
@@ -140,7 +142,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'dev';
 
 ```
 $ cd ~/mst
-$ docker-compose up -d 
+$ docker-compose up -d
 ```
 
 ---

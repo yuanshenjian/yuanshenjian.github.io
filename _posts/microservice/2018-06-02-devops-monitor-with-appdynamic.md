@@ -8,7 +8,7 @@ author_index: https://www.jianshu.com/u/6d9b0af2d0af
 
 categories: [Micro Service]
 tag: [Workshop@Micro Service]
-
+published: false
 brief: "
 微服务治理Workshop系列之运营监控篇。
 "
@@ -20,7 +20,7 @@ brief: "
 
 ---
 
-## AppDynamic是什么 
+## AppDynamic是什么
 Appdynamics 是一种**服务性能监控/管理工具**，主要包含两种功能：
 1. 终端用户性能体验监控
 2. 计算资源监控
@@ -35,11 +35,11 @@ Appdynamics 是一种**服务性能监控/管理工具**，主要包含两种功
 
 ### 微服务本身的复杂度带来的问题
 > 微服务的特点决定了功能模块的部署是分布式的，以往在单应用环境下，所有的业务都在同一个服务器上，如果服务器出现错误和异常，我们只要盯住一个点，就可以快速定位和处理问题，但是在微服务的架构下，大部分功能模块都是单独部署运行的，彼此通过总线交互，都是无状态的服务，这种架构下，前后台的业务流会经过很多个微服务的处理和传递，我们难免会遇到这样的问题：
-> 
-1. 分散在各个服务器上的日志怎么处理？ 
-2. 如果业务流出现了错误和异常，如何定位是哪个点出的问题？ 
-3. 如何快速定位问题？ 
-4. 如何跟踪业务流的处理顺序和结果？   
+>
+1. 分散在各个服务器上的日志怎么处理？
+2. 如果业务流出现了错误和异常，如何定位是哪个点出的问题？
+3. 如何快速定位问题？
+4. 如何跟踪业务流的处理顺序和结果？
 >
 我们发现，以前在单应用下的日志监控很简单，在微服务架构下却成为了一个大问题，如果无法跟踪业务流，无法定位问题，我们将耗费大量的时间来查找和定位问题，在复杂的微服务交互关系中，我们就会非常被动。
 
@@ -82,7 +82,7 @@ appdynamics 会收集同一个一段时间内的处理情况，从中可以查�
 为了方便起见，使用 spring.io 上的例子，选取一个简单的 REST service 作为试验使用，执行下面的命令克隆并构建 jar 包
 
 ```shell
-git clone https://github.com/spring-guides/gs-rest-service.git 
+git clone https://github.com/spring-guides/gs-rest-service.git
 cd gs-rest-service
 cd complete
 ./gradlew build

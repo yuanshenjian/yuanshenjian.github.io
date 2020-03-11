@@ -8,7 +8,7 @@ author_index: https://www.jianshu.com/u/46c6cdbb1d7d
 
 categories: [Micro Service]
 tag: [Workshop@Micro Service]
-
+published: false
 brief: "
 微服务治理Workshop系列之日志管理篇。
 "
@@ -64,13 +64,13 @@ Fluentd是一个开源的数据收集器，专为处理数据流设计，使用J
 在这个图中，上下两个框分别表示使用Fluentd前后的日志收集。在第二个框中，Consul能够使用灵活的key/value仓库去存储动态配置。而confd能够使用从consul来的模版管理本地配置。
 
 ---
-	
+
 ## 搭建EFK
 根据fluent官网，我们搭建了EFK项目，项目目录结构如下：
 
 ```
 mst-efk/
- esticasearch/   
+ esticasearch/
  filebeat/
  fluentd/
  kibana/

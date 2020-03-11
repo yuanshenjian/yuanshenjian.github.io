@@ -8,6 +8,7 @@ author: 袁慎建
 categories: [Micro Service]
 tag: [Workshop@Micro Service]
 
+published: false
 brief: "
 微服务治理Workshop系列之集中配置服务中心。
 "

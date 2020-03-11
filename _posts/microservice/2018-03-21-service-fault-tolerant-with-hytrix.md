@@ -9,6 +9,7 @@ author_index: https://www.jianshu.com/u/2db65e841261
 categories: [Micro Service]
 tag: [Workshop@Micro Service]
 
+published: false
 brief: "
 微服务治理Workshop系列之服务容错，主要涉及服务熔断和服务降级。
 "
@@ -87,7 +88,7 @@ public class GoodClientFallback implements GoodsClient {
 为了保证高可用性，我们需要做到：
 
 - 服务N挂的时候，断开与服务N-1之间的调用关系
-- 服务N-1在服务N挂的时候，还能正常运行 
+- 服务N-1在服务N挂的时候，还能正常运行
 
 所以，为了达到上述目标，我们就需要引入断路器来做服务容错保护。
 

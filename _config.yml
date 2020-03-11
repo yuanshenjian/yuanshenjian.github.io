@@ -5,6 +5,7 @@ baseurl: ""
 permalink: /:title/
 url: https://yuanshenjian.cn
 img_path: /assets/images
+image_path_post: /assets/images/post/
 
 junit:
   current_version: 5.3.0

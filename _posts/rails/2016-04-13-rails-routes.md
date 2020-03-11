@@ -6,6 +6,7 @@ date: 2016-04-13
 categories: [RAILS]
 tag: [Rails]
 author: "袁慎建"
+published: false
 brief: "
 Rails中URL的约定严格基于 <i>RESTful</i> 风格的。客户端的请求其实是在操作一些资源，同一资源的不同的请求动作(<i>GET, POST, PUT, PATCH, DELETE</i>)分别对资源进行不同的操作(CRUD)。默认的情况下，我们只需要在routes.rb文件中配置好资源，Rails会为该资源生成7种不同的路由，根据路由就可以将客户端的请求转交给服务端对应的控制器进行处理，然后做出正确的响应。Rails Route能识别这种资源式(<i>RESTful</i>风格)的路由以及非资源式的路由，它是客户端请求和服务端控制器的粘合剂，能将URL分发给控制器进行处理。
 
@@ -38,7 +39,7 @@ Rails路由主要有两个作用，首先作为客户端请求和服务端控制
 get '/articles/:id', to: 'articles#show'，
 ```
 - 这个请求就会被交给`articles`控制器中的`show`动作处理，并把`{ id: '17' }`传入params
-	
+
 	```ruby
 	get '/articles/:id', to: 'articles#show'，
 	```
@@ -52,21 +53,21 @@ get '/articles/:id', to: 'articles#show', as: 'article'
 ```
 
 在控制器中有
-	
+
 ```ruby
 @article = Article.find(17)
 ```
 
 视图中有
-	
+
 ```ruby
 <%= link_to 'Article Record', article_path(@patient) %>
 ```
-	
+
 `article_path(@patient)`会生成路径`/articles/17`。
 
 
->**提示**  
+>**提示**
 >路由是按照顺序定匹配的，一旦匹配成功就会寻找对应的控制器动作。
 
 
@@ -179,7 +180,7 @@ edit_geocoder GET    /geocoder/edit(.:format) geocoders#edit
 - `geocoder_path`， 返回 `/geocoder`
 
 
->**提示**  
+>**提示**
 >单数资源使用场景不是很多，了解怎么使用即可。
 
 
@@ -239,7 +240,7 @@ end
 ```
 - 上面资源嵌套后会生成`/publishers/1/magazines/2/photos/3`这样的路由。这种路由嵌套层次多，可读性不高，而且处理起来也比较复杂。
 
->**最佳实践**  
+>**最佳实践**
 >嵌套资源不要超过一层，可以使用浅层嵌套来解决这个问题。
 
 ---
@@ -324,7 +325,7 @@ new_article_comment GET    /articles/:article_id/comments/new(.:format) comments
 concern :commentable do
   resources :comments
 end
- 
+
 concern :image_attachable do
   resources :images, only: :index
 end
@@ -340,7 +341,7 @@ resources :articles, concerns: [:commentable, :image_attachable]
 resources :messages do
   resources :comments
 end
- 
+
 resources :articles do
   resources :comments
   resources :images, only: :index
@@ -419,7 +420,7 @@ end
 ```
 - 上述资源定义能识别 `/comments/new/preview` 是个 GET 请求，映射到 `CommentsController` 的 `preview` 动作上。同时还会生成 `preview_new_comment_url` 和 `preview_new_comment_path` 两个路由帮助方法
 
->**警告**  
+>**警告**
 >如果在资源式路由中添加了过多额外动作，这时就要停下来问自己，是不是要新建一个资源。
 
 
@@ -450,7 +451,7 @@ get ':controller/:action/:id/with_user/:user_id'
 ```
 - 这个路由能响应 `/photos/show/1/with_user/2` 这种路径。此时，`params` 的值为 `{ controller: 'photos', action: 'show', id: '1', user_id: '2' }`。
 
->警告  
+>警告
 >默认情况下，动态路径片段中不能使用点号，因为点号是格式化路由的分隔符。如果需要在动态路径片段中使用点号，可以添加一个约束条件。例如，`id: /[^\/]+/` 可以接受除斜线之外的所有字符。
 
 ---
@@ -527,7 +528,7 @@ resources :articles, constraints: {format: :json}, :defaults => {:format => :jso
 root to: 'welcome#index'
 
 # 简写成
-root 'welcome#index' 
+root 'welcome#index'
 ```
 
 在命名空间中也可以使用root
@@ -537,7 +538,7 @@ namespace :admin do
     root to: "admin#index"
 end
 ```
-- 上述路由会将 `/admin` 定位到 `/admin/index` 
+- 上述路由会将 `/admin` 定位到 `/admin/index`
 
 ---
 
@@ -555,7 +556,7 @@ match 'photos', to: 'photos#show', via: [:get, :post]
 match 'photos', to: 'photos#show', via: :all
 ```
 
->**最佳实践**  
+>**最佳实践**
 >同一个路由不要允许所有的HTTP方法。因为同个路由即处理 GET 请求又处理 POST 请求有安全隐患。一般情况下，除非有特殊原因，切记不要允许在一个动作上使用所有 HTTP 方法。
 
 ---
@@ -564,7 +565,7 @@ match 'photos', to: 'photos#show', via: :all
 
 使用`:constraints`来限制动态路由
 
-```ruby 
+```ruby
 get 'photos/:id', to: 'photos#show', constraints: { id: /[A-Z]\d{5}/ }
 
 # 简化形式
@@ -586,7 +587,7 @@ resources :comments, only: [:index, :new, :create]
 resources :comments, except: :destroy
 
 ```
->**最佳实践**  
+>**最佳实践**
 >如果程序中有很多 REST 路由，使用 :only 和 :except 指定只生成所需的路由，可以节省内存，加速路由处理过程。
 
 ---
@@ -639,7 +640,7 @@ end
 # 或者针对单个资源
 resources :articles, module: 'admin'
 ```
-	
+
 `scope ''` 只给URL添加命名空间
 
 ```ruby
@@ -659,7 +660,7 @@ resources :articles, path: '/admin/articles'
 |`scope :module` | /articles | admin/articles#index | `articles_path`
 |`scope ''`  | /admin/articles | articles#index | `articles_path`
 
->**提示**  
+>**提示**
 >如果在 namespace 代码块中想使用其他的控制器命名空间，可以指定控制器的绝对路径，例如`get '/foo' => '/foo#index'`。
 
 ---
@@ -692,7 +693,7 @@ edit_photo GET    /photos/:id/edit(.:format) images#edit
 resources :user_permissions, controller: 'admin/user_permissions'
 ```
 
->**提示**  
+>**提示**
 >指定命名空间控制器时只支持目录形式。如果使用Ruby常量形式，例如 controller: 'Admin::UserPermissions'，会导致路由报错。
 
 ---
@@ -736,7 +737,7 @@ end
 ```
 - 这段路由会生成 `admin_photos_path` 和 `admin_accounts_path` 等帮助方法，分别映射到 `/admin/photos` 和 `/admin/accounts` 上。
 
->**提示**  
+>**提示**
 >namespace 作用域会自动添加 :as 以及 :module 和 :path 前缀。
 
 ---

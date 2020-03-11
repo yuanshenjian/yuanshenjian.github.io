@@ -8,7 +8,7 @@ author_index: https://www.jianshu.com/u/a6b3075161bd
 
 categories: [Micro Service]
 tag: [Workshop@Micro Service]
-
+published: false
 brief: "
 微服务治理Workshop系列之API Gateway。
 "

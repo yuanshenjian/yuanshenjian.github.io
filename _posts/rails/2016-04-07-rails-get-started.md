@@ -7,6 +7,9 @@ categories: [RAILS]
 tag: [Rails]
 
 author: "袁慎建"
+
+published: false
+
 brief: "
 Rails是一个用Ruby编写的Web应用开发框架。它的设计目标是通过预先提供开发人员最开始需要的基础设施，从而让Web应用开发更加容易。它可以让你写更少的代码来完成其他语言和框架所不能完成的工作。有过Rail开发经验的人都说它能让web应用开发变得更有趣。</br></br>
 

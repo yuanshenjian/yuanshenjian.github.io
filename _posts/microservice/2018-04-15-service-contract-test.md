@@ -8,6 +8,7 @@ author: 袁慎建
 categories: [Micro Service]
 tag: [Workshop@Micro Service]
 
+published: false
 brief: "
 微服务治理Workshop系列之契约测试。
 "
@@ -94,10 +95,10 @@ dependencyManagement {
 
 dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
-    
+
     // verifier
     testCompile('org.springframework.cloud:spring-cloud-starter-contract-verifier')
-    
+
     // Make plugin discovery junit 4 based tests
     testRuntime("org.junit.vintage:junit-vintage-engine:4.12.3")
 }
@@ -269,7 +270,7 @@ dependencyManagement {
 }
 
 dependencies {
-    // stub runner 
+    // stub runner
     testCompile('org.springframework.cloud:spring-cloud-starter-contract-stub-runner')
 
     // Make plugin discovery junit 4 based tests
@@ -297,7 +298,7 @@ stubrunner:
 public class GoodsClientTest {
     @Autowired
     private StubFinder stubFinder;
-    
+
     @Test
     public void find_goods() throws IOException {
         int port = stubFinder.findStubUrl("com.thoughtworks", "mst-goods-service").getPort();
