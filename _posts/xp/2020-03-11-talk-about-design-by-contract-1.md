@@ -14,8 +14,7 @@ author: "袁慎建"
 
 ---
 
-我第一次接触`Design by Contract`这个概念，是在阅读Bob大叔的《敏捷软件开发：原则、模式与实践》这本书第十章。Bob大叔在讲解面向对象设计SOLID原则中的LSP(Liskov Substitution Principle)的时候借助DBC来支撑LSP。
-
+我在阅读Bob大叔的《敏捷软件开发：原则、模式与实践》第十章的时候第一次接触`Design by Contract`这个概念。Bob大叔在讲解面向对象设计SOLID原则中的LSP(Liskov Substitution Principle)的时候借助DBC来支撑LSP。
 
 
 当时的场景是这样子的：
