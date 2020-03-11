@@ -166,12 +166,6 @@ a {
     a {
       position: relative;
       margin-right: 5px;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-
       &:not(:last-child):after {
         //content: " , ";
         position: absolute;

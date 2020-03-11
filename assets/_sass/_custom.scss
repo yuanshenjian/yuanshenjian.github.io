@@ -146,17 +146,20 @@ td {
   }
 }
 
+a {
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
 .read-more {
   margin-top: 20px;
   margin-right: 5px;
   margin-bottom: 1em;
   text-align: right;
   a {
-    text-decoration: none;
     color: #333;
-  }
-  a:hover {
-    text-decoration: underline;
   }
 }
 
