@@ -6,6 +6,8 @@ date: 2018-08-02
 categories: [eXtreme Programming]
 tag: [eXtreme Programming, Simple Design]
 author: "袁慎建"
+toXP: true
+
 
 brief: "
 在我的简单设计价值观的指引下，本文我以代码设计面临的问题为起点，进而讨论设计决策中我们主要考虑的维度，针对这四个维度我们一起来尝试回答四个问题。
@@ -23,7 +25,17 @@ brief: "
 
 ---
 
-在 [我的简单设计价值观]({{ site.url }}{{ '/value-of-simple-design/' }}) 一文中，我分享了我在实践中形成对简单设计的理解。而提到价值观，平时跟同事讨论某个技术实践的时候，一旦触碰到价值观，我就会很谨慎，因为在两个人价值观不同的前提下，去讨论一项实践的好坏，很可能在面红耳赤之后不欢而散。
+{% if site.is_personal %}
+{% assign base_url = site.url %}
+{% else%}
+{% assign base_url = 'https://yuanshenjian.cn' %}
+{% endif %}
+
+{% assign base_post_image_path = base_url | append: site.image_path_post %}
+
+
+
+在 [我的简单设计价值观]({{ base_url | append: '/value-of-simple-design' }}) 一文中，我分享了我在实践中形成对简单设计的理解。而提到价值观，平时跟同事讨论某个技术实践的时候，一旦触碰到价值观，我就会很谨慎，因为在两个人价值观不同的前提下，去讨论一项实践的好坏，很可能在面红耳赤之后不欢而散。
 
 如果你压根都不认同简单设计价值观，我不建议你阅读此文。如果你跟我刚开始类似，并不是不认同简单设计的价值观，只是觉得它很抽象，没法落地，本文我会基于Kent Beck提出的简单设计原则，结合今天的软件开发，对这几个原则做一个全面的解读。
 
@@ -34,7 +46,7 @@ brief: "
 
 在代码设计中，我们会面临设计不足和过度设计的问题，比如不假思索过程式编写代码，以及不择手段套用设计模式，在实际中通常位于这两极端之间。设计不足主要表现为*冗余*、*耦合*、*注释覆盖率高*，过度设计主要表现为*复杂*、*臃肿*、*代码闲置率高*。这些现象通常会引发几大问题：*难以修改*、*难以测试*、*难以阅读*。
 
-![]({{ site.url }}{{ site.img_path }}{{ '/xp/design-issues.jpg' }})
+![]({{ base_post_image_path | append: page.url | append: 'design-issues.jpg' }})
 
 ---
 
@@ -56,7 +68,7 @@ brief: "
 3. 消除重复
 4. 最少元素
 
-![]({{ site.url }}{{ site.img_path }}{{ '/xp/design-facts.png' }})
+![]({{ base_post_image_path | append: page.url | append: 'design-facts.png' }})
 
 ---
 
@@ -91,7 +103,9 @@ Kent Beck以类和方法来代表*最少元素* 中的元素。我们可以把�
 ### 画龙点睛
 简单设计四原则给设计决策提供了有效的指导，在实际运用过程中，当面临冲突时，我们如何取舍，Kent Beck最后给出了一个优先级顺序：
 
-![]({{ site.url }}{{ site.img_path }}{{ '/xp/simple-design-priority.jpg' }})
+
+![]({{ base_post_image_path | append: page.url | append: 'simple-design-priority.jpg' }})
+
 
 *最少元素* 这一条造就了*简单设计原则* 的独特性，它犹如点睛之笔，而优先级顺序则像一条龙将四条原则串接起来，让简单设计原则具有强大生命力。优先级顺序在简单设计原则中的重要程度类似于敏捷宣言中的最后一句：[*也就是说，尽管右项有其价值，我们更重视左项的价值*](http://agilemanifesto.org/iso/zhchs/manifesto.html)。
 
