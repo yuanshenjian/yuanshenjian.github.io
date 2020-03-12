@@ -5,7 +5,7 @@ title: "重构十六字心法"
 date: 2017-05-08
 categories: [eXtreme Programming]
 tag: [Refactoring]
-toXP: true
+toXPSite: true
 
 author: "王健"
 origin: "https://insights.thoughtworks.cn/principles-of-refactoring/"

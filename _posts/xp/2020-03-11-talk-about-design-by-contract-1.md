@@ -4,7 +4,7 @@ title: "简单聊聊契约设计（上）"
 date: 2020-03-11
 categories: [eXtreme Programming]
 tag: [eXtreme Programming]
-for: xp
+toXPSite: true
 author: "袁慎建"
 
 ---
@@ -13,6 +13,13 @@ author: "袁慎建"
 {:toc}
 
 ---
+
+{% if site.is_personal %}
+{% assign base_url = site.url %}
+{% else%}
+{% assign base_url = 'https://yuanshenjian.cn' %}
+{% endif %}
+{% assign base_post_image_path = base_url | append: site.image_path_post %}
 
 我在阅读Bob大叔的《敏捷软件开发：原则、模式与实践》第十章的时候第一次接触`Design by Contract`这个概念。Bob大叔在讲解面向对象设计SOLID原则中的LSP(Liskov Substitution Principle)的时候借助DBC来支撑LSP[1]。
 
@@ -92,11 +99,7 @@ public class Client {
 
 一江湖侠客（用户）经常使用的一把宝剑，出鞘进鞘如行云流水。另一刺客（用户）手持利刃，刀光剑影不出三招必拿下人头，手速快到你都觉得刀从未出鞘。本来这两人，各自使用自己的武器非常顺手（独立看模型，都没问题）。此时，调皮的你，趁侠客舞剑，把刺客的刀鞘插到侠客的剑桥中（胡乱继承），侠客舞剑完毕按照老习惯将剑入鞘（原有假设），此时很可能会非常尴尬（程序出错）。
 
-{% if site.is_personal %}
-![]({{site.image_path_post}}{{page.url}}{{'dbc-metaphor.png'}})
-{% else%}
-![]({{'https://yuanshenjian.cn'}}{{site.image_path_post}}{{page.url}}{{'dbc-metaphor.png'}})
-{% endif %}
+![]({{ base_post_image_path | append: page.url | append: 'dbc-metaphor.png' }})
 
 上述有段子对应三种模型设计：
 

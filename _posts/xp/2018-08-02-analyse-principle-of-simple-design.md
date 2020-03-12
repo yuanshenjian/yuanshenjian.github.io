@@ -6,7 +6,7 @@ date: 2018-08-02
 categories: [eXtreme Programming]
 tag: [eXtreme Programming, Simple Design]
 author: "袁慎建"
-toXP: true
+toXPSite: true
 
 
 brief: "
