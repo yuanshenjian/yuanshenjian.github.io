@@ -62,6 +62,3 @@ gitalk:
   repo: 'yuanshenjian.github.io'
   owner: 'yuanshenjian'
   admin: ['yuanshenjian']
-
-exclude:
-  - _posts/.git
