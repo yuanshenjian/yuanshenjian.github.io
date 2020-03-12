@@ -46,7 +46,7 @@ brief: "
 
 在代码设计中，我们会面临设计不足和过度设计的问题，比如不假思索过程式编写代码，以及不择手段套用设计模式，在实际中通常位于这两极端之间。设计不足主要表现为*冗余*、*耦合*、*注释覆盖率高*，过度设计主要表现为*复杂*、*臃肿*、*代码闲置率高*。这些现象通常会引发几大问题：*难以修改*、*难以测试*、*难以阅读*。
 
-![]({{ base_post_image_path | append: page.url | append: 'design-issues.jpg' }})
+{% include post-image.html name = 'design-issues.jpg' %}
 
 ---
 
@@ -68,7 +68,8 @@ brief: "
 3. 消除重复
 4. 最少元素
 
-![]({{ base_post_image_path | append: page.url | append: 'design-facts.png' }})
+{% include post-image.html name = 'design-facts.png' %}
+
 
 ---
 
@@ -103,9 +104,7 @@ Kent Beck以类和方法来代表*最少元素* 中的元素。我们可以把�
 ### 画龙点睛
 简单设计四原则给设计决策提供了有效的指导，在实际运用过程中，当面临冲突时，我们如何取舍，Kent Beck最后给出了一个优先级顺序：
 
-
-![]({{ base_post_image_path | append: page.url | append: 'simple-design-priority.jpg' }})
-
+{% include post-image.html name = 'simple-design-priority.jpg' %}
 
 *最少元素* 这一条造就了*简单设计原则* 的独特性，它犹如点睛之笔，而优先级顺序则像一条龙将四条原则串接起来，让简单设计原则具有强大生命力。优先级顺序在简单设计原则中的重要程度类似于敏捷宣言中的最后一句：[*也就是说，尽管右项有其价值，我们更重视左项的价值*](http://agilemanifesto.org/iso/zhchs/manifesto.html)。
 

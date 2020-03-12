@@ -99,7 +99,7 @@ public class Client {
 
 一江湖侠客（用户）经常使用的一把宝剑，出鞘进鞘如行云流水。另一刺客（用户）手持利刃，刀光剑影不出三招必拿下人头，手速快到你都觉得刀从未出鞘。本来这两人，各自使用自己的武器非常顺手（独立看模型，都没问题）。此时，调皮的你，趁侠客舞剑，把刺客的刀鞘插到侠客的剑桥中（胡乱继承），侠客舞剑完毕按照老习惯将剑入鞘（原有假设），此时很可能会非常尴尬（程序出错）。
 
-![]({{ base_post_image_path | append: page.url | append: 'dbc-metaphor.png' }})
+{% include post-image.html name = 'dbc-metaphor.png' %}
 
 上述有段子对应三种模型设计：
 

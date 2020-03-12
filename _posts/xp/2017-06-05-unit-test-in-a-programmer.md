@@ -38,8 +38,7 @@ brief: "
 
 在内行人看来，程序员是一个成天面对QA的"质疑"、PM的"夺命催"以及DEVs的"吐槽"，扛着身心压力的`苦行僧`。
 
-![图片来自网络]({{ base_post_image_path | append: page.url | append: 'ku-xing-seng.png' }})
-
+{% include post-image.html name = 'ku-xing-seng.png' %}
 
 在我看来，程序员应该是：
 
@@ -90,8 +89,7 @@ class StringUtilsTest {
 
 ***开发人员编写一小段代码，用于检验被检测代码的一个很小的、很明确的功能是否正确。***
 
-![图片来自网络]({{ base_post_image_path | append: page.url | append: 'test-pyramid.png' }})
-<div class="image-source-comment">图片来自：https://martinfowler.com/bliki/TestPyramid.html</div>
+{% include post-image.html name = 'test-pyramid.png' reference = 'https://martinfowler.com/bliki/TestPyramid.html' %}
 
 >广义上的测试并不总是像上面这段代码这么简单，熟为人知的 [测试金字塔](https://martinfowler.com/bliki/TestPyramid.html) 将测试分为三大类，单元测试位于测试金字塔底端，旨在传达单元测试应该来得更凶猛一些，而它们正是由开发人员亲手编写出来。本文也是围绕单元测试来开展。
 
@@ -111,7 +109,7 @@ class StringUtilsTest {
 
 再来说说有形的代码。缺陷减少了则证明你的代码质量提高了，代码质量衡量指标总离不开`可读性`、`可扩展性`、`可维护性`。这三个指标的增强反映了良好的代码整洁度、OO设计、模块化等。实践证明，这些良好的设计往往不是一蹴而就的，而当你为一个类或方法编写单元测试却举步维艰的时候，你就应该考虑去**改良你的设计了**。
 
-![图片来自网络]({{ base_post_image_path | append: page.url | append: 'value-of-unit-test.png' }})
+{% include post-image.html name = 'value-of-unit-test.png' %}
 
 理想情况下，编写完的代码应该是可以工作的。但现实并不那么美好，当你在验证代码正确性的时候遇到问题，你就不得不频繁地启用调试模式，而调试正是吞噬你宝贵时间的恶魔。此时我们要拔出单元测试这把神剑，使出浑身解数将恶魔驱赶到尘封的黑暗角落，从而**缩减我们花在调式上的时间**。
 
@@ -169,8 +167,7 @@ class StringUtilsTest {
 
 实践证明，随着时间推移，产品的功能性的变化趋势受测试代码编写的时机的影响如下图所示：
 
-![图片来自网络]({{ base_post_image_path | append: page.url | append: 'productivity.png' }})
-
+{% include post-image.html name = 'productivity.png' %}
 
 好想法抵挡不住现实的打击，代码库随着项目的进展越发复杂，由于没有测试的保护，一些不良的设计偷偷溜了进来，代码越发娇气，慢慢地没有人敢去动它。最糟糕的结果可能是，DEVs顶着巨大交付压力，唯唯诺诺的写着代码，而灾难正在酝酿，交付最终失败。
 

@@ -1,0 +1,4 @@
+<img src="{{ site.url | append: site.image_path_post | append: page.url | append: include.name }}">
+{% if include.reference %}
+<div class="image-source-comment">图片来自：{{ include.reference }}</div>
+{% endif %}

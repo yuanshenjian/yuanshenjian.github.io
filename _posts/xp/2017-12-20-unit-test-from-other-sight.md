@@ -43,7 +43,7 @@ brief: "
 
 如果将软件生命周期大致划分成两部分：
 
-![]({{ base_post_image_path | append: page.url | append: 'lifecycle-of-software.jpg' }})
+{% include post-image.html name = 'lifecycle-of-software.jpg' %}
 
 我们认为左边部分正在享受着微服务架构的益处，而右边部分在遭受着微服务架构复杂性的折磨。
 
