@@ -137,6 +137,6 @@ public class Client {
 
 ## 参考阅读
 
-1. [听面向对象先生聊SOLID创业故事]({{site.url}}{{'/solid-in-depth-explanation'}})
-2. [聊聊面向对象设计中的Is-A]({{site.url}}{{'/	talking-about-is-a-in-ood'}})
+1. [听面向对象先生聊SOLID创业故事]({{base_url | append: '/solid-in-depth-explanation' }})
+2. [聊聊面向对象设计中的Is-A]({{base_url | append: '/talking-about-is-a-in-ood' }})
 

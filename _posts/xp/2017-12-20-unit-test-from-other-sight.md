@@ -5,7 +5,7 @@ title: "从另一个角度告诉你单元测试的意义"
 date: 2017-12-20
 categories: [eXtreme Programming]
 tag: [eXtreme Programming, TDD]
-
+toXPSite: true
 author: "袁慎建"
 
 brief: "
@@ -23,6 +23,14 @@ brief: "
 
 ---
 
+{% if site.is_personal %}
+{% assign base_url = site.url %}
+{% else%}
+{% assign base_url = 'https://yuanshenjian.cn' %}
+{% endif %}
+{% assign base_post_image_path = base_url | append: site.image_path_post %}
+
+
 当下微服务如火如荼，各个团队在争先恐后推出微服务，不论在概念上还是在实践上，如果自己没有跟微服务挂上钩，便会被贴上`落伍`的标签。我们在推微服务的时候，我们说微服务架构具备如下优势：
 
 - 架构灵活，能够应对复杂的业务需求。
@@ -35,13 +43,13 @@ brief: "
 
 如果将软件生命周期大致划分成两部分：
 
-![]({{ site.url }}{{ site.img_path }}{{ '/xp/lifecycle-of-sofeware.jpg' }})
+![]({{ base_post_image_path | append: page.url | append: 'lifecycle-of-software.jpg' }})
 
 我们认为左边部分正在享受着微服务架构的益处，而右边部分在遭受着微服务架构复杂性的折磨。
 
 微服务架构带来的复杂性（右边部分）已经很大程度上得到了解决，常见的解决方案是在开发团队中植入DEVOPS。比如在ThoughtWorks中的某些团队，DEVOPS成为Team不可或缺的成分。
 
-我们把注意力放在左边部分。开发人员关注更多的是`开发`，每个服务由一个小的Team负责开发，Team正在极力往`服务自治`的方向靠拢。测试人员可能更加关注`测试`，尤其是契约测试伴随着业界对集成测试（UI测试）的痛斥声而崛起。`消费者驱动契约测试`的演讲比比皆是，我也没有例外，在某Account的技术大会上做了一次 [*微服务架构下的测试应对策略*]({{ site.url }}{{ '/test-strategy-to-meet-microservice-architecture-1/' }}) 的分享。在分享中，我赶时髦提倡用契约测试取代集成测试，但是细节中没有忽略的一个核心点：*单元测试*。这也是本文我要分享的重点。
+我们把注意力放在左边部分。开发人员关注更多的是`开发`，每个服务由一个小的Team负责开发，Team正在极力往`服务自治`的方向靠拢。测试人员可能更加关注`测试`，尤其是契约测试伴随着业界对集成测试（UI测试）的痛斥声而崛起。`消费者驱动契约测试`的演讲比比皆是，我也没有例外，在某Account的技术大会上做了一次 [*微服务架构下的测试应对策略*]({{ base_url | append: '/test-strategy-to-meet-microservice-architecture-1/'}}) 的分享。在分享中，我赶时髦提倡用契约测试取代集成测试，但是细节中没有忽略的一个核心点：*单元测试*。这也是本文我要分享的重点。
 
 ---
 
@@ -79,7 +87,7 @@ CI上有契约测试的Stage，但也是草率编写，甚至契约测试因为�
 我们不会说单元测试是灵丹妙药，对于100%覆盖率我们也应该持有保留态度。但在一个微服务架构基础设施还不完善、开发人员能力参差不齐、DDD能力不足以应对复杂业务的情况下，单元测试是性价比最高的实践。
 
 ### 能力建设
-一个具备开发经验的开发人员，基本上都会编写单元测试。即便不会，可以通过培训来快速达成。从学习曲线上看，单元测试很容易上手（方法难以被测试另当别论），拥抱Java大腿的JUnit就是一个很好的例子。所以在一个团队中，我们可以过培训、[*Pair*]({{ site.url }}{{ '/first-impressive-agile-experience-in-thoughtworks/#pair' }}) 快速让开发人员具备编写单元测试能力。
+一个具备开发经验的开发人员，基本上都会编写单元测试。即便不会，可以通过培训来快速达成。从学习曲线上看，单元测试很容易上手（方法难以被测试另当别论），拥抱Java大腿的JUnit就是一个很好的例子。所以在一个团队中，我们可以过培训、[*Pair*]({{ base_url }}{{ '/first-impressive-agile-experience-in-thoughtworks/#pair' }}) 快速让开发人员具备编写单元测试能力。
 
 测试即文档，对于新上项目的开发人员，可以通过阅读单元测试来了解业务需求，并且不会对一系列具备复杂数据安装的Service测试产生恐惧感。
 
@@ -131,7 +139,7 @@ CI上有契约测试的Stage，但也是草率编写，甚至契约测试因为�
 - Protected Variations，受保护变化
 - Pure fabrication，纯虚构
 
-以上这些原则需要在编码中不断地刻意练习，除了阅读针对性的书籍，在团队中积极组织 [*Code Review*]({{ site.url }}{{ '/first-impressive-agile-experience-in-thoughtworks/#code-review' }})、推动 [*Pair*]({{ site.url }}{{ '/first-impressive-agile-experience-in-thoughtworks/#pair' }}) 来互相学习和改进是一个更有效的方式。
+以上这些原则需要在编码中不断地刻意练习，除了阅读针对性的书籍，在团队中积极组织 [*Code Review*]({{ base_url }}{{ '/first-impressive-agile-experience-in-thoughtworks/#code-review' }})、推动 [*Pair*]({{ base_url }}{{ '/first-impressive-agile-experience-in-thoughtworks/#pair' }}) 来互相学习和改进是一个更有效的方式。
 
 良好的代码设计让我们的单元测试更加容易编写，而要编写有效的单元测试，我们应该对以下几个维度的测试坏味道保持敏锐的嗅觉：
 
@@ -144,12 +152,7 @@ CI上有契约测试的Stage，但也是草率编写，甚至契约测试因为�
 ## 我的呼吁
 我们在试图驾驭微服务架构的路上，应该时刻守住根本，让单元测试这项成本低、收益高的实践为我们高层测试打好地基。*如何设计良好可测的代码* 以及 *如何编写有效的单元测试* 更是值得每一位追求卓越的程序员去深入学习和实践。
 
-如果你还在思考*为什要写单元测试？*推荐阅读我的文章 [*一枚程序员眼中的单元测试*]({{ site.url }}{{ '/unit-test-view-from-a-programmer/' }})。
-
->***程序员福利***
->
->JUnit测试框架已经升级到JUnit 5，官方用户指南已被译成中文，欢迎你以 [*JUnit 5 中文用户指南*]({{ site.url }}{{ '/junit5/user-guide-cn' }}) 作为学习JUnit 5的起点。
-
+如果你还在思考*为什要写单元测试？*推荐阅读我的文章 [*一枚程序员眼中的单元测试*]({{ base_url }}{{ '/unit-test-view-from-a-programmer/' }})。
 
 
 
