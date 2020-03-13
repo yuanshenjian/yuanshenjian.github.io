@@ -65,7 +65,7 @@ public class Square extends Rectangle {
 
 存在这样子的用户使用场景：
 
-```
+```java
 public class Client {
     public static void main(String[] args) {
         assertStandardHouseArea(new Rectangle());
