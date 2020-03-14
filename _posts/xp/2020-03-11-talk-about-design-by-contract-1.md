@@ -21,10 +21,12 @@ author: "袁慎建"
 {% endif %}
 {% assign base_post_image_path = base_url | append: site.image_path_post %}
 
+<!--brief-->
 我在阅读Bob大叔的《敏捷软件开发：原则、模式与实践》第十章的时候第一次接触`Design by Contract`这个概念。Bob大叔在讲解面向对象设计SOLID原则中的LSP(Liskov Substitution Principle)的时候借助DBC来支撑LSP[1]。
 
 
 当时的场景是这样子的：
+<!--brief-->
 
 在一个系统中，存在一个长方形（Rectangle）类，该类设置宽、高以及计算面积的方法：
 

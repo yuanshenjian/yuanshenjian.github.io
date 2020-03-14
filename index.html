@@ -16,10 +16,20 @@ summary: "极限编程"
     {% endif %}
   </div>
   {% if post.brief %}
-  <div>{{ post.brief }}</div>
+  <p>{{ post.brief }}</p>
   {% else %}
-  <div>{{ post.content | strip_html | strip_newlines | truncate: 220 }}</div>
+  <div>
+    {% if post.content contains '<!--brief-->' %}
+    {% assign parts = post.content | split:'<!--brief-->' %}
+    {{ parts[1] }}
+    {% else %}
+    {{ post.content | strip_html | strip_newlines | truncate: 200 }}
+    {% endif %}
+  </div>
   {% endif %}
+  <div>
+    <a href="{{ site.baseurl }}{{ post.url }}">阅读全文</a>
+  </div>
 
 <!--  <div class="read-more"><a class="read-more" href="{{ site.url }}{{ post.url }}"> 继续阅读 →</a></div>-->
   <div class="height-50"></div>
