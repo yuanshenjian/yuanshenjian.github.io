@@ -8,6 +8,7 @@ keywords: "ThoughtWorks,Agile,Practice"
 
 categories: [AGILE]
 tags: [Agile]
+toXPSite: true
 
 author: "袁慎建"
 
