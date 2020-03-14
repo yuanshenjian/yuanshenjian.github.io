@@ -5,6 +5,7 @@ title: "让里氏替换原则为你效力"
 date: 2018-12-15
 categories: [OOD]
 tag: [Object-Oriented Design]
+toXPSite: true
 
 author: "袁慎建"
 

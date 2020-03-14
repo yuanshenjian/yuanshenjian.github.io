@@ -5,6 +5,7 @@ title: "聊聊面向对象设计中的Is-A"
 date: 2018-12-25
 categories: [OOD]
 tag: [Object-Oriented Design]
+toXPSite: true
 
 author: "袁慎建"
 
