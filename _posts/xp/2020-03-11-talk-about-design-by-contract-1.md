@@ -22,7 +22,7 @@ author: "袁慎建"
 {% assign base_post_image_path = base_url | append: site.image_path_post %}
 
 <!--brief-->
-我在阅读Bob大叔的《敏捷软件开发：原则、模式与实践》第十章的时候第一次接触`Design by Contract`这个概念。Bob大叔在讲解面向对象设计SOLID原则中的LSP(Liskov Substitution Principle)的时候借助DBC来支撑LSP[1]。
+我在阅读Bob大叔的《敏捷软件开发：原则、模式与实践》第十章的时候第一次接触**Design by Contract**这个概念。Bob大叔在讲解面向对象设计SOLID原则中的LSP(Liskov Substitution Principle)的时候借助DbC来支撑LSP[1]。
 
 
 当时的场景是这样子的：
@@ -127,7 +127,7 @@ public class Client {
 
 
 ## 如何明确用户的合理假设？
-聊了这么多，说起来我们好像是在基于用户的合理假设来审视我们的模型设计，我们需要去猜测用户会存在哪些合理假设，而这种猜测可能会让人觉得心里不踏实，如何才能知道客户的真正要求呢？Bob大叔提到了一项技术，也就是我们要聊的主题DBC (Design By Contract)，能够帮助明确用户的合理的假设。
+聊了这么多，说起来我们好像是在基于用户的合理假设来审视我们的模型设计，我们需要去猜测用户会存在哪些合理假设，而这种猜测可能会让人觉得心里不踏实，如何才能知道客户的真正要求呢？Bob大叔提到了一项技术，也就是我们要聊的主题DbC (Design by Contract)，能够帮助明确用户的合理的假设。
 
 下一篇文章我会来聊聊DBC到底是个什么东西？
 
