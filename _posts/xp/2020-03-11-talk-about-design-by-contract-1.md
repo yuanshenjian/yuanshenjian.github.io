@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "简单聊聊契约设计（上）"
+title: "简单聊聊契约式设计（上）"
 date: 2020-03-11
 categories: [eXtreme Programming]
 tag: [eXtreme Programming]
