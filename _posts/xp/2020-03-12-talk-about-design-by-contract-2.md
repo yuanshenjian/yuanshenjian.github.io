@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "简单聊聊契约式设计（下）"
+title: "里氏替换原则背后的契约式设计（下）"
 date: 2020-03-12
 categories: [eXtreme Programming]
 tag: [eXtreme Programming, DBC]
@@ -16,7 +16,7 @@ author: "袁慎建"
 
 
 <!--brief-->
-在上一篇文章中，我们从Bob大叔讲解的LSP中得出了一个结论 -- 做模型设计的时候，要基于客户程序使用的角度去审视模型的有效性。这就需要我们要去猜测客户程序的一些"合理"的假设。当一个事情需要靠猜测的时候，我们总会觉得心里不安。Bob大叔提到`DbC`这项技术，能够帮助我们来明确用户的合理假设。本文就来聊聊DbC。
+在上一篇文章中通过里氏替换原则的示例，Bob大叔抛出了一个观点 -- 做模型设计的时候，要基于客户程序使用的角度去审视模型的有效性。这就需要我们要去猜测客户程序的一些"合理"的假设。当一个事情需要靠猜测的时候，我们总会觉得心里不安。Bob大叔提到`DbC`这项技术，能够帮助我们来明确用户的合理假设。本文就来聊聊DbC对LSP的加持。
 <!--brief-->
 
 ## 契约促进社会秩序稳定
@@ -49,15 +49,15 @@ P和Q是**断言**，C是**命令** 。P叫做**前置条件**，Q叫做**后置
 
 
 ## DbC在OOD中的应用
-结合DbC的描述，我们来看看，上文中提到的Rectangle和Square，`Rectangle.setWidth(double width)`
+借助DbC的设计思想，我们来看看上文中提到的Rectangle和Square，`Rectangle.setWidth(double width)`
 
-- 前置条件是：assert type width is double
+- 前置条件是：assert type width is double && above 0.0
 - 后置条件是：assert this.width == new.width && this.height = old.height
 
 
 而`Square.setWidth(double width)`：
 
-- 前置条件是：assert type width is double
+- 前置条件是：assert type width is double && above 0.0
 - 后置条件是：assert this.width == new.width && this.height = new.width
 
 同理，setHeight的方法也是如此。
