@@ -33,7 +33,12 @@ layout: default
         href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative
         Commons
         BY-NC-ND 4.0</a>
+      {% if page.origin %}
+      <div>原文链接：<a href="{{ page.origin }}">{{ page.origin }}</a></div>
+      {% else %}
       <div>原文链接：<a href="{{ page.url }}">{{ site.url}}{{ page.url }}</a></div>
+      {% endif %}
+
     </div>
 
     <div class="height-30"></div>
