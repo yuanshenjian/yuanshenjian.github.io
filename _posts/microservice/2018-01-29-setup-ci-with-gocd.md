@@ -6,7 +6,7 @@ date: 2018-01-29
 author: 袁慎建
 
 categories: [Micro Service]
-tag: [Workshop@Micro Service]
+tags: [Workshop@Micro Service]
 
 published: false
 
@@ -48,7 +48,7 @@ brief: "
 Vagrant是一个命令行工具，用于管理虚拟机生命周期（启动，关机，注销，移除等），非常易用，官方文档的 [getting-started](https://www.vagrantup.com/intro/getting-started/) 是一个很好的学习文档。
 
 ```
-$ vagrant -v 
+$ vagrant -v
 Vagrant 2.0.1
 ```
 
@@ -303,19 +303,19 @@ $ docker run -d -e WORKDIR=$(pwd)/go-agent -e GO_SERVER_URL=https://10.29.5.155:
 Error saving credentials: open /home/vagrant/.docker/config.json: permission denied
 ```
 
-因为登录时会往config.json文件中写入信息，而该文件属于root用户：  
+因为登录时会往config.json文件中写入信息，而该文件属于root用户：
 
 ```sh
 $ sudo docker login 10.29.5.155:5000 -u admin -p admin123
 ```
 
-### 运行docker命令出现警告  
+### 运行docker命令出现警告
 
 ```
 WARNING: Error loading config file: /home/vagrant/.docker/config.json - open /home/vagrant/.docker/config.json: permission denied
-```  
+```
 
-可以通过更改文件的权限消除警告：  
+可以通过更改文件的权限消除警告：
 
 ```sh
 $ sudo chmod 644 /home/vagrant/.docker/config.json

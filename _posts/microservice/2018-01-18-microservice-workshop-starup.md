@@ -6,7 +6,7 @@ date: 2018-01-18
 author: 袁慎建
 
 categories: [Micro Service]
-tag: [Workshop@Micro Service]
+tags: [Workshop@Micro Service]
 
 published: false
 

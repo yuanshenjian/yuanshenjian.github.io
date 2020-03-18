@@ -7,7 +7,7 @@ author: 谭艺冰
 author_index: https://www.jianshu.com/u/a6b3075161bd
 
 categories: [Micro Service]
-tag: [Workshop@Micro Service]
+tags: [Workshop@Micro Service]
 published: false
 brief: "
 微服务治理Workshop系列之API Gateway。
@@ -101,7 +101,7 @@ spring:
           ttlValue: 10
         preferIpAddress: true
         tags: localtag
-        default-query-tag: localtag
+        default-query-tags: localtag
         query-passing: true
 ```
 

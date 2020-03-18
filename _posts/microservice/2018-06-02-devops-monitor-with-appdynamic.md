@@ -7,7 +7,7 @@ author: 陈崇发
 author_index: https://www.jianshu.com/u/6d9b0af2d0af
 
 categories: [Micro Service]
-tag: [Workshop@Micro Service]
+tags: [Workshop@Micro Service]
 published: false
 brief: "
 微服务治理Workshop系列之运营监控篇。

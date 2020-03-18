@@ -4,7 +4,7 @@ layout: post
 title: "听面向对象先生聊SOLID创业故事"
 date: 2019-08-15
 categories: [OOD]
-tag: [Object-Oriented Design]
+tags: [Object-Oriented Design]
 toXPSite: true
 
 author: "袁慎建"

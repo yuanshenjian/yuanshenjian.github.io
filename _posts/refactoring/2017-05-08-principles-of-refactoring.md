@@ -4,7 +4,7 @@ layout: post
 title: "重构十六字心法"
 date: 2017-05-08
 categories: [eXtreme Programming]
-tag: [Refactoring]
+tags: [Refactoring]
 toXPSite: true
 
 author: "王健"

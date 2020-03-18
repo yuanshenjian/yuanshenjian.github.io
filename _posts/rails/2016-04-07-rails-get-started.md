@@ -4,7 +4,7 @@ layout: post
 title: "Ruby on Rails 初次冲浪体验"
 date: 2016-04-07
 categories: [RAILS]
-tag: [Rails]
+tags: [Rails]
 
 author: "袁慎建"
 

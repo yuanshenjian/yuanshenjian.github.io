@@ -4,7 +4,7 @@ layout: post
 title: "Java泛型•通配符限定"
 date: 2016-07-12
 category: [JAVASE]
-tag: [Java]
+tags: [Java]
 
 author: "袁慎建"
 brief: "
@@ -52,7 +52,7 @@ public class ArrayUtil {
 	}
 }
 ```
-     
+
 注意看，我们定义类型参数的变化：`<T extends Comparable<T>>`，这里将T类型限定在Comparable及其所有的子类。是不是很好奇`Comparable `明明是一个`interface`，根据所学知识判断，实现`interface`用的关键字是`implements`，为什么呢？
 
 `<T extends Bounding Type>`，表示T类型应该是绑定类型及其子类型(subType)，T和绑定类型可以是类或者接口，使用`extends`关键字因为它更接近于子类的概念，另外Java设计者并不打算为Java添加新的关键字如：`sub`
@@ -84,7 +84,7 @@ public class ArrayUtil {
 3. 限定`interface`的时候，对interface的个数和顺序无严格要求，限定类时，则需要将类型置于第一个，且最多只能存在一个`class`类型。
 
 ### 钻牛角尖
->问：类型限定中可以通过`extends`来限定子类型，是否可以通过类似`super`关键字来限定超类型呢？ 
+>问：类型限定中可以通过`extends`来限定子类型，是否可以通过类似`super`关键字来限定超类型呢？
 >答：哈哈，问的好，接下来一一揭晓。
 
 比较遗憾的是，类似`<T extends Runnable & Serializable>`这样的泛型限定子类的语法，来限定超类是没有成为Java中的一个语法规范的，例如：
@@ -150,7 +150,7 @@ public static void printWife(Couple<? extends Employee> couple) {
 ```
 ---
 
-### 子类型限定     
+### 子类型限定
 >通配符的子类型限定的语法与文章一开始介绍的类型限定有点相似，但是这里有些细节的秘密。
 
 ```java

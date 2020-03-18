@@ -4,7 +4,7 @@ layout: post
 title: "浅析Java对象初始化"
 date: 2016-06-15
 category: [JAVASE]
-tag: [Java]
+tags: [Java]
 
 author: "袁慎建"
 brief: "
@@ -108,7 +108,7 @@ public class InitializeDemo {
  9. 静态属性和静态块执行完毕，然后执行main方法中的代码new InitializeDemo("init");
 10. main方法中创建对象，先初始化非静态属性，private int j = print("j");打印j，然后执行构造块，最后执行构造方法。
 ```
-只要把握住核心概念，碰到在复杂的问题也都不会乱了分寸。  
+只要把握住核心概念，碰到在复杂的问题也都不会乱了分寸。
 
 ---
 

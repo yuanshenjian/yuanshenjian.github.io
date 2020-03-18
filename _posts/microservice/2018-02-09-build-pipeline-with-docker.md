@@ -6,7 +6,7 @@ date: 2018-02-09
 author: 袁慎建
 
 categories: [Micro Service]
-tag: [Workshop@Micro Service]
+tags: [Workshop@Micro Service]
 
 published: false
 brief: "
@@ -37,7 +37,7 @@ brief: "
 在你本地的Vagrant VM（`10.29.5.155`）上将上节课中的Go server、Go agent容器启动，另外确保你搭建的Nexus服务正常启动：
 
 ```sh
-$ docker ps -a 
+$ docker ps -a
 $ docker start <go_server_contain_id>
 $ docker start <go_agent_contain_id>
 ```

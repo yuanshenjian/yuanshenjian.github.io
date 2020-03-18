@@ -4,7 +4,7 @@ layout: post
 title: "太白山登顶游记"
 date: 2018-09-14
 categories: [Fitness]
-tag: [Life]
+tags: [Life]
 
 author: "袁慎建"
 

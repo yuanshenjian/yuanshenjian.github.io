@@ -4,7 +4,7 @@ layout: post
 title: "Ruby on Rails 路由解析"
 date: 2016-04-13
 categories: [RAILS]
-tag: [Rails]
+tags: [Rails]
 author: "袁慎建"
 published: false
 brief: "

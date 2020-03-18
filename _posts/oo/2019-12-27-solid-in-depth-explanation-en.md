@@ -4,7 +4,7 @@ layout: post
 title: "SOLID entrepreneurial story of Mr. Object-Oriented"
 date: 2019-12-27
 categories: [OOD]
-tag: [Object-Oriented Design]
+tags: [Object-Oriented Design]
 
 author: "袁慎建"
 published: true

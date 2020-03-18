@@ -4,7 +4,7 @@ layout: post
 title: "从另一个角度告诉你单元测试的意义"
 date: 2017-12-20
 categories: [eXtreme Programming]
-tag: [eXtreme Programming, TDD]
+tags: [eXtreme Programming, TDD]
 toXPSite: true
 author: "袁慎建"
 

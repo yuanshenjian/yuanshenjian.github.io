@@ -7,7 +7,7 @@ author: 赵琪琪
 author_index: https://www.jianshu.com/u/2db65e841261
 
 categories: [Micro Service]
-tag: [Workshop@Micro Service]
+tags: [Workshop@Micro Service]
 
 published: false
 brief: "

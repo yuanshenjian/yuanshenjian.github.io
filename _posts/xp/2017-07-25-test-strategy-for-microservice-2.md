@@ -4,7 +4,7 @@ layout: post
 title: "微服务架构下的测试应对策略（下）"
 date: 2017-07-25
 categories: [eXtreme Programming]
-tag: [eXtreme Programming, TDD]
+tags: [eXtreme Programming, TDD]
 
 author: "袁慎建"
 

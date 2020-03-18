@@ -4,7 +4,7 @@ layout: post
 title: "Java泛型•约束和局限性"
 date: 2016-08-14
 category: [JAVASE]
-tag: [Java]
+tags: [Java]
 
 author: "袁慎建"
 brief: "
@@ -35,9 +35,9 @@ float                FLoat           0.0F
 double               Double          0.0D
 char                 Character       '\u0000'
 boolean              Boolean         false
-```   
+```
 ---
-       
+
 ### 不能实例化类型参数
 Java中创建对象使用new关键字，但是泛型的类型参数不能用于实例化对象，如：
 
@@ -156,7 +156,7 @@ public static <T extends Throwable> void doSomething(T t) throws T {
 ```
 
 ---
-          
+
 ### 泛型类中的类型参数不能用于静态上下文中
 
 怎么理解这个呢？看个例子就知道了，如一个泛型单例：
@@ -167,7 +167,7 @@ public static <T extends Throwable> void doSomething(T t) throws T {
 public class Singleton <T>{
 
            private static T instance;
-          
+
            public static T getInstance(){ ..}
 }
 ```
@@ -203,7 +203,7 @@ class GregorianCalendar extends Calendar implements Comparable<GregorianCalendar
 
 >public int compareTo (Object o) {return compareTo((Calendar)o);}
 
-而实现了`Comparable<GregorianCalendar>`在类型擦除后，虚拟机为`GregorianCalendar`合成一个桥方法：     
+而实现了`Comparable<GregorianCalendar>`在类型擦除后，虚拟机为`GregorianCalendar`合成一个桥方法：
 
 >public int compareTo (Object o) {return compareTo((GregorianCalendar )o);}
 

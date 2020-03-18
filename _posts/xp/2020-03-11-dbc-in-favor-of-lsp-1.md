@@ -3,7 +3,7 @@ layout: "post"
 title: "契约式设计对里氏替换原则的加持（上）"
 date: 2020-03-11
 categories: [eXtreme Programming]
-tag: [eXtreme Programming]
+tags: [eXtreme Programming, DBC]
 toXPSite: true
 author: "袁慎建"
 
