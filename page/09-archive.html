@@ -11,7 +11,9 @@ active: 文库
 
 
 <div class="archive-toc-top">
-  {% for tag in site.tags %}
+  {% assign tags = site.tags | sort %}
+
+  {% for tag in tags %}
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
 
@@ -22,7 +24,7 @@ active: 文库
 </div>
 
 <div class="archive-content">
-  {% for tag in site.tags %}
+  {% for tag in tags %}
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
 
@@ -55,7 +57,7 @@ active: 文库
     <hr/>
   </div>
   <div class="content">
-    {% for tag in site.tags %}
+    {% for tag in tags %}
     {% assign t = tag | first %}
     {% assign posts = tag | last %}
     <ul><a href="#{{ t | downcase }}">{{ t }}</a></ul>
