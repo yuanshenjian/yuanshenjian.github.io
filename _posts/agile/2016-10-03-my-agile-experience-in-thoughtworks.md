@@ -22,7 +22,7 @@ brief: "敏捷开发的核心就是<i>在一个高度协作的环境下，不断
 * content
 {:toc}
 
----
+
 
 此文章已发表于InfoQ，[阅读InfoQ文章](https://www.infoq.cn/article/my-agile-practice-in-thoughtworks)
 

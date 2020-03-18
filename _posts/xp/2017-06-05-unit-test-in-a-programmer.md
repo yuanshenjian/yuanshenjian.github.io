@@ -13,8 +13,6 @@ author: "袁慎建"
 * content
 {:toc}
 
----
-
 
 {% if site.is_personal %}
 {% assign base_url = site.url %}

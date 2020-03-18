@@ -21,7 +21,6 @@ brief: "
 * content
 {:toc}
 
----
 
 {% if site.is_personal %}
 {% assign base_url = site.url %}
