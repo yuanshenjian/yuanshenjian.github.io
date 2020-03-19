@@ -4,7 +4,7 @@ layout: post
 title: "我的简单设计价值观"
 date: 2018-07-19
 categories: [eXtreme Programming]
-tags: [eXtreme Programming, Simple Design]
+tags: [Simple Design]
 
 author: "袁慎建"
 

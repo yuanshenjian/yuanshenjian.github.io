@@ -4,7 +4,7 @@ layout: post
 title: "解析简单设计原则"
 date: 2018-08-02
 categories: [eXtreme Programming]
-tags: [eXtreme Programming, Simple Design]
+tags: [Simple Design]
 author: "袁慎建"
 toXPSite: true
 

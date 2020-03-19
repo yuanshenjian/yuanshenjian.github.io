@@ -4,7 +4,7 @@ layout: post
 title: "简单设计落地三板斧"
 date: 2018-08-27
 categories: [eXtreme Programming]
-tags: [eXtreme Programming, Simple Design]
+tags: [Simple Design]
 
 author: "袁慎建"
 

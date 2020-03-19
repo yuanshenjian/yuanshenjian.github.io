@@ -4,7 +4,7 @@ layout: post
 title: "一枚程序员眼中的单元测试"
 date: 2017-06-05
 categories: [eXtreme Programming]
-tags: [eXtreme Programming, TDD]
+tags: [TDD]
 toXPSite: true
 
 author: "袁慎建"
