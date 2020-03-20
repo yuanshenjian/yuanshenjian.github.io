@@ -6,6 +6,7 @@ categories: [eXtreme Programming]
 tags: [TDD]
 toXPSite: true
 author: "刘冉"
+origin: "https://insights.thoughtworks.cn/talk-about-tdd-again/"
 
 ---
 
