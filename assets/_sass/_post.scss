@@ -1,0 +1,35 @@
+article h1{
+  margin-bottom: 10px;
+}
+
+.badge {
+  display: inline-block;
+  padding: .25em .25em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+}
+
+.badge-origin {
+  font-size: 75%;
+  color: #fff;
+  background-color: #bababa;
+}
+
+.badge-tag {
+  a {
+    color: #fff;
+  }
+  background-color: #cdcdcd;
+}
+
+.badge-tag:hover,
+.badge-tag:focus {
+  color: #222;
+  text-decoration: none;
+  background-color: #a59816;
+}

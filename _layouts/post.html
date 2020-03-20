@@ -6,6 +6,18 @@ layout: default
 
   <h1 class="post-title">{{ page.title }}</h1>
 
+  <div>
+    {% if page.author == site.author.name %}
+    {% for tag in page.tags %}
+    <span class="badge badge-tag">
+      <a href="{{ site.url | append: '/archives#' | append: tag | downcase }}">{{ tag }}</a>
+    </span>
+    {% endfor %}
+    {% else %}
+    <span class="badge badge-origin">转载</span>
+    {% endif %}
+
+  </div>
   <p class="post-meta">
     <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%Y-%m-%d" }}</time>
 
@@ -39,6 +51,11 @@ layout: default
       <div>原文链接：<a href="{{ page.url }}">{{ site.url}}{{ page.url }}</a></div>
       {% endif %}
 
+      <div>
+        {% for tag in page.tags %}
+        <span class="badge badge-tag"><a href="{{ site.base_url }}">{{ tag }}</a></span>
+        {% endfor %}
+      </div>
     </div>
 
     <div class="height-30"></div>
@@ -49,22 +66,6 @@ layout: default
     </div>
 
     {% include comments.html %}
-
-    <div class="post-links">
-      {% if page.next.url %}
-      <a class="link-to-post" href="{{ page.next.url }}">
-        <span class="link-to-post__next">&#10535; &nbsp;Next post</span>
-        <span class="link-to-post__title">{{ page.next.title }}</span>
-      </a>
-      {% endif %}
-
-      {% if page.previous.url %}
-      <a class="link-to-post" href="{{ page.previous.url }}">
-        <span class="link-to-post__prev">&#10535; &nbsp;Previous post</span>
-        <span class="link-to-post__title">{{ page.previous.title }}</span>
-      </a>
-      {% endif %}
-    </div>
   </div>
   <div class="post-toc">
     <div class="title"><h4><a href="{{ page.url }}">{{ page.title }}</a></h4></div>
