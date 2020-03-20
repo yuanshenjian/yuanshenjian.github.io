@@ -34,6 +34,9 @@ article h1{
 
 .badge-tag:hover,
 .badge-tag:focus {
+  a {
+    color: #fff;
+  }
   color: #222;
   text-decoration: none;
   background-color: #a59816;

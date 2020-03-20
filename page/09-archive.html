@@ -17,7 +17,9 @@ active: 文库
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
 
-  <a href="#{{ t | downcase }}" class="selected">{{ t }}</a> &nbsp;&nbsp;
+  <span class="badge badge-tag">
+      <a href="{{ site.url | append: '/archives#' | append: t | downcase }}">{{ t }}</a>
+  </span>
 
   {% endfor %}
 
