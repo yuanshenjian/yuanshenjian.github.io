@@ -8,11 +8,7 @@ layout: default
 
   <div>
     {% if page.author == site.author.name %}
-    {% for tag in page.tags %}
-    <span class="badge badge-tag">
-      <a href="{{ site.url | append: '/archives#' | append: tag | downcase }}">{{ tag }}</a>
-    </span>
-    {% endfor %}
+      {% include tags.html tags = page.tags %}
     {% else %}
     <span class="badge badge-origin">转载</span>
     {% endif %}
@@ -50,11 +46,8 @@ layout: default
       {% else %}
       <div>原文链接：<a href="{{ page.url }}">{{ site.url}}{{ page.url }}</a></div>
       {% endif %}
-
       <div>
-        {% for tag in page.tags %}
-        <span class="badge badge-tag"><a href="{{ site.base_url }}">{{ tag }}</a></span>
-        {% endfor %}
+        {% include tags.html tags = page.tags %}
       </div>
     </div>
 
