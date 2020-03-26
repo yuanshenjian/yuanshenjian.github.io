@@ -12,7 +12,7 @@ active: 作者
 
 #### 基本信息
 
-- **姓名**：袁慎建 | YUAN SHENJIAN
+- **姓名**：袁慎建 \| YUAN SHENJIAN
 
 - **职业**：ThoughtWorks 内训师
 
