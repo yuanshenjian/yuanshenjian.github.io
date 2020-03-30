@@ -108,7 +108,7 @@ public class Client {
 `Square`继承`Rectangle`之后，使用者的假设就变了：
 
 1. `Rectangle`，长和宽独自变化，互不影响。
-2. `Square` is a `Rectangle`，可以回到假设1。
+2. `Square` is a `Rectangle`，回到假设1。
 
 很明显，`Square`覆写了设置宽和高的方法后，破坏了`Rectangle`的用户假设，继承后的新模型就失效了。
 
