@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "契约式设计对里氏替换原则的加持（下）"
+title: "简单聊聊契约式设计（下）"
 date: 2020-03-12
 categories: [eXtreme Programming]
 tags: [DbC]
