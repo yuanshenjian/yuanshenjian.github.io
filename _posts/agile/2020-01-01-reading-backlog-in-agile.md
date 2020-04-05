@@ -15,33 +15,31 @@ author: "袁慎建"
 
 
 ## 人生及哲学类
-- 道德经 – Tao（by 老子 LaoZi）
-- 活法 – Live Act（by 稻盛和夫 Kazuo Inamori）
+- [道德经](https://book.douban.com/subject/1009789/)
+- [活法](https://book.douban.com/subject/1269900/)
 - [乔布斯传](https://book.douban.com/subject/6798611/)
-- 设计中的设计 – Designing Design (by 原研哉 Kenyahara）
-- 禅者的初心 – Zen Mind, Beginner’s Mind (by Shunryu Suzuki 铃木俊隆)
-- 失控 – Out of Control (by 凯文·凯利 Kevin Kelly)
-- 复杂- Complexity: A guided tour (by 米歇尔·沃尔德罗普 Melanie Mitchell)
+- [设计中的设计](https://book.douban.com/subject/1941558/)
+- [禅者的初心](https://book.douban.com/subject/4898627/)
+- [失控](https://book.douban.com/subject/5375620/)
+- [复杂](https://book.douban.com/subject/6749832/)
 
 
 ## 教练技术
 - [高绩效教练](https://book.douban.com/subject/21264215/)
 - [共创式教练](https://book.douban.com/subject/25839505/)
+- [学问：100种提问力创造200倍企业力](https://book.douban.com/subject/26896977/)
 
 ## 领导力
 - [影响力](https://book.douban.com/subject/1786387/)
-- 创新公司：皮克斯的启示 – Creativity, Inc. (by 艾德•卡特姆 Ed Catmull）
-- 驱动力 – Drive (by 丹尼尔•平克 Daniel Pink)
-- Quiet Leadership: Six Steps to Transforming Performance at Work (by David Rock)
-- The Wisdom of Teams (by Jon R. Katzenbach and Douglas K. Smith)
-- The Art of Focused Conversation: 100 Ways to Access Group Wisdom in the Workplace (edited by Brian Stanfield for the Canadian Institute of Cultural Affairs)
-- 身心合一的奇迹力量 – The inner game of Tennis (by 提摩西•加尔韦 W. Timothy Gallwey)
-- 拥抱变革 – Fearless Change (by 玛丽莲·曼斯 Mary Lynn Manns, 琳达·赖斯 (Linda Rising)
-- 从0到1:开启商业与未来的秘密 Zero to One(by 彼得·蒂尔 Peter Thiel, 布莱克·马斯特斯Blake Masters)
-- 从为什么开始 – Start with Why (by 西蒙•斯涅克 Simon Sinek)
-- 瞬变 – Switch (by 奇普.希思 Chip Heath, 丹.希思 Chip Heath)
-- 克服团队协作的五种障碍 – Overcoming the Five Dysfunctions of a Team (by 帕特里克•兰西奥尼 Patrick Lencioni)
-- 重塑组织 – Reinventing Organizations (by Frederic Laloux, Ken Wilber)
+- [创新公司：皮克斯的启示](https://book.douban.com/subject/26314955/)
+- [驱动力](https://book.douban.com/subject/10484712/)
+- [身心合一的奇迹力量](https://book.douban.com/subject/21249050/)
+- [拥抱变革](https://book.douban.com/subject/25766546/)
+- [从0到1:开启商业与未来的秘密](https://book.douban.com/subject/26297606/)
+- [从为什么开始](https://book.douban.com/subject/6718052/)
+- [瞬变](https://book.douban.com/subject/25828158/)
+- [克服团队协作的五种障碍](https://book.douban.com/subject/25338822/)
+- [重塑组织](https://book.douban.com/subject/27030307/)
 
 
 ## 通用管理
