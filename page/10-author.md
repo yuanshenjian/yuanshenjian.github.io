@@ -14,9 +14,9 @@ active: 作者
 
 - **姓名**：袁慎建 \| YUAN SHENJIAN
 
-- **职业**：ThoughtWorks 内训师
+- **职业**：ThoughtWorks 咨询师、培训师
 
-- **领域**：专注[敏捷程序员基本功修炼](https://xpbootcamp.cn)
+- **领域**：CSM，专注敏捷程序员基本功修炼
 
 - **兴趣**：健身 && 多种球类运动
 
