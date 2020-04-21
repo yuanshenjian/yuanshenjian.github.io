@@ -11,9 +11,12 @@ date: 2020-01-01
 {:toc}
 
 
-### 基础导入
+## 概念篇
+
 - [如何解读TDD？](https://www.jianshu.com/p/5651ae2536a3)
 - [为什么使用TDD？](https://www.jianshu.com/p/4c011de96d9c)
+- [TDD编码流程长啥样？](https://www.jianshu.com/p/bee47429d418)
+- [如何理解TDD的三条“童子军规”？](https://www.jianshu.com/p/63110ca653a6)
 
 ### Tasking Driven Development
 - [如何区分Tasking的两种视角?](https://www.jianshu.com/p/95048240ee8c)
@@ -35,13 +38,14 @@ date: 2020-01-01
 - [测试如何驱动设计？](https://www.jianshu.com/p/fd816a3ab1d7)
 
 
-### 应用场景
+### 实际应用场景
 - [什么场景不适合TDD？](https://www.jianshu.com/p/7d0f507e6dbe)
+
+
+
+
+## 实践篇
 - [前端如何做TDD？](https://www.jianshu.com/p/0bf49e4d5687)
-
-
-
-
 
 
 
