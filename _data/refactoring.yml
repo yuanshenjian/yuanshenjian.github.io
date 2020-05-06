@@ -10,3 +10,17 @@ catetories:
         link: https://www.jianshu.com/p/a973e6cd83de
       - title: 重构有哪些参考准则？
         link: https://www.jianshu.com/p/fb4854ac28aa
+      - title: 重构到什么时候可以停止了？
+        link: https://www.jianshu.com/p/7bb7145b311b
+      - title: 重构的流程长啥样？
+        link: https://www.jianshu.com/p/e1e964b5c0b1
+  - name: 设计篇
+    questions:
+      - title: 如何界定代码腐化？
+        link: https://www.jianshu.com/p/f99094c88da2
+      - title: 如何统一代码风格？
+        link: https://www.jianshu.com/p/f88c8a0e1266
+      - title: 你好，请问这是什么鱼？
+        link: https://www.jianshu.com/p/c119650123ad
+      - title: 服务员，能帮忙来双公筷吗？
+        link: https://www.jianshu.com/p/28f23e73bce8
