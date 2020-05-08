@@ -20,12 +20,12 @@ catetories:
         link: https://www.jianshu.com/p/191eac3b37a2
   - name: Test Driven Development
     questions:
+      - title: 如何写测试，有哪些步骤？
+        link: https://www.jianshu.com/p/49eaa63d18ec
       - title: 为什么一定要测试先行呢？
         link: https://www.jianshu.com/p/671de1c8664e
       - title: TDD跟单元测试的关系如何处理？
         link: https://www.jianshu.com/p/4100d61652fe
-      - title: 如何写测试，有哪些步骤？
-        link: https://www.jianshu.com/p/49eaa63d18ec
       - title: 测试越多越好吗？
         link: https://www.jianshu.com/p/a1afa78b5c53
       - title: 写测试过程中要先解决编译错误吗？
@@ -43,7 +43,7 @@ catetories:
       - title: TDD 算不算契约式设计？
         link: https://www.jianshu.com/p/d7aa4e6be9c0
 
-  - name: 实际应用场景
+  - name: 应用场景
     questions:
       - title: 什么场景不适合TDD?
         link: https://www.jianshu.com/p/7d0f507e6dbe
