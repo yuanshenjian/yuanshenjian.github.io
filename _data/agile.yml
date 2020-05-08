@@ -1,0 +1,19 @@
+
+catetories:
+  - name: 敏捷教练
+    articles:
+      - title: 敏捷教练成长书单（持续更新）
+        link: https://www.jianshu.com/p/02c0ca146969
+  - name: 敏捷价值观
+    articles:
+      - title: 敏捷宣言到底有几句？
+        link: https://www.jianshu.com/p/85937e85ca0d
+      - title: 深入解读敏捷宣言
+        link: https://www.jianshu.com/p/31da1cd05801
+  - name: 敏捷实践
+    articles:
+      - title: 我在ThoughtWorks中的敏捷实践
+        link: https://www.jianshu.com/p/e063bbdd5f93
+      - title: Scrum需要一个双刃团队
+        link: https://www.jianshu.com/p/e1c94d3b0c6e
+
