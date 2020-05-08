@@ -9,56 +9,19 @@ date: 2020-01-01
 
 ---
 
+{% for group in site.data.column_toc.groups %}
 <div class="columns">
+  {% for column in group.columns %}
   <div class="column">
-    <a href="/column/tdd">
+    <a href="/column/{{column.href}}">
       <img
-        src="{{ site.url }}{{ site.img_path }}{{ '/column/tdd-column-cover.png' }}">
+        src="{{ site.url }}{{ site.img_path }}{{ '/column/' | append: column.cover }}">
     </a>
     <div>
-      <a href="/column/tdd">百问TDD</a>
-    </div>
-  </div>
-
-  <div class="separator"></div>
-  <div class="column">
-    <a href="/column/refactoring">
-      <img src="{{ site.url }}{{ site.img_path }}{{ '/column/refactoring-column-cover.jpg' }}">
-    </a>
-    <div>
-      <a href="/column/refactoring">百问重构</a>
-    </div>
-  </div>
-</div>
-<div class="columns">
-  <div class="column">
-    <a href="/column/xp">
-      <img
-        src="{{ site.url }}{{ site.img_path }}{{ '/column/xp-column-cover.png' }}">
-    </a>
-    <div>
-      <a href="/column/xp">极限编程</a>
+      <a href="/column/{{column.href}}">{{column.name}}</a>
     </div>
   </div>
   <div class="separator"></div>
-  <div class="column">
-    <a href="/column/agile">
-      <img src="{{ site.url }}{{ site.img_path }}{{ '/column/agile-column-cover.jpg' }}">
-    </a>
-    <div>
-      <a href="/column/agile">敏捷</a>
-    </div>
-  </div>
+  {% endfor %}
 </div>
-
-<div class="columns">
-  <div class="column">
-    <a href="/column/trainer">
-      <img src="{{ site.url }}{{ site.img_path }}{{ '/column/trainer-column-cover.jpg' }}">
-    </a>
-    <div>
-      <a href="/column/trainer">培训师</a>
-    </div>
-  </div>
-  <div class="separator"></div>
-</div>
+{% endfor %}
