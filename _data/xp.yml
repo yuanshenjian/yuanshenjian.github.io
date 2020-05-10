@@ -4,19 +4,25 @@ catetories:
     articles:
       - title: 简单设计
         link: https://www.jianshu.com/p/d6252d3dd6e8
+  - name: TDD实战之FizzBuzz（视频）
+    articles:
+      - title: 第1集 - 基础需求 Tasking
+        link: https://www.bilibili.com/video/BV1JK4y187KH/
+      - title: 第2集 - 基础需求 TDD
+        link: https://www.bilibili.com/video/BV1nV411d7H1/
   - name: TDD实战之镶金玫瑰（视频）
     articles:
       - title: 第1集 - Tasking 1
         link: https://www.bilibili.com/video/BV1SA41147vX/
       - title: 第2集 - Tasking 2
         link: https://www.bilibili.com/video/BV1La4y1i7Te/
-      - title: 第3集 - TDD 1
+      - title: 第3集 - Test & Design 1
         link: https://www.bilibili.com/video/BV1oi4y1x7yy/
-      - title: 第4集 - TDD 2
-        link:
-      - title: 第5集 - TDD 3
-        link:
-      - title: 第6集 - TDD 4
+      - title: 第4集 - Test & Design 2
+        link: https://www.bilibili.com/video/BV1st4y117XE/
+      - title: 第5集 - Test & Design 3
+        link: https://www.bilibili.com/video/BV1CA411476m/
+      - title: 第6集 - Test & Design 4
         link: https://www.bilibili.com/video/BV1ze411p7ED/
       - title: 第7集 - 重构到模式
         link:
