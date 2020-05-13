@@ -14,10 +14,15 @@ catetories:
     questions:
       - title: 如何区分Tasking的两种视角?
         link: https://www.jianshu.com/p/95048240ee8c
+      - title: 为什么TDD的时候，Tasking要站在业务视角？
+        link: https://www.jianshu.com/p/159514efc217
       - title: 技术上Tasking如何做？
         link: https://www.jianshu.com/p/be8093317457
       - title: Tasking产出的Task和AC有什么差别？
         link: https://www.jianshu.com/p/191eac3b37a2
+      - title: 业务需求Tasking的结果要可视化吗？
+        link: https://www.jianshu.com/p/b48c4a412949
+
   - name: Test Driven Development
     questions:
       - title: 如何写测试，有哪些步骤？
