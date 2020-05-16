@@ -4,6 +4,8 @@ catetories:
     questions:
       - title: 什么是重构？
         link: https://www.jianshu.com/p/1246091f605b
+      - title: 为什么要重构？
+        link: https://www.jianshu.com/p/c75e28d4d91a
       - title: 没有测试保护的重构叫重构吗？
         link: https://www.jianshu.com/p/d5063ea2887a
       - title: 什么时候重构？
@@ -24,3 +26,9 @@ catetories:
         link: https://www.jianshu.com/p/c119650123ad
       - title: 服务员，能帮忙来双公筷吗？
         link: https://www.jianshu.com/p/28f23e73bce8
+  - name: 运用篇
+    questions:
+      - title: Legacy Code Base如何做重构？
+        link: https://www.jianshu.com/p/175ea44bf732
+      - title: 重构代码的时候，要不要考虑性能？
+        link: https://www.jianshu.com/p/0f543f5a65bc
