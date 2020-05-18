@@ -26,6 +26,10 @@ catetories:
         link: https://www.jianshu.com/p/c119650123ad
       - title: 服务员，能帮忙来双公筷吗？
         link: https://www.jianshu.com/p/28f23e73bce8
+  - name: 坏味道
+    questions:
+      - title: 客户让你给代码加注释怎么办？
+        link: https://www.jianshu.com/p/012877a28bf0
   - name: 运用篇
     questions:
       - title: Legacy Code Base如何做重构？
