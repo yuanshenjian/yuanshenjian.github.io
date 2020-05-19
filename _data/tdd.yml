@@ -22,6 +22,8 @@ catetories:
         link: https://www.jianshu.com/p/191eac3b37a2
       - title: 业务需求Tasking的结果要可视化吗？
         link: https://www.jianshu.com/p/b48c4a412949
+      - title: Tasking要拆到什么粒度？
+        link: https://www.jianshu.com/p/c3a4d48743e9
   - name: Test Driven Development
     questions:
       - title: 从Task到Test，语言不统一会怎么样？
