@@ -26,10 +26,14 @@ catetories:
         link: https://www.jianshu.com/p/c119650123ad
       - title: 服务员，能帮忙来双公筷吗？
         link: https://www.jianshu.com/p/28f23e73bce8
+      - title: 消除重复和揭示意图会有冲突吗？
+        link: https://www.jianshu.com/p/59707176078f
   - name: 坏味道
     questions:
       - title: 客户让你给代码加注释怎么办？
         link: https://www.jianshu.com/p/012877a28bf0
+      - title: 能为你的全局常量安个家吗？
+        link: https://www.jianshu.com/p/3e65d694c579
   - name: 运用篇
     questions:
       - title: Legacy Code Base如何做重构？
