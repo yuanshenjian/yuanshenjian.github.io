@@ -34,6 +34,8 @@ catetories:
         link: https://www.jianshu.com/p/012877a28bf0
       - title: 能为你的全局常量安个家吗？
         link: https://www.jianshu.com/p/3e65d694c579
+      - title: Switch语句这个坏味道，到底坏在哪里？
+        link: https://www.jianshu.com/p/50a9510673b7
   - name: 运用篇
     questions:
       - title: Legacy Code Base如何做重构？
