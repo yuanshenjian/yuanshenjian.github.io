@@ -1,5 +1,11 @@
 
 catetories:
+  - name: 学习目标
+    articles:
+      - title: 编写培训目标的ABCD模式
+        link: https://www.jianshu.com/p/c1856cb1e6d2
+      - title: 制定学习目标的SMART原则
+        link: https://www.jianshu.com/p/c405c7464265
   - name: 破冰游戏
     articles:
       - title: 江湖名客
