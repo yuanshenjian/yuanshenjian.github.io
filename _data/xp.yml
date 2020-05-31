@@ -4,27 +4,9 @@ catetories:
     articles:
       - title: 简单设计
         link: https://www.jianshu.com/p/d6252d3dd6e8
-  - name: TDD实战之FizzBuzz（视频）
+  - name: TDD Kata
     articles:
-      - title: 第1集 - 基础需求 Tasking
-        link: https://www.bilibili.com/video/BV1JK4y187KH/
-      - title: 第2集 - 基础需求 TDD
-        link: https://www.bilibili.com/video/BV1nV411d7H1/
-  - name: TDD实战之镶金玫瑰（视频）
-    articles:
-      - title: 第0集 - 需求澄清
-        link: https://www.bilibili.com/video/BV1dz411q7J5/
-      - title: 第1集 - Tasking 1
-        link: https://www.bilibili.com/video/BV1SA41147vX/
-      - title: 第2集 - Tasking 2
-        link: https://www.bilibili.com/video/BV1La4y1i7Te/
-      - title: 第3集 - Test & Design 1
-        link: https://www.bilibili.com/video/BV1oi4y1x7yy/
-      - title: 第4集 - Test & Design 2
-        link: https://www.bilibili.com/video/BV1st4y117XE/
-      - title: 第5集 - Test & Design 3
-        link: https://www.bilibili.com/video/BV1CA411476m/
-      - title: 第6集 - Test & Design 4
-        link: https://www.bilibili.com/video/BV1ze411p7ED/
-      - title: 第7集 - 重构到模式
-        link: https://www.bilibili.com/video/BV1xt4y117pF/
+      - title: FizzBuzz 基础版
+        link: https://www.jianshu.com/p/34ac77b91b7a
+      - title: 镶金玫瑰（GildedRose）
+        link:
