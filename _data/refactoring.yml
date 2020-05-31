@@ -36,6 +36,8 @@ catetories:
         link: https://www.jianshu.com/p/3e65d694c579
       - title: Switch语句这个坏味道，到底坏在哪里？
         link: https://www.jianshu.com/p/50a9510673b7
+      - title: 发散式变化和霰弹式修改区别是什么？
+        link: https://www.jianshu.com/p/ccbfa35b2600
   - name: 运用篇
     questions:
       - title: Legacy Code Base如何做重构？
