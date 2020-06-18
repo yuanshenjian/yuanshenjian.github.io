@@ -14,7 +14,7 @@ author: "袁慎建"
 {:toc}
 
 
-## 人生及哲学类
+## 哲学
 - [道德经](https://book.douban.com/subject/1009789/)
 - [活法](https://book.douban.com/subject/1269900/)
 - [乔布斯传](https://book.douban.com/subject/6798611/)
@@ -23,11 +23,6 @@ author: "袁慎建"
 - [失控](https://book.douban.com/subject/5375620/)
 - [复杂](https://book.douban.com/subject/6749832/)
 
-
-## 教练技术
-- [高绩效教练](https://book.douban.com/subject/21264215/)
-- [共创式教练](https://book.douban.com/subject/25839505/)
-- [学问：100种提问力创造200倍企业力](https://book.douban.com/subject/26896977/)
 
 ## 领导力
 - [影响力](https://book.douban.com/subject/1786387/)
@@ -40,6 +35,17 @@ author: "袁慎建"
 - [瞬变](https://book.douban.com/subject/25828158/)
 - [克服团队协作的五种障碍](https://book.douban.com/subject/25338822/)
 - [重塑组织](https://book.douban.com/subject/27030307/)
+
+## 教练技术
+- [高绩效教练](https://book.douban.com/subject/21264215/)
+- [共创式教练](https://book.douban.com/subject/25839505/)
+- [学问：100种提问力创造200倍企业力](https://book.douban.com/subject/26896977/)
+- [提问的威力：教练问题全清单](https://book.douban.com/subject/25827011/)
+- [学会提问](https://book.douban.com/subject/20428922/)
+- [学会提问：批判性思维指南](https://book.douban.com/subject/1504957/)
+- [赋能：打造应对不确定性的敏捷团队](https://book.douban.com/subject/27204181/)
+- [敏捷教练：如何打造优秀的敏捷团队](https://book.douban.com/subject/24756834/)
+- [你的灯还亮着吗？](https://book.douban.com/subject/25772550/)
 
 
 ## 通用管理
@@ -59,7 +65,7 @@ author: "袁慎建"
 
 ## 敏捷管理
 - [Scrum敏捷项目管理](https://book.douban.com/subject/2327024/)
-- [Scrum精髓](https://book.douban.com/subject/25887356/)
+- [Scrum精髓：敏捷转型指南](https://book.douban.com/subject/25887356/)
 - [Scrum敏捷软件开发](https://book.douban.com/subject/5334585/)
 - [大规模Scrum](https://book.douban.com/subject/30333997/)
 - [硝烟中的Scrum和XP](https://book.douban.com/subject/3390446/)
@@ -76,6 +82,7 @@ author: "袁慎建"
 - [精益和敏捷开发大型应用指南](https://book.douban.com/subject/4170079/)
 - [看板方法](https://book.douban.com/subject/25788807/)
 - [精益创业](https://book.douban.com/subject/10945606/)
+- [精益思想](https://book.douban.com/subject/26704157/)
 
 
 ## 敏捷技术

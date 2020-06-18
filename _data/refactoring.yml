@@ -28,6 +28,8 @@ catetories:
         link: https://www.jianshu.com/p/28f23e73bce8
       - title: 消除重复和揭示意图会有冲突吗？
         link: https://www.jianshu.com/p/59707176078f
+      - title: 什么是好的设计？
+        link: https://www.jianshu.com/p/6c64f1d7885d
   - name: 坏味道
     questions:
       - title: 客户让你给代码加注释怎么办？
@@ -38,9 +40,13 @@ catetories:
         link: https://www.jianshu.com/p/50a9510673b7
       - title: 发散式变化和霰弹式修改区别是什么？
         link: https://www.jianshu.com/p/ccbfa35b2600
+      - title: 你以为只有长得一样的代码才叫重复代码吗？
+        link: https://www.jianshu.com/p/9cd58c8d21df
   - name: 运用篇
     questions:
       - title: Legacy Code Base如何做重构？
         link: https://www.jianshu.com/p/175ea44bf732
       - title: 重构代码的时候，要不要考虑性能？
         link: https://www.jianshu.com/p/0f543f5a65bc
+      - title: 为什么掌握了重构的招式还是做不好重构？
+        link: https://www.jianshu.com/p/3abffc0d0639
