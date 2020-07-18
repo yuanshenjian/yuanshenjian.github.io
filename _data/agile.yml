@@ -8,7 +8,7 @@ catetories:
     articles:
       - title: 敏捷宣言到底有几句？
         link: https://www.jianshu.com/p/85937e85ca0d
-      - title: 深入解读敏捷宣言
+      - title: 如何解读敏捷宣言？
         link: https://www.jianshu.com/p/31da1cd05801
   - name: 敏捷实践之站会
     articles:
@@ -20,5 +20,5 @@ catetories:
         link: https://www.jianshu.com/p/40c0b764fa8e
   - name: 敏捷实战
     articles:
-      - title: 我在ThoughtWorks中的敏捷实践
+      - title: 在ThoughtWorks，真的存在敏捷项目吗？
         link: https://www.jianshu.com/p/e063bbdd5f93
