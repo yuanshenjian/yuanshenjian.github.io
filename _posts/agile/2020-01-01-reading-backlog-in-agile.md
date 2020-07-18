@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "敏捷阅读清单"
+title: "敏捷教练阅读书单"
 date: 2020-01-01
 categories: [AGILE]
 tags: [Agile]
