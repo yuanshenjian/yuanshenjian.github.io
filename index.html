@@ -5,7 +5,46 @@ title: "Programming eXtremely"
 summary: "极限编程"
 ---
 
+{% for post in site.posts%}
+{% if post.isTop %}
+<article class="index-page">
+  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  {% include tags.html tags = post.tags %}
+  <div class="post-meta">
+    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+    {% if post.author %}
+    &nbsp;/&nbsp;
+    <span>{{ post.author }}</span>
+    {% endif %}
+  </div>
+  {% if post.brief %}
+  <p>{{ post.brief }}</p>
+  {% else %}
+  <div>
+    {% if post.content contains '<!--brief-->' %}
+    {% assign parts = post.content | split:'<!--brief-->' %}
+    {{ parts[1] }}
+    {% else %}
+    {{ post.content | strip_html | strip_newlines | truncate: 200 }}
+    {% endif %}
+  </div>
+  {% endif %}
+  <div>
+    <a href="{{ site.baseurl }}{{ post.url }}">阅读全文</a>
+  </div>
+
+  <!--  <div class="read-more"><a class="read-more" href="{{ site.url }}{{ post.url }}"> 继续阅读 →</a></div>-->
+  <div class="height-30"></div>
+  <hr>
+</article>
+{% endif %}
+{% endfor %}
+
+
+
 {% for post in site.posts limit: 200 %}
+{% if  post.isTop %}
+{% else %}
 <article class="index-page">
   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
   {% include tags.html tags = post.tags %}
@@ -36,5 +75,6 @@ summary: "极限编程"
   <div class="height-30"></div>
   <hr>
 </article>
+{% endif %}
 {% endfor %}
 
