@@ -1,8 +1,8 @@
 
 catetories:
-  - name: 敏捷教练
+  - name: 敏捷成长
     articles:
-      - title: 敏捷教练成长书单（持续更新）
+      - title: 敏捷教练可以读哪些书？
         link: https://www.jianshu.com/p/02c0ca146969
   - name: 敏捷价值观
     articles:
@@ -10,10 +10,15 @@ catetories:
         link: https://www.jianshu.com/p/85937e85ca0d
       - title: 深入解读敏捷宣言
         link: https://www.jianshu.com/p/31da1cd05801
-  - name: 敏捷实践
+  - name: 敏捷实践之站会
+    articles:
+      - title: 站会：每日站会到底是个啥会？
+        link: https://www.jianshu.com/p/2e6dd4fd11b8
+      - title: 站会：为啥就这么容易开成汇报会？
+        link: https://www.jianshu.com/p/544978a249e9
+      - title: 站会：几分钟的会议里还能踩到雷？
+        link: https://www.jianshu.com/p/40c0b764fa8e
+  - name: 敏捷实战
     articles:
       - title: 我在ThoughtWorks中的敏捷实践
         link: https://www.jianshu.com/p/e063bbdd5f93
-      - title: Scrum需要一个双刃团队
-        link: https://www.jianshu.com/p/e1c94d3b0c6e
-

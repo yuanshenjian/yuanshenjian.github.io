@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "敏捷"
+title: "百问敏捷"
 permalink: /column/agile
 author: "袁慎建"
 date: 2020-01-01
