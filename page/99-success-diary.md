@@ -3,6 +3,8 @@ bg: "author"
 layout: post
 title: "成功日记"
 permalink: /success-diary
+date: 2020-08-02
+author: "袁慎建"
 summary: "成功日记"
 ---
 
