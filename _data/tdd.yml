@@ -10,7 +10,7 @@ catetories:
         link: https://www.jianshu.com/p/bee47429d418
       - title: 如何理解TDD的三条“童子军规”？
         link: https://www.jianshu.com/p/63110ca653a6
-  - name: Tasking Driven Development
+  - name: Task-Driven Development
     questions:
       - title: 如何区分Tasking的两种视角?
         link: https://www.jianshu.com/p/95048240ee8c
@@ -32,7 +32,7 @@ catetories:
         link: https://www.jianshu.com/p/70fe3a18fad8
       - title: Tasking算是TDD的第一个步，还是一个独立的方法呢？
         link: https://www.jianshu.com/p/31360ca07c07
-  - name: Test Driven Development
+  - name: Test-Driven Development
     questions:
       - title: 从Task到Test，语言不统一会怎么样？
         link: https://www.jianshu.com/p/3504f234fe51
@@ -54,7 +54,7 @@ catetories:
         link: https://www.jianshu.com/p/8eeb2b161a81
       - title: Test case命名如何是好？
         link: https://www.jianshu.com/p/e7704437edfa
-  - name: Test Driven Design
+  - name: Test-Driven Design
     questions:
       - title: TDD是否会频繁重构代码?
         link: https://www.jianshu.com/p/546c131f87c5
