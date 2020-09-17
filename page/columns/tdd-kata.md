@@ -11,7 +11,7 @@ column: TDD-KATA
 {:toc}
 
 
-{% for post in site.posts %}
+{% for post in site.posts reversed %}
 {% if post.column == page.column %}
 <a target="_blank" href="{{ post.url }}">{{ post.title }}</a>
 {% endif %}
