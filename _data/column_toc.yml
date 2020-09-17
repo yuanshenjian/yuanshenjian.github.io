@@ -1,20 +1,20 @@
 groups:
   - group: 1
     columns:
-      - name: 百问敏捷
-        href: agile
-        cover: agile-column-cover.jpg
-      - name: TDD KATA
-        href: tdd-katas
-        cover: xp-column-cover.jpg
-  - group: 2
-    columns:
       - name: 百问TDD
         href: tdd-question-100
         cover: tdd-column-cover.jpg
       - name: 百问重构
         href: refactoring
         cover: refactoring-column-cover.jpg
+  - group: 2
+    columns:
+      - name: 百问敏捷
+        href: agile
+        cover: agile-column-cover.jpg
+      - name: TDD KATA
+        href: tdd-katas
+        cover: xp-column-cover.jpg
   - group: 3
     columns:
       - name: 培训师
