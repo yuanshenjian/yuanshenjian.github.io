@@ -4,13 +4,13 @@ groups:
       - name: 百问敏捷
         href: agile
         cover: agile-column-cover.jpg
-      - name: 极限编程
-        href: xp
+      - name: TDD KATA
+        href: tdd-katas
         cover: xp-column-cover.jpg
   - group: 2
     columns:
       - name: 百问TDD
-        href: tdd
+        href: tdd-question-100
         cover: tdd-column-cover.jpg
       - name: 百问重构
         href: refactoring

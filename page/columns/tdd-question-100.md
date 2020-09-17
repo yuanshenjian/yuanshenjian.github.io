@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "百问TDD"
-permalink: /column/tdd
+permalink: /column/tdd-question-100
 author: "袁慎建"
 date: 2020-01-01
 ---
