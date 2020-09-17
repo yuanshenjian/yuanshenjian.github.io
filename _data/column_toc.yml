@@ -5,7 +5,7 @@ groups:
         href: tdd-question-100
         cover: tdd-column-cover.jpg
       - name: 百问重构
-        href: refactoring
+        href: refactoring-question-100
         cover: refactoring-column-cover.jpg
   - group: 2
     columns:
