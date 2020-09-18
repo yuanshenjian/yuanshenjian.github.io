@@ -1,17 +1,17 @@
 groups:
   - group: 1
     columns:
-      - name: TDD KATA
-        href: tdd-katas
-        cover: xp-column-cover.jpg
-      - name: 百问敏捷
-        href: agile-question-100
-        cover: agile-column-cover.jpg
-  - group: 2
-    columns:
       - name: 百问TDD
         href: tdd-question-100
         cover: tdd-column-cover.jpg
       - name: 百问重构
         href: refactoring-question-100
         cover: refactoring-column-cover.jpg
+  - group: 2
+    columns:
+      - name: TDD KATA
+        href: tdd-katas
+        cover: tdd-kata-column-cover.png
+      - name: 百问敏捷
+        href: agile-question-100
+        cover: agile-column-cover.jpg
