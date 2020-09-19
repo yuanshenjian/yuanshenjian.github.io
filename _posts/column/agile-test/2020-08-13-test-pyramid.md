@@ -32,7 +32,7 @@ brief: "
 但是，这种方法很快就陷入了困境，演变成所谓的 [蛋卷冰淇淋](https://alisterbscott.com/kb/testing-pyramids/)。原因有很多，这里我列出主要的几条。首先，基于UI的测试运行很慢，增加了构建时间。其次，它经常需安装测试自动化软件许可证，这就意味着只能在特定的机器上运行；另外，这些测试往往无法轻易地以“headless”[译注1]模式运行，即不能通过脚本进行UI监视，从而将其集成到合适的部署流水线上。
 
 
-最重要的一条原因是，这些测试太脆弱了。对系统功能的增强很容易破坏大量的测试，导致我们不得不重新录制。当然，你可以放弃这些工具来减少此类问题的发生，但这样又增加了测试的编写难度[注1]。 即使你采用了一些优秀的实践，端到端测试也相对更容易出现[不确定性问题](https://martinfowler.com/articles/nonDeterminism.html)，这会破坏测试可靠性。 简而言之，基于UI的端到端测试存在这些缺点：脆弱、编写成本高且运行缓慢。 因此，测试金字塔提倡 -- 相比于传统基于GUI的测试，你应该编写更多的自动化通元测试[注2]。 
+最重要的一条原因是，这些测试太脆弱了。对系统功能的增强很容易破坏大量的测试，导致我们不得不重新录制。当然，你可以放弃这些工具来减少此类问题的发生，但这样又增加了测试的编写难度[注1]。 即使你采用了一些优秀的实践，端到端测试也相对更容易出现[不确定性问题](https://martinfowler.com/articles/nonDeterminism.html)，这会破坏测试可靠性。 简而言之，基于UI的端到端测试存在这些缺点：脆弱、编写成本高且运行缓慢。 因此，测试金字塔提倡 -- 相比于传统基于GUI的测试，你应该编写更多的自动化通元测试[注2]。
 
 
 
@@ -46,7 +46,7 @@ brief: "
 
 
 #### 注释
-1. 注1: 对任何类型的自动化来说，录制-回放工具几乎都是个糟糕的主意。因为它们会降低易变性并且阻碍我们进行有用的抽象。它们仅值得作为生成脚本片段的工具，以便你在随后使用合适的编程语言进行改写，就像[Twist](https://www.thoughtworks.com/what-we-do/products)和[Emacs](http://www.gnu.org/software/emacs/manual/html_node/emacs/Save-Keyboard-Macro.html)那样。 
+1. 注1: 对任何类型的自动化来说，录制-回放工具几乎都是个糟糕的主意。因为它们会降低易变性并且阻碍我们进行有用的抽象。它们仅值得作为生成脚本片段的工具，以便你在随后使用合适的编程语言进行改写，就像[Twist](https://www.thoughtworks.com/what-we-do/products)和[Emacs](http://www.gnu.org/software/emacs/manual/html_node/emacs/Save-Keyboard-Macro.html)那样。
 
 2. 注2：金字塔是基于这样的假设，与单元测试这种低层级、细粒度测试相比，高层级、粗粒度测试的成本高、速度慢且脆弱。 尽管通常是这样，但也有例外。 如果你的高层级测试运行快、可靠且修改成本低，你就不需要较低层级的测试。
 
@@ -58,7 +58,7 @@ brief: "
 
 
 #### 声明
-本文翻译自Martin Fowler的文章Test Pyramid：
+本文翻译自Martin Fowler的文章TestPyramid：
 
-- 原文链接： [Test Pyramid](https://martinfowler.com/bliki/TestPyramid.html)  
+- 原文链接： [TestPyramid](https://martinfowler.com/bliki/TestPyramid.html)
 - 原文作者： [Martin Fowler](https://martinfowler.com/)
