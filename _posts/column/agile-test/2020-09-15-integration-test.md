@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "单元测试"
+title: "集成测试"
 date: 2020-09-15
 categories: [Agile]
 tags: [AGILE-TEST]
