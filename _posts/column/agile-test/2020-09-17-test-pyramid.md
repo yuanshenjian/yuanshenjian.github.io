@@ -2,7 +2,7 @@
 layout: post
 
 title: "测试金字塔"
-date: 2020-08-13
+date: 2020-09-17
 categories: [Agile]
 tags: [AGILE-TEST]
 column: AGILE-TEST
