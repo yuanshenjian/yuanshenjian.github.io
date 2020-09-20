@@ -62,3 +62,4 @@ brief: "
 
 - 原文链接： [TestPyramid](https://martinfowler.com/bliki/TestPyramid.html)
 - 原文作者： [Martin Fowler](https://martinfowler.com/)
+- 发表时间： 2012年5月1日
