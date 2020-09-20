@@ -5,7 +5,7 @@ title: "测试金字塔"
 date: 2020-08-13
 categories: [Agile]
 tags: [AGILE-TEST]
-column: AGILE-Test
+column: AGILE-TEST
 sub-tag: "common"
 
 author: "袁慎建"
