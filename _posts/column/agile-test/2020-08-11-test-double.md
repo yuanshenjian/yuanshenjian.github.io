@@ -11,7 +11,7 @@ sub-tag: "common"
 author: "袁慎建"
 
 brief: "
-Gerard Meszaros正在写一本书，用以总结各种Xunit框架的使用模式。他遇到的一个棘手的问题是如何更好地区分各种名词概念，比如存根（stubs），模拟（mocks），伪造品（fakes），假人（dummies）以及人们用来代替被测系统依赖项的东西。为了解决这个问题，他发明了一系列词汇，这些词汇我觉得很有意义，值得普及。
+Gerard Meszaros正在写一本书，用以总结各种Xunit框架的使用模式。他遇到的一个棘手的问题是如何更好地区分各种名词概念，比如stubs、mocks、fakes、dummies以及人们用来代替被测系统依赖项的东西。为了解决这个问题，他发明了一系列词汇，这些词汇我觉得很有意义，值得普及。
 "
 
 ---
@@ -21,7 +21,7 @@ Gerard Meszaros正在写一本书，用以总结各种Xunit框架的使用模式
 
 
 
-Gerard Meszaros正在[写一本书](https://martinfowler.com/books/meszaros.html)，用以总结各种Xunit框架的使用模式。他遇到的一个棘手的问题是如何更好地区分各种名词概念，比如存根（stubs），模拟（mocks），伪造品（fakes），假人（dummies）以及人们用来代替被测系统依赖项的东西。为了解决这个问题，他发明了一系列词汇，这些词汇我觉得很有意义，值得普及。
+Gerard Meszaros正在[写一本书](https://martinfowler.com/books/meszaros.html)，用以总结各种Xunit框架的使用模式。他遇到的一个棘手的问题是如何更好地区分各种名词概念，比如stubs、mocks、fakes、dummies以及人们用来代替被测系统依赖项的东西。为了解决这个问题，他发明了一系列词汇，这些词汇我觉得很有意义，值得普及。
 
 
 他使用的通用术语是[测试替身](http://xunitpatterns.com/Test%20Double.html)（想象一下演员替身）。任何你出于测试目的而替换掉实际生产对象的场景都是对它的运用。Gerard罗列出了几种类型的测试替身：
