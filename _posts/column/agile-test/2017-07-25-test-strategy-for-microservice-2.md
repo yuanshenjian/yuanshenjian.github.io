@@ -3,8 +3,9 @@ layout: post
 
 title: "微服务架构下的测试应对策略（下）"
 date: 2017-07-25
-categories: [eXtreme Programming]
-tags: [eXtreme Programming, TDD]
+categories: [Agile]
+tags: [AGILE-TEST]
+column: AGILE-TEST
 
 author: "袁慎建"
 

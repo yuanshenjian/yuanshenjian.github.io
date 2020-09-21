@@ -3,8 +3,9 @@ layout: post
 
 title: "从另一个角度告诉你单元测试的意义"
 date: 2017-12-20
-categories: [eXtreme Programming]
-tags: [TDD]
+categories: [Agile]
+tags: [AGILE-TEST]
+column: AGILE-TEST
 toXPSite: true
 author: "袁慎建"
 

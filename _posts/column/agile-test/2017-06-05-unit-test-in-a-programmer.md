@@ -3,8 +3,9 @@ layout: post
 
 title: "一枚程序员眼中的单元测试"
 date: 2017-06-05
-categories: [eXtreme Programming]
-tags: [TDD]
+categories: [Agile]
+tags: [AGILE-TEST]
+column: AGILE-TEST
 toXPSite: true
 
 author: "袁慎建"
