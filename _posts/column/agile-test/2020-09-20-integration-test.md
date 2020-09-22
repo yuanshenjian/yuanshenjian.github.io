@@ -84,3 +84,6 @@ brief: "
 - 原文链接： [IntegrationTest](https://martinfowler.com/bliki/IntegrationTest.html)
 - 原文作者： [Martin Fowler](https://martinfowler.com/)
 - 发表时间： 2018年1月16日
+
+
+我的博客即将同步至腾讯云+社区，邀请大家一同入驻：https://cloud.tencent.com/developer/support-plan?invite_code=2u3d25d0ch8gw
