@@ -9,9 +9,15 @@ groups:
         cover: refactoring-column-cover.jpg
   - group: 2
     columns:
+      - name: 敏捷测试
+        href: agile-test
+        cover: agile-test-column-cover.png
       - name: TDD KATA
         href: tdd-katas
         cover: tdd-kata-column-cover.png
+
+  - group: 3
+    columns:
       - name: 百问敏捷
         href: agile-question-100
         cover: agile-column-cover.jpg
