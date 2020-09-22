@@ -79,7 +79,7 @@ brief: "
 
 
 #### 声明
-本文翻译自Martin Fowler的文章UnitTest：
+本文翻译自Martin Fowler的文章*IntegrationTest*：
 
 - 原文链接： [IntegrationTest](https://martinfowler.com/bliki/IntegrationTest.html)
 - 原文作者： [Martin Fowler](https://martinfowler.com/)

@@ -45,7 +45,7 @@ brief: "
 
 
 #### 声明
-本文翻译自Martin Fowler的文章ContractTest：
+本文翻译自Martin Fowler的文章*ContractTest*：
 
 - 原文链接： [ContractTest](https://martinfowler.com/bliki/ContractTest.html)
 - 原文作者： [Martin Fowler](https://martinfowler.com/)

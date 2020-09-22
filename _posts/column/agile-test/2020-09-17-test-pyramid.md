@@ -58,7 +58,7 @@ brief: "
 
 
 #### 声明
-本文翻译自Martin Fowler的文章TestPyramid：
+本文翻译自Martin Fowler的文章*TestPyramid*：
 
 - 原文链接： [TestPyramid](https://martinfowler.com/bliki/TestPyramid.html)
 - 原文作者： [Martin Fowler](https://martinfowler.com/)

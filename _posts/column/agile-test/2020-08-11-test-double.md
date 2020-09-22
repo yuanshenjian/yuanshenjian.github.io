@@ -34,7 +34,7 @@ Gerard Meszaros正在[写一本书](https://martinfowler.com/books/meszaros.html
 
 
 #### 声明
-本文翻译自Martin Fowler的文章TestDouble：
+本文翻译自Martin Fowler的文章*TestDouble*：
 
 - 原文链接： [TestDouble](https://martinfowler.com/bliki/TestDouble.html)
 - 原文作者： [Martin Fowler](https://martinfowler.com/)
