@@ -39,7 +39,7 @@ brief: "
 它们很容易被搞混淆，毕竟如果你不将frobile模块和twibbler模块集成到单个环境中，并运行同时能够覆盖这两个模块的测试，你是没法测试他们能否在一起正常工作的。
 
 
-2010年代的观点提出了一个替代方案，这个在1980年代很少有人去考虑。 在新的替代方案中，我们只测试frobile模块中与twibbler模块有交互的那一小部分代码，并使用测试替身（[TestDouble](https://martinfowler.com/bliki/TestDouble.html)）替换掉twibbler模块。按照这种方式来测试frobile和twibbler两个模块的集成，只要twibbler模块的测试替身是值得信赖的，那么我们就可以在不启动完整的twibbler实例的前提下测试所有跟twibbler模块的交互行为。 如果它俩只是单个应用程序中的两个独立模块，处理起来还不算复杂。但是如果twibbler是一项单独的服务，就要复杂得多。twibbler服务有自己的构建工具、环境和网络连接。针对单独的服务，我们可以使用[mountebank](http://www.mbtest.org/)这类工具来提供测试替身，此时测试替身可以是进程内的，也可以是进程间跨网络的。
+2010年代的观点提出了一个替代方案，这个在1980年代很少有人去考虑。 在新的替代方案中，我们只测试frobile模块中与twibbler模块有交互的那一小部分代码，并使用[测试替身]({{site.url | append: '/test-double'}})（[TestDouble](https://martinfowler.com/bliki/TestDouble.html)）替换掉twibbler模块。按照这种方式来测试frobile和twibbler两个模块的集成，只要twibbler模块的测试替身是值得信赖的，那么我们就可以在不启动完整的twibbler实例的前提下测试所有跟twibbler模块的交互行为。 如果它俩只是单个应用程序中的两个独立模块，处理起来还不算复杂。但是如果twibbler是一项单独的服务，就要复杂得多。twibbler服务有自己的构建工具、环境和网络连接。针对单独的服务，我们可以使用[mountebank](http://www.mbtest.org/)这类工具来提供测试替身，此时测试替身可以是进程内的，也可以是进程间跨网络的。
 
 
 使用测试替身进行集成测试的方式存在一个核心问题是 -- 测试替身是否值得信赖。为了更好地保证这一点，我们可以借助[契约测试]({{ site.url | append: '/contract-test'}})（[Contract Test](https://martinfowler.com/bliki/ContractTest.html)）分别对测试替身和被测试目标进行测试。
