@@ -37,5 +37,9 @@ active: 作者
 - 2019.12.18，获得 *ATD课程设计* 课程证书
 - 2019.05.15，获得 *ATD培训师技巧* 课程证书
 
+#### 出品物
+
+- 2017-06-01，*[《JavaScript学习指南 第3版》](https://item.jd.com/12123997.html)*中文译本
+
 
 {% include comments.html %}
