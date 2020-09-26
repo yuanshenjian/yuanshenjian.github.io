@@ -20,7 +20,7 @@ active: 作者
 
 - **兴趣**：运动健身，羽毛球
 
-- **邮箱**：sjyuan@thoughtworks.com
+- **邮箱**：yuanshenjian.cn@gmail.com
 
 
 #### 工作经历
