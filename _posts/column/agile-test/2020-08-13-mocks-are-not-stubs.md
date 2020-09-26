@@ -302,9 +302,7 @@ An important offshoot of the mockist style is that of Behavior Driven Developmen
 
 当研究古典派/模拟派的选择时，我们需要考虑很多因素，我将它们粗略地分成了几类。
 
-
-### Driving TDD
-### 驶入TDD
+### 驱动TDD（Driving TDD）
 Mock对象来自XP社区，XP的主要特性之一是它对测试驱动开发的强调 -- 系统的设计是通过编写测试驱动的迭代来演进的。
 
 因此，模拟派特别强调模拟测试对设计的影响也就不足为奇了。他们特别提倡一种称为需求驱动开发的风格。使用这种风格，你在开始着手开发用户故事（[user story](https://martinfowler.com/bliki/UserStory.html)）前，可以通过为系统外部编写第一个测试，并让某些接口对象变为SUT。通过思考对协作者的期望来探索SUT及其邻居之间的交互，这样能有效地设计SUT的对外的接口。
