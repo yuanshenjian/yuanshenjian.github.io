@@ -14,7 +14,7 @@ active: 作者
 
 - **姓名**：袁慎建 \| YUAN SHENJIAN
 
-- **职业**：ThoughtWorks 咨询师、培训师
+- **职业**：ThoughtWorks 咨询师
 
 - **领域**：CSM，专注敏捷内功修炼
 
