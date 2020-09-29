@@ -1,10 +1,10 @@
 ---
 bg: "author"
 layout: page
-title: "作者"
+title: "about"
 permalink: /me
 summary: "简约 • 分享"
-active: 作者
+active: About
 
 ---
 
@@ -20,7 +20,7 @@ active: 作者
 
 - **兴趣**：运动健身，羽球，篮球
 
-- **邮箱**：yuanshenjian.cn@gmail.com
+- **邮箱**：sjyuan@thoughtworks.com
 
 
 #### 工作经历

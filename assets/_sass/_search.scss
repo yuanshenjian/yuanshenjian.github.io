@@ -89,8 +89,16 @@
     text-overflow: ellipsis
   }
 
+  .search-content-side {
+    width: 150px;
+    font-size: 12px;
+    height: 30px;
+    opacity: 0.8;
+    margin: auto auto 15px;
+    color: black;
+    border-radius: 10px;
+  }
   .search-content {
-    position: fixed;
     top: 60px;
     width: 70%;
     margin: 0 15%;
@@ -119,6 +127,16 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis
+  }
+
+  .search-content-side {
+    width: 150px;
+    font-size: 12px;
+    height: 30px;
+    opacity: 0.8;
+    margin: auto auto 15px;
+    color: black;
+    border-radius: 10px;
   }
 
   .search-content {
