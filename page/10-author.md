@@ -1,7 +1,7 @@
 ---
 bg: "author"
 layout: page
-title: "about"
+title: "作者"
 permalink: /me
 summary: "简约 • 分享"
 active: About
