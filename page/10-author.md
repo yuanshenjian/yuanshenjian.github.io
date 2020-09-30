@@ -48,6 +48,3 @@ active: About
 #### 出品物
 
 - 2017-06-01，*[《JavaScript学习指南 第3版》](https://item.jd.com/12123997.html)*中文译本
-
-
-{% include comments.html %}
