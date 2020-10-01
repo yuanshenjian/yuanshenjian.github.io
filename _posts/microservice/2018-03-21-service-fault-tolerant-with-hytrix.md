@@ -7,9 +7,10 @@ author: 赵琪琪
 author_index: https://www.jianshu.com/u/2db65e841261
 
 categories: [Micro Service]
-tags: [Workshop@Micro Service]
+tags: [Workshop@Micro-Service]
 
-published: false
+published: true
+
 brief: "
 微服务治理Workshop系列之服务容错，主要涉及服务熔断和服务降级。
 "

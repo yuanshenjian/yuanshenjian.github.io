@@ -6,9 +6,9 @@ date: 2018-02-23
 author: 袁慎建
 
 categories: [Micro Service]
-tags: [Workshop@Micro Service]
+tags: [Workshop@Micro-Service]
 
-published: false
+published: true
 
 brief: "
 微服务治理Workshop系列之部署，使用Rancher部署服务。
