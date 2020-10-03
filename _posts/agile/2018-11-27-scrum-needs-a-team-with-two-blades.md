@@ -4,7 +4,7 @@ layout: post
 title: "Scrum需要一个双刃团队"
 date: 2018-11-27
 categories: [AGILE]
-tags: [Agile]
+tags: [AGILE, AGILE-TEAM]
 
 published: false
 author: "袁慎建"

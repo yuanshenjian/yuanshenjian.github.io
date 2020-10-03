@@ -4,7 +4,7 @@ layout: post
 title: "ThoughtWorks中的敏捷团队建设"
 date: 2016-10-22
 categories: [AGILE]
-tags: [Agile]
+tags: [AGILE, AGILE-TEAM]
 
 author: "袁慎建"
 

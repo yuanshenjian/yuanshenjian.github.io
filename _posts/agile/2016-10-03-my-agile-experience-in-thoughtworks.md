@@ -7,7 +7,7 @@ desc: "我在ThoughtWorks中的敏捷实践"
 keywords: "ThoughtWorks,Agile,Practice"
 
 categories: [AGILE]
-tags: [Agile]
+tags: [AGILE, AGILE-DELIVERY]
 toXPSite: true
 
 author: "袁慎建"
