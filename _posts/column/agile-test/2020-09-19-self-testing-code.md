@@ -4,7 +4,7 @@ layout: post
 title: "自测试代码"
 date: 2020-09-19
 categories: [Agile]
-tags: [AGILE-TEST]
+tags: [AGILE, AGILE-TEST]
 column: AGILE-TEST
 sub-tag: "common"
 

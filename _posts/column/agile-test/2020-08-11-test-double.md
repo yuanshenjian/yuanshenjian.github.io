@@ -4,7 +4,7 @@ layout: post
 title: "测试替身"
 date: 2020-08-11
 categories: [Agile]
-tags: [AGILE-TEST]
+tags: [AGILE, AGILE-TEST]
 column: AGILE-TEST
 sub-tag: "common"
 

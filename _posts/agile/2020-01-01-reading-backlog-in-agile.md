@@ -4,7 +4,7 @@ layout: post
 title: "敏捷教练阅读书单"
 date: 2020-01-01
 categories: [AGILE]
-tags: [Agile]
+tags: [AGILE]
 isTop: true
 
 author: "袁慎建"

@@ -4,7 +4,7 @@ layout: post
 title: "契约测试"
 date: 2020-09-15
 categories: [Agile]
-tags: [AGILE-TEST]
+tags: [AGILE, AGILE-TEST]
 column: AGILE-TEST
 sub-tag: "common"
 

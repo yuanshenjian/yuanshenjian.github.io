@@ -4,7 +4,7 @@ layout: post
 title: "Mocks 不是 Stubs"
 date: 2020-08-13
 categories: [Agile]
-tags: [AGILE-TEST]
+tags: [AGILE, AGILE-TEST]
 column: AGILE-TEST
 sub-tag: "common"
 

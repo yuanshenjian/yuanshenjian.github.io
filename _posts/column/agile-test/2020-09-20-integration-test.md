@@ -4,7 +4,7 @@ layout: post
 title: "集成测试"
 date: 2020-09-20
 categories: [Agile]
-tags: [AGILE-TEST]
+tags: [AGILE, AGILE-TEST]
 column: AGILE-TEST
 sub-tag: "common"
 
@@ -45,7 +45,7 @@ brief: "
 使用测试替身进行集成测试的方式存在一个核心问题是 -- 测试替身是否值得信赖。为了更好地保证这一点，我们可以借助[契约测试]({{ site.url | append: '/contract-test'}})（[Contract Test](https://martinfowler.com/bliki/ContractTest.html)）分别对测试替身和被测试目标进行测试。
 
 
-结合使用窄集成测试（narrow integration tests）和契约测试（contract tests），我可以自信地与外部服务集成，而无需单独运行基于外部服务真实实例的测试，这就大大简化了我的构建过程。即便这样做了，团队可能还会对所有真实服务进行某种形式的端到端系统测试。但如果是这样，那写测试只是最终的冒烟测试，它要测试路径范围少很多。它还有助于提升生产质量保证（[QA in Production](https://martinfowler.com/articles/qa-in-production.html)）方面的能力。如果该能力足够成熟，我们可能根本就不需要端到端的系统测试。
+结合使用窄集成测试（narrow integration tests）和契约测试（contract tests），我可以自信地与外部服务集成，而无需单独运行基于外部服务真实实例的测试，这就大大简化了我的构建过程。即便这样做了，团队可能还会对所有真实服务进行某种形式的端到端系统测试。但如果是这样，那写测试只是最终的冒烟测试，它要测试路径范围少很多。它还有助于提升[生产环境下的QA]({{site.url | append: '/qa-in-production'}})（[QA in Production](https://martinfowler.com/articles/qa-in-production.html)）方面的能力。如果该能力足够成熟，我们可能根本就不需要端到端的系统测试。
 
 ![](https://martinfowler.com/bliki/images/integrationTesting/sketch.png)
 
@@ -67,7 +67,7 @@ brief: "
 大多数的软件开发人员都将“集成测试”理解为“宽集成测试”，一旦他们碰到使用窄集成测试的同仁时，难免会心生困惑。
 
 如果你只编写过宽集成测试，建议你也了解一下窄集成测试风格。它可能会显着提高你的测试速度
-、易用性和弹性。由于窄集成测试的范围较小，所以运行速度会更快。因此，你可以在部署流水线（[DeploymentPipeline](https://martinfowler.com/bliki/DeploymentPipeline.html)）的早期阶段运行，一旦出现问题就能提供更快、更早的反馈。
+、易用性和弹性。由于窄集成测试的范围较小，所以运行速度会更快。因此，你可以在[部署流水线]({{site.url | append: '/deployment-pipeline'}})（[DeploymentPipeline](https://martinfowler.com/bliki/DeploymentPipeline.html)）的早期阶段运行，一旦出现问题就能提供更快、更早的反馈。
 
 
 这就是为什么我对“集成测试”保持警惕的原因。当我在某篇文章看到这个概念时，我会进一步寻找更多的上下文，因此我通常清楚作者的要表达的真正含义。 [注1]如果我要谈论宽集成测试，我更喜欢使用“系统测试”或“端到端测试”。 对于窄集成测试，我还没有找到更好的名字，不过我确实在使用它（但是我用“窄”来帮助读者理解这些测试的特点）。

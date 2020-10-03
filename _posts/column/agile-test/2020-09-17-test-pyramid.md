@@ -4,7 +4,7 @@ layout: post
 title: "测试金字塔"
 date: 2020-09-17
 categories: [Agile]
-tags: [AGILE-TEST]
+tags: [AGILE, AGILE-TEST]
 column: AGILE-TEST
 sub-tag: "common"
 
