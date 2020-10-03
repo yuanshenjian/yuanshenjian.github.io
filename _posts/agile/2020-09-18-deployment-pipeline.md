@@ -5,7 +5,7 @@ title: "部署流水线"
 date: 2020-09-18
 categories: [Agile]
 tags: [AGILE, AGILE-DELIVERY]
-column: AGILE
+column: AGILE-DELIVERY
 sub-tag: "DELIVERY"
 
 author: "袁慎建"
