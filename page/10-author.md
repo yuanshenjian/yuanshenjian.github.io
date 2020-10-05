@@ -18,7 +18,7 @@ active: About
 
 - **领域**：AGILE，专磕敏捷内功
 
-- **兴趣**：好动，羽、篮、桌球
+- **兴趣**：好动，喜欢羽、篮、桌球
 
 - **邮箱**：sjyuan@thoughtworks.com
 
