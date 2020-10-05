@@ -67,7 +67,7 @@ Ham 是德国 ThoughtWorks 的一名软件开发和咨询师。由于厌倦了�
 
 
 #### 声明
-本文摘自[ThoughtWorks洞见](https://insights.thoughtworks.cn/)网站，原文出自作者Ham Vocke之手。
+本文摘自[ThoughtWorks洞见](https://insights.thoughtworks.cn/)网站，原文出自Ham Vocke之手。
 
 - 原文链接： [The Practical Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html)
 - 中文译文： [测试金字塔实战](https://insights.thoughtworks.cn/practical-test-pyramid/)
