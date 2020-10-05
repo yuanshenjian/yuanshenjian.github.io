@@ -51,14 +51,12 @@ brief: "
 - [高效程序员的的45个习惯](https://read.douban.com/ebook/379531/)
 
 ## 敏捷管理
-- [Scrum敏捷项目管理](https://book.douban.com/subject/2327024/)
+
 - [Scrum精髓：敏捷转型指南](https://book.douban.com/subject/25887356/)
 - [Scrum敏捷软件开发](https://book.douban.com/subject/5334585/)
-- [大规模Scrum](https://book.douban.com/subject/30333997/)
 - [硝烟中的Scrum和XP](https://book.douban.com/subject/3390446/)
 - [敏捷革命](https://book.douban.com/subject/27008697/)
 - [管理3.0](https://book.douban.com/subject/10484469/)
-- [敏捷回顾](https://book.douban.com/subject/19978582/)
 - [用户故事与敏捷方法](https://book.douban.com/subject/4743056/)
 - [用户故事地图](https://book.douban.com/subject/26760348/)
 - [如何构建敏捷项目管理团队](https://book.douban.com/subject/10946308/)
@@ -70,7 +68,10 @@ brief: "
 - [看板方法](https://book.douban.com/subject/25788807/)
 - [精益创业](https://book.douban.com/subject/10945606/)
 - [精益思想](https://book.douban.com/subject/26704157/)
-
+- [学习敏捷](https://book.douban.com/subject/26979886/)
+- [敏捷回顾](https://book.douban.com/subject/19978582/)
+- [Scrum敏捷项目管理](https://book.douban.com/subject/2327024/)
+- [大规模Scrum](https://book.douban.com/subject/30333997/)
 
 ## 心理学
 - [心流 : 最优体验心理学](https://book.douban.com/subject/27186106/)
