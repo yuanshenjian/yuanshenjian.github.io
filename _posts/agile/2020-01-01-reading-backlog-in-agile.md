@@ -19,13 +19,6 @@ brief: "
 * content
 {:toc}
 
-
-## 沟通协作
-- [金字塔原理 ](https://book.douban.com/subject/4882120/)
-- [麦肯锡方法](https://book.douban.com/subject/4238931/)
-- [非暴力沟通](https://book.douban.com/subject/3533221/)
-- [关键对话 : 如何高效能沟通（原书第2版）](https://book.douban.com/subject/10586741/)
-
 ## 敏捷技术
 - [代码整洁之道](https://book.douban.com/subject/4199741/)
 - [敏捷软件开发：原则、模式与实践](https://book.douban.com/subject/1140457/)
@@ -72,11 +65,6 @@ brief: "
 - [敏捷回顾](https://book.douban.com/subject/19978582/)
 - [Scrum敏捷项目管理](https://book.douban.com/subject/2327024/)
 - [大规模Scrum](https://book.douban.com/subject/30333997/)
-
-## 心理学
-- [心流 : 最优体验心理学](https://book.douban.com/subject/27186106/)
-- [自控力](https://book.douban.com/subject/10786473/)
-
 
 ## 教练技术
 - [高绩效教练](https://book.douban.com/subject/21264215/)
@@ -137,3 +125,15 @@ brief: "
 - [禅者的初心](https://book.douban.com/subject/4898627/)
 - [失控](https://book.douban.com/subject/5375620/)
 - [复杂](https://book.douban.com/subject/6749832/)
+
+## 心理学
+- [心流 : 最优体验心理学](https://book.douban.com/subject/27186106/)
+- [自控力](https://book.douban.com/subject/10786473/)
+
+
+## 沟通协作
+- [金字塔原理 ](https://book.douban.com/subject/4882120/)
+- [麦肯锡方法](https://book.douban.com/subject/4238931/)
+- [非暴力沟通](https://book.douban.com/subject/3533221/)
+- [关键对话 : 如何高效能沟通（原书第2版）](https://book.douban.com/subject/10586741/)
+
