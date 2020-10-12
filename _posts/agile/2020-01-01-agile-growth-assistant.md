@@ -61,6 +61,7 @@ brief: "
 - [精益产品开发](https://book.douban.com/subject/27116921/)
 - [看板方法](https://book.douban.com/subject/25788807/)
 - [精益创业](https://book.douban.com/subject/10945606/)
+- [精益企业](https://book.douban.com/subject/26702829/)
 - [精益思想](https://book.douban.com/subject/26704157/)
 - [敏捷回顾](https://book.douban.com/subject/19978582/)
 - [Scrum精髓：敏捷转型指南](https://book.douban.com/subject/25887356/)
