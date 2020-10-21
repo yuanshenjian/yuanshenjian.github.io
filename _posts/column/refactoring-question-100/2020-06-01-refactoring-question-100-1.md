@@ -27,7 +27,7 @@ Martin Fowler在跟Kent Beck在同一个项目深度合作后，看到了Kent Be
 
 后来，重构被纳入为XP（eXtreme Programming，极限编程）中的一项核心实践。
 
-![](https://upload-images.jianshu.io/upload_images/1445879-ce9478b004585bd3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![]({{site.url | append: site.img_path | append: '/column/refactoring-question-100/xp-refactoring.png'}})
 
 我们平时所说的重构，大多指代码重构，回到重构的定义，本身有两种理解：
 
