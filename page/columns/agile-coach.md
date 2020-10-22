@@ -26,7 +26,7 @@ column: AGILE-COACHING
 ---
 
 ### 敏捷赋能
-{% for post in site.posts reversed %}
+{% for post in site.posts %}
 {% if post.column == page.column %}
 {% if post.sub-tag == "Agile enablement" %}
 <a target="_blank" href="{{ post.url }}">{{ post.title }}</a>
