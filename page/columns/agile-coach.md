@@ -1,29 +1,43 @@
 ---
 layout: post
-title: "百问敏捷"
-permalink: /column/agile-question-100
+title: "敏捷教练"
+permalink: /column/agile-coach
 author: "袁慎建"
 date: 2020-08-02
 
-column: AGILE-QUESTION-100
+column: AGILE-COACHING
 
 ---
 
 * content
 {:toc}
 
-### 基础概念
+
+### 敏捷工程实践
 {% for post in site.posts reversed %}
 {% if post.column == page.column %}
-{% if post.sub-tag == "Basic concept" %}
+{% if post.sub-tag == "Agile engineering practice" %}
 <a target="_blank" href="{{ post.url }}">{{ post.title }}</a>
 {% endif %}
 {% endif %}
 {% endfor %}
 
+
 ---
 
-### Stand-up
+### 敏捷赋能
+{% for post in site.posts reversed %}
+{% if post.column == page.column %}
+{% if post.sub-tag == "Agile enablement" %}
+<a target="_blank" href="{{ post.url }}">{{ post.title }}</a>
+{% endif %}
+{% endif %}
+{% endfor %}
+
+
+---
+
+### 规模化极限编程
 {% for post in site.posts reversed %}
 {% if post.column == page.column %}
 {% if post.sub-tag == "Stand-up" %}

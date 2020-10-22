@@ -3,8 +3,10 @@ layout: post
 
 title: "Workshop中的价值交付投射模型"
 date: 2018-07-05
-categories: [TRAINING]
-tags: [Training]
+categories: [Agile]
+tags: [AGILE-COACHING]
+sub-tag: "Agile enablement"
+column: AGILE-COACHING
 
 author: "袁慎建"
 

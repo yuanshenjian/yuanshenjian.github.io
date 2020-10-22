@@ -3,8 +3,10 @@ layout: post
 
 title: "以学习者为中心的项目驱动培训"
 date: 2017-10-23
-categories: [TRAINING]
-tags: [Training]
+categories: [Agile]
+tags: [AGILE-COACHING]
+sub-tag: "Agile enablement"
+column: AGILE-COACHING
 
 author: "袁慎建"
 
@@ -41,7 +43,7 @@ ThoughtWorks的特色文化（敏捷）告诉我，在培训过程中坚持持�
 ![]({{ site.url }}{{ site.img_path }}{{ '/career/student-center-training-system.jpg' }})
 
 ---
- 
+
 ### 意识形态的更新
 意识形态，某种意义上又回到了认知的问题。对于刚从象牙塔中走出来的新人，他们对学习的认知会直接影响他们的学习方式和学习效率。
 

@@ -1,23 +1,22 @@
 groups:
   - group: 1
     columns:
+      - name: 敏捷教练
+        href: agile-coach
+        cover: agile-coach-column-cover.jpg
+      - name: 敏捷测试
+        href: agile-test
+        cover: agile-test-column-cover.png
+  - group: 2
+    columns:
       - name: 百问TDD
         href: tdd-question-100
         cover: tdd-column-cover.jpg
       - name: 百问重构
         href: refactoring-question-100
         cover: refactoring-column-cover.jpg
-  - group: 2
+  - group: 3
     columns:
-      - name: 敏捷测试
-        href: agile-test
-        cover: agile-test-column-cover.png
       - name: TDD KATA
         href: tdd-katas
         cover: tdd-kata-column-cover.png
-
-  - group: 3
-    columns:
-      - name: 百问敏捷
-        href: agile-question-100
-        cover: agile-column-cover.jpg
