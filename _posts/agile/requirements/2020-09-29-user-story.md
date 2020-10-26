@@ -99,10 +99,9 @@ Bill Wake指出好的用户故事特征应该符合[INVEST](https://xp123.com/ar
 
 
 #### 声明
-本文翻译自Martin Fowler关于用户故事的系列文章：
+本文翻译自[Martin Fowler](https://martinfowler.com/)关于用户故事的系列文章：
 
 - [UserStory @2013年4月22日](https://martinfowler.com/bliki/UserStory.html)
 - [UseCasesAndStories @2003年8月18日](https://martinfowler.com/bliki/UserStory.html)
 - [ConversationalStories @2010年2月4日](https://martinfowler.com/bliki/UserStory.html)
 - [UseCase](https://martinfowler.com/bliki/UseCase.html)
-- 原文作者： [Martin Fowler](https://martinfowler.com/)
