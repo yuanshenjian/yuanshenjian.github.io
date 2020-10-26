@@ -4,9 +4,8 @@ layout: post
 title: "从另一个角度告诉你单元测试的意义"
 date: 2017-12-20
 categories: [Agile]
-tags: [AGILE-TEST]
-column: AGILE-TEST
-toXPSite: true
+tags: [AGILE, AGILE-TESTING]
+column: AGILE-TESTING
 author: "袁慎建"
 
 brief: "

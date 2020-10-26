@@ -4,8 +4,8 @@ layout: post
 title: "集成测试"
 date: 2020-09-20
 categories: [Agile]
-tags: [AGILE, AGILE-TEST]
-column: AGILE-TEST
+tags: [AGILE, AGILE-TESTING]
+column: AGILE-TESTING
 sub-tag: "common"
 
 author: "袁慎建"

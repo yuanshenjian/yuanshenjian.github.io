@@ -4,8 +4,8 @@ layout: post
 title: "Mocks 不是 Stubs"
 date: 2020-08-13
 categories: [Agile]
-tags: [AGILE, AGILE-TEST]
-column: AGILE-TEST
+tags: [AGILE, AGILE-TESTING]
+column: AGILE-TESTING
 sub-tag: "common"
 
 author: "袁慎建"

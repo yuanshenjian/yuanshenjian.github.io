@@ -4,8 +4,8 @@ layout: post
 title: "微服务架构下的测试应对策略（上）"
 date: 2017-07-05
 categories: [Agile]
-tags: [AGILE-TEST]
-column: AGILE-TEST
+tags: [AGILE, AGILE-TESTING]
+column: AGILE-TESTING
 
 author: "袁慎建"
 

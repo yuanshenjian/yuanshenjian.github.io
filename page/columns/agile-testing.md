@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "敏捷测试"
-permalink: /column/agile-test
+permalink: /column/agile-testing
 author: "袁慎建"
 date: 2020-01-01
-column: AGILE-TEST
+column: AGILE-TESTING
 ---
 
 * content
