@@ -24,7 +24,7 @@ active: About
 
 
 #### 工作经历
-- 2020.11 ~ 至今，在ThoughtWorks做咨询师
+- 2020.12 ~ 至今，在ThoughtWorks做咨询师
 
 - 2018.05 ~ 2020.11，在ThoughtWorks做内训师
 
