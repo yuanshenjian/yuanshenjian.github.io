@@ -16,16 +16,17 @@ active: About
 
 - **职业**：ThoughtWorks 咨询师
 
-- **领域**：AGILE，专磕敏捷内功
+- **领域**：AGILE，专磕精益敏捷内功
 
-- **兴趣**：好动，喜欢羽、篮、桌球
+- **兴趣**：运动健身，喜欢羽、篮、桌球
 
 - **邮箱**：sjyuan@thoughtworks.com
 
 
 #### 工作经历
+- 2020.11 ~ 至今，在ThoughtWorks做咨询师
 
-- 2018.05 ~ 至今，在ThoughtWorks做内训师
+- 2018.05 ~ 2020.11，在ThoughtWorks做内训师
 
 - 2015.03 ~ 2018.05，在ThoughtWorks做软件交付
 
