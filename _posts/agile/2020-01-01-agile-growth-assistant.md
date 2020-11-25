@@ -21,13 +21,13 @@ brief: "
 
 ## 书单
 ### 敏捷技术
-- [程序员的职业素养](https://book.douban.com/subject/11614538/) 
-- [程序员修炼之道(第2版)](https://book.douban.com/subject/35006892/) 
-- [有效的单元测试](https://book.douban.com/subject/26364867/) 
-- [软件测试的艺术](https://book.douban.com/subject/1445661/) 
-- [Google软件测试之道](https://book.douban.com/subject/25742200/) 
-- [敏捷软件测试](https://book.douban.com/subject/5338399/) 
-- [测试驱动开发](https://book.douban.com/subject/1230036/) 
+- [程序员的职业素养](https://book.douban.com/subject/11614538/)
+- [程序员修炼之道(第2版)](https://book.douban.com/subject/35006892/)
+- [有效的单元测试](https://book.douban.com/subject/26364867/)
+- [软件测试的艺术](https://book.douban.com/subject/1445661/)
+- [Google软件测试之道](https://book.douban.com/subject/25742200/)
+- [敏捷软件测试](https://book.douban.com/subject/5338399/)
+- [测试驱动开发](https://book.douban.com/subject/1230036/)
 - [测试驱动开发的艺术](https://book.douban.com/subject/5326182/)
 - [编写可读代码的艺术](https://book.douban.com/subject/10797189/)
 - [代码整洁之道](https://book.douban.com/subject/4199741/)
@@ -43,12 +43,13 @@ brief: "
 - [实例化需求](https://book.douban.com/subject/11611022/)
 - [敏捷开发的艺术](https://book.douban.com/subject/4037534/)
 - [DevOps实践指南](https://book.douban.com/subject/30186150/)
-- [高效程序员的的45个习惯](https://read.douban.com/ebook/379531/)
+- [高效程序员的的45个习惯](https://book.douban.com/subject/4164024/)
 - [用户故事与敏捷方法](https://book.douban.com/subject/4743056/)
 - [用户故事地图](https://book.douban.com/subject/26760348/)
 - [硝烟中的Scrum和XP](https://book.douban.com/subject/3390446/)
 
 ### 敏捷管理
+- [敏捷整洁之道](https://book.douban.com/subject/35083518/)
 - [学习敏捷](https://book.douban.com/subject/26979886/)
 - [敏捷革命](https://book.douban.com/subject/27008697/)
 - [敏捷教练](https://book.douban.com/subject/24756834/)
