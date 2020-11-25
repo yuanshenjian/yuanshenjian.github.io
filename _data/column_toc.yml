@@ -2,21 +2,21 @@ groups:
   - group: 1
     columns:
       - name: 敏捷教练
-        href: agile-coach
+        href: "/column/agile-coach"
         cover: agile-coach-column-cover.jpg
       - name: 敏捷测试
         href: agile-testing
         cover: agile-test-column-cover.png
   - group: 2
     columns:
-      - name: 百问TDD
-        href: tdd-question-100
+      - name: TDD爱问
+        href: "https://www.yuque.com/yuanshenjian/tdd/"
         cover: tdd-column-cover.jpg
-      - name: 百问重构
+      - name: 重构爱问
         href: refactoring-question-100
         cover: refactoring-column-cover.jpg
   - group: 3
     columns:
       - name: TDD KATA
-        href: tdd-katas
+        href: "/column/tdd-katas"
         cover: tdd-kata-column-cover.png
