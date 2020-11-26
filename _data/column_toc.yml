@@ -13,7 +13,7 @@ groups:
         href: "https://www.yuque.com/yuanshenjian/tdd/"
         cover: tdd-column-cover.jpg
       - name: 重构爱问
-        href: refactoring-question-100
+        href: "/column/refactoring-question-100"
         cover: refactoring-column-cover.jpg
   - group: 3
     columns:
