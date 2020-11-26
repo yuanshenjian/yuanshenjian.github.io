@@ -14,12 +14,12 @@ date: 2020-01-01
 <div class="columns">
   {% for column in group.columns %}
   <div class="column">
-    <a href="/column/{{column.href}}">
+    <a href="{{column.href}}" target="_blank">
       <img
         src="{{ site.url }}{{ site.img_path }}{{ '/column/' | append: column.cover }}">
     </a>
     <div>
-      <a href="/column/{{column.href}}">{{column.name}}</a>
+      <a href="{{column.href}}" target="_blank">{{column.name}}</a>
     </div>
   </div>
   <div class="separator"></div>
