@@ -1,3 +1,4 @@
+
 ---
 layout: post
 
@@ -31,7 +32,7 @@ TDD KATA，Bowling 保龄球，TDD的练习，有一定的挑战。本文我将�
 在上一篇文章 [TDD Kata - 保龄球（Bowling）Tasking](https://www.jianshu.com/p/b9581aa8216f)中，我对保龄球业务需求做了分析和拆分，并得到了一个需求的任务列表，本文我将基于此任务列表一步一步地进行TDD。
 
 开始前，先来TDD的三顶帽子：
-![](https://upload-images.jianshu.io/upload_images/1445879-ba984614295cdb28.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://cdn.nlark.com/yuque/0/2020/png/104324/1606886904550-b3a1a7c8-4a56-4c8a-9773-0ea0b72508d5.png)
 我会将每一个测试从失败到通过到重构的过程视为一个循环，在这个循环中，我不断地切换红、Lv、蓝三顶帽子。
 
 

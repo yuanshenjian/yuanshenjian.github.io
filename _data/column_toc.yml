@@ -15,8 +15,3 @@ groups:
       - name: 重构爱问
         href: "/column/refactoring-question-100"
         cover: refactoring-column-cover.jpg
-  - group: 3
-    columns:
-      - name: TDD KATA
-        href: "/column/tdd-katas"
-        cover: tdd-kata-column-cover.png
