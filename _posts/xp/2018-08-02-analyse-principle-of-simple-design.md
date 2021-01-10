@@ -44,8 +44,7 @@ brief: "
 1. 最少元素
 
 
-
-![](https://cdn.nlark.com/yuque/0/2020/png/104324/1606710638065-a085f32a-9b8b-4186-88ba-28164fa4746e.png#align=left&display=inline&height=576&margin=%5Bobject%20Object%5D&originHeight=576&originWidth=1168&size=0&status=done&style=none&width=1168)
+{% include post-image.html name = 'simple-design-priority.jpg' %}
 
 ---
 
