@@ -35,6 +35,8 @@ active: About
 - 2013.04 ~ 2014.08，在美林数据做程序员
 
 #### 学习经历
+- 2021.02.04，获得 *[CAC认证敏捷教练](https://cac-file.thoughtworks.cn/ac51460963521766a099.png)*
+
 - 2020.12.11，获得 *[ATD Master Trainer](https://www.youracclaim.com/badges/6de72773-adbd-4c63-a1d7-5a8de6c0e00f)*
 
 - 2020.09.25，获得 *MBC* 课程证书
