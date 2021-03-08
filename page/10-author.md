@@ -18,13 +18,13 @@ active: About
 
 - **领域**：AGILE，专磕精益敏捷内功
 
-- **兴趣**：健身、羽球、游泳、篮球、桌球
+- **兴趣**：健身、羽球、游泳、桌球、手游
 
 - **邮箱**：sjyuan@thoughtworks.com
 
 
 #### 工作经历
-- 2020.12 ~ 至今，在ThoughtWorks做咨询师
+- 2020.12 ~ 至今，在ThoughtWorks做敏捷教练
 
 - 2018.05 ~ 2020.11，在ThoughtWorks做内训师
 

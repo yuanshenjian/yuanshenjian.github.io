@@ -12,6 +12,6 @@ groups:
       - name: TDD Handbook
         href: "https://www.yuque.com/yuanshenjian/tdd/"
         cover: tdd-column-cover.jpg
-      - name: TDD Handbook
+      - name: Refactoring Handbook
         href: "https://www.yuque.com/yuanshenjian/refactoring/"
         cover: refactoring-column-cover.jpg
