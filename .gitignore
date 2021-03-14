@@ -4,6 +4,7 @@ _site
 node_modules
 **/.DS_Store
 .idea
+.jekyll-cache/
 page/junit5/book.json
 page/junit5/README.md
 page/junit5/SUMMARY.md

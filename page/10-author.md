@@ -3,8 +3,8 @@ bg: "author"
 layout: page
 title: "作者"
 permalink: /me
-summary: "简约 • 分享"
-active: About
+# summary: "简约 • 分享"
+active: 作者
 
 ---
 
