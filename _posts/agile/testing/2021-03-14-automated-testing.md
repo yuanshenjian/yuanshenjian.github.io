@@ -40,4 +40,4 @@ brief: "
 
 ......
 
-关于本文完整文章，请移步阅读全文：[自动化测试](https://www.yuque.com/yuanshenjian/agile/automated-test/)
+关于本文完整内容，请移步阅读：[自动化测试](https://www.yuque.com/yuanshenjian/agile/automated-testing/)
