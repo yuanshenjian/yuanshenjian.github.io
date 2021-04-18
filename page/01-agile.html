@@ -15,12 +15,16 @@ date: 2020-01-01
   {% for column in group.columns %}
   <div class="column">
     <a href="{{column.href}}" target="_blank">
-      <img
+      <img title="{{column.name}}"
         src="{{ site.url }}{{ site.img_path }}{{ '/column/' | append: column.cover }}">
     </a>
     <div>
-      <a href="{{column.href}}" target="_blank">{{column.name}}</a>
+      <div class="introduction">
+        <a href="{{column.href}}" target="_blank">《{{ column.name }}》：</a>
+        {{ column.introduction }}
+      </div>
     </div>
+    <div class="height-80"></div>
   </div>
   <div class="separator"></div>
   {% endfor %}

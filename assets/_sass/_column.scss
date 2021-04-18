@@ -16,13 +16,13 @@
   display: table;
 
   .separator {
-    width: 10px;
+    width: 20px;
     height: 300px;
     display: table-cell;
   }
 
   .column {
-    width: 49%;
+    width: 40%;
     height: 300px;
     display: table-cell;
 
@@ -41,6 +41,16 @@
       width: 100%;
       object-fit: scale-down;
       margin: 0;
+      box-shadow: 5px 5px 5px  #d2d1d1;
+      border-radius: 50px;
+    }
+
+    .introduction {
+      text-align: left;
+      font-size: 12px;
+      a{
+        font-size: 14px;
+      }
     }
   }
 }

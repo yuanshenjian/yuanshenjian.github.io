@@ -4,14 +4,18 @@ groups:
       - name: 精益敏捷
         href: "https://www.yuque.com/yuanshenjian/agile"
         cover: agile-test-column-cover.png
+        introduction: "该专栏涵盖了敏捷精益软件开发中的相关知识，包括极限编程，Scrum，敏捷测试，面向对象设计"
       - name: 教练赋能
         href: "https://www.yuque.com/yuanshenjian/empower"
         cover: agile-coach-column-cover.jpg
+        introduction: "该专栏涵盖了敏捷教练赋能、培训赋能方面的知识和洞见"
   - group: 2
     columns:
       - name: TDD Handbook
         href: "https://www.yuque.com/yuanshenjian/tdd/"
         cover: tdd-column-cover.jpg
+        introduction: "该专栏涵盖了TDD的基础知识、爱问百科以及TDD实战案例剖析"
       - name: Refactoring Handbook
         href: "https://www.yuque.com/yuanshenjian/refactoring/"
         cover: refactoring-column-cover.jpg
+        introduction: "该专栏涵盖了重构的基础知识、重构的坏味道剖析以及相关的重构Kata"
