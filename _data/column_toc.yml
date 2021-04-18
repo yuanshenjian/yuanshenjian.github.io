@@ -1,12 +1,12 @@
 groups:
   - group: 1
     columns:
-      - name: 敏捷教练
-        href: "/column/agile-coach"
-        cover: agile-coach-column-cover.jpg
-      - name: 敏捷测试
-        href: "/column/agile-testing"
+      - name: 精益敏捷
+        href: "https://www.yuque.com/yuanshenjian/agile"
         cover: agile-test-column-cover.png
+      - name: 教练赋能
+        href: "https://www.yuque.com/yuanshenjian/empower"
+        cover: agile-coach-column-cover.jpg
   - group: 2
     columns:
       - name: TDD Handbook
