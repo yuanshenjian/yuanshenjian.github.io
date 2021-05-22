@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "敏捷成长小助手"
+title: "敏捷软件教练基础书单"
 date: 2020-01-01
 categories: [AGILE]
 tags: [AGILE]
@@ -10,7 +10,8 @@ isTop: true
 author: "袁慎建"
 
 brief: "
-沟通协作、敏捷技术、敏捷管理、心理学、引导技术、领导力、通用管理 方面的阅读书单
+沟通协作、敏捷技术、敏捷管理、心理学、引导技术、领
+导力、通用管理 方面的阅读书单
 </br></br>
 "
 
@@ -19,8 +20,7 @@ brief: "
 * content
 {:toc}
 
-## 书单
-### 敏捷技术
+## 敏捷技术
 - [程序员的职业素养](https://book.douban.com/subject/11614538/)
 - [程序员修炼之道(第2版)](https://book.douban.com/subject/35006892/)
 - [有效的单元测试](https://book.douban.com/subject/26364867/)
@@ -48,7 +48,7 @@ brief: "
 - [用户故事地图](https://book.douban.com/subject/26760348/)
 - [硝烟中的Scrum和XP](https://book.douban.com/subject/3390446/)
 
-### 敏捷管理
+## 敏捷管理
 - [敏捷整洁之道](https://book.douban.com/subject/35083518/)
 - [学习敏捷](https://book.douban.com/subject/26979886/)
 - [敏捷革命](https://book.douban.com/subject/27008697/)
@@ -71,7 +71,7 @@ brief: "
 - [大规模Scrum](https://book.douban.com/subject/30333997/)
 - [管理3.0](https://book.douban.com/subject/10484469/)
 
-### 教练技术
+## 教练技术
 - [高绩效教练](https://book.douban.com/subject/21264215/)
 - [共创式教练](https://book.douban.com/subject/25839505/)
 - [提问的威力：教练问题全清单](https://book.douban.com/subject/25827011/)
@@ -84,7 +84,7 @@ brief: "
 - [被赋能的高效对话 : 教练对话流程实操](https://book.douban.com/subject/26713285/)
 
 
-### 引导技术
+## 引导技术
 - [学问：100种提问力创造200倍企业力](https://book.douban.com/subject/26896977/)
 - [基于引导技术的工作坊设计](https://book.douban.com/subject/27138076/)
 - [引导工具箱 : 解决组织问题的49个工具](https://book.douban.com/subject/26896978/)
@@ -95,7 +95,7 @@ brief: "
 - [开放空间引导技术](https://book.douban.com/subject/26366029/)
 - [视觉会议：应用视觉工具促进团队沟通、决策与执行](https://book.douban.com/subject/26587519/)
 
-### 通用管理
+## 通用管理
 - [团队协作的五大障碍](https://book.douban.com/subject/25338822/)
 - [反脆弱](https://book.douban.com/subject/25782902/)
 - [从优秀到卓越](https://book.douban.com/subject/1059769/)
@@ -111,7 +111,7 @@ brief: "
 - [重来2](https://book.douban.com/subject/25861795/)
 - [系统思考](https://book.douban.com/subject/25963524/)
 
-### 领导力
+## 领导力
 - [影响力](https://book.douban.com/subject/1786387/)
 - [创新公司：皮克斯的启示](https://book.douban.com/subject/26314955/)
 - [驱动力](https://book.douban.com/subject/10484712/)
@@ -122,7 +122,7 @@ brief: "
 - [瞬变](https://book.douban.com/subject/25828158/)
 - [重塑组织](https://book.douban.com/subject/27030307/)
 
-### 哲学 & 心理学
+## 哲学 & 心理学
 - [道德经](https://book.douban.com/subject/1009789/)
 - [活法](https://book.douban.com/subject/1269900/)
 - [乔布斯传](https://book.douban.com/subject/6798611/)
@@ -134,7 +134,7 @@ brief: "
 - [自控力](https://book.douban.com/subject/10786473/)
 
 
-### 沟通协作
+## 沟通协作
 - [金字塔原理 ](https://book.douban.com/subject/4882120/)
 - [麦肯锡方法](https://book.douban.com/subject/4238931/)
 - [非暴力沟通](https://book.douban.com/subject/3533221/)
