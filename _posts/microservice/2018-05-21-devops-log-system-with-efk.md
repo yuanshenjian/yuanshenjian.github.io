@@ -9,7 +9,7 @@ author_index: https://www.jianshu.com/u/46c6cdbb1d7d
 categories: [Micro Service]
 tags: [Workshop@Micro-Service]
 
-published: true
+published: false
 
 brief: "
 微服务治理Workshop系列之日志管理篇。

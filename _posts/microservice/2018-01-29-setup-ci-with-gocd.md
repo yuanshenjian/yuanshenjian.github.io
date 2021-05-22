@@ -8,7 +8,7 @@ author: 袁慎建
 categories: [Micro Service]
 tags: [Workshop@Micro-Service]
 
-published: true
+published: false
 
 brief: "
 微服务治理Workshop系列之CI/CD，搭建基础设施
