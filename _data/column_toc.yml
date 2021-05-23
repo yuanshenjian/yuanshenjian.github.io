@@ -1,10 +1,10 @@
 groups:
   - group: 1
     columns:
-      - name: 精益敏捷
+      - name: 敏捷软件研发
         href: "https://www.yuque.com/yuanshenjian/agile"
         cover: agile-test-column-cover.png
-        introduction: "该专栏涵盖了敏捷精益软件开发中的相关知识，包括极限编程，Scrum，敏捷测试，面向对象设计"
+        introduction: "该专栏涵盖了敏捷软件开发中的相关知识，包括极限编程工程实践，Scrum，敏捷测试，面向对象设计，DDD等"
       - name: 教练赋能
         href: "https://www.yuque.com/yuanshenjian/empower"
         cover: agile-coach-column-cover.jpg
