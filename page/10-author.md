@@ -51,7 +51,7 @@ active: 作者
 
 - 2019.05.15，获得 *ATD培训师技巧* 课程证书
 
-#### 出品物
+#### 作品
 
 - 知识专栏：[敏捷软件研发](https://www.yuque.com/yuanshenjian/agile)、[教练赋能](https://www.yuque.com/yuanshenjian/empower)、[TDD Handbook](https://www.yuque.com/yuanshenjian/tdd)、[Refactoring Handbook](https://www.yuque.com/yuanshenjian/refactoring)
 - 中文翻译: *[《JavaScript学习指南 第3版》](https://item.jd.com/12123997.html)*
