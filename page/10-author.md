@@ -14,11 +14,11 @@ active: 作者
 
 - **姓名**：袁慎建 \| YUAN SHENJIAN
 
-- **职业**：ThoughtWorks 咨询师
+- **职业**：ThoughtWorks 敏捷教练
 
 - **领域**：敏捷软件研发，教练赋能
 
-- **兴趣**：健身、读书、写作、羽球、鬼步舞
+- **兴趣**：极限健身、羽毛球
 
 - **邮箱**：sjyuan@thoughtworks.com
 
