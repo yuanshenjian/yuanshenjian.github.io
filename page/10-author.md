@@ -53,6 +53,6 @@ active: 作者
 
 #### 作品
 
-- 知识专栏：[敏捷软件研发](https://www.yuque.com/yuanshenjian/agile)、[教练赋能](https://www.yuque.com/yuanshenjian/empower)、[TDD Handbook](https://www.yuque.com/yuanshenjian/tdd)、[Refactoring Handbook](https://www.yuque.com/yuanshenjian/refactoring)
+- 知识专栏：[精益敏捷软件研发](https://www.yuque.com/lean-agile)
 - B站专栏：<https://space.bilibili.com/238186529>
 - 中文翻译: *[《JavaScript学习指南 第3版》](https://item.jd.com/12123997.html)*
