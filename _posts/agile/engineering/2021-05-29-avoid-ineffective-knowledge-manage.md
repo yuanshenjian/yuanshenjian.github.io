@@ -9,7 +9,7 @@ sub-tag: "Agile enablement"
 column: AGILE-COACHING
 
 author: "袁慎建"
-link: "https://www.yuque.com/yuanshenjian/agile/avoid-ineffective-knowledge-manage"
+link: "https://www.yuque.com/lean-agile/efficacy/avoid-ineffective-knowledge-manage"
 brief: "
 随着互联网的繁荣发展，信息传播的多样化和速度已经发生了质的飞跃，人们获取信息越来越容易，业界各类有识之士纷纷买票上车，大力向外界传播自己的知识，或是出于公益而免费普及，或是出于利益而付费变现。
 </br></br>
@@ -24,7 +24,7 @@ brief: "
 * content
 {:toc}
 
-语雀原文链接：<https://www.yuque.com/yuanshenjian/agile/avoid-ineffective-knowledge-manage>
+语雀原文链接：<https://www.yuque.com/lean-agile/efficacy/avoid-ineffective-knowledge-manage>
 
 
 
