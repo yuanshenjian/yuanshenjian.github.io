@@ -7,7 +7,7 @@ categories: [CAREER]
 tags: [Career]
 
 author: "袁慎建"
-link: "https://www.yuque.com/yuanshenjian/empower/3-misunderstandings-of-programmer"
+link: "https://www.yuque.com/lean-agile/coaching/3-misunderstandings-of-programmer"
 
 brief: "
 在ThoughtWorks，我学到了对我的职业生涯来说很宝贵的东西 -- **用正确的方式做正确的事情，持续改进，追求卓越**。在一个这样充满同侪压力的学习氛围中，即便胸无大志的我也不会被潮流抛弃，顺流缓进是一贯的主旋律。流的越久，认识的程序员种类越多。总得来说，在这里大部分人在做正确的事情，同样也用正确的方式做事情。
@@ -27,6 +27,6 @@ brief: "
 ---
 
 
-语雀文章链接：<https://www.yuque.com/yuanshenjian/empower/3-misunderstandings-of-programmer>
+语雀文章链接：<https://www.yuque.com/lean-agile/coaching/3-misunderstandings-of-programmer>
 
 
