@@ -9,7 +9,7 @@ keywords: "ThoughtWorks,Agile,Practice"
 categories: [AGILE]
 tags: [AGILE, AGILE-DELIVERY]
 
-link: "https://www.yuque.com/yuanshenjian/agile/agile-practice-in-thoughtworks"
+link: "https://www.yuque.com/lean-agile/core/agile-practice-in-thoughtworks"
 
 author: "袁慎建"
 
@@ -25,4 +25,4 @@ brief: "敏捷开发的核心就是<i>在一个高度协作的环境下，不断
 
 
 
-语雀原文链接：<https://www.yuque.com/yuanshenjian/agile/agile-practice-in-thoughtworks>
+语雀原文链接：<https://www.yuque.com/lean-agile/core/agile-practice-in-thoughtworks>
