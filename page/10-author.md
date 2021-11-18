@@ -14,7 +14,7 @@ active: 作者
 
 - **姓名**：袁慎建 \| YUAN SHENJIAN
 
-- **职业**：ThoughtWorks 敏捷教练
+- **职业**：Thoughtworks 敏捷教练
 
 - **领域**：敏捷软件研发，教练赋能
 
@@ -25,11 +25,11 @@ active: 作者
 
 #### 工作经历
 
-- 2020.12 ~ 至今，在ThoughtWorks做咨询师
+- 2020.12 ~ 至今，在Thoughtworks做咨询师
 
-- 2018.05 ~ 2020.11，在ThoughtWorks做内训师
+- 2018.05 ~ 2020.11，在Thoughtworks做内训师
 
-- 2015.03 ~ 2018.05，在ThoughtWorks做程序员
+- 2015.03 ~ 2018.05，在Thoughtworks做程序员
 
 - 2014.09 ~ 2015.03，独立软件交付工作室做程序员
 
@@ -53,6 +53,8 @@ active: 作者
 
 #### 作品
 
-- 知识专栏：[精益敏捷软件研发](https://www.yuque.com/lean-agile)
+- 程序员基本功修炼：[程序员基本功修炼](https://www.yuque.com/yuanshenjian/clean-coder)
+- 敏捷大杂烩：[敏捷大杂烩](https://www.yuque.com/lean-agile)
+- 培训大师：[培训大师](https://www.yuque.com/yuanshenjian/training-master)
 - B站专栏：<https://space.bilibili.com/238186529>
 - 中文翻译: *[《JavaScript学习指南 第3版》](https://item.jd.com/12123997.html)*
