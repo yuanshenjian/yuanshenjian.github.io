@@ -54,7 +54,7 @@ active: 作者
 #### 作品
 
 - 程序员基本功修炼：[程序员基本功修炼](https://www.yuque.com/yuanshenjian/clean-coder)
-- 敏捷大杂烩：[敏捷大杂烩](https://www.yuque.com/lean-agile)
+- 敏捷大杂烩：[敏捷大杂烩](https://www.yuque.com/yuanshenjian/agile)
 - 培训大师：[培训大师](https://www.yuque.com/yuanshenjian/training-master)
 - B站专栏：<https://space.bilibili.com/238186529>
 - 中文翻译: *[《JavaScript学习指南 第3版》](https://item.jd.com/12123997.html)*
