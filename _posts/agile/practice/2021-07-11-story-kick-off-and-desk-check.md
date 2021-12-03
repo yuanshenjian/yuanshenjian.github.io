@@ -8,7 +8,7 @@ tags: [AGILE]
 
 author: "袁慎建"
 
-link: "https://www.yuque.com/lean-agile/core/practice.story-kick-off-and-desk-check"
+link: "https://www.yuque.com/yuanshenjian/agile/story-kick-off-and-desk-check"
 
 brief: "
 如题，故事是用户故事，它是敏捷研发团队一贯采用的需求管理手段。开发人员以用户故事作为需求功能开发的单元，在开始开发用户故事前和完成用户故事开发后，一头一尾，通过两个非常轻量级的实践来形成首尾呼应，能够大大提升工作产出的价值，减少返工的风险和浪费。
@@ -23,4 +23,4 @@ brief: "
 {:toc}
 
 
-语雀文章链接：<https://www.yuque.com/lean-agile/core/practice.story-kick-off-and-desk-check>
+语雀文章链接：<https://www.yuque.com/yuanshenjian/agile/story-kick-off-and-desk-check>
