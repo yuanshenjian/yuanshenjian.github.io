@@ -37,6 +37,8 @@ active: 作者
 
 #### 学习经历
 
+- 2021.11.30，获得 *贝尔宾领导力* 课程证书
+
 - 2021.02.04，获得 *[CAC认证敏捷教练](https://cac-file.thoughtworks.cn/ac51460963521766a099.png)*
 
 - 2020.12.11，获得 *[ATD Master Trainer](https://www.youracclaim.com/badges/6de72773-adbd-4c63-a1d7-5a8de6c0e00f)*
