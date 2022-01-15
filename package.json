@@ -42,7 +42,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^2.1.2",
     "i18next": "^7.1.2",
-    "shelljs": "^0.7.6",
+    "shelljs": "^0.8.5",
     "uglify-js": "^2.7.5"
   }
 }
