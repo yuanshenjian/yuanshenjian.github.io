@@ -1,7 +1,7 @@
 ---
 bg: "author"
 layout: page
-title: "作者"
+title: "程序袁帅"
 permalink: /me
 # summary: "简约 • 分享"
 active: 作者
