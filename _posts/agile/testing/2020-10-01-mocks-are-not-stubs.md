@@ -8,7 +8,7 @@ tags: [AGILE]
 
 author: "袁慎建"
 
-link: "https://www.yuque.com/lean-agile/core/practice.code-review"
+link: "https://www.yuque.com/yuanshenjian/agile/mocks-are-not-stubs"
 
 published: true
 
