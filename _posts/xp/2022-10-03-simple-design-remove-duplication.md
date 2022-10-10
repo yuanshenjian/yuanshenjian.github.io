@@ -2,7 +2,7 @@
 layout: post
 
 title: "简单设计之消除重复"
-date: 2022-09-03
+date: 2022-10-03
 categories: [eXtreme Programming]
 tags: [Simple Design]
 author: "袁慎建"

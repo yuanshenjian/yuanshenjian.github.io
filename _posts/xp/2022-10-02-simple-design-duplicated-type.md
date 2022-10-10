@@ -2,7 +2,7 @@
 layout: post
 
 title: "简单设计之识别重复"
-date: 2022-09-02
+date: 2022-10-02
 categories: [eXtreme Programming]
 tags: [Simple Design]
 author: "袁慎建"

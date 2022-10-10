@@ -2,7 +2,7 @@
 layout: post
 
 title: "我的简单设计价值观"
-date: 2022-09-05
+date: 2022-10-05
 categories: [eXtreme Programming]
 tags: [Simple Design]
 

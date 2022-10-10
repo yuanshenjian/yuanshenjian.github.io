@@ -2,7 +2,7 @@
 layout: post
 
 title: "简单设计之揭示意图"
-date: 2022-09-04
+date: 2022-10-04
 categories: [eXtreme Programming]
 tags: [Simple Design]
 author: "袁慎建"

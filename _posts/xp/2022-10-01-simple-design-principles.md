@@ -2,7 +2,7 @@
 layout: post
 
 title: "简单设计五原则"
-date: 2022-09-01
+date: 2022-10-01
 categories: [eXtreme Programming]
 tags: [Simple Design]
 author: "袁慎建"
