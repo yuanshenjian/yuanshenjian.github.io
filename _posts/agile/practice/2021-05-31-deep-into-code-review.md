@@ -8,7 +8,7 @@ tags: [AGILE]
 
 author: "袁慎建"
 
-link: "https://www.yuque.com/lean-agile/core/practice.code-review"
+link: "https://www.yuque.com/yuanshenjian/agile/code-review"
 
 brief: "
 自从2015年3月加入ThoughtWorks接触到团队Code Review活动之后，我对Code Review有一种上瘾的感觉。那会儿的项目简直是敏捷派程序员的乐园，各种敏捷工程实践都得到很好的实践，团队了有优秀的程序员带着一帮热爱学习的新人和次新人在构建着已投入生产的大型商业软件。
@@ -29,4 +29,4 @@ brief: "
 {:toc}
 
 
-语雀文章链接：<https://www.yuque.com/lean-agile/core/practice.code-review>
+语雀文章链接：<https://www.yuque.com/yuanshenjian/agile/code-review>
