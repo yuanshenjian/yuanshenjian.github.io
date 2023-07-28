@@ -2,10 +2,9 @@
 layout: post
 
 title: "敏捷软件教练书单"
-date: 2020-01-01
+date: 2023-01-01
 categories: [AGILE]
 tags: [AGILE]
-isTop: true
 
 author: "袁慎建"
 
